@@ -22,7 +22,7 @@ interface PhotoCardData {
   heightRatio?: number;
 }
 
-export default function EducationPillarsSection() {
+export default function EducationPillarsSectionComponent() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
@@ -201,3 +201,6 @@ function PhotoCard({ image, alt, heightRatio = 1.2 }: PhotoCardData) {
     </div>
   );
 }
+
+// Named export để tương thích với import hiện tại
+export { EducationPillarsSectionComponent as EducationPillarsSection };
