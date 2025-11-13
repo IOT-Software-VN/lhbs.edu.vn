@@ -33,7 +33,7 @@ export default function EducationPillarsSection() {
   // Column 1: StatCard (cao hơn) + PhotoCard
   const col1: (StatCardData | PhotoCardData)[] = [
     {
-      icon: <Users className="w-12 h-12" />,
+      icon: <Users className="w-16 h-16" />,
       value: '+6,000',
       body: 'Students have graduated from LHBS, equipped with bilingual excellence and global perspectives',
       isExtended: true,
@@ -54,7 +54,7 @@ export default function EducationPillarsSection() {
       heightRatio: 1.2
     } as PhotoCardData,
     {
-      icon: <BookOpen className="w-12 h-12" />,
+      icon: <BookOpen className="w-16 h-16" />,
       value: '+10,000',
       body: 'Hours of bilingual instruction annually, ensuring fluency and cultural competence in both languages',
       isExtended: true,
@@ -65,7 +65,7 @@ export default function EducationPillarsSection() {
   // Column 3: StatCard (cao hơn) + PhotoCard
   const col3: (StatCardData | PhotoCardData)[] = [
     {
-      icon: <Award className="w-12 h-12" />,
+      icon: <Award className="w-16 h-16" />,
       value: '96.04%',
       body: 'University acceptance rate with students admitted to top institutions worldwide',
       isExtended: true,
@@ -81,7 +81,7 @@ export default function EducationPillarsSection() {
   // Column 4: StatCard + PhotoCard + StatCard (giữ chiều cao bình thường)
   const col4: (StatCardData | PhotoCardData)[] = [
     {
-      icon: <Link2 className="w-12 h-12" />,
+      icon: <Link2 className="w-16 h-16" />,
       value: '+6',
       body: 'Partnerships with international schools across Asia, Europe, and North America'
     } as StatCardData,
@@ -91,7 +91,7 @@ export default function EducationPillarsSection() {
       heightRatio: 0.8
     } as PhotoCardData,
     {
-      icon: <GraduationCap className="w-12 h-12" />,
+      icon: <GraduationCap className="w-16 h-16" />,
       value: '+980',
       body: 'Alumni pursuing higher education at prestigious universities globally each year'
     } as StatCardData
@@ -171,7 +171,7 @@ function StatCard({ icon, value, body, isExtended, minHeight }: StatCardData) {
       style={minHeight ? { minHeight } : {}}
     >
       {/* Icon - size lớn hơn */}
-      <div className="text-[#fffae9] mb-4 scale-125 md:scale-150">
+      <div className="text-[#fffae9] text-5xl md:text-6xl lg:text-7xl mb-4 scale-125 md:scale-150">
         {icon}
       </div>
 
