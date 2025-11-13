@@ -74,7 +74,7 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
               <img 
                 src={logoImage} 
                 alt="LHBS - Lac Hong Bilingual School" 
-                className="h-14 w-auto"
+                className="h-16 w-auto"
               />
             </div>
             

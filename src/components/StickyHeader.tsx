@@ -40,7 +40,7 @@ export function StickyHeader({ scrolled, onMenuClick, onLogoClick, onEnquireClic
            <img 
               src={logoImage} 
               alt="LHBS - Lac Hong Bilingual School" 
-              className="h-14 w-auto"
+              className="h-16 w-auto"
             />
         </motion.button>
         
