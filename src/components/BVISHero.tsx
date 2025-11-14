@@ -95,7 +95,7 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <button
-                onClick={() => onNavigate('/admissions/apply-now')}
+                onClick={() => onNavigate('/admissions')}
                 className="px-8 md:px-10 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold uppercase text-sm md:text-base tracking-wider hover:bg-[#e5a812] transition-all focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-transparent"
               >
                 Enquire Now

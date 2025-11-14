@@ -17,6 +17,7 @@ import educationImage from '../assets/hero-01.jpg';
 import items01 from '../assets/items-01.png';
 import items02 from '../assets/items-02.png';
 import items03 from '../assets/items-03.png';
+import anniversaryImage from '../assets/anyver.png';
 
 
 export function HomePage({ onNavigate }: { onNavigate: (path: string) => void }) {
@@ -32,6 +33,9 @@ export function HomePage({ onNavigate }: { onNavigate: (path: string) => void })
       
       {/* Section 2: Founding Message */}
       <FoundingMessageSection onNavigate={onNavigate} />
+
+       {/* Section 2.5: 15 Years Anniversary */}
+      <AnniversarySection onNavigate={onNavigate} />
       
       {/* Section 3: LHBS UNIQUE Education Pillars */}
       <EducationPillarsSection />
@@ -265,6 +269,87 @@ function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => 
     </motion.section>
   );
 }
+
+// ==================== SECTION 2.5: 15 Years Anniversary ====================
+function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  return (
+    <motion.section
+      ref={ref}
+      className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
+    >
+      <div className="grid md:grid-cols-2 gap-16 items-center">
+        {/* Left: Anniversary Image - 6 columns */}
+        <motion.div
+          className="relative h-[500px] md:h-[600px] overflow-hidden"
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <img
+            src={anniversaryImage}
+            alt="Student holding trophy celebrating 15 years of LHBS excellence"
+            className="w-full h-full object-cover object-center"
+          />
+        </motion.div>
+        
+        {/* Right: Content - 6 columns */}
+        <motion.div
+          className="relative flex flex-col justify-center"
+          initial={{ opacity: 0, x: 50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          {/* Title with highlight */}
+          <h2 className="font-['SVN-Gotham'] text-3xl md:text-4xl lg:text-5xl text-[#1a5336] mb-6 leading-tight">
+            15 years{' '}
+            <span 
+              className="relative inline-block px-2"
+              style={{
+                background: 'linear-gradient(to bottom, transparent 0%, transparent 40%, #3FD97F 40%, #3FD97F 80%, transparent 80%)'
+              }}
+            >
+              and continuing
+            </span>
+            {' '}to educate
+          </h2>
+          
+          {/* Body copy - 3 paragraphs */}
+          <div className="space-y-4 mb-8">
+            <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] leading-relaxed">
+              Founded in 2011, Lac Hong Bilingual School offers a modern education to unlock students' potential through innovative methods.
+            </p>
+            
+            <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] leading-relaxed">
+              We celebrate each student's unique dreams and talents, providing a Learning Pathways that builds a foundation in academics, 21st-century skills, English proficiency, and values, fostering Global Citizens.
+            </p>
+            
+            <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] leading-relaxed">
+              Our transparent international learning pathways address parental concerns, guiding students to success and future leadership roles.
+            </p>
+          </div>
+          
+          {/* CTA Button */}
+          <div>
+            <motion.button
+              onClick={() => onNavigate('/our-school/about-us')}
+              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold cursor-pointer hover:bg-[#e5a812] transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Learn more
+            </motion.button>
+          </div>
+        </motion.div>
+      </div>
+    </motion.section>
+  );
+}
+
 
 // ==================== PILLAR MODAL ====================
 function PillarModal({ pillarIndex, onClose }: { pillarIndex: number; onClose: () => void }) {
