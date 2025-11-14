@@ -42,7 +42,7 @@ export function TestimonialsSection() {
   return (
     <motion.section
       ref={ref}
-      className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]"
+      className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}

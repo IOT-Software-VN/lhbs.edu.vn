@@ -102,7 +102,7 @@ export default function EducationPillarsSectionComponent() {
   return (
     <section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9] overflow-hidden"
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto  overflow-hidden"
     >
       {/* Decorative motif - top left */}
       <div 
