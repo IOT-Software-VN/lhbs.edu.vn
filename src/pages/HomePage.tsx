@@ -36,6 +36,9 @@ export function HomePage({ onNavigate }: { onNavigate: (path: string) => void })
 
        {/* Section 2.5: 15 Years Anniversary */}
       <AnniversarySection onNavigate={onNavigate} />
+
+       {/* Section 2.75: Core Strengths - 5 Pillars */}
+       <CoreStrengthsSection />
       
       {/* Section 3: LHBS UNIQUE Education Pillars */}
       <EducationPillarsSection />
@@ -170,7 +173,7 @@ function EducationLevelItem({ label, link, onNavigate, delay, isInView }: Educat
   return (
     <motion.button
       onClick={() => onNavigate(link)}
-      className="w-full flex items-center justify-between px-4 md:px-6 h-[52px] md:h-[56px] border border-[#1a5336] text-left cursor-pointer hover:bg-gray-50 transition-all group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 !rounded-lg"
+      className="w-full flex items-center justify-between px-4 md:px-6 h-[52px] md:h-[56px] border border-[#1a5336] text-left cursor-pointer hover:bg-gray-50 transition-all group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 rounded-lg"
       initial={{ opacity: 0, x: -20 }}
       animate={isInView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.6, delay: 0.6 + delay }}
@@ -347,6 +350,176 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
             </motion.button>
           </div>
         </motion.div>
+      </div>
+    </motion.section>
+  );
+}
+
+// ==================== SECTION 2.75: Core Strengths - 5 Pillars ====================
+function CoreStrengthsSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+  const pillars = [
+    {
+      title: 'ACADEMIC EXCELLENCE',
+      icon: (
+        <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
+          <path d="M32 8 L52 18 L52 38 L32 48 L12 38 L12 18 Z" strokeLinejoin="round" />
+          <path d="M32 28 L32 48" />
+          <path d="M22 23 L32 28 L42 23" />
+        </svg>
+      ),
+      image: 'https://images.unsplash.com/photo-1758270704191-5d7255cc02dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGFjYWRlbWljJTIwZXhjZWxsZW5jZXxlbnwxfHx8fDE3NjMxMDc3NzB8MA&ixlib=rb-4.1.0&q=80&w=400'
+    },
+    {
+      title: 'TRULY BILINGUAL',
+      icon: (
+        <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
+          <circle cx="24" cy="24" r="16" />
+          <circle cx="40" cy="40" r="16" />
+          <path d="M24 16 L24 32" />
+          <path d="M40 32 L40 48" />
+        </svg>
+      ),
+      image: 'https://images.unsplash.com/photo-1690192435015-319c1d5065b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWxpbmd1YWwlMjBjbGFzc3Jvb20lMjBsZWFybmluZ3xlbnwxfHx8fDE3NjMxMDc3NzF8MA&ixlib=rb-4.1.0&q=80&w=400'
+    },
+    {
+      title: 'INTELLECTUAL CURIOSITY',
+      icon: (
+        <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
+          <circle cx="32" cy="28" r="14" />
+          <path d="M32 42 L32 54" />
+          <path d="M26 54 L38 54" />
+          <path d="M28 48 L36 48" />
+        </svg>
+      ),
+      image: 'https://images.unsplash.com/photo-1758685734030-a31d96462eec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGN1cmlvc2l0eSUyMHNjaWVuY2V8ZW58MXx8fHwxNzYzMTA3NzcxfDA&ixlib=rb-4.1.0&q=80&w=400'
+    },
+    {
+      title: 'GLOBAL MINDSET',
+      icon: (
+        <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
+          <circle cx="32" cy="32" r="20" />
+          <ellipse cx="32" cy="32" rx="12" ry="20" />
+          <path d="M12 32 L52 32" />
+          <path d="M20 20 L44 20" />
+          <path d="M20 44 L44 44" />
+        </svg>
+      ),
+      image: 'https://images.unsplash.com/photo-1660182922635-713da2867c82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBzdHVkZW50cyUyMGRpdmVyc2l0eXxlbnwxfHx8fDE3NjMxMDc3NzJ8MA&ixlib=rb-4.1.0&q=80&w=400'
+    },
+    {
+      title: 'ENGAGED CITIZENSHIP',
+      icon: (
+        <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
+          <path d="M32 12 L36 28 L52 28 L40 38 L44 54 L32 44 L20 54 L24 38 L12 28 L28 28 Z" strokeLinejoin="round" />
+        </svg>
+      ),
+      image: 'https://images.unsplash.com/photo-1758582171503-ce7b5c28bb4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGNvbW11bml0eSUyMHNlcnZpY2V8ZW58MXx8fHwxNzYzMTA3NzcyfDA&ixlib=rb-4.1.0&q=80&w=400'
+    }
+  ];
+
+  return (
+    <motion.section
+      ref={ref}
+      className="py-24 px-4 md:px-12 bg-[#fffae9]"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
+      transition={{ duration: 0.8 }}
+    >
+      {/* Top Text Block with Highlights */}
+      <motion.div 
+        className="text-center mb-16 max-w-4xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <h2 className="font-['SVN-Gotham'] text-3xl md:text-4xl lg:text-5xl text-[#1a5336] leading-relaxed">
+          We{' '}
+          <span 
+            className="relative inline-block px-2"
+            style={{
+              background: 'linear-gradient(to bottom, transparent 0%, transparent 40%, #3FD97F 40%, #3FD97F 80%, transparent 80%)'
+            }}
+          >
+            educate
+          </span>
+          {' '}not just for success, but{' '}
+          <span 
+            className="relative inline-block px-2"
+            style={{
+              background: 'linear-gradient(to bottom, transparent 0%, transparent 40%, #3FD97F 40%, #3FD97F 80%, transparent 80%)'
+            }}
+          >
+            for significance.
+          </span>
+        </h2>
+        <h2 className="font-['SVN-Gotham'] text-3xl md:text-4xl lg:text-5xl text-[#1a5336] leading-relaxed mt-4">
+          We{' '}
+          <span 
+            className="relative inline-block px-2"
+            style={{
+              background: 'linear-gradient(to bottom, transparent 0%, transparent 40%, #3FD97F 40%, #3FD97F 80%, transparent 80%)'
+            }}
+          >
+            nurture
+          </span>
+          {' '}not just bright minds, but{' '}
+          <span 
+            className="relative inline-block px-2"
+            style={{
+              background: 'linear-gradient(to bottom, transparent 0%, transparent 40%, #3FD97F 40%, #3FD97F 80%, transparent 80%)'
+            }}
+          >
+            bright futures.
+          </span>
+        </h2>
+      </motion.div>
+
+      {/* 5 Vertical Pillar Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-[1440px] mx-auto">
+        {pillars.map((pillar, index) => (
+          <motion.div
+            key={index}
+            className="bg-[#f5f0e1] flex flex-col relative overflow-hidden"
+            style={{ minHeight: '480px' }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 + (index * 0.1) }}
+          >
+            {/* Title at top-left */}
+            <div className="p-6">
+              <h3 className="font-['SVN-Gotham'] text-sm tracking-wider text-[#1a5336]">
+                {pillar.title}
+              </h3>
+            </div>
+
+            {/* Icon in middle */}
+            <div className="flex-1 flex items-center justify-center relative z-10">
+              {pillar.icon}
+            </div>
+
+            {/* Circular photo overlapping bottom of icon */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+              <div 
+                className="w-32 h-32 rounded-full overflow-hidden border-4 border-[#f5f0e1]"
+                style={{
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
+                }}
+              >
+                <img 
+                  src={pillar.image} 
+                  alt={`${pillar.title} at LHBS`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Bottom spacing */}
+            <div className="h-20"></div>
+          </motion.div>
+        ))}
       </div>
     </motion.section>
   );
