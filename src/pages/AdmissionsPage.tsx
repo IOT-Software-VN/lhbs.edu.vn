@@ -1,1239 +1,765 @@
 import { useState } from 'react';
-import { motion } from 'motion/react';
-import { Download, Phone, Mail, MessageCircle, Calendar, CheckCircle, FileText, Users, Trophy, Clock, ArrowRight, ChevronDown, ChevronUp, ChevronRight } from 'lucide-react';
-import admissionsHeroImage from '../assets/hero-01.jpg';
+import { ChevronRight, ChevronDown, ChevronUp, Phone, Mail, Users, Calendar, FileText, CheckCircle, Award, Trophy, DollarSign, BookOpen, Target, Heart, Globe, Sparkles, Building, GraduationCap } from 'lucide-react';
+import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
-export function AdmissionsPage({ onNavigate }: { onNavigate: (path: string) => void }) {
-  return (
-    <div className="relative bg-[#fffae9]">
-      {/* Section 1: Header Hero */}
-      <HeaderAdmissions onNavigate={onNavigate} />
-      
-      {/* Section 2: Why Choose */}
-      <WhyChooseSection />
-      
-      {/* Section 3: Process Timeline */}
-      <ProcessSection onNavigate={onNavigate} />
-      
-      {/* Section 4: Tuition & Fees */}
-      <TuitionFeesSection onNavigate={onNavigate} />
-      
-      {/* Section 5: Scholarships & Support */}
-      <ScholarshipsSection onNavigate={onNavigate} />
-      
-      {/* Section 6: Entry Requirements */}
-      <EntryRequirementsSection onNavigate={onNavigate} />
-      
-      {/* Section 7: Key Dates */}
-      <KeyDatesSection />
-      
-      {/* Section 8: Apply Online */}
-      <ApplyOnlineSection onNavigate={onNavigate} />
-      
-      {/* Section 9: Helper Footer */}
-      <HelperFooterAdmissions />
-    </div>
-  );
-}
-
-// ==================== SECTION 1: HEADER ADMISSIONS ====================
-function HeaderAdmissions({ onNavigate }: { onNavigate: (path: string) => void }) {
-  const hdrTitle = "Join the LHBS Community";
-  const hdrSubhead = "Where Vietnamese Heritage Meets Global Excellence";
-  const hdrLead = "We welcome families who share our commitment to bilingual education, academic excellence, and character development. Our admissions process is designed to ensure the best fit for both students and our learning community.";
-  const applyLink = "/admissions/apply-now";
-  const tourLink = "/contact/book-tour";
-  const guidePdf = "/downloads/admissions-guide-2025.pdf";
-  const counselorLink = "/contact/admissions-counselor";
-
-  return (
-    <section className="relative min-h-[65vh] md:min-h-[50vh] flex items-center bg-[#fffae9] overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
-        <img 
-          src={admissionsHeroImage} 
-          alt="LHBS campus welcoming new students"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1a5336]/95 via-[#1a5336]/85 to-[#1a5336]/50" />
-      </div>
-      
-      {/* Content */}
-      <div className="relative z-10 max-w-[1440px] mx-auto w-full px-4 md:px-20 py-24">
-        {/* Breadcrumb */}
-        <nav className="mb-6" aria-label="Breadcrumb">
-          <ol className="flex items-center gap-2 text-sm">
-            <li>
-              <button 
-                onClick={() => onNavigate('/')}
-                className="text-[#fffae9]/70 hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-              >
-                Home
-              </button>
-            </li>
-            <li>
-              <ChevronRight className="w-4 h-4 text-[#fffae9]/70" />
-            </li>
-            <li className="text-[#fffae9] ">Admissions</li>
-          </ol>
-        </nav>
-        
-        {/* Main Content - Left Aligned */}
-        <div className="max-w-[720px]">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            {/* Subhead */}
-            <p className=" text-sm md:text-base text-[#FABA1E] mb-4 tracking-wide uppercase">
-              {hdrSubhead}
-            </p>
-            
-            {/* Title */}
-            <h1 className=" text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
-              {hdrTitle}
-            </h1>
-            
-            {/* Lead */}
-            <p className=" text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
-              {hdrLead}
-            </p>
-            
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button
-                onClick={() => onNavigate(applyLink)}
-                className="px-12 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
-              >
-                APPLY NOW
-              </button>
-              
-              <button
-                onClick={() => onNavigate(tourLink)}
-                className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-              >
-                BOOK A TOUR
-              </button>
-            </div>
-            
-            {/* Utility Links */}
-            <div className="flex flex-wrap gap-6">
-              <a
-                href={guidePdf}
-                download
-                className="flex items-center gap-2 text-[#fffae9]/90 hover:text-[#fffae9] transition-colors  text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-              >
-                <Download className="w-4 h-4" />
-                <span>Admissions Guide (PDF)</span>
-              </a>
-              
-              <button
-                onClick={() => onNavigate(counselorLink)}
-                className="flex items-center gap-2 text-[#fffae9]/90 hover:text-[#fffae9] transition-colors  text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-              >
-                <Users className="w-4 h-4" />
-                <span>Talk to a Counselor</span>
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ==================== SECTION 2: WHY CHOOSE ====================
-function WhyChooseSection() {
-  const features = [
-    {
-      icon: '🎓',
-      title: 'Academic Excellence',
-      description: '15 years of proven bilingual education with outstanding university acceptance rates',
-      stat: '96%',
-      statLabel: 'University Acceptance'
-    },
-    {
-      icon: '🌏',
-      title: 'Truly Bilingual',
-      description: 'Seamless Vietnamese-English curriculum taught by native-speaking educators',
-      stat: null,
-      statLabel: null
-    },
-    {
-      icon: '👥',
-      title: 'Diverse Community',
-      description: 'Students from 25+ countries creating a rich multicultural learning environment',
-      stat: '6,000+',
-      statLabel: 'Alumni Network'
-    },
-    {
-      icon: '🏆',
-      title: 'Award-Winning Programs',
-      description: 'Recognized internationally for innovation in bilingual education',
-      stat: null,
-      statLabel: null
-    },
-    {
-      icon: '🔬',
-      title: 'Modern Facilities',
-      description: 'State-of-the-art labs, libraries, sports facilities, and technology resources',
-      stat: '980+',
-      statLabel: 'Current Students'
-    },
-    {
-      icon: '🤝',
-      title: 'Personalized Support',
-      description: 'Small class sizes with dedicated counselors and learning specialists',
-      stat: null,
-      statLabel: null
-    }
-  ];
-
-  return (
-    <section id="why-choose" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
-      {/* Section Header */}
-      <div className="text-center mb-16">
-        <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
-          Why Choose LHBS?
-        </h2>
-        <p className=" text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
-          Join a community dedicated to nurturing bilingual, globally-minded leaders with deep roots in Vietnamese culture.
-        </p>
-      </div>
-      
-      {/* Feature Cards Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        {features.map((feature, index) => (
-          <motion.div
-            key={index}
-            className="border-2 border-[#1a5336] p-8 hover:bg-[#1a5336] hover:text-[#fffae9] transition-all duration-300 group"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-          >
-            {/* Icon */}
-            <div className="text-5xl mb-4">{feature.icon}</div>
-            
-            {/* Title */}
-            <h3 className=" text-2xl text-[#1a5336] group-hover:text-[#fffae9] mb-3">
-              {feature.title}
-            </h3>
-            
-            {/* Description */}
-            <p className=" text-sm text-[#212121] group-hover:text-[#fffae9]/90 mb-4">
-              {feature.description}
-            </p>
-            
-            {/* Stat Badge */}
-            {feature.stat && (
-              <div className="mt-6 pt-4 border-t border-[#1a5336]/20 group-hover:border-[#fffae9]/20">
-                <div className=" text-3xl text-[#FABA1E] mb-1">
-                  {feature.stat}
-                </div>
-                <div className=" text-xs text-[#212121] group-hover:text-[#fffae9]/70 uppercase tracking-wide">
-                  {feature.statLabel}
-                </div>
-              </div>
-            )}
-          </motion.div>
-        ))}
-      </div>
-      
-      {/* Metrics Row */}
-      <div className="grid md:grid-cols-3 gap-8">
-        <MetricCard 
-          value="96%" 
-          label="University Acceptance Rate"
-          description="Our graduates gain admission to top universities worldwide"
-        />
-        <MetricCard 
-          value="6,000+" 
-          label="Global Alumni Network"
-          description="Successful graduates making impact across industries"
-        />
-        <MetricCard 
-          value="980+" 
-          label="Current Students"
-          description="Thriving learners from diverse backgrounds"
-        />
-      </div>
-    </section>
-  );
-}
-
-function MetricCard({ value, label, description }: { value: string; label: string; description: string }) {
-  return (
-    <div className="text-center p-6 bg-[#1a5336] text-[#fffae9]">
-      <div className=" text-5xl md:text-6xl text-[#FABA1E] mb-3">
-        {value}
-      </div>
-      <div className=" text-xl mb-2">
-        {label}
-      </div>
-      <div className=" text-sm text-[#fffae9]/80">
-        {description}
-      </div>
-    </div>
-  );
-}
-
-// ==================== SECTION 3: PROCESS TIMELINE ====================
-function ProcessSection({ onNavigate }: { onNavigate: (path: string) => void }) {
-  const steps = [
-    {
-      title: 'Explore & Connect',
-      description: 'Visit our campus, meet teachers, and experience LHBS firsthand',
-      ctaText: 'Book Tour',
-      ctaLink: '/contact/book-tour',
-      sla: null
-    },
-    {
-      title: 'Submit Application',
-      description: 'Complete online form with student information and documents',
-      ctaText: 'Start Application',
-      ctaLink: '/admissions/apply-now',
-      sla: '1 day'
-    },
-    {
-      title: 'Upload Documents',
-      description: 'Birth certificate, academic records, health forms, and photos',
-      ctaText: 'View Requirements',
-      ctaLink: '#entry',
-      sla: '2-3 days'
-    },
-    {
-      title: 'Assessment & Interview',
-      description: 'Age-appropriate evaluation and family interview with admissions team',
-      ctaText: 'Schedule Assessment',
-      ctaLink: '/admissions/schedule-assessment',
-      sla: '5-7 days'
-    },
-    {
-      title: 'Decision & Offer',
-      description: 'Receive admission decision and enrollment package',
-      ctaText: 'Check Status',
-      ctaLink: '/admissions/application-status',
-      sla: '3-7 days'
-    },
-    {
-      title: 'Enroll & Onboard',
-      description: 'Complete enrollment, pay fees, and prepare for orientation',
-      ctaText: 'Enrollment Guide',
-      ctaLink: '/admissions/enrollment-guide',
-      sla: '7-14 days'
-    }
-  ];
-
-  return (
-    <section id="process" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white">
-      {/* Section Header */}
-      <div className="text-center mb-16">
-        <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
-          Admissions Process
-        </h2>
-        <p className=" text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
-          Our straightforward 6-step process ensures a smooth journey from inquiry to enrollment.
-        </p>
-      </div>
-      
-      {/* Desktop: Horizontal Timeline */}
-      <div className="hidden lg:block mb-12">
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute top-8 left-0 right-0 h-[2px] bg-[#1a5336]/20" />
-          
-          {/* Steps */}
-          <div className="grid grid-cols-6 gap-4">
-            {steps.map((step, index) => (
-              <div key={index} className="relative">
-                {/* Step Number Dot */}
-                <div className="relative z-10 w-16 h-16 mx-auto mb-4 bg-[#1a5336] flex items-center justify-center">
-                  <span className=" text-2xl text-[#fffae9] font-bold">
-                    {index + 1}
-                  </span>
-                </div>
-                
-                {/* Content */}
-                <div className="text-center">
-                  <h3 className=" text-lg text-[#1a5336] mb-2">
-                    {step.title}
-                  </h3>
-                  <p className=" text-xs text-[#212121] mb-3 line-clamp-3">
-                    {step.description}
-                  </p>
-                  
-                  {step.sla && (
-                    <div className=" text-xs text-[#FABA1E] mb-3">
-                      ⏱ {step.sla}
-                    </div>
-                  )}
-                  
-                  <button
-                    onClick={() => onNavigate(step.ctaLink)}
-                    className=" text-xs text-[#1a5336] underline hover:text-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-                  >
-                    {step.ctaText} →
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      
-      {/* Mobile: Stacked Steps */}
-      <div className="lg:hidden space-y-6">
-        {steps.map((step, index) => (
-          <div key={index} className="flex gap-4">
-            {/* Step Number */}
-            <div className="flex-shrink-0 w-12 h-12 bg-[#1a5336] flex items-center justify-center">
-              <span className=" text-xl text-[#fffae9] font-bold">
-                {index + 1}
-              </span>
-            </div>
-            
-            {/* Content */}
-            <div className="flex-1">
-              <h3 className=" text-xl text-[#1a5336] mb-2">
-                {step.title}
-              </h3>
-              <p className=" text-sm text-[#212121] mb-3">
-                {step.description}
-              </p>
-              
-              {step.sla && (
-                <div className=" text-xs text-[#FABA1E] mb-3">
-                  ⏱ Processing time: {step.sla}
-                </div>
-              )}
-              
-              <button
-                onClick={() => onNavigate(step.ctaLink)}
-                className=" text-sm text-[#1a5336] underline hover:text-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-              >
-                {step.ctaText} →
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-// ==================== SECTION 4: TUITION & FEES ====================
-function TuitionFeesSection({ onNavigate }: { onNavigate: (path: string) => void }) {
-  const [selectedDivision, setSelectedDivision] = useState('primary');
-
-  const oneTimeFees = [
-    { item: 'Application Fee', amount: '5,000,000 VND' },
-    { item: 'Registration Fee (New Students)', amount: '20,000,000 VND' },
-    { item: 'Building Fund (One-time)', amount: '50,000,000 VND' }
-  ];
-
-  const tuitionByDivision = {
-    kg: {
-      name: 'Galaxy KG',
-      annual: '180,000,000 VND',
-      perTerm: '60,000,000 VND',
-      instalment: '18,000,000 VND/month'
-    },
-    primary: {
-      name: 'Primary School',
-      annual: '220,000,000 VND',
-      perTerm: '73,333,333 VND',
-      instalment: '22,000,000 VND/month'
-    },
-    middle: {
-      name: 'Middle School',
-      annual: '240,000,000 VND',
-      perTerm: '80,000,000 VND',
-      instalment: '24,000,000 VND/month'
-    },
-    high: {
-      name: 'High School',
-      annual: '260,000,000 VND',
-      perTerm: '86,666,667 VND',
-      instalment: '26,000,000 VND/month'
-    }
-  };
-
-  const optionalServices = [
-    { item: 'School Bus (Round Trip)', amount: '8,000,000 VND/year' },
-    { item: 'Lunch Program', amount: '15,000,000 VND/year' },
-    { item: 'After-School Program', amount: '12,000,000 VND/year' },
-    { item: 'Summer Camp', amount: 'Varies by program' }
-  ];
-
-  const discounts = [
-    '10% discount for siblings (2nd child onwards)',
-    '5% discount for early payment (full year)',
-    'Need-based financial aid available',
-    'Scholarship opportunities for academic excellence'
-  ];
-
-  return (
-    <section id="tuition-fees" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
-      {/* Section Header */}
-      <div className="text-center mb-16">
-        <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
-          Tuition & Fees
-        </h2>
-        <p className=" text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto mb-8">
-          Transparent pricing for world-class bilingual education. All fees are in Vietnamese Dong (VND).
-        </p>
-        
-        <div className="flex flex-wrap justify-center gap-4">
-          <a
-            href="/downloads/tuition-fees-2025.pdf"
-            download
-            className="px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold flex items-center gap-2 hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-          >
-            <Download className="w-4 h-4" />
-            Download Full Fee Schedule (PDF)
-          </a>
-          
-          <button
-            onClick={() => onNavigate('/admissions/fee-calculator')}
-            className="px-8 h-12 border-2 border-[#1a5336] text-[#1a5336]  font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-          >
-            Estimate Your Total
-          </button>
-        </div>
-      </div>
-      
-      {/* Fee Summary Cards */}
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
-        {/* One-Time Fees */}
-        <div className="border-2 border-[#1a5336] p-8">
-          <h3 className=" text-2xl text-[#1a5336] mb-6">
-            One-Time Fees
-          </h3>
-          <div className="space-y-4">
-            {oneTimeFees.map((fee, index) => (
-              <div key={index} className="flex justify-between items-start pb-3 border-b border-[#1a5336]/20 last:border-0">
-                <span className=" text-sm text-[#212121]">{fee.item}</span>
-                <span className=" text-sm text-[#1a5336] font-bold">{fee.amount}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        {/* Optional Services */}
-        <div className="border-2 border-[#1a5336] p-8">
-          <h3 className=" text-2xl text-[#1a5336] mb-6">
-            Optional Services
-          </h3>
-          <div className="space-y-4">
-            {optionalServices.map((service, index) => (
-              <div key={index} className="flex justify-between items-start pb-3 border-b border-[#1a5336]/20 last:border-0">
-                <span className=" text-sm text-[#212121]">{service.item}</span>
-                <span className=" text-sm text-[#1a5336] font-bold">{service.amount}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      
-      {/* Annual Tuition by Division */}
-      <div className="bg-white p-8 mb-8">
-        <h3 className=" text-3xl text-[#1a5336] mb-6 text-center">
-          Annual Tuition by Division
-        </h3>
-        
-        {/* Division Selector */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-          {Object.entries(tuitionByDivision).map(([key, division]) => (
-            <button
-              key={key}
-              onClick={() => setSelectedDivision(key)}
-              className={`px-6 h-10  transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] ${
-                selectedDivision === key
-                  ? 'bg-[#1a5336] text-[#fffae9]'
-                  : 'bg-[#fffae9] text-[#1a5336] border-2 border-[#1a5336] hover:bg-[#1a5336]/10'
-              }`}
-            >
-              {division.name}
-            </button>
-          ))}
-        </div>
-        
-        {/* Tuition Table */}
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead>
-              <tr className="bg-[#1a5336] text-[#fffae9]">
-                <th className=" text-lg text-left p-4">Payment Plan</th>
-                <th className=" text-lg text-right p-4">Amount</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b border-[#1a5336]/20">
-                <td className=" text-sm p-4">Annual (Full Year)</td>
-                <td className=" font-bold text-[#1a5336] text-right p-4">
-                  {tuitionByDivision[selectedDivision as keyof typeof tuitionByDivision].annual}
-                </td>
-              </tr>
-              <tr className="border-b border-[#1a5336]/20">
-                <td className=" text-sm p-4">Per Term (3 terms/year)</td>
-                <td className=" font-bold text-[#1a5336] text-right p-4">
-                  {tuitionByDivision[selectedDivision as keyof typeof tuitionByDivision].perTerm}
-                </td>
-              </tr>
-              <tr>
-                <td className=" text-sm p-4">Monthly Instalment (10 months)</td>
-                <td className=" font-bold text-[#1a5336] text-right p-4">
-                  {tuitionByDivision[selectedDivision as keyof typeof tuitionByDivision].instalment}
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      
-      {/* Discounts & Notes */}
-      <div className="bg-[#FABA1E]/10 border-l-4 border-[#FABA1E] p-6">
-        <h4 className=" text-xl text-[#1a5336] mb-4">
-          Discounts & Financial Support
-        </h4>
-        <ul className="space-y-2">
-          {discounts.map((discount, index) => (
-            <li key={index} className="flex items-start gap-3">
-              <CheckCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-              <span className=" text-sm text-[#212121]">{discount}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-  );
-}
-
-// ==================== SECTION 5: SCHOLARSHIPS & SUPPORT ====================
-function ScholarshipsSection({ onNavigate }: { onNavigate: (path: string) => void }) {
-  const [openAccordion, setOpenAccordion] = useState<number | null>(0);
-
-  const scholarships = [
-    {
-      title: 'Merit Scholarship',
-      description: 'Recognizing outstanding academic achievement and leadership potential',
-      criteria: [
-        'Exceptional academic records (GPA ≥ 3.8/4.0)',
-        'Demonstrated leadership in school or community',
-        'Strong character references',
-        'Outstanding entrance assessment scores'
-      ],
-      documents: ['Academic transcripts', 'Recommendation letters (2)', 'Personal statement', 'Awards/certificates'],
-      deadline: 'March 31, 2025',
-      amount: 'Up to 50% tuition coverage'
-    },
-    {
-      title: 'Bilingual Achievement Award',
-      description: 'For students demonstrating excellence in both Vietnamese and English',
-      criteria: [
-        'Proven bilingual proficiency (both languages)',
-        'Strong performance in language assessments',
-        'Cultural bridge-building activities',
-        'Commitment to bilingual education values'
-      ],
-      documents: ['Language test scores', 'Portfolio of bilingual work', 'Video introduction (bilingual)', 'Teacher recommendations'],
-      deadline: 'April 15, 2025',
-      amount: 'Up to 30% tuition coverage'
-    },
-    {
-      title: 'Need-Based Financial Aid',
-      description: 'Supporting families who need financial assistance to access quality education',
-      criteria: [
-        'Demonstrated financial need',
-        'Student shows academic promise',
-        'Family commitment to school values',
-        'Complete financial documentation'
-      ],
-      documents: ['Financial aid application', 'Income verification', 'Tax documents', 'Supporting statement'],
-      deadline: 'Rolling basis',
-      amount: 'Varies by need (up to 70%)'
-    },
-    {
-      title: 'Siblings & Loyalty Discount',
-      description: 'Rewarding families with multiple children at LHBS or long-term enrollment',
-      criteria: [
-        'Two or more siblings enrolled simultaneously',
-        'OR continuous enrollment for 3+ years',
-        'Good standing (academic & conduct)',
-        'Timely fee payments'
-      ],
-      documents: ['Enrollment verification', 'Family registration form'],
-      deadline: 'Automatic (at enrollment)',
-      amount: '10% per additional child'
-    }
-  ];
-
-  return (
-    <section id="scholarships" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white">
-      <div className="grid lg:grid-cols-2 gap-16">
-        {/* Left: Overview */}
-        <div>
-          <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-6">
-            Scholarships & Financial Support
-          </h2>
-          
-          <p className=" text-base md:text-lg text-[#212121] mb-6 leading-relaxed">
-            We believe that exceptional bilingual education should be accessible to talented students from all backgrounds. LHBS offers a comprehensive range of scholarships and financial aid options to support deserving families.
-          </p>
-          
-          <p className=" text-base text-[#212121] mb-8 leading-relaxed">
-            Our scholarship programs recognize academic excellence, bilingual achievement, leadership, and character. We also provide need-based financial aid to ensure that financial circumstances never prevent a qualified student from joining our community.
-          </p>
-          
-          <div className="bg-[#FABA1E]/10 border-l-4 border-[#FABA1E] p-6 mb-8">
-            <p className=" text-sm text-[#212121]">
-              <strong className="text-[#1a5336]">💡 Pro Tip:</strong> Many scholarships can be combined! A student may be eligible for both merit-based awards and sibling discounts. Contact our admissions team to explore all options.
-            </p>
-          </div>
-          
-          <div className="flex flex-col gap-4">
-            <a
-              href="/downloads/scholarship-policy-2025.pdf"
-              download
-              className="px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold flex items-center justify-center gap-2 hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-            >
-              <Download className="w-4 h-4" />
-              Scholarship Policy (PDF)
-            </a>
-            
-            <button
-              onClick={() => onNavigate('/admissions/financial-aid-application')}
-              className="px-8 h-12 border-2 border-[#1a5336] text-[#1a5336]  font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-            >
-              Apply for Financial Aid
-            </button>
-          </div>
-        </div>
-        
-        {/* Right: Accordion */}
-        <div>
-          <div className="space-y-4">
-            {scholarships.map((scholarship, index) => (
-              <ScholarshipAccordion
-                key={index}
-                scholarship={scholarship}
-                index={index}
-                isOpen={openAccordion === index}
-                onToggle={() => setOpenAccordion(openAccordion === index ? null : index)}
-                onNavigate={onNavigate}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-interface ScholarshipAccordionProps {
-  scholarship: any;
-  index: number;
-  isOpen: boolean;
-  onToggle: () => void;
+interface AdmissionsPageProps {
   onNavigate: (path: string) => void;
 }
 
-function ScholarshipAccordion({ scholarship, index, isOpen, onToggle, onNavigate }: ScholarshipAccordionProps) {
+export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const faqs = [
+    {
+      question: "Which grade levels does LHBS admit for the 2025–2026 school year?",
+      answer: "LHBS admits students to Grade 1, Grade 6, Grade 10, and accepts transfers to other grades. Each level has specific intake quotas and admissions run from 17/02/2025 until quotas are filled. Parents are encouraged to apply early to secure a place for their child."
+    },
+    {
+      question: "What documents are required for the application?",
+      answer: "The application requires: admission form, birth certificate (copy), household registration book (copy), academic records or school reports from the most recent year, health certificate, and 4 passport photos (3x4). Parents can submit applications online via tuyensinh.lhbs.vn or in person at the school."
+    },
+    {
+      question: "Does the school offer semi-boarding and school bus services?",
+      answer: "Yes, LHBS provides a safe semi-boarding programme with modern facilities for learning, play, and rest. Additionally, the school operates a comprehensive transportation system covering multiple routes in Bien Hoa and surrounding areas, ensuring safety and convenience for students."
+    },
+    {
+      question: "How is the Bilingual Programme at LHBS different from public schools?",
+      answer: "LHBS Bilingual Programme combines the MOET curriculum with Cambridge English and enrichment subjects. Students study both Vietnamese and English daily, developing critical thinking, 21st-century skills, and preparing for international pathways including Dual Diploma, 2+2 programmes, and study abroad opportunities."
+    },
+    {
+      question: "If my child transfers mid-year, will they be able to catch up with the programme?",
+      answer: "LHBS teachers assess each student's abilities and create personalised learning plans to help them integrate quickly. The school offers supplementary classes and support programmes to ensure transfer students can catch up and thrive in their new environment."
+    },
+    {
+      question: "Does LHBS offer scholarships?",
+      answer: "Yes, LHBS provides scholarships based on academic achievement, family circumstances, and community contribution. Parents can find detailed information on the Scholarships page or contact the Admissions Office to learn more about eligibility criteria and application deadlines."
+    }
+  ];
+
   return (
-    <div className="border-2 border-[#1a5336]">
-      {/* Header */}
-      <button
-        onClick={onToggle}
-        className="w-full p-6 flex items-center justify-between text-left hover:bg-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-        aria-expanded={isOpen}
+    <div className="w-full bg-[#fffae9]">
+      {/* 1. HERO SECTION */}
+      <section 
+        className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.85), rgba(26, 83, 54, 0.85)), url(https://images.unsplash.com/photo-1760917094679-d33f2ec13110?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBhZG1pc3Npb25zJTIwc3R1ZGVudHMlMjBjYW1wdXN8ZW58MXx8fHwxNzYzMTA1MTg1fDA&ixlib=rb-4.1.0&q=80&w=1080)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
       >
-        <div className="flex-1">
-          <h3 className=" text-xl md:text-2xl text-[#1a5336] mb-1">
-            {scholarship.title}
-          </h3>
-          <p className=" text-sm text-[#212121]">
-            {scholarship.amount}
-          </p>
-        </div>
-        
-        {isOpen ? (
-          <ChevronUp className="w-6 h-6 text-[#1a5336] flex-shrink-0" />
-        ) : (
-          <ChevronDown className="w-6 h-6 text-[#1a5336] flex-shrink-0" />
-        )}
-      </button>
-      
-      {/* Content */}
-      {isOpen && (
-        <div className="p-6 pt-0 border-t border-[#1a5336]/20">
-          <p className=" text-sm text-[#212121] mb-6">
-            {scholarship.description}
-          </p>
-          
-          {/* Criteria */}
-          <div className="mb-6">
-            <h4 className=" text-lg text-[#1a5336] mb-3">Eligibility Criteria:</h4>
-            <ul className="space-y-2">
-              {scholarship.criteria.map((criterion: string, i: number) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className=" text-sm text-[#212121]">{criterion}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          {/* Documents */}
-          <div className="mb-6">
-            <h4 className=" text-lg text-[#1a5336] mb-3">Required Documents:</h4>
-            <ul className="space-y-2">
-              {scholarship.documents.map((doc: string, i: number) => (
-                <li key={i} className="flex items-start gap-3">
-                  <FileText className="w-4 h-4 text-[#1a5336] flex-shrink-0 mt-0.5" />
-                  <span className=" text-sm text-[#212121]">{doc}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          {/* Deadline & CTA */}
-          <div className="bg-[#fffae9] p-4 mb-4">
-            <div className="flex items-center gap-2 mb-3">
-              <Clock className="w-4 h-4 text-[#1a5336]" />
-              <span className=" text-sm text-[#212121]">
-                <strong>Application Deadline:</strong> {scholarship.deadline}
-              </span>
-            </div>
-          </div>
-          
-          <button
-            onClick={() => onNavigate('/admissions/scholarship-application')}
-            className="w-full px-8 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
-          >
-            Apply for This Scholarship
-          </button>
-        </div>
-      )}
-    </div>
-  );
-}
-
-// ==================== SECTION 6: ENTRY REQUIREMENTS ====================
-function EntryRequirementsSection({ onNavigate }: { onNavigate: (path: string) => void }) {
-  const ageChart = [
-    { grade: 'Galaxy KG', age: '3-5 years', cutoffDate: 'Before August 31' },
-    { grade: 'Grade 1', age: '6 years', cutoffDate: 'Before August 31' },
-    { grade: 'Grade 6', age: '11 years', cutoffDate: 'Before August 31' },
-    { grade: 'Grade 10', age: '15 years', cutoffDate: 'Before August 31' }
-  ];
-
-  const requirements = [
-    {
-      title: 'Academic Records',
-      icon: FileText,
-      items: [
-        'Most recent report cards (2 years)',
-        'Teacher recommendations (current)',
-        'Standardized test scores (if applicable)',
-        'Portfolio of work (for transfer students)'
-      ]
-    },
-    {
-      title: 'English Proficiency',
-      icon: CheckCircle,
-      items: [
-        'Age-appropriate English assessment',
-        'Conversational fluency evaluation',
-        'Reading & writing samples',
-        'ESL support available for qualified students'
-      ]
-    },
-    {
-      title: 'Assessments',
-      icon: Trophy,
-      items: [
-        'Academic placement test (Math, Language)',
-        'English language proficiency test',
-        'Student & family interview',
-        'Behavioral/social assessment (for younger students)'
-      ]
-    },
-    {
-      title: 'Health Requirements',
-      icon: CheckCircle,
-      items: [
-        'Complete health examination form',
-        'Immunization records (up-to-date)',
-        'Vision & hearing screening',
-        'Special needs disclosure (if applicable)'
-      ]
-    },
-    {
-      title: 'Residency & Legal',
-      icon: FileText,
-      items: [
-        'Valid passport or birth certificate',
-        'Residence permit (for expat families)',
-        'Custody/guardianship documents',
-        'Previous school transfer documents'
-      ]
-    },
-    {
-      title: 'Transfer Students',
-      icon: ArrowRight,
-      items: [
-        'Official transcripts from previous school',
-        'Letter of good standing',
-        'Course descriptions (for credit evaluation)',
-        'May require additional assessments'
-      ]
-    }
-  ];
-
-  return (
-    <section id="entry" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
-      {/* Section Header */}
-      <div className="text-center mb-16">
-        <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
-          Entry Requirements
-        </h2>
-        <p className=" text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
-          Clear guidelines to help you prepare a complete application for your child.
-        </p>
-      </div>
-      
-      <div className="grid lg:grid-cols-2 gap-16 mb-12">
-        {/* Left: Age & Grade Placement */}
-        <div>
-          <h3 className=" text-3xl text-[#1a5336] mb-6">
-            Age & Grade Placement
-          </h3>
-          
-          <p className=" text-sm text-[#212121] mb-6">
-            Students must meet the minimum age requirement for their grade level by the cutoff date. 
-            Grade placement is determined by age, previous schooling, and assessment results.
-          </p>
-          
-          <div className="border-2 border-[#1a5336]">
-            <table className="w-full">
-              <thead>
-                <tr className="bg-[#1a5336] text-[#fffae9]">
-                  <th className=" text-lg text-left p-4">Grade Level</th>
-                  <th className=" text-lg text-left p-4">Age</th>
-                  <th className=" text-lg text-left p-4">Cutoff Date</th>
-                </tr>
-              </thead>
-              <tbody>
-                {ageChart.map((row, index) => (
-                  <tr key={index} className="border-b border-[#1a5336]/20 last:border-0">
-                    <td className=" text-sm p-4">{row.grade}</td>
-                    <td className=" text-sm p-4">{row.age}</td>
-                    <td className=" text-sm p-4">{row.cutoffDate}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          
-          <div className="mt-8">
-            <a
-              href="/downloads/admissions-policy-2025.pdf"
-              download
-              className="inline-flex items-center gap-2 px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-            >
-              <Download className="w-4 h-4" />
-              Download Admissions Policy (PDF)
-            </a>
-          </div>
-        </div>
-        
-        {/* Right: Requirements Grid */}
-        <div className="space-y-6">
-          {requirements.map((req, index) => (
-            <div key={index} className="border-2 border-[#1a5336] p-6">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-[#1a5336] flex items-center justify-center">
-                  <req.icon className="w-5 h-5 text-[#fffae9]" />
-                </div>
-                <h4 className=" text-xl text-[#1a5336]">
-                  {req.title}
-                </h4>
-              </div>
-              
-              <ul className="space-y-2">
-                {req.items.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="text-[#FABA1E] mt-1">•</span>
-                    <span className=" text-sm text-[#212121]">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ==================== SECTION 7: KEY DATES ====================
-function KeyDatesSection() {
-  const dates = [
-    {
-      category: 'Application Rounds',
-      events: [
-        { title: 'Round 1 Applications Open', date: 'October 1, 2024', status: 'past' },
-        { title: 'Round 1 Deadline', date: 'December 15, 2024', status: 'past' },
-        { title: 'Round 2 Applications Open', date: 'January 10, 2025', status: 'active' },
-        { title: 'Round 2 Deadline', date: 'March 31, 2025', status: 'upcoming' },
-        { title: 'Final Round Deadline', date: 'June 15, 2025', status: 'upcoming' }
-      ]
-    },
-    {
-      category: 'Placement Tests',
-      events: [
-        { title: 'Round 1 Assessments', date: 'January 15-20, 2025', status: 'past' },
-        { title: 'Round 2 Assessments', date: 'April 10-15, 2025', status: 'upcoming' },
-        { title: 'Final Round Assessments', date: 'June 20-25, 2025', status: 'upcoming' }
-      ]
-    },
-    {
-      category: 'Scholarship Deadlines',
-      events: [
-        { title: 'Merit Scholarship Applications', date: 'March 31, 2025', status: 'upcoming' },
-        { title: 'Bilingual Achievement Award', date: 'April 15, 2025', status: 'upcoming' },
-        { title: 'Need-Based Aid (Rolling)', date: 'Ongoing', status: 'active' }
-      ]
-    },
-    {
-      category: 'Orientation & Start',
-      events: [
-        { title: 'New Family Orientation', date: 'August 10, 2025', status: 'upcoming' },
-        { title: 'First Day of School', date: 'August 25, 2025', status: 'upcoming' }
-      ]
-    }
-  ];
-
-  return (
-    <section id="dates" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white">
-      {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
-        <div>
-          <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
-            Key Dates & Deadlines
-          </h2>
-          <p className=" text-base text-[#212121] max-w-[60ch]">
-            Plan ahead with our admissions calendar. Mark important dates to ensure a smooth application process.
-          </p>
-        </div>
-        
-        <div className="mt-6 md:mt-0">
-          <a
-            href="/downloads/admissions-calendar-2025.ics"
-            download
-            className="inline-flex items-center gap-2 px-6 h-10 border-2 border-[#1a5336] text-[#1a5336]  hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-          >
-            <Calendar className="w-4 h-4" />
-            Add to Calendar
-          </a>
-        </div>
-      </div>
-      
-      {/* Date Cards by Category */}
-      <div className="space-y-12">
-        {dates.map((category, catIndex) => (
-          <div key={catIndex}>
-            <h3 className=" text-2xl text-[#1a5336] mb-6">
-              {category.category}
-            </h3>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {category.events.map((event, eventIndex) => (
-                <div
-                  key={eventIndex}
-                  className={`border-2 p-6 ${
-                    event.status === 'active'
-                      ? 'border-[#FABA1E] bg-[#FABA1E]/5'
-                      : event.status === 'past'
-                      ? 'border-[#1a5336]/30 bg-[#1a5336]/5'
-                      : 'border-[#1a5336]'
-                  }`}
+        <div className="relative w-full max-w-screen-xl mx-auto px-6 md:px-12 py-24 md:py-32">
+          {/* Breadcrumb */}
+          <nav className="mb-6" aria-label="Breadcrumb">
+            <ol className="flex items-center gap-2 text-sm">
+              <li>
+                <button 
+                  onClick={() => onNavigate('/')}
+                  className="text-[#fffae9]/70 hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <div className={`px-3 py-1 text-xs  uppercase ${
-                      event.status === 'active'
-                        ? 'bg-[#FABA1E] text-[#1a5336]'
-                        : event.status === 'past'
-                        ? 'bg-[#1a5336]/20 text-[#1a5336]/60'
-                        : 'bg-[#1a5336]/10 text-[#1a5336]'
-                    }`}>
-                      {event.status === 'active' ? 'Open Now' : event.status === 'past' ? 'Closed' : 'Upcoming'}
-                    </div>
-                  </div>
-                  
-                  <h4 className=" text-lg text-[#1a5336] mb-2">
-                    {event.title}
-                  </h4>
-                  
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-[#1a5336]" />
-                    <span className=" text-sm text-[#212121]">
-                      {event.date}
-                    </span>
-                  </div>
-                </div>
-              ))}
+                  Home
+                </button>
+              </li>
+              <li><ChevronRight className="w-4 h-4 text-[#fffae9]/70" /></li>
+              <li className="text-[#fffae9] font-['Lexend_Deca']">Admissions</li>
+            </ol>
+          </nav>
+
+          {/* Hero Content */}
+          <div className="max-w-3xl">
+            <p className="text-[#FABA1E] mb-4 uppercase tracking-wider text-sm">
+              ADMISSIONS
+            </p>
+            <h1 
+              className="font-['SVN-Gotham'] text-white mb-4"
+              style={{ fontSize: '48px', lineHeight: '1.24' }}
+            >
+              LHBS ADMISSIONS
+            </h1>
+            <p className="text-[#FABA1E] mb-6 text-xl">
+              A strong foundation to become global citizens
+            </p>
+            <p className="text-[#fffae9]/90 mb-8 text-lg leading-relaxed max-w-2xl">
+              LHBS offers holistic bilingual education from Primary to High School, combining strong academic foundations with life skills, English proficiency, and 21st-century competencies to prepare students for global success.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a 
+                href="https://tuyensinh.lhbs.vn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors flex items-center justify-center"
+              >
+                Apply Online
+              </a>
+              <button 
+                onClick={() => onNavigate('/contact/contact-us')}
+                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
+              >
+                Contact Admissions Office
+              </button>
             </div>
           </div>
-        ))}
-      </div>
-      
-      {/* Get Reminders CTA */}
-      <div className="mt-12 text-center">
-        <button
-          onClick={() => window.open('mailto:admissions@lhbs.edu.vn?subject=Admissions Date Reminders', '_blank')}
-          className="px-12 h-12 bg-[#1a5336] text-[#fffae9]  font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-        >
-          Get Email Reminders
-        </button>
-      </div>
-    </section>
-  );
-}
+        </div>
+      </section>
 
-// ==================== SECTION 8: APPLY ONLINE ====================
-function ApplyOnlineSection({ onNavigate }: { onNavigate: (path: string) => void }) {
-  const checklist = [
-    "Student's birth certificate or passport",
-    'Recent academic transcripts (2 years)',
-    'Immunization & health records',
-    '2 passport-size photos',
-    'Previous school reports & recommendations',
-    'Parent/Guardian ID documents'
-  ];
+      {/* 2. WELCOMING YOU FROM THE START */}
+      <section className="bg-white py-24 md:py-32">
+        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left: Text */}
+            <div>
+              <h2 
+                className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+                style={{ fontSize: '48px', lineHeight: '1.24' }}
+              >
+                Welcome to Lac Hong Bilingual School
+              </h2>
+              <p className="text-[#212121] text-lg leading-relaxed mb-6">
+                Choosing an education environment means building the foundation for your child's future. At LHBS, we understand this responsibility and are committed to providing a comprehensive learning journey from Primary to High School.
+              </p>
+              <p className="text-[#212121] text-lg leading-relaxed mb-6">
+                Our bilingual programme combines strong academic knowledge, creative thinking, practical life skills, and a global citizenship mindset. We create an environment where students thrive academically, socially, and emotionally.
+              </p>
+              <p className="text-[#212121] text-lg leading-relaxed">
+                LHBS is more than a school—it's a safe, dynamic, and supportive community for both students and parents. We welcome families who share our vision of nurturing confident, compassionate, and capable young leaders.
+              </p>
+            </div>
 
-  return (
-    <section id="apply" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
-      <div className="max-w-[800px] mx-auto text-center">
-        {/* Header */}
-        <div className="mb-12">
-          <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
-            Ready to Apply?
-          </h2>
-          
-          <p className=" text-base md:text-lg text-[#212121] mb-6">
-            Our online application makes it easy to start your LHBS journey. Complete the form at your own pace—you can save and continue later.
-          </p>
-          
-          <div className="bg-[#1a5336]/5 border-l-4 border-[#1a5336] p-6 text-left">
-            <p className=" text-sm text-[#212121]">
-              <strong className="text-[#1a5336]">🔒 Your data is secure:</strong> We use industry-standard encryption to protect your personal information. We will never share your data with third parties without your consent. See our <button className="underline hover:text-[#FABA1E]">Privacy Policy</button> for details.
+            {/* Right: Image */}
+            <div className="relative h-[500px] lg:h-[600px]">
+              <ImageWithFallback 
+                src="https://images.unsplash.com/photo-1760210094557-7d9515843f10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjB0b3VyJTIwZmFtaWxpZXN8ZW58MXx8fHwxNzYzMTA1MTg2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Families visiting LHBS campus during school tour"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. WHO CAN JOIN - ENTRY REQUIREMENTS */}
+      <section className="bg-[#fffae9] py-24 md:py-32">
+        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-4">
+            <p className="text-[#FABA1E] mb-2 uppercase tracking-wider text-sm">
+              ENTRY REQUIREMENTS
+            </p>
+            <h2 
+              className="font-['SVN-Gotham'] text-[#1a5336] mb-12"
+              style={{ fontSize: '48px', lineHeight: '1.24' }}
+            >
+              Who Can Join LHBS?
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            {/* Left: Text */}
+            <div>
+              <p className="text-[#212121] text-lg leading-relaxed mb-8">
+                LHBS admits students across key levels—<strong>Grade 1, Grade 6, Grade 10</strong>, and transfer students to other grades—for the new school year. Admissions open from <strong>17/02/2025 until intake quotas are filled</strong>. Seats are limited, so we encourage parents to complete applications early.
+              </p>
+
+              {/* Intake Cards */}
+              <div className="space-y-4">
+                <div className="bg-white p-6 border-l-4 border-[#1a5336]">
+                  <div className="flex items-start justify-between mb-2">
+                    <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Grade 1</h3>
+                    <span className="px-3 py-1 bg-[#1a5336] text-[#fffae9] text-xs font-['Lexend_Deca']">224 students</span>
+                  </div>
+                  <p className="text-[#212121]/70 text-sm">
+                    Admissions from 17/02/2025 until quotas are filled
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 border-l-4 border-[#1a5336]">
+                  <div className="flex items-start justify-between mb-2">
+                    <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Grade 6</h3>
+                    <span className="px-3 py-1 bg-[#1a5336] text-[#fffae9] text-xs font-['Lexend_Deca']">224 students</span>
+                  </div>
+                  <p className="text-[#212121]/70 text-sm">
+                    Admissions from 17/02/2025 until quotas are filled
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 border-l-4 border-[#1a5336]">
+                  <div className="flex items-start justify-between mb-2">
+                    <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Grade 10</h3>
+                    <span className="px-3 py-1 bg-[#1a5336] text-[#fffae9] text-xs font-['Lexend_Deca']">180 students</span>
+                  </div>
+                  <p className="text-[#212121]/70 text-sm">
+                    Admissions from 17/02/2025 until quotas are filled
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 border-l-4 border-[#FABA1E]">
+                  <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-2">Transfer to Other Grades</h3>
+                  <p className="text-[#212121]/70 text-sm">
+                    Admissions until quotas are filled. Contact for more details.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <button 
+                  onClick={() => onNavigate('/admissions/announcement')}
+                  className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#14432b] transition-colors"
+                >
+                  View Full Admissions Announcement 2025–2026
+                </button>
+              </div>
+            </div>
+
+            {/* Right: Image */}
+            <div className="relative h-[500px] lg:h-[600px]">
+              <ImageWithFallback 
+                src="https://images.unsplash.com/photo-1609153315701-1a12bc6acf63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwcmVnaXN0cmF0iW9uJTIwZm9ybXN8ZW58MXx8fHwxNzYzMTA1MTg2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Student registration and admissions forms"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. SPEAK TO OUR ADMISSIONS TEAM */}
+      <section className="bg-white py-24 md:py-32">
+        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-4">
+            <p className="text-[#FABA1E] mb-2 uppercase tracking-wider text-sm">
+              HERE TO HELP
+            </p>
+            <h2 
+              className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+              style={{ fontSize: '48px', lineHeight: '1.24' }}
+            >
+              Speak to Our Admissions Team
+            </h2>
+            <p className="text-[#212121]/70 text-lg max-w-3xl mx-auto mb-12">
+              Our admissions team provides personalised guidance to help parents understand our programmes, intake timelines, and documentation requirements.
             </p>
           </div>
+
+          <div className="max-w-4xl mx-auto">
+            {/* Key Points */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              <div className="bg-[#fffae9] p-6 flex items-start gap-4">
+                <Users className="w-8 h-8 text-[#FABA1E] flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-2">Personalized Consultation Process</h3>
+                  <p className="text-[#212121]/70 text-sm">
+                    Each family receives tailored support aligned with their child's needs and goals
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-[#fffae9] p-6 flex items-start gap-4">
+                <Globe className="w-8 h-8 text-[#FABA1E] flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-2">Bilingual Support</h3>
+                  <p className="text-[#212121]/70 text-sm">
+                    Consultation available in both Vietnamese and English throughout the admissions process
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-[#fffae9] p-6 flex items-start gap-4">
+                <FileText className="w-8 h-8 text-[#FABA1E] flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-2">Detailed Information</h3>
+                  <p className="text-[#212121]/70 text-sm">
+                    Information about academic programmes, admissions timeline, tuition fees, and scholarships
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-[#fffae9] p-6 flex items-start gap-4">
+                <Heart className="w-8 h-8 text-[#FABA1E] flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-2">Support from Start to Finish</h3>
+                  <p className="text-[#212121]/70 text-sm">
+                    Assistance from application submission to official enrolment
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Details */}
+            <div className="bg-[#1a5336] p-8 text-center">
+              <h3 className="font-['SVN-Gotham'] text-2xl text-[#fffae9] mb-6">Contact Admissions Office</h3>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
+                <div className="flex items-center gap-3">
+                  <Phone className="w-6 h-6 text-[#FABA1E]" />
+                  <span className="text-[#fffae9] text-lg">0251 3952 953</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Mail className="w-6 h-6 text-[#FABA1E]" />
+                  <a href="mailto:tuyensinh@lhbs.vn" className="text-[#fffae9] text-lg hover:text-[#FABA1E] transition-colors">
+                    tuyensinh@lhbs.vn
+                  </a>
+                </div>
+              </div>
+              <button 
+                onClick={() => onNavigate('/contact/contact-us')}
+                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors"
+              >
+                Request Admissions Consultation
+              </button>
+            </div>
+          </div>
         </div>
-        
-        {/* What You'll Need */}
-        <div className="mb-12 text-left">
-          <h3 className=" text-2xl text-[#1a5336] mb-6 text-center">
-            What You'll Need
-          </h3>
-          
-          <div className="grid md:grid-cols-2 gap-4">
-            {checklist.map((item, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                <span className=" text-sm text-[#212121]">{item}</span>
+      </section>
+
+      {/* 5. STEP-BY-STEP ADMISSIONS PROCESS */}
+      <section className="bg-[#fffae9] py-24 md:py-32">
+        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-16">
+            <h2 
+              className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+              style={{ fontSize: '48px', lineHeight: '1.24' }}
+            >
+              Our Step-by-Step Admissions Process
+            </h2>
+            <p className="text-[#212121]/70 text-lg max-w-3xl mx-auto">
+              We've designed a clear, supportive admissions journey to make the process smooth for every family.
+            </p>
+          </div>
+
+          {/* Timeline Steps */}
+          <div className="space-y-8">
+            {/* Step 1 */}
+            <div className="bg-white p-8 border-l-4 border-[#1a5336]">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
+                  <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">1</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-3">Enquiry</h3>
+                  <p className="text-[#212121]/70 mb-4 leading-relaxed">
+                    Parents contact LHBS via hotline, email, website, or in-person visit to learn more about our programmes, facilities, and admissions process. Our team is ready to answer all your questions.
+                  </p>
+                  <button 
+                    onClick={() => onNavigate('/contact/contact-us')}
+                    className="px-6 h-10 bg-[#FABA1E] text-[#1a5336] font-['Arial'] text-sm hover:bg-[#e5a812] transition-colors"
+                  >
+                    Request Consultation
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-white p-8 border-l-4 border-[#1a5336]">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
+                  <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">2</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-3">School Tour</h3>
+                  <p className="text-[#212121]/70 mb-4 leading-relaxed">
+                    The admissions team arranges a campus tour or online consultation so families can experience our learning environment, meet teachers, and see our facilities firsthand. This helps you understand what makes LHBS special.
+                  </p>
+                  <button 
+                    onClick={() => onNavigate('/contact/book-tour')}
+                    className="px-6 h-10 bg-[#FABA1E] text-[#1a5336] font-['Arial'] text-sm hover:bg-[#e5a812] transition-colors"
+                  >
+                    Book a Tour
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-white p-8 border-l-4 border-[#1a5336]">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
+                  <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">3</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-3">Online Application</h3>
+                  <p className="text-[#212121]/70 mb-4 leading-relaxed">
+                    Parents complete the online application via tuyensinh.lhbs.vn and submit required documents (student information, previous academic reports, health certificate, etc.). Our system guides you through each step.
+                  </p>
+                  <a 
+                    href="https://tuyensinh.lhbs.vn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 h-10 bg-[#FABA1E] text-[#1a5336] font-['Arial'] text-sm hover:bg-[#e5a812] transition-colors leading-10"
+                  >
+                    Apply Online
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="bg-white p-8 border-l-4 border-[#1a5336]">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
+                  <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">4</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-3">Assessment & Placement</h3>
+                  <p className="text-[#212121]/70 leading-relaxed">
+                    LHBS reviews the application and arranges assessments or interviews if needed. We evaluate each student's readiness and propose the most suitable class level to ensure their success and comfort in our learning environment.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 5 */}
+            <div className="bg-white p-8 border-l-4 border-[#1a5336]">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
+                  <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">5</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-3">Offer & Enrolment</h3>
+                  <p className="text-[#212121]/70 leading-relaxed">
+                    LHBS confirms the admission result. Parents complete registration fees and deposit within the given timeframe to secure the seat. Our admissions team guides you through the enrolment process and answers any final questions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 6 */}
+            <div className="bg-white p-8 border-l-4 border-[#FABA1E]">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 bg-[#FABA1E] flex items-center justify-center flex-shrink-0">
+                  <span className="font-['SVN-Gotham'] text-2xl text-[#1a5336]">6</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-3">Orientation & First School Day</h3>
+                  <p className="text-[#212121]/70 leading-relaxed">
+                    The school prepares orientation activities so students can familiarise themselves with the campus, meet teachers and classmates, and feel confident before or during their first days at LHBS. Welcome to the LHBS family!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. KEY DATES */}
+      <section className="bg-white py-24 md:py-32">
+        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-12">
+            <h2 
+              className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+              style={{ fontSize: '48px', lineHeight: '1.24' }}
+            >
+              Key Admissions & School Dates
+            </h2>
+            <p className="text-[#212121]/70 text-lg max-w-3xl mx-auto">
+              Important milestones for the 2025–2026 school year to help you plan ahead.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-[#fffae9] p-8">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4 pb-6 border-b border-[#1a5336]/20">
+                  <Calendar className="w-8 h-8 text-[#FABA1E] flex-shrink-0 mt-1" />
+                  <div className="flex-1">
+                    <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-2">Admissions 2025–2026 School Year</h3>
+                    <p className="text-[#212121]/70">
+                      <strong>From 17/02/2025 until quotas are filled</strong> – Grade 1, 6, 10, and transfer to other grades
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 pb-6 border-b border-[#1a5336]/20">
+                  <Calendar className="w-8 h-8 text-[#FABA1E] flex-shrink-0 mt-1" />
+                  <div className="flex-1">
+                    <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-2">New School Year Begins</h3>
+                    <p className="text-[#212121]/70">
+                      August 2025 (details will be announced upon official academic calendar release)
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-8 h-8 text-[#FABA1E] flex-shrink-0 mt-1" />
+                  <div className="flex-1">
+                    <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-2">Recommended Application Deadline</h3>
+                    <p className="text-[#212121]/70">
+                      Submit application before <strong>30/06/2025</strong> to secure a place and allow sufficient preparation time
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-8">
+              <button 
+                onClick={() => onNavigate('/academics/calendar')}
+                className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#14432b] transition-colors"
+              >
+                View Academic Calendar
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. TUITION FEES */}
+      <section className="bg-[#fffae9] py-24 md:py-32">
+        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-12">
+            <h2 
+              className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+              style={{ fontSize: '48px', lineHeight: '1.24' }}
+            >
+              Tuition Fees
+            </h2>
+            <p className="text-[#212121]/70 text-lg max-w-3xl mx-auto">
+              LHBS provides a transparent fee structure aligned with the quality of our education, modern facilities, comprehensive extracurricular programmes, and services including semi-boarding and school transportation.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-8 text-center border-t-4 border-[#1a5336]">
+              <DollarSign className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
+              <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-4">Primary–Lower Secondary–High School Fees</h3>
+              <p className="text-[#212121]/70 text-sm mb-6">
+                Tuition fees for Primary, Lower Secondary, and High School levels
+              </p>
+              <button 
+                onClick={() => onNavigate('/admissions/tuition-fees')}
+                className="px-6 h-10 bg-[#1a5336] text-[#fffae9] font-['Arial'] text-sm hover:bg-[#14432b] transition-colors w-full"
+              >
+                View Details
+              </button>
+            </div>
+
+            <div className="bg-white p-8 text-center border-t-4 border-[#1a5336]">
+              <BookOpen className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
+              <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-4">Kindergarten Bien Hoa Fees</h3>
+              <p className="text-[#212121]/70 text-sm mb-6">
+                Tuition fees for Kindergarten at Bien Hoa campus
+              </p>
+              <button 
+                onClick={() => onNavigate('/admissions/tuition-fees')}
+                className="px-6 h-10 bg-[#1a5336] text-[#fffae9] font-['Arial'] text-sm hover:bg-[#14432b] transition-colors w-full"
+              >
+                View Details
+              </button>
+            </div>
+
+            <div className="bg-white p-8 text-center border-t-4 border-[#1a5336]">
+              <Building className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
+              <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-4">Kindergarten Long Khanh Fees</h3>
+              <p className="text-[#212121]/70 text-sm mb-6">
+                Tuition fees for Kindergarten at Long Khanh campus
+              </p>
+              <button 
+                onClick={() => onNavigate('/admissions/tuition-fees')}
+                className="px-6 h-10 bg-[#1a5336] text-[#fffae9] font-['Arial'] text-sm hover:bg-[#14432b] transition-colors w-full"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. SCHOLARSHIPS & SPECIAL PROGRAMMES */}
+      <section className="bg-white py-24 md:py-32">
+        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-12">
+            <h2 
+              className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+              style={{ fontSize: '48px', lineHeight: '1.24' }}
+            >
+              Scholarships & Special Programmes
+            </h2>
+            <p className="text-[#212121]/70 text-lg max-w-3xl mx-auto">
+              LHBS offers scholarship opportunities based on academic achievement, family circumstances, and community contribution. We encourage parents to check scholarship conditions and application timelines.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto bg-[#fffae9] p-12 text-center">
+            <Trophy className="w-16 h-16 text-[#FABA1E] mx-auto mb-6" />
+            <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-4">LHBS Scholarships</h3>
+            <p className="text-[#212121]/70 mb-8 max-w-2xl mx-auto">
+              Scholarships based on academic achievement, family circumstances, special talents, and community contribution. Support ranges from partial to full tuition coverage, helping students from challenging backgrounds access quality education.
+            </p>
+            <button 
+              onClick={() => onNavigate('/admissions/scholarships')}
+              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors"
+            >
+              View Scholarship Information
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. WHY CHOOSE LHBS */}
+      <section className="bg-[#fffae9] py-24 md:py-32">
+        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-4">
+            <h2 
+              className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+              style={{ fontSize: '48px', lineHeight: '1.24' }}
+            >
+              Why Choose LHBS?
+            </h2>
+            <p className="text-[#212121]/70 text-lg max-w-3xl mx-auto mb-16">
+              A dynamic, caring bilingual environment for holistic development.
+            </p>
+          </div>
+
+          {/* Advantage Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <div className="bg-white p-8 text-center">
+              <Users className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
+              <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-3">Dynamic, Friendly Learning Environment</h3>
+              <p className="text-[#212121]/70 text-sm">
+                Diverse, safe community that encourages creativity and holistic development
+              </p>
+            </div>
+
+            <div className="bg-white p-8 text-center">
+              <Sparkles className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
+              <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-3">Active, Creative Learning Methods</h3>
+              <p className="text-[#212121]/70 text-sm">
+                Enhanced English, IT, STEM, and 21st-century skills
+              </p>
+            </div>
+
+            <div className="bg-white p-8 text-center">
+              <Building className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
+              <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-3">Green Spaces, Modern Facilities</h3>
+              <p className="text-[#212121]/70 text-sm">
+                Well-invested classrooms, labs, libraries, and sports areas
+              </p>
+            </div>
+
+            <div className="bg-white p-8 text-center">
+              <Target className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
+              <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-3">Clear Graduate Pathways</h3>
+              <p className="text-[#212121]/70 text-sm">
+                Progression from Primary → Lower Secondary → High School → University in Vietnam or abroad
+              </p>
+            </div>
+          </div>
+
+          {/* Stats Row */}
+          <div className="bg-[#1a5336] p-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="font-['SVN-Gotham'] text-4xl text-[#FABA1E] mb-2">2,600+</div>
+                <div className="text-[#fffae9]/80 text-sm">Students</div>
+              </div>
+              <div>
+                <div className="font-['SVN-Gotham'] text-4xl text-[#FABA1E] mb-2">170+</div>
+                <div className="text-[#fffae9]/80 text-sm">Teachers</div>
+              </div>
+              <div>
+                <div className="font-['SVN-Gotham'] text-4xl text-[#FABA1E] mb-2">100%</div>
+                <div className="text-[#fffae9]/80 text-sm">High School Graduates</div>
+              </div>
+              <div>
+                <div className="font-['SVN-Gotham'] text-4xl text-[#FABA1E] mb-2">52</div>
+                <div className="text-[#fffae9]/80 text-sm">Quality Certifications</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 10. QUESTIONS (FAQ) */}
+      <section className="bg-white py-24 md:py-32">
+        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-12">
+            <h2 
+              className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+              style={{ fontSize: '48px', lineHeight: '1.24' }}
+            >
+              Questions About Admissions
+            </h2>
+            <p className="text-[#212121]/70 text-lg max-w-3xl mx-auto">
+              Here are answers to common questions from parents about the LHBS admissions process.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-[#fffae9] border border-[#1a5336]/20">
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="w-full p-6 flex items-start justify-between gap-4 text-left hover:bg-white/50 transition-colors"
+                >
+                  <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] flex-1">
+                    {faq.question}
+                  </h3>
+                  {openFaq === index ? (
+                    <ChevronUp className="w-6 h-6 text-[#FABA1E] flex-shrink-0" />
+                  ) : (
+                    <ChevronDown className="w-6 h-6 text-[#FABA1E] flex-shrink-0" />
+                  )}
+                </button>
+                {openFaq === index && (
+                  <div className="px-6 pb-6">
+                    <p className="text-[#212121]/70 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
-        </div>
-        
-        {/* Estimated Time */}
-        <div className="mb-12 flex items-center justify-center gap-3 text-[#212121]">
-          <Clock className="w-5 h-5 text-[#1a5336]" />
-          <span className=" text-sm">
-            <strong>Estimated time:</strong> 20-30 minutes
-          </span>
-        </div>
-        
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <button
-            onClick={() => onNavigate('/admissions/apply-now')}
-            className="px-12 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
-          >
-            START APPLICATION
-          </button>
-          
-          <button
-            onClick={() => onNavigate('/contact/admissions-counselor')}
-            className="px-12 h-12 border-2 border-[#1a5336] text-[#1a5336]  font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-          >
-            TALK TO A COUNSELOR
-          </button>
-        </div>
-        
-        {/* Save & Continue Note */}
-        <p className=" text-sm text-[#212121]/70">
-          💾 Don't worry—you can save your progress and continue later. We'll send you a link to resume.
-        </p>
-      </div>
-    </section>
-  );
-}
 
-// ==================== SECTION 9: HELPER FOOTER ====================
-function HelperFooterAdmissions() {
-  const hfHotline = '+84 (28) 3771 4568';
-  const hfEmail = 'admissions@lhbs.edu.vn';
-  const hfWhatsApp = '+84 90 123 4567';
-
-  return (
-    <section className="bg-[#1a5336] py-6 px-4 md:px-20">
-      <div className="max-w-[1440px] mx-auto">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          {/* Left: Text */}
-          <div>
-            <p className=" text-xl text-[#fffae9] mb-1">
-              Need Help With Your Application?
+          <div className="text-center mt-8">
+            <p className="text-[#212121]/70 mb-4">
+              Need more detailed information?
             </p>
-            <p className=" text-sm text-[#fffae9]/80">
-              Our admissions team is here to assist you every step of the way.
-            </p>
+            <button 
+              onClick={() => onNavigate('/resources/parent-handbook')}
+              className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#14432b] transition-colors"
+            >
+              Download Parent Handbook
+            </button>
           </div>
-          
-          {/* Right: Contact Options */}
-          <div className="flex flex-wrap gap-4">
-            <a
-              href={`tel:${hfHotline.replace(/\s/g, '')}`}
-              className="flex items-center gap-2 px-6 h-10 bg-[#fffae9] text-[#1a5336]  text-sm hover:bg-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-            >
-              <Phone className="w-4 h-4" />
-              <span>{hfHotline}</span>
-            </a>
-            
-            <a
-              href={`mailto:${hfEmail}`}
-              className="flex items-center gap-2 px-6 h-10 bg-[#fffae9] text-[#1a5336]  text-sm hover:bg-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-            >
-              <Mail className="w-4 h-4" />
-              <span>Email</span>
-            </a>
-            
-            <a
-              href={`https://wa.me/${hfWhatsApp.replace(/\s/g, '')}`}
+        </div>
+      </section>
+
+      {/* 11. FINAL CTA - READY TO APPLY */}
+      <section className="bg-[#1a5336] py-24 md:py-32">
+        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12 text-center">
+          <h2 
+            className="font-['SVN-Gotham'] text-[#fffae9] mb-6"
+            style={{ fontSize: '48px', lineHeight: '1.24' }}
+          >
+            Ready to Apply?
+          </h2>
+          <p className="text-[#fffae9]/90 text-lg leading-relaxed max-w-3xl mx-auto mb-12">
+            Admissions for the 2025–2026 school year are now open. We are ready to partner with families in choosing the best learning environment for your child.
+          </p>
+
+          {/* Final CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="https://tuyensinh.lhbs.vn"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 h-10 bg-[#fffae9] text-[#1a5336]  text-sm hover:bg-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors flex items-center justify-center"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>WhatsApp</span>
+              Apply Online
             </a>
+            <button 
+              onClick={() => onNavigate('/contact/contact-us')}
+              className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
+            >
+              Request Admissions Consultation
+            </button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

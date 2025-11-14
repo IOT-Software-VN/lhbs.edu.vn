@@ -57,8 +57,11 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
           {/* Desktop Layout */}
           {!isMobile ? (
             <motion.div
-              className="fixed top-[72px] left-0 right-0 z-50 bg-[#1a5336]"
-              style={{ height: '50vh' }}
+              className="fixed left-0 right-0 z-50 bg-[#1a5336]"
+              style={{ 
+                top: 'calc(72px + 2rem)', // Account for header height + padding
+                height: '50vh' 
+              }}
               initial={{ y: '-100%', opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: '-100%', opacity: 0 }}
@@ -165,7 +168,8 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
           ) : (
             /* Mobile Layout - Single Column Accordion */
             <motion.div
-              className="fixed top-[72px] left-0 right-0 bottom-0 z-50 bg-[#1a5336] overflow-y-auto"
+              className="fixed left-0 right-0 bottom-0 z-50 bg-[#1a5336] overflow-y-auto"
+              style={{ top: 'calc(72px + 0.5rem)' }} // Account for header height + padding
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}

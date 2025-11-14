@@ -24,7 +24,7 @@ export function HomePage({ onNavigate }: { onNavigate: (path: string) => void })
   const [showPillarModal, setShowPillarModal] = useState<number | null>(null);
   
   return (
-    <div className="relative bg-[#fffae9]">
+    <div className="relative bg-white">
       {/* Hero Section - Full-width BVIS style */}
       <BVISHero onNavigate={onNavigate} />
       
@@ -81,7 +81,7 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9] overflow-hidden"
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white overflow-hidden"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
@@ -170,7 +170,7 @@ function EducationLevelItem({ label, link, onNavigate, delay, isInView }: Educat
   return (
     <motion.button
       onClick={() => onNavigate(link)}
-      className="w-full flex items-center justify-between px-4 md:px-6 h-[52px] md:h-[56px] border border-[#1a5336] text-left cursor-pointer hover:bg-[#fffae9]/60 transition-all group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 rounded-lg"
+      className="w-full flex items-center justify-between px-4 md:px-6 h-[52px] md:h-[56px] border border-[#1a5336] text-left cursor-pointer hover:bg-gray-50 transition-all group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 !rounded-lg"
       initial={{ opacity: 0, x: -20 }}
       animate={isInView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.6, delay: 0.6 + delay }}
@@ -283,7 +283,7 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
   return (
     <motion.section
       ref={ref}
-      className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]"
+      className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
     >
