@@ -260,8 +260,8 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
         {/* Hero Content */}
         <div className="relative z-10 w-full px-4 md:px-20 max-w-[1200px] mx-auto flex-1 flex flex-col justify-center pb-16 md:pb-24 pt-4">
           <motion.h1
-            className="font-['Crimson_Pro'] text-white text-[32px] md:text-[56px] mb-4 max-w-[22ch]"
-            style={{ lineHeight: '1.1' }}
+            className="font-['Crimson_Pro'] text-white text-[32px] md:text-[48px] mb-4 max-w-[22ch]"
+            style={{ lineHeight: '1.24' }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}

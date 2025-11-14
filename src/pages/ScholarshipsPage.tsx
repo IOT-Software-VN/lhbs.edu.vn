@@ -331,7 +331,7 @@ function CriteriaMatrixSection() {
         </p>
         
         {/* Weighting Bar */}
-        <div className="mb-12 mx-auto">
+        <div className="mb-12 max-w-[900px] mx-auto">
           <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-4">
             Evaluation Weighting
           </h3>

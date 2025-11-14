@@ -333,7 +333,7 @@ function ProcessSection({ onNavigate }: { onNavigate: (path: string) => void }) 
         <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
           Admissions Process
         </h2>
-        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-[75ch] mx-auto">
+        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
           Our straightforward 6-step process ensures a smooth journey from inquiry to enrollment.
         </p>
       </div>
@@ -357,7 +357,7 @@ function ProcessSection({ onNavigate }: { onNavigate: (path: string) => void }) 
                 
                 {/* Content */}
                 <div className="text-center">
-                  <h3 className="font-['Crimson_Pro'] text-lg text-[#1a5336] mb-2 font-semibold">
+                  <h3 className="font-['Crimson_Pro'] text-lg text-[#1a5336] mb-2">
                     {step.title}
                   </h3>
                   <p className="font-['Lexend_Deca'] text-xs text-[#212121] mb-3 line-clamp-3">
@@ -481,7 +481,7 @@ function TuitionFeesSection({ onNavigate }: { onNavigate: (path: string) => void
         <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
           Tuition & Fees
         </h2>
-        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-[75ch] mx-auto mb-8">
+        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto mb-8">
           Transparent pricing for world-class bilingual education. All fees are in Vietnamese Dong (VND).
         </p>
         
@@ -496,7 +496,7 @@ function TuitionFeesSection({ onNavigate }: { onNavigate: (path: string) => void
           </a>
           
           <button
-            onClick={() => onNavigate('/admissions/tuition-fees')}
+            onClick={() => onNavigate('/admissions/fee-calculator')}
             className="px-8 h-12 border-2 border-[#1a5336] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
           >
             Estimate Your Total

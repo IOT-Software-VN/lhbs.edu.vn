@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { siteNavigation, NavParent } from '../types/navigation';
-import { X, Search, ChevronRight } from 'lucide-react';
+import { siteNavigation, moreLinks, NavParent } from '../types/navigation';
+import { ChevronRight, ArrowRight } from 'lucide-react';
 
 interface FullScreenMenuProps {
   isOpen: boolean;
@@ -11,13 +11,12 @@ interface FullScreenMenuProps {
 }
 
 export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: FullScreenMenuProps) {
-  const [selectedParent, setSelectedParent] = useState<NavParent | null>(siteNavigation[0]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [activeParent, setActiveParent] = useState<NavParent | null>(siteNavigation[0]);
   const [isMobile, setIsMobile] = useState(false);
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
@@ -42,211 +41,220 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
     onClose();
   };
 
-  const filteredParents = searchQuery
-    ? siteNavigation.filter(parent =>
-        parent.label.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        parent.children.some(child => child.label.toLowerCase().includes(searchQuery.toLowerCase()))
-      )
-    : siteNavigation;
-
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div
-          className="fixed inset-0 z-[200] bg-[#1a5336] overflow-hidden"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-        >
+        <>
+          {/* Overlay */}
+          <motion.div
+            className="fixed inset-0 z-40 bg-black/50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+          />
+
           {/* Desktop Layout */}
           {!isMobile ? (
-            <div className="h-full flex flex-col">
-              {/* Header */}
-              <div className="border-b border-white/20 px-20 py-6 flex items-center justify-between">
-                <div className="flex items-center gap-4 flex-1 max-w-md">
-                  <Search className="w-5 h-5 text-white/60" />
-                  <input
-                    type="text"
-                    placeholder="Search pages…"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="flex-1 bg-transparent border-none outline-none text-white placeholder:text-white/40 font-['Lexend_Deca']"
-                    autoFocus
-                  />
-                </div>
-                <button
-                  onClick={onClose}
-                  className="text-white hover:text-[#FABA1E] transition-colors p-2"
-                  aria-label="Close menu"
-                >
-                  <X className="w-8 h-8" />
-                </button>
-              </div>
-
-              {/* 3-Column Layout */}
-              <div className="flex-1 grid grid-cols-12 overflow-hidden">
-                {/* Left Column - Parents */}
-                <div className="col-span-3 border-r border-white/20 overflow-y-auto p-8">
-                  <h3 className="font-['Arial'] font-bold text-white/60 text-sm mb-6 uppercase tracking-wider">
-                    Main Navigation
-                  </h3>
-                  <nav className="space-y-2">
-                    {filteredParents.map((parent) => (
+            <motion.div
+              className="fixed top-[72px] left-0 right-0 z-50 bg-[#1a5336]"
+              style={{ height: '50vh' }}
+              initial={{ y: '-100%', opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: '-100%', opacity: 0 }}
+              transition={{ duration: 0.4, ease: 'easeInOut' }}
+            >
+              {/* Three Column Layout */}
+              <div className="h-full max-w-[1320px] mx-auto px-12 py-12 pb-24 flex gap-12">
+                
+                {/* Column 1 - Primary Navigation (40%) */}
+                <div className="w-[40%] border-r border-white/20 pr-12">
+                  <nav className="space-y-6" aria-label="Main sections">
+                    {siteNavigation.map((parent) => (
                       <button
                         key={parent.id}
-                        onClick={() => setSelectedParent(parent)}
-                        className={`w-full text-left px-6 py-4 transition-all group ${
-                          selectedParent?.id === parent.id
-                            ? 'bg-white/10 text-white'
-                            : 'text-white/70 hover:text-white hover:bg-white/5'
+                        onMouseEnter={() => setActiveParent(parent)}
+                        onFocus={() => setActiveParent(parent)}
+                        onClick={() => handleNavClick(parent.path)}
+                        className={`block w-full text-left font-['Crimson_Pro'] text-[36px] uppercase tracking-wide transition-all group ${
+                          activeParent?.id === parent.id
+                            ? 'text-white'
+                            : 'text-white/50 hover:text-white/80'
                         }`}
                       >
-                        <div className="font-['Crimson_Pro'] text-2xl mb-1">{parent.label}</div>
-                        <div className="font-['Lexend_Deca'] text-sm text-white/50 group-hover:text-white/70">
-                          {parent.description}
-                        </div>
+                        {parent.label}
                       </button>
                     ))}
                   </nav>
                 </div>
 
-                {/* Middle Column - Children */}
-                <div className="col-span-4 border-r border-white/20 overflow-y-auto p-8">
-                  {selectedParent && (
-                    <>
-                      <h3 className="font-['Arial'] font-bold text-white/60 text-sm mb-6 uppercase tracking-wider">
-                        {selectedParent.label}
+                {/* Column 2 - Active Section Submenu (30%) */}
+                <div className="w-[30%] border-r border-white/20 pr-12">
+                  {activeParent && (
+                    <div>
+                      <h3 className="font-['Arial'] text-white text-[18px] uppercase tracking-wider mb-6">
+                        {activeParent.label}
                       </h3>
-                      <nav className="space-y-1">
-                        <button
-                          onClick={() => handleNavClick(selectedParent.path)}
-                          className="w-full text-left px-6 py-4 text-white/70 hover:text-white hover:bg-white/5 transition-all border-b border-white/10"
-                        >
-                          <div className="font-['Crimson_Pro'] text-xl flex items-center justify-between">
-                            Overview
-                            <ChevronRight className="w-5 h-5" />
-                          </div>
-                        </button>
-                        {selectedParent.children.map((child) => (
+                      <nav className="space-y-3 mb-6" aria-label={`${activeParent.label} pages`}>
+                        {activeParent.children.map((child) => (
                           <button
                             key={child.id}
                             onClick={() => handleNavClick(child.path)}
-                            className={`w-full text-left px-6 py-4 transition-all group ${
+                            className={`block w-full text-left font-['Lexend_Deca'] text-[15px] transition-colors group ${
                               currentPath === child.path
-                                ? 'bg-[#FABA1E]/20 text-[#FABA1E]'
-                                : 'text-white/70 hover:text-white hover:bg-white/5'
+                                ? 'text-[#FABA1E]'
+                                : 'text-white hover:text-[#FABA1E]'
                             }`}
                           >
-                            <div className="font-['Crimson_Pro'] text-xl mb-1 flex items-center justify-between">
-                              {child.label}
-                              <ChevronRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            <div className="font-['Lexend_Deca'] text-sm text-white/50">
-                              {child.description}
+                            <div className="flex items-center justify-between">
+                              <span>{child.label}</span>
+                              <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </div>
                           </button>
                         ))}
                       </nav>
-                    </>
-                  )}
-                </div>
-
-                {/* Right Column - Preview */}
-                <div className="col-span-5 overflow-y-auto p-8">
-                  {selectedParent && (
-                    <div className="max-w-lg">
-                      <div className="bg-white/10 aspect-video mb-6 flex items-center justify-center text-white/40">
-                        <span className="font-['Lexend_Deca'] text-sm">Page Preview</span>
-                      </div>
-                      <h2 className="font-['Crimson_Pro'] text-4xl text-white mb-4">
-                        {selectedParent.label}
-                      </h2>
-                      <p className="font-['Lexend_Deca'] text-white/70 text-lg mb-8 leading-relaxed">
-                        {selectedParent.description}
-                      </p>
-                      <button
-                        onClick={() => handleNavClick(selectedParent.path)}
-                        className="px-8 py-4 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors"
-                      >
-                        View Page
-                      </button>
+                      {activeParent.cta && (
+                        <button
+                          onClick={() => handleNavClick(activeParent.cta!.path)}
+                          className="w-full px-6 py-3 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold text-sm hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                        >
+                          {activeParent.cta.text}
+                        </button>
+                      )}
                     </div>
                   )}
                 </div>
-              </div>
-            </div>
-          ) : (
-            /* Mobile Layout */
-            <div className="h-full flex flex-col">
-              {/* Mobile Header */}
-              <div className="border-b border-white/20 px-4 py-4 flex items-center justify-between">
-                <div className="flex items-center gap-2 flex-1">
-                  <Search className="w-4 h-4 text-white/60" />
-                  <input
-                    type="text"
-                    placeholder="Search…"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="flex-1 bg-transparent border-none outline-none text-white placeholder:text-white/40 font-['Lexend_Deca'] text-sm"
-                  />
+
+                {/* Column 3 - Discover More (30%) */}
+                <div className="w-[30%]">
+                  <h3 className="font-['Arial'] text-white/60 text-[14px] uppercase tracking-wider mb-6">
+                    Discover More
+                  </h3>
+                  <nav className="space-y-3" aria-label="Additional pages">
+                    {moreLinks.map((link, index) => (
+                      <button
+                        key={index}
+                        onClick={() => handleNavClick(link.path)}
+                        className="block w-full text-left font-['Lexend_Deca'] text-[15px] text-white hover:text-[#FABA1E] transition-colors group"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span>{link.label}</span>
+                          <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </div>
+                      </button>
+                    ))}
+                  </nav>
                 </div>
-                <button onClick={onClose} className="text-white p-2">
-                  <X className="w-6 h-6" />
-                </button>
               </div>
 
-              {/* Mobile Accordion */}
-              <div className="flex-1 overflow-y-auto p-4">
-                {filteredParents.map((parent) => (
-                  <div key={parent.id} className="mb-2">
-                    <button
-                      onClick={() => setExpandedMobile(expandedMobile === parent.id ? null : parent.id)}
-                      className="w-full text-left px-4 py-4 bg-white/10 text-white"
-                    >
-                      <div className="font-['Crimson_Pro'] text-xl flex items-center justify-between">
+              {/* Bottom Cyan Strip */}
+              <div className="absolute bottom-0 left-0 right-0 h-[52px] bg-[#3a8f66] flex items-center justify-center">
+                <div className="flex items-center gap-3">
+                  <span className="font-['Lexend_Deca'] text-white text-sm">
+                    Part of the LHBS bilingual education community
+                  </span>
+                  <button 
+                    className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+                    aria-label="Learn more"
+                  >
+                    <ArrowRight className="w-4 h-4 text-white" />
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          ) : (
+            /* Mobile Layout - Single Column Accordion */
+            <motion.div
+              className="fixed top-[72px] left-0 right-0 bottom-0 z-50 bg-[#1a5336] overflow-y-auto"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+            >
+              <div className="p-6">
+                {/* Main Sections */}
+                <nav className="space-y-2">
+                  {siteNavigation.map((parent) => (
+                    <div key={parent.id} className="border-b border-white/10">
+                      <button
+                        onClick={() => setExpandedMobile(expandedMobile === parent.id ? null : parent.id)}
+                        className="w-full text-left py-4 font-['Crimson_Pro'] text-[24px] text-white flex items-center justify-between"
+                      >
                         {parent.label}
                         <motion.div
                           animate={{ rotate: expandedMobile === parent.id ? 90 : 0 }}
                           transition={{ duration: 0.2 }}
                         >
-                          <ChevronRight className="w-5 h-5" />
+                          <ChevronRight className="w-6 h-6" />
                         </motion.div>
-                      </div>
-                    </button>
-                    <AnimatePresence>
-                      {expandedMobile === parent.id && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.25 }}
-                          className="overflow-hidden bg-white/5"
-                        >
-                          <button
-                            onClick={() => handleNavClick(parent.path)}
-                            className="w-full text-left px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 border-b border-white/10"
+                      </button>
+                      <AnimatePresence>
+                        {expandedMobile === parent.id && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.25 }}
+                            className="overflow-hidden pb-4"
                           >
-                            <div className="font-['Lexend_Deca'] text-sm">See all {parent.label}</div>
-                          </button>
-                          {parent.children.map((child) => (
-                            <button
-                              key={child.id}
-                              onClick={() => handleNavClick(child.path)}
-                              className="w-full text-left px-6 py-3 text-white/70 hover:text-white hover:bg-white/5"
-                            >
-                              <div className="font-['Lexend_Deca']">{child.label}</div>
-                            </button>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                            <div className="space-y-2 pl-4">
+                              {parent.children.map((child) => (
+                                <button
+                                  key={child.id}
+                                  onClick={() => handleNavClick(child.path)}
+                                  className={`block w-full text-left py-2 font-['Lexend_Deca'] text-[15px] ${
+                                    currentPath === child.path
+                                      ? 'text-[#FABA1E]'
+                                      : 'text-white/80 hover:text-white'
+                                  }`}
+                                >
+                                  {child.label}
+                                </button>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
+                </nav>
+
+                {/* Discover More - Mobile */}
+                <div className="mt-8 pt-8 border-t border-white/20">
+                  <h3 className="font-['Arial'] text-white/60 text-sm uppercase tracking-wider mb-4">
+                    Discover More
+                  </h3>
+                  <div className="space-y-2">
+                    {moreLinks.map((link, index) => (
+                      <button
+                        key={index}
+                        onClick={() => handleNavClick(link.path)}
+                        className="block w-full text-left py-2 font-['Lexend_Deca'] text-[15px] text-white/80 hover:text-white"
+                      >
+                        {link.label}
+                      </button>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
+
+              {/* Bottom Strip - Mobile */}
+              <div className="sticky bottom-0 h-[52px] bg-[#3a8f66] flex items-center justify-center px-6">
+                <div className="flex items-center gap-2">
+                  <span className="font-['Lexend_Deca'] text-white text-xs">
+                    LHBS Education Community
+                  </span>
+                  <button 
+                    className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center"
+                    aria-label="Learn more"
+                  >
+                    <ArrowRight className="w-3 h-3 text-white" />
+                  </button>
+                </div>
+              </div>
+            </motion.div>
           )}
-        </motion.div>
+        </>
       )}
     </AnimatePresence>
   );

@@ -11,75 +11,91 @@ export interface NavParent {
   path: string;
   description: string;
   children: NavChild[];
+  cta?: {
+    text: string;
+    path: string;
+  };
 }
 
-// Built from SITEMAP_YAML
+// More/Additional Links (right column in mega menu)
+export interface MoreLink {
+  label: string;
+  path: string;
+}
+
+export const moreLinks: MoreLink[] = [
+  { label: 'About Our School', path: '/our-school/about-us' },
+  { label: 'Parents', path: '/parents' },
+  { label: 'News / Events', path: '/news-events' },
+  { label: 'Academic Results', path: '/academic-results' },
+  { label: 'Apply Now', path: '/admissions/apply-now' },
+  { label: 'Q & A', path: '/admissions/faqs' },
+];
+
+// New sitemap based on concept slide
 export const siteNavigation: NavParent[] = [
   {
-    id: 'admissions',
-    label: 'Admissions',
+    id: 'admission',
+    label: 'Admission',
     path: '/admissions',
-    description: 'Apply, tuition, scholarships, FAQs',
+    description: 'Join the LHBS family',
     children: [
-      { id: 'admissions-apply', label: 'Apply Now', path: '/admissions/apply-now', description: 'Start your LHBS journey with our simple application process' },
-      { id: 'admissions-tuition', label: 'Tuition & Fees', path: '/admissions/tuition-fees', description: 'Transparent pricing and flexible payment options' },
-      { id: 'admissions-scholarships', label: 'Scholarships', path: '/admissions/scholarships', description: 'Financial support for deserving students' },
-      // { id: 'admissions-faqs', label: 'FAQs', path: '/admissions/faqs', description: 'Common questions about enrollment and life at LHBS' },
-    ]
+      { id: 'admission-tuition', label: 'Tuition & Fees', path: '/admissions/tuition-fees', description: 'Transparent pricing and flexible payment options' },
+      { id: 'admission-scholarships', label: 'Scholarships', path: '/admissions/scholarships', description: 'Financial support for deserving students' },
+      { id: 'admission-requirements', label: 'Entry Requirements', path: '/admissions', description: 'Admission criteria and documentation needed' },
+    ],
+    cta: {
+      text: 'Apply Now',
+      path: '/admissions/apply-now'
+    }
   },
   {
-    id: 'academics',
-    label: 'Academics',
-    path: '/academics/overview',
-    description: 'Programs and learning pathways',
-    children: [
-      { id: 'academics-kindergarten', label: 'Galaxy KG+', path: '/academics/kindergarten', description: 'Ages 3-5: Play-based bilingual learning' },
-      { id: 'academics-primary', label: 'LHBS Primary School+', path: '/academics/primary', description: 'Grades 1-5: Building strong foundations' },
-      { id: 'academics-lower', label: 'LHBS Secondary School+', path: '/academics/lower-secondary', description: 'Grades 6-9: Advanced concepts and critical thinking' },
-      { id: 'academics-upper', label: 'LHBS High School+', path: '/academics/upper-secondary', description: 'Grades 10-12: University preparation and global readiness' },
-    ]
-  },
-  {
-    id: 'our-school',
-    label: 'Our School',
+    id: 'lhbs-campus',
+    label: 'LHBS Campus',
     path: '/our-school',
-    description: 'Vision, leadership, accreditation',
+    description: 'Explore our facilities and environment',
     children: [
-      { id: 'our-school-about', label: 'About Us', path: '/our-school/about-us', description: '15 years of educational excellence and innovation' },
-      { id: 'our-school-leadership', label: 'Leadership & Founding Message', path: '/our-school/leadership', description: 'Meet our dedicated leaders and founder\'s vision' },
-      { id: 'our-school-facilities', label: 'Facilities', path: '/our-school/facilities', description: 'State-of-the-art learning environments' },
-      { id: 'our-school-accreditation', label: 'Accreditation', path: '/our-school/accreditation', description: 'International standards and certifications' },
-    ]
+      { id: 'campus-about', label: 'About Our Campus', path: '/our-school/about-us', description: '15 years of educational excellence and innovation' },
+      { id: 'campus-facilities', label: 'Facilities', path: '/our-school/facilities', description: 'State-of-the-art learning environments' },
+      { id: 'campus-leadership', label: 'Leadership & Vision', path: '/our-school/leadership', description: 'Meet our dedicated leaders and founder\'s vision' },
+      { id: 'campus-accreditation', label: 'Accreditation', path: '/our-school/accreditation', description: 'International standards and certifications' },
+    ],
+    cta: {
+      text: 'Explore Our Campus',
+      path: '/our-school/facilities'
+    }
   },
   {
-    id: 'student-life',
-    label: 'Student Life',
+    id: 'holistic-education',
+    label: 'Holistic Education',
+    path: '/academics/overview',
+    description: 'Comprehensive bilingual learning programs',
+    children: [
+      { id: 'holistic-kindergarten', label: 'Galaxy KC', path: '/academics/kindergarten', description: 'Ages 3-5: Play-based bilingual learning' },
+      { id: 'holistic-primary', label: 'LHBS Primary School', path: '/academics/primary', description: 'Grades 1-5: Building strong foundations' },
+      { id: 'holistic-lower', label: 'LHBS Secondary School', path: '/academics/lower-secondary', description: 'Grades 6-9: Advanced concepts and critical thinking' },
+      { id: 'holistic-upper', label: 'LHBS High School', path: '/academics/upper-secondary', description: 'Grades 10-12: University preparation and global readiness' },
+      { id: 'holistic-overview', label: 'Curriculum Overview', path: '/academics/overview', description: 'Our comprehensive educational approach' },
+    ],
+    cta: {
+      text: 'Discover Our Programme',
+      path: '/academics/overview'
+    }
+  },
+  {
+    id: 'paths-to-passion',
+    label: 'Paths to Passion',
     path: '/student-life',
-    description: 'Clubs, sports, wellbeing',
+    description: 'Beyond the classroom experiences',
     children: [
-      { id: 'student-life-clubs', label: 'Clubs & Activities', path: '/student-life/clubs-activities', description: 'Diverse extracurricular programs for every interest' },
-      { id: 'student-life-sports', label: 'Sports', path: '/student-life/sports', description: 'Athletics, teamwork, and physical development' },
-      { id: 'student-life-wellbeing', label: 'Wellbeing & Support', path: '/student-life/wellbeing', description: 'Comprehensive student support services' },
-    ]
-  },
-  {
-    id: 'news-events',
-    label: 'News & Events',
-    path: '/news-events',
-    description: 'Updates from the community',
-    children: [
-      { id: 'news-events-news', label: 'News', path: '/news-events/news', description: 'Latest achievements and announcements' },
-      { id: 'news-events-events', label: 'Events', path: '/news-events/events', description: 'Upcoming activities and celebrations' },
-    ]
-  },
-  {
-    id: 'contact',
-    label: 'Contact',
-    path: '/contact',
-    description: 'Get in touch and visit',
-    children: [
-      { id: 'contact-us', label: 'Contact Us', path: '/contact/contact-us', description: 'Send us your questions and inquiries' },
-      { id: 'contact-tour', label: 'Book a School Tour', path: '/contact/book-tour', description: 'Schedule a personalized campus visit' },
-    ]
+      { id: 'passion-clubs', label: 'Clubs & Activities', path: '/student-life/clubs-activities', description: 'Diverse extracurricular programs for every interest' },
+      { id: 'passion-sports', label: 'Sports', path: '/student-life/sports', description: 'Athletics, teamwork, and physical development' },
+      { id: 'passion-wellbeing', label: 'Wellbeing & Support', path: '/student-life/wellbeing', description: 'Comprehensive student support services' },
+      { id: 'passion-arts', label: 'Arts & Culture', path: '/student-life/clubs-activities', description: 'Creative expression and cultural activities' },
+    ],
+    cta: {
+      text: 'See Activities & Clubs',
+      path: '/student-life/clubs-activities'
+    }
   },
 ];

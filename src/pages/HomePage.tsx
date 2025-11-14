@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'motion/react';
-import { HeroCarousel } from '../components/HeroCarousel';
+import { BVISHero } from '../components/BVISHero';
 import { AcademicExcellenceSection } from '../components/AcademicExcellenceSection';
 import { BookTourCTA } from '../components/BookTourCTA';
 import { EducationPillarsSection } from '../components/EducationPillarsSection';
@@ -22,64 +22,18 @@ import items03 from '../assets/items-03.png';
 export function HomePage({ onNavigate }: { onNavigate: (path: string) => void }) {
   const [showPillarModal, setShowPillarModal] = useState<number | null>(null);
   
-  // Hero Carousel slides data
-  const heroSlides = [
-    {
-      kicker: 'Welcome to LHBS',
-      title: 'The world ahead needs people who move the world forward',
-      body: 'Vietnam cultural roots, Global vision. We cultivate lifelong learners who embrace both heritage and innovation.',
-      ctaText: 'ENQUIRE NOW',
-      ctaLink: '/admissions/apply-now',
-      cta2Text: 'LEARN MORE',
-      cta2Link: '/our-school/about-us',
-      image: heroImage,
-      alt: 'LHBS students in a modern learning environment',
-      icon: '🎓'
-    },
-    {
-      kicker: '15 Years of Excellence',
-      title: 'Building Tomorrow\'s Global Citizens Today',
-      body: 'A truly bilingual education that nurtures character, ignites curiosity, and prepares students for success in an interconnected world.',
-      ctaText: 'EXPLORE PROGRAMS',
-      ctaLink: '/academics',
-      cta2Text: 'BOOK A TOUR',
-      cta2Link: '/contact/book-tour',
-      image: 'https://images.unsplash.com/photo-1690192435015-319c1d5065b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWxpbmd1YWwlMjBjbGFzc3Jvb20lMjBzdHVkZW50c3xlbnwxfHx8fDE3NjI5Mjk3OTR8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'Students engaged in bilingual classroom activities',
-      icon: '🌏'
-    },
-    {
-      kicker: 'Join Our Community',
-      title: 'Where Vietnamese Heritage Meets International Excellence',
-      body: 'Discover a learning environment that honors cultural identity while fostering global perspectives and academic achievement.',
-      ctaText: 'START YOUR JOURNEY',
-      ctaLink: '/admissions/apply-now',
-      cta2Text: 'VIEW FACILITIES',
-      cta2Link: '/our-school/facilities',
-      image: 'https://images.unsplash.com/photo-1732971856110-6367a9a25303?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBmZXN0aXZhbCUyMGV2ZW50fGVufDF8fHx8MTc2MjkyODc5OXww&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'LHBS school festival with students and families',
-      icon: '🏫'
-    }
-  ];
-  
   return (
     <div className="relative bg-[#fffae9]">
-      {/* Hero Carousel - Swipeable with multiple slides */}
-      <HeroCarousel slides={heroSlides} autoplayDelay={5000} onNavigate={onNavigate} />
+      {/* Hero Section - Full-width BVIS style */}
+      <BVISHero onNavigate={onNavigate} />
       
       {/* Section 1: Solid Education Foundation */}
       <SolidEducationSection onNavigate={onNavigate} />
       
-            {/* Section 3: Founding Message */}
+      {/* Section 2: Founding Message */}
       <FoundingMessageSection onNavigate={onNavigate} />
-
-      {/* Section 2: Academic Excellence */}
-      <AcademicExcellenceSection />
       
-      {/* Section 4: Book a School Tour CTA */}
-      <BookTourCTA onNavigate={onNavigate} />
-      
-      {/* Section 5: LHBS UNIQUE Education Pillars */}
+      {/* Section 3: LHBS UNIQUE Education Pillars */}
       <EducationPillarsSection />
       
       {/* Pillar Modal */}
@@ -87,23 +41,23 @@ export function HomePage({ onNavigate }: { onNavigate: (path: string) => void })
         <PillarModal pillarIndex={showPillarModal} onClose={() => setShowPillarModal(null)} />
       )}
       
-      {/* Section 6: LHBS Life Video */}
+      {/* Section 4: LHBS Life Video */}
       <LHBSLifeVideoSection />
       
-      {/* Section 7: Academic & Bilingual Identity */}
+      {/* Section 5: Academic & Bilingual Identity */}
       <AcademicBilingualSection onNavigate={onNavigate} />
       
-      {/* Section 8: Testimonials */}
+      {/* Section 6: Book a School Tour CTA */}
+      <BookTourCTA onNavigate={onNavigate} />
+      
+      {/* Section 7: What Our Community Says */}
       <TestimonialsSection />
       
-      {/* Section 9: News & Events */}
+      {/* Section 8: News & Events */}
       <NewsEventsSection onNavigate={onNavigate} />
       
-      {/* Section 10: Let's Begin CTA */}
+      {/* Section 9: Let's Begin CTA */}
       <LetsBeginCTA onNavigate={onNavigate} />
-      
-      {/* Footer */}
-      {/* <Footer onNavigate={onNavigate} /> */}
     </div>
   );
 }
@@ -123,7 +77,7 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
   return (
     <motion.section
       ref={ref}
-      className="container relative px-6 md:px-10 lg:px-16 max-w-[1440px] mx-auto bg-[#fffae9] overflow-hidden"
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9] overflow-hidden"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
@@ -143,8 +97,11 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Title */}
-          <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
+          {/* Title - Green background with yellow text */}
+          <h2 
+            className="font-['Crimson_Pro'] text-[#FABA1E] bg-[#1a5336] mb-6 inline-block px-6 py-4"
+            style={{ fontSize: '48px', lineHeight: '1.24' }}
+          >
             Solid education foundation to Future
           </h2>
           
@@ -175,7 +132,7 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
         
         {/* Right: Image - 6 columns */}
         <motion.div
-          className="relative h-[600px] md:h-[900px] overflow-hidden"
+          className="relative h-[500px] md:h-[600px] overflow-hidden"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -233,98 +190,77 @@ function EducationLevelItem({ label, link, onNavigate, delay, isInView }: Educat
   );
 }
 
-// ==================== SECTION 4: Founding Message ====================
-export function FoundingMessageSection({ onNavigate }: FoundingMessageSectionProps) {
-  const ref = useRef<HTMLDivElement | null>(null);
+// ==================== SECTION 2: Founding Message ====================
+function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => void }) {
+  const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
     <motion.section
       ref={ref}
-      className="w-full bg-[#1a5336] relative overflow-hidden sm:py-0 "
+      className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
     >
-      {/* Decorative background items */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-       <motion.img src={items01} alt="" className="absolute top-10 left-5 w-32 opacity-20 z-10" initial={{ scale: 0.8, opacity: 0 }} animate={isInView ? { scale: 1, opacity: 0.2 } : {}} transition={{ duration: 0.8, delay: 0.1 }} /> 
-       <motion.img src={items02} alt="" className="absolute bottom-20 right-10 w-40 opacity-20 z-10" initial={{ scale: 0.8, opacity: 0 }} animate={isInView ? { scale: 1, opacity: 0.2 } : {}} transition={{ duration: 0.8, delay: 0.3 }} /> 
-       <motion.img src={items03} alt="" className="absolute top-1/2 right-20 w-24 opacity-20 z-10" initial={{ scale: 0.8, opacity: 0 }} animate={isInView ? { scale: 1, opacity: 0.2 } : {}} transition={{ duration: 0.8, delay: 0.5 }} />
-        <motion.img alt="" className="absolute top-[200px] left-20 w-20 opacity-20 z-10" initial={{ scale: 0.8, opacity: 0 }} animate={isInView ? { scale: 1, opacity: 0.2 } : {}} transition={{ duration: 0.8, delay: 0.7 }} />
-      </div>
-
-      {/* Content Wrapper */}
-      <div className="container mx-auto max-w-[1440px] px-6 md:px-10 lg:px-16 relative z-20">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-stretch">
-          {/* Image Section */}
-          <motion.div
-            className="relative order-1 md:order-1 w-full overflow-hidden rounded-none md:rounded-lg"
-            initial={{ opacity: 0, y: 40 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <img
-              src={founderPortrait}
-              alt="The late People's Teacher, Dr. Do Huu Tai - Founder of LHBS"
-              className="w-full h-auto max-h-[600px] object-cover object-center md:w-[720px] mx-auto"
-            />
-          </motion.div>
-
-          {/* Text Section */}
-          <motion.div
-            className="order-2 md:order-2 flex flex-col justify-center text-start md:text-left mt-8 md:mt-0"
-            initial={{ opacity: 0, y: 40 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="flex justify-start md:justify-start mb-6">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="100"
-                viewBox="0 0 160 160"
-                fill="none"
-              >
-                <path
-                  d="M106.667 20C103.131 20 99.7392 21.4048 97.2387 23.9052C94.7383 26.4057 93.3335 29.7971 93.3335 33.3333V73.3333C93.3335 76.8696 94.7383 80.2609 97.2387 82.7614C99.7392 85.2619 103.131 86.6667 106.667 86.6667C108.435 86.6667 110.131 87.369 111.381 88.6193C112.631 89.8695 113.333 91.5652 113.333 93.3333V100C113.333 103.536 111.929 106.928 109.428 109.428C106.928 111.929 103.536 113.333 100 113.333C98.2321 113.333 96.5364 114.036 95.2861 115.286C94.0359 116.536 93.3335 118.232 93.3335 120V133.333C93.3335 135.101 94.0359 136.797 95.2861 138.047C96.5364 139.298 98.2321 140 100 140C110.609 140 120.783 135.786 128.284 128.284C135.786 120.783 140 110.609 140 100V33.3333C140 29.7971 138.595 26.4057 136.095 23.9052C133.594 21.4048 130.203 20 126.667 20H106.667Z"
-                  fill="#FFFAE9"
-                />
-                <path
-                  d="M33.3333 20C29.7971 20 26.4057 21.4048 23.9052 23.9052C21.4048 26.4057 20 29.7971 20 33.3333V73.3333C20 76.8696 21.4048 80.2609 23.9052 82.7614C26.4057 85.2619 29.7971 86.6667 33.3333 86.6667C35.1014 86.6667 36.7971 87.369 38.0474 88.6193C39.2976 89.8695 40 91.5652 40 93.3333V100C40 103.536 38.5952 106.928 36.0948 109.428C33.5943 111.929 30.2029 113.333 26.6667 113.333C24.8986 113.333 23.2029 114.036 21.9526 115.286C20.7024 116.536 20 118.232 20 120V133.333C20 135.101 20.7024 136.797 21.9526 138.047C23.2029 139.298 24.8986 140 26.6667 140C37.2753 140 47.4495 135.786 54.9509 128.284C62.4524 120.783 66.6667 110.609 66.6667 100V33.3333C66.6667 29.7971 65.2619 26.4057 62.7614 23.9052C60.2609 21.4048 56.8696 20 53.3333 20H33.3333Z"
-                  fill="#FFFAE9"
-                />
-              </svg>
-            </div>
-
-            <h2 className="font-['Crimson_Pro'] font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#fffae9] mb-6 leading-tight">
-              For ourself, our community, and our society
-            </h2>
-
-            <p className="font-['Lexend_Deca'] text-base sm:text-lg md:text-xl text-[#fffae9]/90 mb-8 leading-relaxed max-w-2xl mx-auto md:mx-0">
-              LHBS is committed to creating a humanistic learning environment that nurtures and educates young generations to appreciate Vietnamese heritage and identity while embracing global knowledge, skills, and citizenship—contributing positively to themselves, their communities, and society.
+      <div className="grid md:grid-cols-2 gap-16 items-stretch">
+        {/* Left: Portrait Image - 6 columns */}
+        <motion.div
+          className="relative h-[500px] md:h-auto overflow-hidden order-2 md:order-1"
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <img
+            src={founderPortrait}
+            alt="The late People's Teacher, Dr. Do Huu Tai - Founder of LHBS"
+            className="w-full h-full object-cover object-center"
+          />
+        </motion.div>
+        
+        {/* Right: Content with Green Background - 6 columns */}
+        <motion.div
+          className="relative bg-[#1a5336] p-8 md:p-12 flex flex-col justify-center order-1 md:order-2"
+          initial={{ opacity: 0, x: 50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          {/* Decorative quote mark */}
+          <div className="text-[#fffae9] text-6xl md:text-7xl mb-4 leading-none font-serif opacity-40">
+            "
+          </div>
+          
+          {/* Title */}
+          <h2 className="font-['Crimson_Pro'] text-3xl md:text-4xl lg:text-5xl text-[#fffae9] mb-6">
+            For ourself, our community, and our society
+          </h2>
+          
+          {/* Body copy */}
+          <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
+            LHBS is committed to creating a humanistic learning environment that nurtures and educates young generations to appreciate Vietnamese heritage and identity while embracing global knowledge, skills, and citizenship—contributing positively to themselves, their communities, and society.
+          </p>
+          
+          {/* Attribution */}
+          <div className="mb-8">
+            <p className="font-['Lexend_Deca'] text-sm md:text-base text-[#fffae9] font-semibold mb-1">
+              The late People's Teacher, Dr. Do Huu Tai
             </p>
-
-            <div className="mb-8">
-              <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#fffae9] font-semibold mb-1">
-                The late People&apos;s Teacher, Dr. Do Huu Tai
-              </p>
-              <p className="font-['Lexend_Deca'] text-sm md:text-base text-[#fffae9]/70">
-                Founder of Lac Hong Bilingual Primary - Secondary - High School
-              </p>
-            </div>
-
-            <div className="flex md:justify-start pb-">
-              <motion.button
-                onClick={() => onNavigate("/our-school/leadership")}
-                className="px-8 h-12 md:h-14 border-2 border-[#fffae9] text-[#fffae9] font-['Arial'] font-bold cursor-pointer hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors w-full sm:w-auto"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                LEARN MORE
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
+            <p className="font-['Lexend_Deca'] text-xs md:text-sm text-[#fffae9]/70">
+              Founder of Lac Hong Bilingual Primary - Secondary - High School
+            </p>
+          </div>
+          
+          {/* CTA Button */}
+          <div>
+            <motion.button
+              onClick={() => onNavigate('/our-school/leadership')}
+              className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9] font-['Arial'] font-bold cursor-pointer hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors w-full md:w-auto"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              LEARN MORE
+            </motion.button>
+          </div>
+        </motion.div>
       </div>
     </motion.section>
   );

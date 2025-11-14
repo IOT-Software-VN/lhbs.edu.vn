@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import { StickyHeader } from './components/StickyHeader';
-import { Footer } from './components/Footer';
 import { FullScreenMenu } from './components/FullScreenMenu';
+import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
-import { GenericPage } from './pages/GenericPage';
 import { ApplyNowPage } from './pages/ApplyNowPage';
 import { AdmissionsPage } from './pages/AdmissionsPage';
 import { TuitionFeesPage } from './pages/TuitionFeesPage';
@@ -13,6 +12,12 @@ import { AcademicsKindergartenPage } from './pages/AcademicsKindergartenPage';
 import { AcademicsPrimaryPage } from './pages/AcademicsPrimaryPage';
 import { AcademicsSecondaryPage } from './pages/AcademicsSecondaryPage';
 import { AcademicsHighSchoolPage } from './pages/AcademicsHighSchoolPage';
+import { ParentsPage } from './pages/ParentsPage';
+import { GenericPage } from './pages/GenericPage';
+import { AcademicResultsPage } from './pages/AcademicResultsPage';
+import { OurSchoolPage } from './pages/OurSchoolPage';
+import { FacilitiesPage } from './pages/FacilitiesPage';
+import { LHBSCampusPage } from './pages/LHBSCampusPage';
 import { siteNavigation } from './types/navigation';
 
 export default function App() {
@@ -64,8 +69,10 @@ export default function App() {
       <StickyHeader
         scrolled={scrolled}
         onMenuClick={() => setMenuOpen(true)}
+        onMenuClose={() => setMenuOpen(false)}
         onLogoClick={() => handleNavigate('/')}
         onEnquireClick={() => handleNavigate('/admissions/apply-now')}
+        menuOpen={menuOpen}
       />
 
       {/* Full Screen Menu */}
@@ -97,6 +104,16 @@ export default function App() {
         <AcademicsSecondaryPage onNavigate={handleNavigate} />
       ) : currentPath === '/academics/upper-secondary' ? (
         <AcademicsHighSchoolPage onNavigate={handleNavigate} />
+      ) : currentPath === '/parents' ? (
+        <ParentsPage onNavigate={handleNavigate} />
+      ) : currentPath === '/academic-results' ? (
+        <AcademicResultsPage onNavigate={handleNavigate} />
+      ) : currentPath === '/our-school' ? (
+        <LHBSCampusPage onNavigate={handleNavigate} />
+      ) : currentPath === '/our-school/about-us' ? (
+        <OurSchoolPage onNavigate={handleNavigate} />
+      ) : currentPath === '/our-school/facilities' ? (
+        <FacilitiesPage onNavigate={handleNavigate} />
       ) : (
         <GenericPage 
           path={currentPath} 
