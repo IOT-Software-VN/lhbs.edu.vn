@@ -1,4 +1,4 @@
-import { ChevronRight, Users, Trees, FileText, Heart, Brain, Palette, Search, Zap, Music, Beaker, Droplet, Activity, Apple, MessageCircle, DollarSign, Calculator, Send } from 'lucide-react';
+import { ChevronRight, Check, Clock, Users, Globe, Heart, BookOpen, Paintbrush, Music, Activity, Utensils, Moon, Sparkles, Calendar } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 interface AcademicsKindergartenPageProps {
@@ -7,25 +7,16 @@ interface AcademicsKindergartenPageProps {
 
 export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenPageProps) {
   return (
-    <div className="w-full">
-      {/* KG_Hero - Safe & loving environment */}
+    <div className="w-full bg-[#fffae9]">
+      {/* 1. HERO SECTION - KINDERGARTEN */}
       <section 
-        className="relative min-h-[65vh] md:min-h-[40vh] flex items-center bg-[#fffae9]"
+        className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.85), rgba(26, 83, 54, 0.85)), url(https://images.unsplash.com/photo-1761208664165-99a2f57e937d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraW5kZXJnYXJ0ZW4lMjBjbGFzc3Jvb20lMjBjaGlsZHJlbiUyMGxlYXJuaW5nfGVufDF8fHx8MTc2Mjk5OTAzOHww&ixlib=rb-4.1.0&q=80&w=1080)`,
+          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.8), rgba(26, 83, 54, 0.8)), url(https://images.unsplash.com/photo-1761208664165-99a2f57e937d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraW5kZXJnYXJ0ZW4lMjBjaGlsZHJlbiUyMGxlYXJuaW5nJTIwY2xhc3Nyb29tfGVufDF8fHx8MTc2MzEwMTY0MXww&ixlib=rb-4.1.0&q=80&w=1080)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
-        {/* Decorative motif */}
-        <div 
-          className="absolute inset-0 opacity-5"
-          aria-hidden="true"
-          style={{
-            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(250, 186, 30, 0.1) 50px, rgba(250, 186, 30, 0.1) 51px)`
-          }}
-        />
-        
         <div className="relative w-full max-w-screen-xl mx-auto px-6 md:px-12 py-24 md:py-32">
           {/* Breadcrumb */}
           <nav className="mb-6" aria-label="Breadcrumb">
@@ -34,14 +25,11 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                 <button 
                   onClick={() => onNavigate('/')}
                   className="text-[#fffae9]/70 hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-                  aria-label="Navigate to home page"
                 >
                   Home
                 </button>
               </li>
-              <li>
-                <ChevronRight className="w-4 h-4 text-[#fffae9]/70" />
-              </li>
+              <li><ChevronRight className="w-4 h-4 text-[#fffae9]/70" /></li>
               <li>
                 <button 
                   onClick={() => onNavigate('/academics/overview')}
@@ -50,942 +38,409 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                   Academics
                 </button>
               </li>
-              <li>
-                <ChevronRight className="w-4 h-4 text-[#fffae9]/70" />
-              </li>
+              <li><ChevronRight className="w-4 h-4 text-[#fffae9]/70" /></li>
               <li className="text-[#fffae9] ">Kindergarten</li>
             </ol>
           </nav>
 
           {/* Hero Content */}
           <div className="max-w-3xl">
-            <p className="text-[#FABA1E] mb-4  uppercase tracking-wider">Ages 3-5</p>
-            <h1 className=" text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
-              A Safe & Loving Environment Where Learning Begins
-            </h1>
-            <p className="text-[#fffae9]/90 mb-8  text-lg leading-relaxed">
-              Our Kindergarten program nurtures young minds through play-based bilingual learning, developing essential social, emotional, and cognitive skills in a warm, supportive environment designed specifically for early learners.
+            <p className="text-[#FABA1E] mb-4  uppercase tracking-wider text-sm">
+              ACADEMIC • KINDERGARTEN
             </p>
-
-            {/* Stat Badges */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-              <div className="bg-white/10 backdrop-blur-sm p-6 border border-white/20">
-                <div className="flex items-start gap-3">
-                  <Users className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <div>
-                    <div className=" text-[#fffae9] text-2xl mb-1">1:8</div>
-                    <div className=" text-[#fffae9]/80 text-sm">Teacher-Student Ratio</div>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm p-6 border border-white/20">
-                <div className="flex items-start gap-3">
-                  <Trees className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <div>
-                    <div className=" text-[#fffae9] text-2xl mb-1">40%</div>
-                    <div className=" text-[#fffae9]/80 text-sm">Outdoor Learning Time</div>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm p-6 border border-white/20">
-                <div className="flex items-start gap-3">
-                  <FileText className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <div>
-                    <div className=" text-[#fffae9] text-2xl mb-1">Bi-weekly</div>
-                    <div className=" text-[#fffae9]/80 text-sm">Progress Reports</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h1 
+              className="font-['SVN-Gotham'] text-white mb-6"
+              style={{ fontSize: '48px', lineHeight: '1.24' }}
+            >
+              A nurturing start for lifelong learning
+            </h1>
+            <p className="text-[#fffae9]/90 mb-8  text-lg leading-relaxed max-w-2xl">
+              At LHBS Kindergarten, we provide a modern bilingual programme that nurtures young minds holistically—developing virtue, intellect, physical wellbeing, and aesthetic appreciation in a joyful, caring environment where every child can thrive.
+            </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
+                onClick={() => onNavigate('/admissions/apply-now')}
+                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors"
+              >
+                Apply Now
+              </button>
+              <button 
                 onClick={() => onNavigate('/contact/book-tour')}
-                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
+                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
               >
-                Book a School Tour
-              </button>
-              <button 
-                onClick={() => onNavigate('/contact/contact-us')}
-                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9]  hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
-              >
-                Talk to a Counselor
-              </button>
-              <button 
-                className="px-8 h-12 bg-transparent text-[#fffae9] border border-[#fffae9]/50  hover:border-[#fffae9] hover:bg-white/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
-              >
-                Download Curriculum PDF
+                Book a Tour
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* KG_WhyThisStage */}
+      {/* 2. OUR KINDERGARTEN CURRICULUM */}
       <section className="bg-white py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
-              Why This Stage Matters
-            </h2>
-            <p className=" text-[#1a5336]/70 text-lg">
-              The kindergarten years are critical for building foundations in learning, relationships, and self-confidence.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Feature 1 */}
-            <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
-              <Heart className="w-12 h-12 text-[#FABA1E] mb-4" />
-              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Social-Emotional Growth</h3>
-              <p className=" text-[#1a5336]/70">
-                Children learn to express feelings, build friendships, and develop empathy through guided play and group activities.
-              </p>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
-              <Brain className="w-12 h-12 text-[#FABA1E] mb-4" />
-              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Cognitive Foundation</h3>
-              <p className=" text-[#1a5336]/70">
-                Early literacy, numeracy, and problem-solving skills are introduced through hands-on exploration and inquiry-based learning.
-              </p>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
-              <Palette className="w-12 h-12 text-[#FABA1E] mb-4" />
-              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Creative Expression</h3>
-              <p className=" text-[#1a5336]/70">
-                Art, music, drama, and storytelling encourage imagination and help children communicate ideas in diverse ways.
-              </p>
-            </div>
-
-            {/* Feature 4 */}
-            <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
-              <Search className="w-12 h-12 text-[#FABA1E] mb-4" />
-              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Curiosity & Discovery</h3>
-              <p className=" text-[#1a5336]/70">
-                Structured exploration time and nature-based activities foster a love of learning and scientific thinking.
-              </p>
-            </div>
-
-            {/* Feature 5 */}
-            <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
-              <Zap className="w-12 h-12 text-[#FABA1E] mb-4" />
-              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Bilingual Advantage</h3>
-              <p className=" text-[#1a5336]/70">
-                Immersive dual-language environment enhances cognitive flexibility, cultural awareness, and future language learning.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* KG_CurriculumAreas */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
-        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
-          <div className="mb-12">
-            <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
-              Curriculum Areas
-            </h2>
-            <p className=" text-[#1a5336]/70 text-lg max-w-3xl">
-              Our integrated curriculum covers seven key learning areas, delivered through play-based and inquiry-driven approaches.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Left Column - Curriculum Goals & Areas */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left: Text Content */}
             <div>
-              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">Kindergarten Learning Goals</h3>
-              <p className=" text-[#1a5336]/70 mb-8">
-                By the end of Kindergarten, children will demonstrate age-appropriate skills in communication, collaboration, critical thinking, and creativity across all learning areas.
+              <h2 
+                className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+                style={{ fontSize: '48px', lineHeight: '1.24' }}
+              >
+                Our Kindergarten Curriculum
+              </h2>
+              <p className=" text-[#212121] text-lg leading-relaxed mb-8">
+                Our comprehensive programme follows the Vietnam Ministry of Education and Training (MOET) early childhood curriculum, enriched with international pedagogical innovations. We focus on holistic development—nurturing body, mind, and character—through play-based, inquiry-driven learning experiences.
               </p>
 
+              {/* Curriculum Areas Checklist */}
               <div className="space-y-4">
-                <div className="bg-white p-6 border-l-4 border-[#FABA1E]">
-                  <h4 className=" text-[#1a5336] mb-2">Language & Literacy</h4>
-                  <p className=" text-[#1a5336]/70 text-sm">
-                    Phonemic awareness, letter recognition, storytelling, basic reading and writing in both languages.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className=" text-[#1a5336] mb-1">Physical development</h3>
+                    <p className=" text-[#1a5336]/70 text-sm">Health, movement skills, outdoor play, and motor coordination</p>
+                  </div>
                 </div>
 
-                <div className="bg-white p-6 border-l-4 border-[#FABA1E]">
-                  <h4 className=" text-[#1a5336] mb-2">Numeracy & Math</h4>
-                  <p className=" text-[#1a5336]/70 text-sm">
-                    Counting, number sense, patterns, shapes, measurement, and simple problem-solving.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className=" text-[#1a5336] mb-1">Cognitive development & early numeracy</h3>
+                    <p className=" text-[#1a5336]/70 text-sm">Thinking skills, problem-solving, numbers, patterns, and logic</p>
+                  </div>
                 </div>
 
-                <div className="bg-white p-6 border-l-4 border-[#FABA1E]">
-                  <h4 className=" text-[#1a5336] mb-2">Social-Emotional Learning</h4>
-                  <p className=" text-[#1a5336]/70 text-sm">
-                    Self-regulation, empathy, cooperation, conflict resolution, and emotional literacy.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className=" text-[#1a5336] mb-1">Language development & bilingual communication</h3>
+                    <p className=" text-[#1a5336]/70 text-sm">Vietnamese and English fluency through immersive activities</p>
+                  </div>
                 </div>
 
-                <div className="bg-white p-6 border-l-4 border-[#FABA1E]">
-                  <h4 className=" text-[#1a5336] mb-2">Physical Development</h4>
-                  <p className=" text-[#1a5336]/70 text-sm">
-                    Gross and fine motor skills, balance, coordination, and healthy habits.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className=" text-[#1a5336] mb-1">Social–emotional development</h3>
+                    <p className=" text-[#1a5336]/70 text-sm">Respect, empathy, self-confidence, and collaboration</p>
+                  </div>
                 </div>
 
-                <div className="bg-white p-6 border-l-4 border-[#FABA1E]">
-                  <h4 className=" text-[#1a5336] mb-2">Creative Arts</h4>
-                  <p className=" text-[#1a5336]/70 text-sm">
-                    Visual arts, music, movement, drama, and creative problem-solving.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className=" text-[#1a5336] mb-1">Aesthetic & creative development</h3>
+                    <p className=" text-[#1a5336]/70 text-sm">Art, music, dance, drama, and creative expression</p>
+                  </div>
                 </div>
 
-                <div className="bg-white p-6 border-l-4 border-[#FABA1E]">
-                  <h4 className=" text-[#1a5336] mb-2">Discovery & Science</h4>
-                  <p className=" text-[#1a5336]/70 text-sm">
-                    Exploration of nature, simple experiments, observation, and inquiry skills.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className=" text-[#1a5336] mb-1">Life skills & independence</h3>
+                    <p className=" text-[#1a5336]/70 text-sm">Self-care, decision-making, and practical daily routines</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Right Column - At-a-glance Info */}
-            <div className="space-y-8">
-              {/* Weekly Allocation */}
-              <div className="bg-white p-8 shadow-sm">
-                <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">At a Glance: Weekly Time Allocation</h3>
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="border-b-2 border-[#1a5336]">
-                        <th className="text-left py-3  text-[#1a5336]">Learning Area</th>
-                        <th className="text-right py-3  text-[#1a5336]">Hours/Week</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-b border-[#1a5336]/20">
-                        <td className="py-3  text-[#1a5336]/70">Language & Literacy</td>
-                        <td className="text-right py-3  text-[#1a5336]">8</td>
-                      </tr>
-                      <tr className="border-b border-[#1a5336]/20">
-                        <td className="py-3  text-[#1a5336]/70">Numeracy</td>
-                        <td className="text-right py-3  text-[#1a5336]">5</td>
-                      </tr>
-                      <tr className="border-b border-[#1a5336]/20">
-                        <td className="py-3  text-[#1a5336]/70">Discovery/Science</td>
-                        <td className="text-right py-3  text-[#1a5336]">4</td>
-                      </tr>
-                      <tr className="border-b border-[#1a5336]/20">
-                        <td className="py-3  text-[#1a5336]/70">Creative Arts</td>
-                        <td className="text-right py-3  text-[#1a5336]">4</td>
-                      </tr>
-                      <tr className="border-b border-[#1a5336]/20">
-                        <td className="py-3  text-[#1a5336]/70">Physical Education</td>
-                        <td className="text-right py-3  text-[#1a5336]">3</td>
-                      </tr>
-                      <tr className="border-b border-[#1a5336]/20">
-                        <td className="py-3  text-[#1a5336]/70">Free Play & Outdoor</td>
-                        <td className="text-right py-3  text-[#1a5336]">6</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              {/* Assessment & Reporting */}
-              <div className="bg-white p-8 shadow-sm">
-                <h3 className=" text-[24px] font-bold text-[#1a5336] mb-4">Assessment & Reporting</h3>
-                <p className=" text-[#1a5336]/70 mb-4">
-                  We use observation-based, developmental assessments rather than formal testing. Parents receive:
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                    <span className=" text-[#1a5336]/70">Bi-weekly progress updates via parent portal</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                    <span className=" text-[#1a5336]/70">Formal parent-teacher conferences twice per year</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                    <span className=" text-[#1a5336]/70">Portfolio of student work showcasing growth</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Homework Policy */}
-              <div className="bg-white p-8 shadow-sm">
-                <h3 className=" text-[24px] font-bold text-[#1a5336] mb-4">Homework Policy</h3>
-                <p className=" text-[#1a5336]/70">
-                  No formal homework is assigned at the Kindergarten level. We encourage families to engage in reading together, outdoor play, and conversations about the school day to support learning at home.
-                </p>
-              </div>
+            {/* Right: Image */}
+            <div className="relative h-[500px] lg:h-[600px]">
+              <ImageWithFallback 
+                src="https://images.unsplash.com/photo-1761208664165-99a2f57e937d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraW5kZXJnYXJ0ZW4lMjBjaGlsZHJlbiUyMGxlYXJuaW5nJTIwY2xhc3Nyb29tfGVufDF8fHx8MTc2MzEwMTY0MXww&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Children engaged in learning activities in a bright kindergarten classroom"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* KG_TeacherEnvironment */}
-      <section className="bg-white py-24 md:py-32">
-        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
-          <div className="mb-12">
-            <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
-              Teachers & Learning Environment
-            </h2>
-            <p className=" text-[#1a5336]/70 text-lg max-w-3xl">
-              Our dedicated team creates a nurturing, safe, and stimulating space where every child feels valued.
-            </p>
-          </div>
-
-          <div className="space-y-12">
-            {/* Card 1: Our Teaching Team */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              {/* Image + Description */}
-              <div>
-                <ImageWithFallback 
-                  src="https://images.unsplash.com/photo-1761208664165-99a2f57e937d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraW5kZXJnYXJ0ZW4lMjBjbGFzc3Jvb20lMjBjaGlsZHJlbiUyMGxlYXJuaW5nfGVufDF8fHx8MTc2Mjk5OTAzOHww&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Bright and welcoming kindergarten classroom with learning centers"
-                  className="w-full aspect-[4/3] object-cover"
-                />
-                <p className=" text-[#1a5336]/60 text-sm mt-2">
-                  Bright, organized classrooms with dedicated learning zones
-                </p>
-              </div>
-              
-              {/* Content */}
-              <div>
-                <h3 className=" text-[24px] font-bold text-[#1a5336] mb-4">Our Teaching Team</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
-                    <div>
-                      <p className=" text-[#1a5336]">
-                        <strong>Qualified early childhood educators</strong> with degrees in ECE or related fields
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
-                    <div>
-                      <p className=" text-[#1a5336]">
-                        <strong>1:8 teacher-student ratio</strong> ensuring individualized attention for each child
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
-                    <div>
-                      <p className=" text-[#1a5336]">
-                        <strong>Bilingual teaching assistants</strong> supporting language immersion
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
-                    <div>
-                      <p className=" text-[#1a5336]">
-                        <strong>Ongoing professional development</strong> in play-based pedagogy and child development
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Card 2: Learning Zones */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              {/* Image + Description */}
-              <div>
-                <ImageWithFallback 
-                  src="https://images.unsplash.com/photo-1630637991997-1cd9c8b41ce1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvdXRkb29yJTIwcGxheWdyb3VuZCUyMGNoaWxkcmVufGVufDF8fHx8MTc2MjkzNTM5NXww&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Outdoor playground with age-appropriate equipment and natural elements"
-                  className="w-full aspect-[4/3] object-cover"
-                />
-                <p className=" text-[#1a5336]/60 text-sm mt-2">
-                  Outdoor play areas with nature exploration zones
-                </p>
-              </div>
-              
-              {/* Content */}
-              <div>
-                <h3 className=" text-[24px] font-bold text-[#1a5336] mb-4">Learning Zones</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
-                    <div>
-                      <p className=" text-[#1a5336]">
-                        <strong>Reading corner</strong> with age-appropriate books in both languages
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
-                    <div>
-                      <p className=" text-[#1a5336]">
-                        <strong>STEAM exploration area</strong> with building blocks, puzzles, and manipulatives
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
-                    <div>
-                      <p className=" text-[#1a5336]">
-                        <strong>Creative arts station</strong> for painting, drawing, and crafts
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
-                    <div>
-                      <p className=" text-[#1a5336]">
-                        <strong>Dramatic play area</strong> for role-play and social interaction
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Card 3: Health & Safety */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              {/* Image + Description */}
-              <div>
-                <ImageWithFallback 
-                  src="https://images.unsplash.com/photo-1585247411924-f1c8286ce3a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHdhc2hpbmclMjBoYW5kcyUyMGh5Z2llbmV8ZW58MXx8fHwxNzYyOTk5MDQyfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Children practicing proper hygiene and health routines"
-                  className="w-full aspect-[4/3] object-cover"
-                />
-                <p className=" text-[#1a5336]/60 text-sm mt-2">
-                  Dedicated hygiene stations and health routines
-                </p>
-              </div>
-              
-              {/* Content */}
-              <div>
-                <h3 className=" text-[24px] font-bold text-[#1a5336] mb-4">Health & Safety</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
-                    <div>
-                      <p className=" text-[#1a5336]">
-                        <strong>Daily health checks</strong> and strict hygiene protocols
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
-                    <div>
-                      <p className=" text-[#1a5336]">
-                        <strong>Nurse on-site</strong> during school hours
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
-                    <div>
-                      <p className=" text-[#1a5336]">
-                        <strong>Parent communication app</strong> with real-time updates and photos
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* KG_Extracurricular */}
+      {/* 3. INNOVATIVE ENGLISH & PHONICS PROGRAMME */}
       <section className="bg-[#fffae9] py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
-          <div className="text-center mb-12">
-            <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
-              Beyond the Classroom
-            </h2>
-            <p className=" text-[#1a5336]/70 text-lg max-w-3xl mx-auto">
-              Enrichment activities that make learning joyful and build confidence through exploration and play.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Activity 1 */}
-            <div className="bg-white p-6 shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left: Image */}
+            <div className="relative h-[500px] lg:h-[600px] order-2 lg:order-1">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1719634689927-58ec6baf0f0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraWRzJTIwbXVzaWMlMjBtb3ZlbWVudHxlbnwxfHx8fDE3NjI5OTkwMzl8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Children engaged in music and movement activities"
-                className="w-full aspect-[16/9] object-cover mb-4"
+                src="https://images.unsplash.com/photo-1733824204474-e1b329a33612?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMGVuZ2xpc2glMjBwaG9uaWNzJTIwY2xhc3Nyb29tfGVufDF8fHx8MTc2MzEwMTY0MXww&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Children learning English through interactive phonics activities"
+                className="w-full h-full object-cover"
               />
-              <div className="flex items-center gap-3 mb-3">
-                <Music className="w-6 h-6 text-[#FABA1E]" />
-                <h3 className=" text-[24px] font-bold text-[#1a5336]">Music & Movement</h3>
-              </div>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Rhythm and dance sessions twice weekly</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Simple instruments and singing in both languages</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Develops coordination and self-expression</span>
-                </li>
-              </ul>
             </div>
 
-            {/* Activity 2 */}
-            <div className="bg-white p-6 shadow-sm">
-              <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1695982001385-c3197431a4cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMFNURUFNJTIwbGVhcm5pbmd8ZW58MXx8fHwxNzYyOTk5MDM5fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Young children exploring STEAM activities with hands-on materials"
-                className="w-full aspect-[16/9] object-cover mb-4"
-              />
-              <div className="flex items-center gap-3 mb-3">
-                <Beaker className="w-6 h-6 text-[#FABA1E]" />
-                <h3 className=" text-[24px] font-bold text-[#1a5336]">Mini Maker / STEAM</h3>
-              </div>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Age-appropriate building and tinkering projects</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Simple science experiments and observations</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Encourages curiosity and problem-solving</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Activity 3 */}
-            <div className="bg-white p-6 shadow-sm">
-              <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1504489969124-eb0e46a5f482?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraWRzJTIwcGxheWluZyUyMHdhdGVyJTIwc2FuZHxlbnwxfHx8fDE3NjI5OTkwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Children playing with water and sand in sensory play area"
-                className="w-full aspect-[16/9] object-cover mb-4"
-              />
-              <div className="flex items-center gap-3 mb-3">
-                <Droplet className="w-6 h-6 text-[#FABA1E]" />
-                <h3 className=" text-[24px] font-bold text-[#1a5336]">Water & Sand Play</h3>
-              </div>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Sensory exploration and fine motor development</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Concepts of volume, texture, and cause-effect</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Calming and therapeutic for young learners</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Activity 4 */}
-            <div className="bg-white p-6 shadow-sm">
-              <div className="w-full aspect-[16/9] bg-[#fffae9] flex items-center justify-center mb-4">
-                <Activity className="w-16 h-16 text-[#FABA1E]" />
-              </div>
-              <div className="flex items-center gap-3 mb-3">
-                <Activity className="w-6 h-6 text-[#FABA1E]" />
-                <h3 className=" text-[24px] font-bold text-[#1a5336]">Yoga & Mindfulness</h3>
-              </div>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Simple poses and breathing exercises</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Supports emotional regulation and focus</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Builds body awareness and calm</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Activity 5 */}
-            <div className="bg-white p-6 shadow-sm">
-              <div className="w-full aspect-[16/9] bg-[#fffae9] flex items-center justify-center mb-4">
-                <Search className="w-16 h-16 text-[#FABA1E]" />
-              </div>
-              <div className="flex items-center gap-3 mb-3">
-                <Search className="w-6 h-6 text-[#FABA1E]" />
-                <h3 className=" text-[24px] font-bold text-[#1a5336]">Field Trips</h3>
-              </div>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Monthly visits to parks, farms, or cultural sites</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Real-world learning beyond the classroom</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Builds social skills and widens horizons</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Activity 6 */}
-            <div className="bg-white p-6 shadow-sm">
-              <div className="w-full aspect-[16/9] bg-[#fffae9] flex items-center justify-center mb-4">
-                <Heart className="w-16 h-16 text-[#FABA1E]" />
-              </div>
-              <div className="flex items-center gap-3 mb-3">
-                <Heart className="w-6 h-6 text-[#FABA1E]" />
-                <h3 className=" text-[24px] font-bold text-[#1a5336]">Cultural Festivals</h3>
-              </div>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Celebrating Vietnamese and international traditions</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Performances, crafts, and storytelling</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Fosters cultural awareness and pride</span>
-                </li>
-              </ul>
+            {/* Right: Text Content */}
+            <div className="order-1 lg:order-2">
+              <h2 
+                className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+                style={{ fontSize: '48px', lineHeight: '1.24' }}
+              >
+                Innovative English and Phonics Programme
+              </h2>
+              <p className=" text-[#212121] text-lg leading-relaxed mb-6">
+                Children learn English naturally through play, real-life topics, and immersive activities. Our experienced foreign and Vietnamese teachers work together to create engaging lessons that make language learning enjoyable and effective.
+              </p>
+              <p className=" text-[#212121] text-lg leading-relaxed">
+                The programme is carefully tailored to each child's learning pace, building strong pronunciation, listening, and speaking skills from the earliest years. Through songs, stories, games, and daily conversations, children develop confidence and fluency in English alongside their native Vietnamese.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* KG_StudentSupport */}
+      {/* 4. DEDICATED AND EXPERIENCED TEACHERS */}
       <section className="bg-white py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
-          <div className="mb-12">
-            <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
-              Student Support & Wellbeing
-            </h2>
-            <p className=" text-[#1a5336]/70 text-lg max-w-3xl">
-              We provide comprehensive support to ensure every child thrives emotionally, physically, and academically.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Left Panel - EAL & Speech */}
-            <div className="bg-[#fffae9] p-8">
-              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">Language & Development Support</h3>
-              
-              <div className="space-y-6">
-                <div>
-                  <h4 className=" text-[#1a5336] mb-3">EAL (English as Additional Language)</h4>
-                  <p className=" text-[#1a5336]/70 mb-3">
-                    For children new to English, we offer:
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className=" text-[#1a5336]/70 text-sm">Small-group language instruction</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className=" text-[#1a5336]/70 text-sm">Visual aids and bilingual support</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className=" text-[#1a5336]/70 text-sm">Progress monitoring and parent coaching</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className=" text-[#1a5336] mb-3">Speech & Language Screening</h4>
-                  <p className=" text-[#1a5336]/70 mb-3">
-                    All Kindergarten students receive:
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className=" text-[#1a5336]/70 text-sm">Initial screening in the first month</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className=" text-[#1a5336]/70 text-sm">Referral to specialists if needed</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className=" text-[#1a5336]/70 text-sm">In-class articulation activities</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left: Text Content */}
+            <div>
+              <h2 
+                className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+                style={{ fontSize: '48px', lineHeight: '1.24' }}
+              >
+                Dedicated and experienced teachers
+              </h2>
+              <p className=" text-[#212121] text-lg leading-relaxed mb-6">
+                Our kindergarten teachers are highly qualified, caring professionals with extensive experience in early childhood education. They understand young learners' developmental needs and create warm, supportive classroom environments where children feel safe to explore and grow.
+              </p>
+              <p className=" text-[#212121] text-lg leading-relaxed">
+                We maintain regular communication with parents through meetings, daily messages, photo updates, and detailed progress reports. Teachers share observations, celebrate milestones, and work closely with families to ensure every child receives the support they need to flourish.
+              </p>
             </div>
 
-            {/* Right Panel - Health & Emotional */}
-            <div className="bg-[#fffae9] p-8">
-              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">Health & Emotional Support</h3>
-              
-              <div className="space-y-6">
-                <div>
-                  <h4 className=" text-[#1a5336] mb-3">Separation Anxiety & Adjustment</h4>
-                  <p className=" text-[#1a5336]/70 mb-3">
-                    We understand that starting school can be challenging. Our approach includes:
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className=" text-[#1a5336]/70 text-sm">Gradual entry program for new students</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className=" text-[#1a5336]/70 text-sm">Comfort items from home are welcomed</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className=" text-[#1a5336]/70 text-sm">Daily communication with parents during transition</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className=" text-[#1a5336] mb-3">Nutrition & Allergy Management</h4>
-                  <p className=" text-[#1a5336]/70 mb-3">
-                    Keeping your child safe and healthy:
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className=" text-[#1a5336]/70 text-sm">Nutritious snacks provided daily</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className=" text-[#1a5336]/70 text-sm">Allergy-aware environment with strict protocols</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className=" text-[#1a5336]/70 text-sm">Staff trained in EpiPen and emergency response</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            {/* Right: Image */}
+            <div className="relative h-[500px] lg:h-[600px]">
+              <ImageWithFallback 
+                src="https://images.unsplash.com/photo-1761604478724-13fe879468cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraW5kZXJnYXJ0ZW4lMjB0ZWFjaGVyJTIwY2hpbGRyZW58ZW58MXx8fHwxNzYzMTAxNjQyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Teacher engaging with kindergarten students in classroom activities"
+                className="w-full h-full object-cover"
+              />
             </div>
-          </div>
-
-          {/* Parent Workshops Note */}
-          <div className="mt-8 bg-[#1a5336] p-8 text-center">
-            <p className=" text-[#fffae9] mb-4">
-              <strong>Parent Workshops:</strong> We host monthly sessions on topics like positive discipline, bilingual parenting, and kindergarten readiness to support families.
-            </p>
-            <button 
-              onClick={() => onNavigate('/contact/contact-us')}
-              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
-            >
-              <MessageCircle className="inline w-5 h-5 mr-2 mb-1" />
-              Talk to Our Counselor
-            </button>
           </div>
         </div>
       </section>
 
-      {/* KG_TuitionPolicy */}
+      {/* 5. PERSONALISED LEARNING FOR EVERY CHILD */}
       <section className="bg-[#fffae9] py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
-          <div className="mb-12">
-            <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
-              Tuition & What's Included
-            </h2>
-            <p className=" text-[#1a5336]/70 text-lg max-w-3xl">
-              Transparent pricing with everything your child needs for a complete Kindergarten experience.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            {/* Included */}
-            <div className="bg-white p-8 shadow-sm">
-              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">Included in Tuition</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className=" text-[#1a5336]/70">All core curriculum and bilingual instruction</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className=" text-[#1a5336]/70">Daily healthy snacks and drinking water</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className=" text-[#1a5336]/70">Learning materials, books, and supplies</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className=" text-[#1a5336]/70">Music & Movement, Yoga, and STEAM classes</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className=" text-[#1a5336]/70">Monthly field trips and cultural celebrations</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className=" text-[#1a5336]/70">Progress reports and parent-teacher conferences</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className=" text-[#1a5336]/70">Access to parent portal and communication app</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className=" text-[#1a5336]/70">School uniform (first set)</span>
-                </li>
-              </ul>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left: Image */}
+            <div className="relative h-[500px] lg:h-[600px] order-2 lg:order-1">
+              <ImageWithFallback 
+                src="https://images.unsplash.com/photo-1588072432836-e10032774350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMGxlYXJuaW5nJTIwcGVyc29uYWxpemVkJTIwY2xhc3Nyb29tfGVufDF8fHx8MTc2MzEwMTY0M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Teacher providing individual attention to a young student"
+                className="w-full h-full object-cover"
+              />
             </div>
 
-            {/* Optional */}
-            <div className="bg-white p-8 shadow-sm">
-              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">Optional Add-Ons</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <ChevronRight className="w-5 h-5 text-[#1a5336]/30 flex-shrink-0 mt-0.5" />
-                  <span className=" text-[#1a5336]/70">Extended care (before/after school)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ChevronRight className="w-5 h-5 text-[#1a5336]/30 flex-shrink-0 mt-0.5" />
-                  <span className=" text-[#1a5336]/70">Hot lunch program</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ChevronRight className="w-5 h-5 text-[#1a5336]/30 flex-shrink-0 mt-0.5" />
-                  <span className=" text-[#1a5336]/70">Swimming lessons (off-site)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ChevronRight className="w-5 h-5 text-[#1a5336]/30 flex-shrink-0 mt-0.5" />
-                  <span className=" text-[#1a5336]/70">Private language tutoring</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ChevronRight className="w-5 h-5 text-[#1a5336]/30 flex-shrink-0 mt-0.5" />
-                  <span className=" text-[#1a5336]/70">Summer camp enrollment</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ChevronRight className="w-5 h-5 text-[#1a5336]/30 flex-shrink-0 mt-0.5" />
-                  <span className=" text-[#1a5336]/70">Transportation service</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Payment & Refund */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white p-8 border-l-4 border-[#1a5336]">
-              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-4">Payment Options</h3>
-              <p className=" text-[#1a5336]/70 mb-4">
-                We offer flexible payment plans to support families:
+            {/* Right: Text Content */}
+            <div className="order-1 lg:order-2">
+              <h2 
+                className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+                style={{ fontSize: '48px', lineHeight: '1.24' }}
+              >
+                Personalised learning for every child
+              </h2>
+              <p className=" text-[#212121] text-lg leading-relaxed mb-6">
+                We recognize that every child is unique, with individual strengths, interests, and learning styles. Our teachers carefully observe each child and design activities that match their developmental stage and spark their natural curiosity.
               </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm"><strong>Annual:</strong> 5% discount for full payment</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm"><strong>Semester:</strong> 2 installments (Sept & Feb)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm"><strong>Quarterly:</strong> 4 installments throughout the year</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm"><strong>Monthly:</strong> 10 payments (Sept-June)</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 border-l-4 border-[#1a5336]">
-              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-4">Refund Policy</h3>
-              <p className=" text-[#1a5336]/70 mb-4">
-                We understand that circumstances change:
+              <p className=" text-[#212121] text-lg leading-relaxed">
+                Through personalized education, we cultivate individual talents, encourage creative thinking, and build essential life skills and independence. Children learn at their own pace in a supportive environment that celebrates their progress and nurtures their confidence.
               </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Withdrawal before Sept 1: 100% refund minus registration fee</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Within first month: 50% refund of unused tuition</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">After first month: No refund, but can transfer to sibling</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className=" text-[#1a5336]/70 text-sm">Medical/relocation: Considered case-by-case</span>
-                </li>
-              </ul>
             </div>
-          </div>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={() => onNavigate('/admissions/tuition-fees')}
-              className="px-8 h-12 bg-[#1a5336] text-[#fffae9]  hover:bg-[#0f3a24] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
-            >
-              <DollarSign className="inline w-5 h-5 mr-2 mb-1" />
-              View Full Fee Schedule
-            </button>
-            <button 
-              className="px-8 h-12 bg-transparent text-[#1a5336] border-2 border-[#1a5336]  hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
-            >
-              <Calculator className="inline w-5 h-5 mr-2 mb-1" />
-              Tuition Calculator
-            </button>
-            <button 
-              onClick={() => onNavigate('/admissions/apply-now')}
-              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
-            >
-              <Send className="inline w-5 h-5 mr-2 mb-1" />
-              Apply Now
-            </button>
           </div>
         </div>
       </section>
 
-      {/* KG_HelperFooter */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12 text-center">
-          <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
-            Ready to Learn More?
-          </h2>
-          <p className=" text-[#1a5336]/70 text-lg mb-8 max-w-2xl mx-auto">
-            We'd love to show you our Kindergarten classrooms in person and answer any questions about your child's journey with us.
-          </p>
+      {/* 6. A TYPICAL DAY AT LHBS KINDERGARTEN */}
+      <section className="bg-white py-24 md:py-32">
+        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-16">
+            <h2 
+              className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+              style={{ fontSize: '48px', lineHeight: '1.24' }}
+            >
+              A typical day at LHBS Kindergarten
+            </h2>
+            <p className=" text-[#212121] text-lg max-w-3xl mx-auto">
+              From arrival to home time, children learn through play in a safe and joyful full-day environment designed to nurture curiosity, creativity, and a love of learning.
+            </p>
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={() => onNavigate('/contact/book-tour')}
-              className="px-8 h-12 bg-[#1a5336] text-[#fffae9]  hover:bg-[#0f3a24] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
-            >
-              Schedule a Tour
-            </button>
-            <button 
-              onClick={() => onNavigate('/contact/contact-us')}
-              className="px-8 h-12 bg-transparent text-[#1a5336] border-2 border-[#1a5336]  hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
-            >
-              Chat with Us
-            </button>
-            <button 
-              className="px-8 h-12 bg-transparent text-[#1a5336] border border-[#1a5336]/50  hover:border-[#1a5336] hover:bg-[#1a5336]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
-            >
-              Download PDF Guide
-            </button>
+          {/* Timeline Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Morning Welcome */}
+            <div className="bg-[#fffae9] p-6 border-l-4 border-[#FABA1E]">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
+                  <Heart className="w-6 h-6 text-[#FABA1E]" />
+                </div>
+                <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Warm welcome & morning play</h3>
+              </div>
+              <p className=" text-[#212121]/70 text-sm">
+                Children arrive to a friendly greeting, enjoy free play with peers, and gather for morning circle time with songs, warm-up activities, and sharing.
+              </p>
+            </div>
+
+            {/* Learning Through Play */}
+            <div className="bg-[#fffae9] p-6 border-l-4 border-[#FABA1E]">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
+                  <BookOpen className="w-6 h-6 text-[#FABA1E]" />
+                </div>
+                <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Learning through play</h3>
+              </div>
+              <p className=" text-[#212121]/70 text-sm">
+                Small-group exploration in classroom learning centers and outdoor playground—STEAM activities, storytelling, creative games, and hands-on discovery.
+              </p>
+            </div>
+
+            {/* Healthy Meals & Rest */}
+            <div className="bg-[#fffae9] p-6 border-l-4 border-[#FABA1E]">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
+                  <Utensils className="w-6 h-6 text-[#FABA1E]" />
+                </div>
+                <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Healthy meals & rest</h3>
+              </div>
+              <p className=" text-[#212121]/70 text-sm">
+                Nutritious lunch following school menu standards, quiet rest time in comfortable spaces, and healthy snacks to keep energy levels balanced.
+              </p>
+            </div>
+
+            {/* Afternoon Discovery */}
+            <div className="bg-[#fffae9] p-6 border-l-4 border-[#FABA1E]">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
+                  <Paintbrush className="w-6 h-6 text-[#FABA1E]" />
+                </div>
+                <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Afternoon discovery</h3>
+              </div>
+              <p className=" text-[#212121]/70 text-sm">
+                Creative arts sessions, music and movement activities, outdoor games, and project work that builds on morning learning experiences.
+              </p>
+            </div>
+
+            {/* After-School Clubs */}
+            <div className="bg-[#fffae9] p-6 border-l-4 border-[#FABA1E]">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
+                  <Sparkles className="w-6 h-6 text-[#FABA1E]" />
+                </div>
+                <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">After-school clubs & Saturday programme</h3>
+              </div>
+              <p className=" text-[#212121]/70 text-sm">
+                Optional enrichment clubs and special Saturday Program extending learning through themed activities, sports, arts, and additional language support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. A SUPPORTIVE PARTNERSHIP WITH OUR PARENTS */}
+      <section className="bg-[#fffae9] py-24 md:py-32">
+        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left: Text Content */}
+            <div>
+              <h2 
+                className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+                style={{ fontSize: '48px', lineHeight: '1.24' }}
+              >
+                A supportive partnership with our parents
+              </h2>
+              <p className=" text-[#212121] text-lg leading-relaxed mb-6">
+                At LHBS, we see parents as essential partners in their child's educational journey. Strong home-school collaboration ensures consistent support and helps children thrive both in and out of the classroom.
+              </p>
+              <p className=" text-[#212121] text-lg leading-relaxed">
+                We maintain open communication through our Parent Handbook, regular meetings, a dedicated hotline, online portals for updates, school events, and frequent messages about each child's activities and progress. Parents are always welcome to connect with teachers, ask questions, and participate in school life.
+              </p>
+            </div>
+
+            {/* Right: Image */}
+            <div className="relative h-[500px] lg:h-[600px]">
+              <ImageWithFallback 
+                src="https://images.unsplash.com/photo-1576673196028-cd681592bd61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXJlbnQlMjB0ZWFjaGVyJTIwbWVldGluZyUyMHNjaG9vbHxlbnwxfHx8fDE3NjMxMDE2NDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Parent and teacher collaborating during a school meeting"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. TRANSITIONING TO PRIMARY SCHOOL */}
+      <section className="bg-white py-24 md:py-32">
+        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left: Image */}
+            <div className="relative h-[500px] lg:h-[600px] order-2 lg:order-1">
+              <ImageWithFallback 
+                src="https://images.unsplash.com/photo-1600792170156-7fdc12ed6733?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHJlYWR5JTIwcHJpbWFyeSUyMHNjaG9vbHxlbnwxfHx8fDE3NjMxMDE2NDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Kindergarten students prepared and ready for primary school transition"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Right: Text Content */}
+            <div className="order-1 lg:order-2">
+              <h2 
+                className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+                style={{ fontSize: '48px', lineHeight: '1.24' }}
+              >
+                Transitioning to primary school
+              </h2>
+              <p className=" text-[#212121] text-lg leading-relaxed mb-6">
+                We carefully prepare kindergarten students for a smooth transition to Grade 1 through structured daily routines, life skills development, and pre-academic readiness activities that build confidence and independence.
+              </p>
+              <p className=" text-[#212121] text-lg leading-relaxed">
+                Our Summer Bridge Program—Grade 1 Readiness initiative and close connection with LHBS Primary School ensure children feel excited and well-prepared for the next step in their learning journey.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. FINAL CTA BLOCK - TWO TILES */}
+      <section className="bg-[#fffae9] py-24 md:py-32">
+        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Tile 1: Discover our Kindergarten pathway */}
+            <div className="bg-[#1a5336] p-12 flex flex-col justify-between">
+              <div>
+                <h3 className="font-['SVN-Gotham'] text-3xl text-[#fffae9] mb-4">
+                  Discover our Kindergarten pathway
+                </h3>
+                <p className=" text-[#fffae9]/90 text-lg mb-8 leading-relaxed">
+                  Learn more about our full Kindergarten programme, tuition fees, admissions process, and how we nurture young learners from ages 3 to 5.
+                </p>
+              </div>
+              <button 
+                onClick={() => onNavigate('/academics/kindergarten')}
+                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors self-start"
+              >
+                Explore Kindergarten programme
+              </button>
+            </div>
+
+            {/* Tile 2: Our facilities */}
+            <div className="bg-white border-2 border-[#1a5336] p-12 flex flex-col justify-between">
+              <div>
+                <h3 className="font-['SVN-Gotham'] text-3xl text-[#1a5336] mb-4">
+                  Our facilities – An environment made for learning
+                </h3>
+                <p className=" text-[#212121]/70 text-lg mb-8 leading-relaxed">
+                  Explore our safe, modern, and spacious campus featuring playgrounds, swimming pool, library, canteen, medical care, and bus service.
+                </p>
+              </div>
+              <button 
+                onClick={() => onNavigate('/our-school/facilities')}
+                className="px-8 h-12 bg-transparent border-2 border-[#1a5336] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors self-start"
+              >
+                Explore our campus
+              </button>
+            </div>
           </div>
         </div>
       </section>

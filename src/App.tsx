@@ -11,6 +11,7 @@ import { AcademicsOverviewPage } from './pages/AcademicsOverviewPage';
 import { AcademicsKindergartenPage } from './pages/AcademicsKindergartenPage';
 import { AcademicsPrimaryPage } from './pages/AcademicsPrimaryPage';
 import { AcademicsSecondaryPage } from './pages/AcademicsSecondaryPage';
+import { AcademicsLowerSecondaryPage } from './pages/AcademicsLowerSecondaryPage';
 import { AcademicsHighSchoolPage } from './pages/AcademicsHighSchoolPage';
 import { ParentsPage } from './pages/ParentsPage';
 import { GenericPage } from './pages/GenericPage';
@@ -101,7 +102,7 @@ export default function App() {
       ) : currentPath === '/academics/primary' ? (
         <AcademicsPrimaryPage onNavigate={handleNavigate} />
       ) : currentPath === '/academics/lower-secondary' ? (
-        <AcademicsSecondaryPage onNavigate={handleNavigate} />
+        <AcademicsLowerSecondaryPage onNavigate={handleNavigate} />
       ) : currentPath === '/academics/upper-secondary' ? (
         <AcademicsHighSchoolPage onNavigate={handleNavigate} />
       ) : currentPath === '/parents' ? (
