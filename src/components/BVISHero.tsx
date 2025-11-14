@@ -12,7 +12,8 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
         <img
           src="https://images.unsplash.com/photo-1696238572906-2a85322d2152?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWxpbmd1YWwlMjBzY2hvb2wlMjBzdHVkZW50cyUyMGNhbXB1c3xlbnwxfHx8fDE3NjMwODQxNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="LHBS campus with students"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover backdrop-blur-sm"
+          style={{ filter: 'blur(1px)' }}
         />
       </div>
 

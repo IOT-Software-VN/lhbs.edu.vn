@@ -65,10 +65,10 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
               transition={{ duration: 0.4, ease: 'easeInOut' }}
             >
               {/* Three Column Layout */}
-              <div className="h-full max-w-[1320px] mx-auto px-12 py-12 pb-24 flex gap-12">
+              <div className="h-full max-w-[1440px] mx-auto px-12 py-12 pb-24 flex gap-12">
                 
                 {/* Column 1 - Primary Navigation (40%) */}
-                <div className="w-[40%] border-r border-white/20 pr-12">
+                <div className="w-[40%] border-r border-white/20 pr-18">
                   <nav className="space-y-6" aria-label="Main sections">
                     {siteNavigation.map((parent) => (
                       <button

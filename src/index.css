@@ -97,6 +97,13 @@ button,
   border-radius: 9999px;
 }
 
+/* Override for specific rounded classes */
+button.rounded-lg,
+[data-testid*="button"].rounded-lg,
+.button.rounded-lg {
+  border-radius: 0.5rem !important;
+}
+
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
     *, :before, :after, ::backdrop {
