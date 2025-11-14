@@ -7,7 +7,7 @@ interface AcademicsKindergartenPageProps {
 
 export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenPageProps) {
   return (
-    <div className="w-full bg-[#fffae9]">
+    <div className="w-full ">
       {/* 1. HERO SECTION - KINDERGARTEN */}
       <section 
         className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
@@ -68,7 +68,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
               </button>
               <button 
                 onClick={() => onNavigate('/contact/book-tour')}
-                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
+                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover: hover:text-[#1a5336] transition-colors"
               >
                 Book a Tour
               </button>
@@ -158,7 +158,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
       </section>
 
       {/* 3. INNOVATIVE ENGLISH & PHONICS PROGRAMME */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: Image */}
@@ -222,7 +222,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
       </section>
 
       {/* 5. PERSONALISED LEARNING FOR EVERY CHILD */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: Image */}
@@ -271,7 +271,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
           {/* Timeline Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Morning Welcome */}
-            <div className="bg-[#fffae9] p-6 border-l-4 border-[#FABA1E]">
+            <div className=" p-6 border-l-4 border-[#FABA1E]">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <Heart className="w-6 h-6 text-[#FABA1E]" />
@@ -284,7 +284,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             </div>
 
             {/* Learning Through Play */}
-            <div className="bg-[#fffae9] p-6 border-l-4 border-[#FABA1E]">
+            <div className=" p-6 border-l-4 border-[#FABA1E]">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <BookOpen className="w-6 h-6 text-[#FABA1E]" />
@@ -297,7 +297,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             </div>
 
             {/* Healthy Meals & Rest */}
-            <div className="bg-[#fffae9] p-6 border-l-4 border-[#FABA1E]">
+            <div className=" p-6 border-l-4 border-[#FABA1E]">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <Utensils className="w-6 h-6 text-[#FABA1E]" />
@@ -310,7 +310,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             </div>
 
             {/* Afternoon Discovery */}
-            <div className="bg-[#fffae9] p-6 border-l-4 border-[#FABA1E]">
+            <div className=" p-6 border-l-4 border-[#FABA1E]">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <Paintbrush className="w-6 h-6 text-[#FABA1E]" />
@@ -323,7 +323,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             </div>
 
             {/* After-School Clubs */}
-            <div className="bg-[#fffae9] p-6 border-l-4 border-[#FABA1E]">
+            <div className=" p-6 border-l-4 border-[#FABA1E]">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <Sparkles className="w-6 h-6 text-[#FABA1E]" />
@@ -339,7 +339,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
       </section>
 
       {/* 7. A SUPPORTIVE PARTNERSHIP WITH OUR PARENTS */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: Text Content */}
@@ -403,7 +403,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
       </section>
 
       {/* 9. FINAL CTA BLOCK - TWO TILES */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Tile 1: Discover our Kindergarten pathway */}

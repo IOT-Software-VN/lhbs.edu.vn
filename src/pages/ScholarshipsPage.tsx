@@ -28,7 +28,7 @@ import {
 
 export function ScholarshipsPage({ onNavigate }: { onNavigate: (path: string) => void }) {
   return (
-    <div className="relative bg-[#fffae9]">
+    <div className="relative ">
       {/* Hero Section */}
       <HeroSection onNavigate={onNavigate} />
       
@@ -151,7 +151,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
             
             <button
               onClick={() => onNavigate('/admissions/apply-now')}
-              className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover: hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               aria-label="Start scholarship application"
             >
               APPLY NOW
@@ -194,7 +194,7 @@ function SummaryCardsSection() {
   ];
 
   return (
-    <section id="summary" className="relative py-16 md:py-24 bg-[#fffae9]">
+    <section id="summary" className="relative py-16 md:py-24 ">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {cards.map((card, idx) => {
@@ -258,7 +258,7 @@ function WhoShouldApplySection() {
           </div>
           
           {/* Reassurance Note */}
-          <div className="bg-[#fffae9] border-l-4 border-[#FABA1E] p-6">
+          <div className=" border-l-4 border-[#FABA1E] p-6">
             <div className="flex gap-3">
               <AlertCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
               <p className=" text-sm text-[#1a5336]/80 leading-relaxed">
@@ -321,7 +321,7 @@ function CriteriaMatrixSection() {
   ];
 
   return (
-    <section id="criteria" className="relative py-16 md:py-24 bg-[#fffae9]">
+    <section id="criteria" className="relative py-16 md:py-24 ">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
         <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4 text-center">
           Scholarship Criteria & Selection
@@ -378,7 +378,7 @@ function CriteriaMatrixSection() {
             </thead>
             <tbody>
               {scholarshipTypes.map((scholarship, idx) => (
-                <tr key={idx} className="border-t-2 border-[#1a5336] hover:bg-[#fffae9]/50">
+                <tr key={idx} className="border-t-2 border-[#1a5336] hover:/50">
                   <td className="p-4  font-bold text-[#1a5336] border-r border-[#1a5336]/20">
                     {scholarship.type}
                   </td>
@@ -556,7 +556,7 @@ function DocumentChecklistSection() {
   ];
 
   return (
-    <section id="docs" className="relative py-16 md:py-24 bg-[#fffae9]">
+    <section id="docs" className="relative py-16 md:py-24 ">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
         <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4 text-center">
           Document Checklist
@@ -701,7 +701,7 @@ function KeyDatesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-[#fffae9] border-2 border-[#1a5336] p-6 relative"
+              className=" border-2 border-[#1a5336] p-6 relative"
             >
               {/* Badge */}
               <div className={`absolute top-0 right-0 px-3 py-1 ${round.badgeColor}`}>
@@ -742,7 +742,7 @@ function KeyDatesSection() {
 // ==================== AWARD & RENEWAL ====================
 function AwardRenewalSection() {
   return (
-    <section id="renewal" className="relative py-16 md:py-24 bg-[#fffae9]">
+    <section id="renewal" className="relative py-16 md:py-24 ">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
         <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-12 text-center">
           Award Application & Renewal
@@ -858,7 +858,7 @@ function StackingPaymentSection() {
         
         <div className="grid md:grid-cols-2 gap-8 max-w-[1100px] mx-auto">
           {/* Stacking Rules */}
-          <div className="bg-[#fffae9] border-2 border-[#1a5336] p-8">
+          <div className=" border-2 border-[#1a5336] p-8">
             <h3 className=" text-2xl text-[#1a5336] mb-6">
               Combining Multiple Scholarships
             </h3>
@@ -910,7 +910,7 @@ function StackingPaymentSection() {
           </div>
           
           {/* Payment & Refund */}
-          <div className="bg-[#fffae9] border-2 border-[#1a5336] p-8">
+          <div className=" border-2 border-[#1a5336] p-8">
             <h3 className=" text-2xl text-[#1a5336] mb-6">
               How Discounts Apply
             </h3>
@@ -974,7 +974,7 @@ function StackingPaymentSection() {
 // ==================== NEED-BASED AID ====================
 function NeedBasedAidSection() {
   return (
-    <section id="aid" className="relative py-16 md:py-24 bg-[#fffae9]">
+    <section id="aid" className="relative py-16 md:py-24 ">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
         <div className="max-w-[900px] mx-auto">
           <div className="bg-white border-2 border-[#1a5336] p-8 md:p-12">
@@ -1041,7 +1041,7 @@ function NeedBasedAidSection() {
               </div>
               
               {/* Confidentiality Highlight */}
-              <div className="bg-[#fffae9] border-2 border-[#FABA1E] p-6">
+              <div className=" border-2 border-[#FABA1E] p-6">
                 <div className="flex items-start gap-3">
                   <AlertCircle className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
                   <div>
@@ -1129,7 +1129,7 @@ function FAQSection() {
             return (
               <div
                 key={idx}
-                className="border-2 border-[#1a5336] bg-[#fffae9] overflow-hidden"
+                className="border-2 border-[#1a5336]  overflow-hidden"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
@@ -1207,7 +1207,7 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
   ];
 
   return (
-    <section id="downloads" className="relative py-16 md:py-24 bg-[#fffae9]">
+    <section id="downloads" className="relative py-16 md:py-24 ">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
         <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-12 text-center">
           Downloads & Contact
@@ -1392,7 +1392,7 @@ function StickyHelper() {
               const criteriaSection = document.getElementById('criteria');
               criteriaSection?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="w-full mt-4 px-4 h-10 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
+            className="w-full mt-4 px-4 h-10 bg-[#FABA1E] text-[#1a5336]  font-bold hover: transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
           >
             CHECK ELIGIBILITY
           </button>

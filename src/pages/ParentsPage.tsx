@@ -85,19 +85,19 @@ export function ParentsPage({ onNavigate }: ParentsPageProps) {
           Join our vibrant parent community and connect with other LHBS families. Participate in school events, workshops, and support networks designed to enhance your family's experience at LHBS.
         </p>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="p-6 bg-[#fffae9]">
+          <div className="p-6 ">
             <h3 className=" text-[24px] text-[#1a5336] mb-3">Parent Workshops</h3>
             <p className=" text-[#666] text-sm">
               Regular workshops on parenting, child development, and supporting your child's education.
             </p>
           </div>
-          <div className="p-6 bg-[#fffae9]">
+          <div className="p-6 ">
             <h3 className=" text-[24px] text-[#1a5336] mb-3">School Events</h3>
             <p className=" text-[#666] text-sm">
               Participate in school performances, sports days, cultural celebrations, and family activities.
             </p>
           </div>
-          <div className="p-6 bg-[#fffae9]">
+          <div className="p-6 ">
             <h3 className=" text-[24px] text-[#1a5336] mb-3">Support Network</h3>
             <p className=" text-[#666] text-sm">
               Connect with other parents, share experiences, and build lasting friendships within our community.

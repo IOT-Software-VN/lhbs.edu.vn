@@ -26,7 +26,7 @@ import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 export function AcademicsOverviewPage({ onNavigate }: { onNavigate: (path: string) => void }) {
   return (
-    <div className="relative bg-[#fffae9]">
+    <div className="relative ">
       {/* Section 1: Header */}
       <HeaderAcademics onNavigate={onNavigate} />
       
@@ -130,7 +130,7 @@ function HeaderAcademics({ onNavigate }: { onNavigate: (path: string) => void })
               
               <button
                 onClick={() => onNavigate('/contact/book-tour')}
-                className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover: hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
                 aria-label="Book a campus tour"
               >
                 BOOK A TOUR
@@ -155,7 +155,7 @@ function HeaderAcademics({ onNavigate }: { onNavigate: (path: string) => void })
 
 function StatBadge({ value, label }: { value: string; label: string }) {
   return (
-    <div className="bg-[#fffae9]/10 backdrop-blur-sm border border-[#fffae9]/20 p-4 text-center">
+    <div className="/10 backdrop-blur-sm border border-[#fffae9]/20 p-4 text-center">
       <div className=" text-2xl md:text-3xl text-[#FABA1E] mb-1">
         {value}
       </div>
@@ -215,7 +215,7 @@ function ProgramHighlightsSection() {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section id="highlights" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]" ref={ref}>
+    <section id="highlights" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto " ref={ref}>
       {/* Section Header */}
       <div className="text-center mb-16">
         <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
@@ -351,7 +351,7 @@ function CurriculumStructureSection({ onNavigate }: { onNavigate: (path: string)
             className={`px-8 h-12  transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] ${
               activeTab === tab
                 ? 'bg-[#1a5336] text-[#fffae9]'
-                : 'bg-[#fffae9] text-[#1a5336] border-2 border-[#1a5336] hover:bg-[#1a5336]/10'
+                : ' text-[#1a5336] border-2 border-[#1a5336] hover:bg-[#1a5336]/10'
             }`}
           >
             {curriculumData[tab].name}
@@ -420,7 +420,7 @@ function CurriculumStructureSection({ onNavigate }: { onNavigate: (path: string)
           </div>
           
           {/* Assessment */}
-          <div className="bg-[#fffae9] p-6">
+          <div className=" p-6">
             <h4 className=" text-lg text-[#1a5336] mb-3">
               Assessment & Reporting
             </h4>
@@ -430,7 +430,7 @@ function CurriculumStructureSection({ onNavigate }: { onNavigate: (path: string)
           </div>
           
           {/* Homework */}
-          <div className="bg-[#fffae9] p-6">
+          <div className=" p-6">
             <h4 className=" text-lg text-[#1a5336] mb-3">
               Homework Policy
             </h4>
@@ -440,7 +440,7 @@ function CurriculumStructureSection({ onNavigate }: { onNavigate: (path: string)
           </div>
           
           {/* Support */}
-          <div className="bg-[#fffae9] p-6">
+          <div className=" p-6">
             <h4 className=" text-lg text-[#1a5336] mb-3">
               Learning Support
             </h4>
@@ -560,7 +560,7 @@ function PathwaysSection({ onNavigate }: { onNavigate: (path: string) => void })
   };
 
   return (
-    <section id="pathways" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
+    <section id="pathways" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto ">
       {/* Section Header */}
       <div className="text-center mb-16">
         <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
@@ -716,7 +716,7 @@ function HelperFooterAcademics({ onNavigate }: { onNavigate: (path: string) => v
           
           <button
             onClick={() => onNavigate('/contact/book-tour')}
-            className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+            className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover: hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
             aria-label="Book a campus tour"
           >
             BOOK A TOUR
@@ -725,7 +725,7 @@ function HelperFooterAcademics({ onNavigate }: { onNavigate: (path: string) => v
           <a
             href="/downloads/lhbs-curriculum-guide-2025.pdf"
             download
-            className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center gap-2"
+            className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover: hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center gap-2"
             aria-label="Download curriculum guide"
           >
             <Download className="w-4 h-4" />

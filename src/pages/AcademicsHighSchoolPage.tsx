@@ -7,7 +7,7 @@ interface AcademicsHighSchoolPageProps {
 
 export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageProps) {
   return (
-    <div className="w-full bg-[#fffae9]">
+    <div className="w-full ">
       {/* 1. HERO SECTION */}
       <section 
         className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
@@ -68,7 +68,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
               </button>
               <button 
                 onClick={() => onNavigate('/admissions/apply-now')}
-                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
+                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover: hover:text-[#1a5336] transition-colors"
               >
                 Enquire Now
               </button>
@@ -94,7 +94,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Card 1: Core Curriculum */}
-            <div className="bg-[#fffae9] p-8 border-l-4 border-[#1a5336]">
+            <div className=" p-8 border-l-4 border-[#1a5336]">
               <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-4">
                 Core Curriculum
               </h3>
@@ -133,7 +133,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
             </div>
 
             {/* Card 2: Specialised & Orientation Classes */}
-            <div className="bg-[#fffae9] p-8 border-l-4 border-[#FABA1E]">
+            <div className=" p-8 border-l-4 border-[#FABA1E]">
               <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-4">
                 Specialised & Orientation Classes
               </h3>
@@ -169,7 +169,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
       </section>
 
       {/* 3. BILINGUAL EDUCATION & ENGLISH PATHWAYS */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left: Text Content */}
@@ -276,7 +276,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
               </p>
 
               {/* Clubs & Student Leadership */}
-              <div className="bg-[#fffae9] p-6 border-l-4 border-[#FABA1E] mb-8">
+              <div className=" p-6 border-l-4 border-[#FABA1E] mb-8">
                 <div className="flex items-start gap-3 mb-3">
                   <Users className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
                   <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Clubs & Student Leadership</h3>
@@ -311,7 +311,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
       </section>
 
       {/* 5. STEM & ENRICHMENT COURSES */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
             <h2 
@@ -406,7 +406,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
           {/* Timeline */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Step 1 */}
-            <div className="bg-[#fffae9] p-8 border-l-4 border-[#1a5336]">
+            <div className=" p-8 border-l-4 border-[#1a5336]">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <Heart className="w-6 h-6 text-[#FABA1E]" />
@@ -419,7 +419,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
             </div>
 
             {/* Step 2 */}
-            <div className="bg-[#fffae9] p-8 border-l-4 border-[#1a5336]">
+            <div className=" p-8 border-l-4 border-[#1a5336]">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <BookOpen className="w-6 h-6 text-[#FABA1E]" />
@@ -432,7 +432,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
             </div>
 
             {/* Step 3 */}
-            <div className="bg-[#fffae9] p-8 border-l-4 border-[#1a5336]">
+            <div className=" p-8 border-l-4 border-[#1a5336]">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <Languages className="w-6 h-6 text-[#FABA1E]" />
@@ -445,7 +445,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
             </div>
 
             {/* Step 4 */}
-            <div className="bg-[#fffae9] p-8 border-l-4 border-[#1a5336]">
+            <div className=" p-8 border-l-4 border-[#1a5336]">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <Beaker className="w-6 h-6 text-[#FABA1E]" />
@@ -458,7 +458,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
             </div>
 
             {/* Step 5 */}
-            <div className="bg-[#fffae9] p-8 border-l-4 border-[#1a5336]">
+            <div className=" p-8 border-l-4 border-[#1a5336]">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <Users className="w-6 h-6 text-[#FABA1E]" />
@@ -474,7 +474,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
       </section>
 
       {/* 7. HIGHLY QUALIFIED TEACHERS & COUNSELORS */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: Text Content */}
@@ -549,7 +549,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
               <p className=" text-[#212121] text-lg leading-relaxed mb-6">
                 These purpose-built spaces enable students to conduct research, collaborate on projects, prepare for university exams, and develop the skills needed for success in higher education and beyond.
               </p>
-              <div className="bg-[#fffae9] p-6 mb-8">
+              <div className=" p-6 mb-8">
                 <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-4">Key Facilities:</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
@@ -582,7 +582,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
       </section>
 
       {/* 9. INTERNATIONAL PATHWAYS & DUAL DIPLOMA */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
             <h2 
@@ -687,7 +687,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
             </button>
             <button 
               onClick={() => onNavigate('/admissions/apply-now')}
-              className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
+              className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover: hover:text-[#1a5336] transition-colors"
             >
               Apply Now
             </button>

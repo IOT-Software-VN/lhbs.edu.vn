@@ -31,7 +31,7 @@ export function GenericPage({ path, onNavigate, breadcrumbs = [] }: GenericPageP
 
   if (!currentParent) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#fffae9]">
+      <div className="min-h-screen flex items-center justify-center ">
         <div className="text-center">
           <h1 className=" text-6xl text-[#1a5336] mb-4">404</h1>
           <p className=" text-xl text-[#666] mb-8">Page not found</p>

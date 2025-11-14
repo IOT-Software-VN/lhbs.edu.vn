@@ -24,7 +24,7 @@ export function TuitionFeesPage({ onNavigate }: { onNavigate: (path: string) => 
   const [showCalculator, setShowCalculator] = useState(false);
 
   return (
-    <div className="relative bg-[#fffae9]">
+    <div className="relative ">
       {/* Hero Section */}
       <HeroSection onNavigate={onNavigate} />
       
@@ -150,7 +150,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
             <a
               href="/downloads/tuition-fees-policy-2025.pdf"
               download
-              className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center gap-2"
+              className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover: hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center gap-2"
             >
               <Download className="w-4 h-4" />
               DOWNLOAD POLICY (PDF)
@@ -208,7 +208,7 @@ function SummaryCardsSection() {
   ];
 
   return (
-    <section id="summary" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
+    <section id="summary" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto ">
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {summaryCards.map((card, index) => (
           <motion.div
@@ -307,7 +307,7 @@ function TuitionTablesSection() {
             className={`px-8 h-10  transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] ${
               selectedTab === tab.key
                 ? 'bg-[#1a5336] text-[#fffae9]'
-                : 'bg-[#fffae9] text-[#1a5336] border-2 border-[#1a5336] hover:bg-[#1a5336]/10'
+                : ' text-[#1a5336] border-2 border-[#1a5336] hover:bg-[#1a5336]/10'
             }`}
           >
             {tab.label}
@@ -384,7 +384,7 @@ function IncludedExcludedSection() {
   ];
 
   return (
-    <section id="included" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
+    <section id="included" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto ">
       <div className="mb-12 text-center">
         <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           What's Included in Tuition?
@@ -510,7 +510,7 @@ function OptionalServicesSection() {
 
       <div className="grid md:grid-cols-2 gap-8">
         {services.map((service, index) => (
-          <div key={index} className="border-2 border-[#1a5336] p-6 bg-[#fffae9]">
+          <div key={index} className="border-2 border-[#1a5336] p-6 ">
             <h3 className=" text-2xl text-[#1a5336] mb-3">
               {service.title}
             </h3>
@@ -578,7 +578,7 @@ function PaymentPlansSection() {
   ];
 
   return (
-    <section id="payment" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
+    <section id="payment" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto ">
       <div className="mb-12 text-center">
         <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           Payment Plans & Methods
@@ -759,7 +759,7 @@ function ScholarshipsAidSection({ onNavigate }: { onNavigate: (path: string) => 
             <div key={index} className="border-2 border-[#1a5336]">
               <button
                 onClick={() => setOpenAccordion(openAccordion === index ? null : index)}
-                className="w-full p-6 flex items-center justify-between text-left hover:bg-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="w-full p-6 flex items-center justify-between text-left hover: transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               >
                 <div className="flex-1">
                   <h3 className=" text-xl text-[#1a5336] mb-1">
@@ -797,7 +797,7 @@ function ScholarshipsAidSection({ onNavigate }: { onNavigate: (path: string) => 
                     </ul>
                   </div>
                   
-                  <div className="bg-[#fffae9] p-3 mb-4">
+                  <div className=" p-3 mb-4">
                     <span className=" text-sm text-[#212121]">
                       <strong>Deadline:</strong> {scholarship.deadline}
                     </span>
@@ -856,7 +856,7 @@ function RefundPolicySection() {
   ];
 
   return (
-    <section id="refund" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
+    <section id="refund" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto ">
       <div className="mb-12 text-center">
         <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           Refund & Withdrawal Policy
@@ -933,7 +933,7 @@ function CalculatorCTASection({ onShowCalculator }: { onShowCalculator: () => vo
   return (
     <section id="calculator" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white">
       <div className="max-w-[900px] mx-auto">
-        <div className="bg-[#fffae9] border-2 border-[#1a5336] p-8">
+        <div className=" border-2 border-[#1a5336] p-8">
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-[#1a5336] mb-4">
               <Calculator className="w-8 h-8 text-[#FABA1E]" />
@@ -1076,7 +1076,7 @@ function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
+    <section id="faq" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto ">
       <div className="mb-12 text-center">
         <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           Frequently Asked Questions
@@ -1091,7 +1091,7 @@ function FAQSection() {
           <div key={index} className="border-2 border-[#1a5336] bg-white">
             <button
               onClick={() => setOpenFaq(openFaq === index ? null : index)}
-              className="w-full p-6 flex items-start justify-between text-left hover:bg-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="w-full p-6 flex items-start justify-between text-left hover: transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
             >
               <div className="flex-1 flex items-start gap-4">
                 <HelpCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
@@ -1151,7 +1151,7 @@ function DownloadsContactsSection({ onNavigate }: { onNavigate: (path: string) =
                 key={index}
                 href={doc.url}
                 download
-                className="flex items-center justify-between p-4 border-2 border-[#1a5336] hover:bg-[#fffae9] transition-colors group focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="flex items-center justify-between p-4 border-2 border-[#1a5336] hover: transition-colors group focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               >
                 <div className="flex items-center gap-4 flex-1">
                   <FileText className="w-6 h-6 text-[#1a5336] flex-shrink-0" />
@@ -1229,7 +1229,7 @@ function DownloadsContactsSection({ onNavigate }: { onNavigate: (path: string) =
               
               <button
                 onClick={() => onNavigate('/admissions/apply-now')}
-                className="w-full px-6 h-10 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="w-full px-6 h-10 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover: hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               >
                 Start Application
               </button>
@@ -1278,7 +1278,7 @@ function StickyHelper() {
 function CalculatorModal({ onClose }: { onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#1a5336]/80">
-      <div className="bg-[#fffae9] max-w-[600px] w-full max-h-[90vh] overflow-y-auto">
+      <div className=" max-w-[600px] w-full max-h-[90vh] overflow-y-auto">
         <div className="p-8">
           <div className="flex items-center justify-between mb-6">
             <h3 className=" text-2xl text-[#1a5336]">

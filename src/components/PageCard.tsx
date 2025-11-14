@@ -12,7 +12,7 @@ export function PageCard({ title, description, image, onClick }: PageCardProps) 
   return (
     <motion.button
       onClick={onClick}
-      className="w-full text-left bg-[#FFFAE9] overflow-hidden hover:shadow-xl transition-all cursor-pointer border-2 border-[#1a5336] group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+      className="w-full text-left  overflow-hidden hover:shadow-xl transition-all cursor-pointer border-2 border-[#1a5336] group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
       whileHover={{ y: -5 }}
       transition={{ duration: 0.2 }}
     >

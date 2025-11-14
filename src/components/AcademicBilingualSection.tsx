@@ -142,7 +142,7 @@ export function AcademicBilingualSection({ onNavigate }: { onNavigate: (path: st
         {/* Navigation Buttons */}
         <div className="absolute top-1/2 -translate-y-1/2 left-0 z-20">
           <button
-            className="bg-[#fffae9]/90 hover:bg-[#fffae9] text-[#1a5336] p-3 rounded-full shadow-lg transition-all duration-300 backdrop-blur-sm"
+            className="/90 hover: text-[#1a5336] p-3 rounded-full shadow-lg transition-all duration-300 backdrop-blur-sm"
             onClick={scrollPrev}
             aria-label="Previous slide"
           >
@@ -152,7 +152,7 @@ export function AcademicBilingualSection({ onNavigate }: { onNavigate: (path: st
         
         <div className="absolute top-1/2 -translate-y-1/2 right-0 z-20">
           <button
-            className="bg-[#fffae9]/90 hover:bg-[#fffae9] text-[#1a5336] p-3 rounded-full shadow-lg transition-all duration-300 backdrop-blur-sm"
+            className="/90 hover: text-[#1a5336] p-3 rounded-full shadow-lg transition-all duration-300 backdrop-blur-sm"
             onClick={scrollNext}
             aria-label="Next slide"
           >
@@ -183,8 +183,8 @@ export function AcademicBilingualSection({ onNavigate }: { onNavigate: (path: st
               key={index}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === selectedIndex 
-                  ? 'bg-[#fffae9] scale-110' 
-                  : 'bg-[#fffae9]/40 hover:bg-[#fffae9]/60'
+                  ? ' scale-110' 
+                  : '/40 hover:/60'
               }`}
               onClick={() => scrollTo(index)}
               aria-label={`Go to slide ${index + 1}`}
@@ -196,7 +196,7 @@ export function AcademicBilingualSection({ onNavigate }: { onNavigate: (path: st
       {/* Section Divider - Bottom */}
       <div className="flex justify-center relative z-10">
         <motion.div
-          className="h-[2px] bg-[#fffae9]/60 w-full max-w-[30%]"
+          className="h-[2px] /60 w-full max-w-[30%]"
           initial={{ scaleX: 0 }}
           animate={isInView ? { scaleX: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -213,7 +213,7 @@ interface AB_CardProps extends AcademicBilingualCard {
 
 function AB_Card({ image, alt, title, description, link, onNavigate }: AB_CardProps) {
   return (
-    <div className="bg-[#fffae9] overflow-hidden group cursor-pointer" onClick={() => onNavigate(link)}>
+    <div className=" overflow-hidden group cursor-pointer" onClick={() => onNavigate(link)}>
       {/* Media Top */}
       <div className="relative overflow-hidden" style={{ aspectRatio: '3 / 2' }}>
         <img

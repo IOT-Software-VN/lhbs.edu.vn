@@ -8,7 +8,7 @@ interface FacilitiesPageProps {
 
 export function FacilitiesPage({ onNavigate }: FacilitiesPageProps) {
   return (
-    <div className="relative bg-[#fffae9]">
+    <div className="relative ">
       {/* Section 1: Hero */}
       <HeroSection onNavigate={onNavigate} />
       
@@ -150,7 +150,7 @@ function DiscoverFacilitiesSection() {
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]"
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto "
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
@@ -279,7 +279,7 @@ function TechLearningSection() {
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]"
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto "
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
@@ -427,7 +427,7 @@ function ServicesSection() {
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]"
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto "
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}

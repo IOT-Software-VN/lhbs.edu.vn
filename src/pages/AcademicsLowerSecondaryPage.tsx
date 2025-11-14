@@ -7,7 +7,7 @@ interface AcademicsLowerSecondaryPageProps {
 
 export function AcademicsLowerSecondaryPage({ onNavigate }: AcademicsLowerSecondaryPageProps) {
   return (
-    <div className="w-full bg-[#fffae9]">
+    <div className="w-full ">
       {/* 1. HERO SECTION */}
       <section 
         className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
@@ -68,7 +68,7 @@ export function AcademicsLowerSecondaryPage({ onNavigate }: AcademicsLowerSecond
               </button>
               <button 
                 onClick={() => onNavigate('/admissions/apply-now')}
-                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
+                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover: hover:text-[#1a5336] transition-colors"
               >
                 Enquire Now
               </button>
@@ -94,7 +94,7 @@ export function AcademicsLowerSecondaryPage({ onNavigate }: AcademicsLowerSecond
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Card 1: Core Subjects in Vietnamese */}
-            <div className="bg-[#fffae9] p-8 border-l-4 border-[#1a5336]">
+            <div className=" p-8 border-l-4 border-[#1a5336]">
               <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-4">
                 Core Subjects in Vietnamese
               </h3>
@@ -130,7 +130,7 @@ export function AcademicsLowerSecondaryPage({ onNavigate }: AcademicsLowerSecond
             </div>
 
             {/* Card 2: English & Enrichment Programmes */}
-            <div className="bg-[#fffae9] p-8 border-l-4 border-[#FABA1E]">
+            <div className=" p-8 border-l-4 border-[#FABA1E]">
               <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-4">
                 English & Enrichment Programmes
               </h3>
@@ -172,7 +172,7 @@ export function AcademicsLowerSecondaryPage({ onNavigate }: AcademicsLowerSecond
       </section>
 
       {/* 3. OUR ENGLISH PROGRAMME */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left: Text Content */}
@@ -295,25 +295,25 @@ export function AcademicsLowerSecondaryPage({ onNavigate }: AcademicsLowerSecond
 
             {/* Key Qualities Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-[#fffae9] p-6 text-center">
+              <div className=" p-6 text-center">
                 <Heart className="w-10 h-10 text-[#FABA1E] mx-auto mb-3" />
                 <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-2">Integrity</h3>
                 <p className=" text-[#212121]/70 text-sm">Acting with honesty and strong moral principles</p>
               </div>
 
-              <div className="bg-[#fffae9] p-6 text-center">
+              <div className=" p-6 text-center">
                 <Sparkles className="w-10 h-10 text-[#FABA1E] mx-auto mb-3" />
                 <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-2">Confidence</h3>
                 <p className=" text-[#212121]/70 text-sm">Believing in abilities and taking initiative</p>
               </div>
 
-              <div className="bg-[#fffae9] p-6 text-center">
+              <div className=" p-6 text-center">
                 <Globe className="w-10 h-10 text-[#FABA1E] mx-auto mb-3" />
                 <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-2">Global Mindset</h3>
                 <p className=" text-[#212121]/70 text-sm">Understanding diverse cultures and perspectives</p>
               </div>
 
-              <div className="bg-[#fffae9] p-6 text-center">
+              <div className=" p-6 text-center">
                 <Users className="w-10 h-10 text-[#FABA1E] mx-auto mb-3" />
                 <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-2">Leadership</h3>
                 <p className=" text-[#212121]/70 text-sm">Inspiring and guiding others positively</p>
@@ -324,7 +324,7 @@ export function AcademicsLowerSecondaryPage({ onNavigate }: AcademicsLowerSecond
       </section>
 
       {/* 5. A TYPICAL DAY AT LHBS LOWER SECONDARY */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="text-center mb-4">
             <p className="text-[#FABA1E] mb-2  uppercase tracking-wider text-sm">
@@ -450,7 +450,7 @@ export function AcademicsLowerSecondaryPage({ onNavigate }: AcademicsLowerSecond
       </section>
 
       {/* 7. AN ENVIRONMENT MADE FOR LEARNING */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
             <p className="text-[#FABA1E] mb-2  uppercase tracking-wider text-sm">
@@ -516,7 +516,7 @@ export function AcademicsLowerSecondaryPage({ onNavigate }: AcademicsLowerSecond
             </button>
             <button 
               onClick={() => onNavigate('/admissions/apply-now')}
-              className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
+              className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover: hover:text-[#1a5336] transition-colors"
             >
               Apply Now
             </button>

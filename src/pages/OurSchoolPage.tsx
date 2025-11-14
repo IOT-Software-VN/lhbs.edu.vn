@@ -8,7 +8,7 @@ interface OurSchoolPageProps {
 
 export function OurSchoolPage({ onNavigate }: OurSchoolPageProps) {
   return (
-    <div className="relative bg-[#fffae9]">
+    <div className="relative ">
       {/* Section 1: Level-2 Hero */}
       <HeroSection onNavigate={onNavigate} />
       
@@ -147,7 +147,7 @@ function IntroSection() {
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]"
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto "
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
@@ -257,7 +257,7 @@ function FacilitiesSection() {
         {facilities.map((facility, index) => (
           <motion.div
             key={index}
-            className="flex items-start gap-4 p-6 border border-[#1a5336]/20 bg-[#fffae9] hover:border-[#1a5336]/40 transition-colors"
+            className="flex items-start gap-4 p-6 border border-[#1a5336]/20  hover:border-[#1a5336]/40 transition-colors"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3 + index * 0.05 }}
@@ -309,7 +309,7 @@ function ExperienceSection() {
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]"
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto "
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
@@ -440,7 +440,7 @@ function ContactSection({ onNavigate }: { onNavigate: (path: string) => void }) 
   return (
     <motion.section
       ref={ref}
-      className="relative py-16 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]"
+      className="relative py-16 px-4 md:px-20 max-w-[1440px] mx-auto "
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}

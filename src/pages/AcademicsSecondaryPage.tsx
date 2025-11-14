@@ -13,7 +13,7 @@ export function AcademicsSecondaryPage({ onNavigate }: AcademicsSecondaryPagePro
     <div className="w-full">
       {/* SS_Hero - The journey to conquer the peak of academics begins here */}
       <section 
-        className="relative min-h-[65vh] md:min-h-[40vh] flex items-center bg-[#fffae9]"
+        className="relative min-h-[65vh] md:min-h-[40vh] flex items-center "
         style={{
           backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.85), rgba(26, 83, 54, 0.85)), url(https://images.unsplash.com/photo-1758270704226-db897b180243?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwc2Nob29sJTIwc3R1ZGVudHMlMjBjbGFzc3Jvb20lMjBsZWFybmluZ3xlbnwxfHx8fDE3NjMwMDE0NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080)`,
           backgroundSize: 'cover',
@@ -109,7 +109,7 @@ export function AcademicsSecondaryPage({ onNavigate }: AcademicsSecondaryPagePro
                 Download Curriculum PDF
               </button>
               <button 
-                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9]  hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
+                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9]  hover: hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
               >
                 View Course Catalog
               </button>
@@ -138,7 +138,7 @@ export function AcademicsSecondaryPage({ onNavigate }: AcademicsSecondaryPagePro
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Feature 1 */}
-            <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
+            <div className=" p-8 shadow-sm hover:shadow-md transition-shadow group">
               <Brain className="w-12 h-12 text-[#FABA1E] mb-4" />
               <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Academic Rigor</h3>
               <p className=" text-[#1a5336]/70">
@@ -147,7 +147,7 @@ export function AcademicsSecondaryPage({ onNavigate }: AcademicsSecondaryPagePro
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
+            <div className=" p-8 shadow-sm hover:shadow-md transition-shadow group">
               <Target className="w-12 h-12 text-[#FABA1E] mb-4" />
               <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">University Preparation</h3>
               <p className=" text-[#1a5336]/70">
@@ -156,7 +156,7 @@ export function AcademicsSecondaryPage({ onNavigate }: AcademicsSecondaryPagePro
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
+            <div className=" p-8 shadow-sm hover:shadow-md transition-shadow group">
               <Globe2 className="w-12 h-12 text-[#FABA1E] mb-4" />
               <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Global Perspective</h3>
               <p className=" text-[#1a5336]/70">
@@ -165,7 +165,7 @@ export function AcademicsSecondaryPage({ onNavigate }: AcademicsSecondaryPagePro
             </div>
 
             {/* Feature 4 */}
-            <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
+            <div className=" p-8 shadow-sm hover:shadow-md transition-shadow group">
               <Rocket className="w-12 h-12 text-[#FABA1E] mb-4" />
               <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Leadership Development</h3>
               <p className=" text-[#1a5336]/70">
@@ -174,7 +174,7 @@ export function AcademicsSecondaryPage({ onNavigate }: AcademicsSecondaryPagePro
             </div>
 
             {/* Feature 5 */}
-            <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
+            <div className=" p-8 shadow-sm hover:shadow-md transition-shadow group">
               <Microscope className="w-12 h-12 text-[#FABA1E] mb-4" />
               <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Research & Innovation</h3>
               <p className=" text-[#1a5336]/70">
@@ -183,7 +183,7 @@ export function AcademicsSecondaryPage({ onNavigate }: AcademicsSecondaryPagePro
             </div>
 
             {/* Feature 6 */}
-            <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
+            <div className=" p-8 shadow-sm hover:shadow-md transition-shadow group">
               <Heart className="w-12 h-12 text-[#FABA1E] mb-4" />
               <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Wellbeing & Identity</h3>
               <p className=" text-[#1a5336]/70">
@@ -195,7 +195,7 @@ export function AcademicsSecondaryPage({ onNavigate }: AcademicsSecondaryPagePro
       </section>
 
       {/* SS_CurriculumAreas with Tabs */}
-      <section className="bg-[#fffae9] py-24 md:py-32" id="curriculum">
+      <section className=" py-24 md:py-32" id="curriculum">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="mb-12">
             <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
@@ -501,7 +501,7 @@ export function AcademicsSecondaryPage({ onNavigate }: AcademicsSecondaryPagePro
           </div>
 
           {/* Bullet Points */}
-          <div className="bg-[#fffae9] p-8">
+          <div className=" p-8">
             <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">Excellence in Teaching</h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <li className="flex items-start gap-3">
@@ -542,7 +542,7 @@ export function AcademicsSecondaryPage({ onNavigate }: AcademicsSecondaryPagePro
       </section>
 
       {/* SS_Extracurricular */}
-      <section className="bg-[#fffae9] py-24 md:py-32" id="activities">
+      <section className=" py-24 md:py-32" id="activities">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
             <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
@@ -706,7 +706,7 @@ export function AcademicsSecondaryPage({ onNavigate }: AcademicsSecondaryPagePro
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Panel - Academic Support */}
-            <div className="bg-[#fffae9] p-8">
+            <div className=" p-8">
               <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">Academic Support</h3>
               
               <div className="space-y-6">
@@ -755,7 +755,7 @@ export function AcademicsSecondaryPage({ onNavigate }: AcademicsSecondaryPagePro
             </div>
 
             {/* Right Panel - Wellbeing & University */}
-            <div className="bg-[#fffae9] p-8">
+            <div className=" p-8">
               <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">Wellbeing & University Prep</h3>
               
               <div className="space-y-6">
@@ -819,7 +819,7 @@ export function AcademicsSecondaryPage({ onNavigate }: AcademicsSecondaryPagePro
       </section>
 
       {/* SS_TuitionPolicy */}
-      <section className="bg-[#fffae9] py-24 md:py-32" id="tuition">
+      <section className=" py-24 md:py-32" id="tuition">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="mb-12">
             <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">

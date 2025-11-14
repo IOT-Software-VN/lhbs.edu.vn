@@ -41,7 +41,7 @@ export function PageTemplate({
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <div className="bg-[#fffae9]">
+    <div className="">
       {/* Hero Section - Full bleed with breadcrumbs inside */}
       <section className="relative min-h-[40vh] md:min-h-[65vh] bg-[#1a5336] overflow-hidden flex flex-col">
         {heroImage ? (
@@ -160,7 +160,7 @@ export function PageTemplate({
 
       {/* Related Pages Section */}
       {relatedPages.length > 0 && (
-        <section className="py-16 md:py-24 px-4 md:px-20 bg-[#FFFAE9]">
+        <section className="py-16 md:py-24 px-4 md:px-20 ">
           <div className="max-w-[1200px] mx-auto">
             <h2 className=" text-[32px] md:text-[40px] text-[#1a5336] mb-12 text-center">
               Explore Related

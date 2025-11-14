@@ -7,7 +7,7 @@ interface AcademicsPrimaryPageProps {
 
 export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) {
   return (
-    <div className="w-full bg-[#fffae9]">
+    <div className="w-full ">
       {/* 1. HERO SECTION */}
       <section 
         className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
@@ -68,7 +68,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
               </button>
               <button 
                 onClick={() => onNavigate('/admissions/apply-now')}
-                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
+                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover: hover:text-[#1a5336] transition-colors"
               >
                 Enquire Now
               </button>
@@ -146,7 +146,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
       </section>
 
       {/* 3. PREPARING FOR LOWER SECONDARY AND FUTURE PATHWAYS */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: Text Content */}
@@ -216,7 +216,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
       </section>
 
       {/* 5. A PERSONALISED LEARNING APPROACH & LIFE SKILLS */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: Text Content */}
@@ -296,7 +296,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
           {/* Timeline */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Step 1 */}
-            <div className="bg-[#fffae9] p-8">
+            <div className=" p-8">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <Heart className="w-6 h-6 text-[#FABA1E]" />
@@ -309,7 +309,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
             </div>
 
             {/* Step 2 */}
-            <div className="bg-[#fffae9] p-8">
+            <div className=" p-8">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <BookOpen className="w-6 h-6 text-[#FABA1E]" />
@@ -322,7 +322,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
             </div>
 
             {/* Step 3 */}
-            <div className="bg-[#fffae9] p-8">
+            <div className=" p-8">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <Globe className="w-6 h-6 text-[#FABA1E]" />
@@ -335,7 +335,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
             </div>
 
             {/* Step 4 */}
-            <div className="bg-[#fffae9] p-8">
+            <div className=" p-8">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <Beaker className="w-6 h-6 text-[#FABA1E]" />
@@ -348,7 +348,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
             </div>
 
             {/* Step 5 */}
-            <div className="bg-[#fffae9] p-8">
+            <div className=" p-8">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                   <BookOpen className="w-6 h-6 text-[#FABA1E]" />
@@ -364,7 +364,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
       </section>
 
       {/* 7. HIGHLY QUALIFIED TEACHERS WHO INSPIRE */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: Image */}
@@ -434,7 +434,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
       </section>
 
       {/* 9. A SUPPORTIVE PARTNERSHIP WITH OUR PARENTS */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: Image */}
@@ -532,7 +532,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
             </button>
             <button 
               onClick={() => onNavigate('/admissions/apply-now')}
-              className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
+              className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover: hover:text-[#1a5336] transition-colors"
             >
               Apply Now
             </button>

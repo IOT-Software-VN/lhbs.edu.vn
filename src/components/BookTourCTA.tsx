@@ -63,7 +63,7 @@ export function BookTourCTA({ onNavigate }: BookTourCTAProps) {
             {/* CTA Button - Outline on Dark */}
             <motion.button
               onClick={() => onNavigate(ctaLink)}
-              className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold cursor-pointer hover:bg-[#fffae9] hover:text-[#1a5336] transition-all focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336] w-full md:w-auto"
+              className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold cursor-pointer hover: hover:text-[#1a5336] transition-all focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336] w-full md:w-auto"
               aria-label={ctaText}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

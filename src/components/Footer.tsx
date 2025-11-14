@@ -193,7 +193,7 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
       
       {/* Footer Divider */}
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
-        <div className="h-[1px] bg-[#fffae9]/20" />
+        <div className="h-[1px] /20" />
       </div>
       
       {/* Footer Bottom - Copyright & Legal Links */}

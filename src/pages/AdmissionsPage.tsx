@@ -41,7 +41,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
   ];
 
   return (
-    <div className="w-full bg-[#fffae9]">
+    <div className="w-full ">
       {/* 1. HERO SECTION */}
       <section 
         className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
@@ -98,7 +98,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
               </a>
               <button 
                 onClick={() => onNavigate('/contact/contact-us')}
-                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
+                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover: hover:text-[#1a5336] transition-colors"
               >
                 Contact Admissions Office
               </button>
@@ -143,7 +143,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
       </section>
 
       {/* 3. WHO CAN JOIN - ENTRY REQUIREMENTS */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="text-center mb-4">
             <p className="text-[#FABA1E] mb-2 uppercase tracking-wider text-sm">
@@ -247,7 +247,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
           <div className="max-w-4xl mx-auto">
             {/* Key Points */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              <div className="bg-[#fffae9] p-6 flex items-start gap-4">
+              <div className=" p-6 flex items-start gap-4">
                 <Users className="w-8 h-8 text-[#FABA1E] flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-2">Personalized Consultation Process</h3>
@@ -257,7 +257,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                 </div>
               </div>
 
-              <div className="bg-[#fffae9] p-6 flex items-start gap-4">
+              <div className=" p-6 flex items-start gap-4">
                 <Globe className="w-8 h-8 text-[#FABA1E] flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-2">Bilingual Support</h3>
@@ -267,7 +267,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                 </div>
               </div>
 
-              <div className="bg-[#fffae9] p-6 flex items-start gap-4">
+              <div className=" p-6 flex items-start gap-4">
                 <FileText className="w-8 h-8 text-[#FABA1E] flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-2">Detailed Information</h3>
@@ -277,7 +277,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                 </div>
               </div>
 
-              <div className="bg-[#fffae9] p-6 flex items-start gap-4">
+              <div className=" p-6 flex items-start gap-4">
                 <Heart className="w-8 h-8 text-[#FABA1E] flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-['SVN-Gotham'] text-lg text-[#1a5336] mb-2">Support from Start to Finish</h3>
@@ -315,7 +315,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
       </section>
 
       {/* 5. STEP-BY-STEP ADMISSIONS PROCESS */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 
@@ -460,7 +460,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="bg-[#fffae9] p-8">
+            <div className=" p-8">
               <div className="space-y-6">
                 <div className="flex items-start gap-4 pb-6 border-b border-[#1a5336]/20">
                   <Calendar className="w-8 h-8 text-[#FABA1E] flex-shrink-0 mt-1" />
@@ -507,7 +507,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
       </section>
 
       {/* 7. TUITION FEES */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
             <h2 
@@ -582,7 +582,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto bg-[#fffae9] p-12 text-center">
+          <div className="max-w-4xl mx-auto  p-12 text-center">
             <Trophy className="w-16 h-16 text-[#FABA1E] mx-auto mb-6" />
             <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-4">LHBS Scholarships</h3>
             <p className="text-[#212121]/70 mb-8 max-w-2xl mx-auto">
@@ -599,7 +599,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
       </section>
 
       {/* 9. WHY CHOOSE LHBS */}
-      <section className="bg-[#fffae9] py-24 md:py-32">
+      <section className=" py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="text-center mb-4">
             <h2 
@@ -689,7 +689,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
 
           <div className="max-w-4xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-[#fffae9] border border-[#1a5336]/20">
+              <div key={index} className=" border border-[#1a5336]/20">
                 <button
                   onClick={() => toggleFaq(index)}
                   className="w-full p-6 flex items-start justify-between gap-4 text-left hover:bg-white/50 transition-colors"
@@ -753,7 +753,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
             </a>
             <button 
               onClick={() => onNavigate('/contact/contact-us')}
-              className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
+              className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover: hover:text-[#1a5336] transition-colors"
             >
               Request Admissions Consultation
             </button>

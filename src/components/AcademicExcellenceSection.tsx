@@ -50,7 +50,7 @@ export function AcademicExcellenceSection() {
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9] overflow-hidden"
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto  overflow-hidden"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}

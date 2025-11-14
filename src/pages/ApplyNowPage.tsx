@@ -141,7 +141,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
 
   if (submitted) {
     return (
-      <div className="bg-[#fffae9]">
+      <div className="">
         {/* Hero Section with Breadcrumbs */}
         <section className="relative min-h-[40vh] md:min-h-[65vh] bg-[#1a5336] overflow-hidden flex flex-col">
           <div className="absolute inset-0 bg-gradient-to-br from-[#1a5336] to-[#14432b]" />
@@ -227,7 +227,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
   }
 
   return (
-    <div className="bg-[#fffae9]">
+    <div className="">
       {/* Hero Section with Breadcrumbs */}
       <section className="relative min-h-[40vh] md:min-h-[65vh] bg-[#1a5336] overflow-hidden flex flex-col">
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a5336] to-[#14432b]" />

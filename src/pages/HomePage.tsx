@@ -262,7 +262,7 @@ function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => 
           <div>
             <motion.button
               onClick={() => onNavigate('/our-school/leadership')}
-              className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold cursor-pointer hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors w-full md:w-auto"
+              className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold cursor-pointer hover: hover:text-[#1a5336] transition-colors w-full md:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
