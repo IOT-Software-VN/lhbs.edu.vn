@@ -980,3 +980,5 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
     </div>
   );
 }
+
+
