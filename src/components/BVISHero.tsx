@@ -44,7 +44,7 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mb-4"
             >
-              <span className="font-['Arial'] text-white/90 text-sm md:text-base uppercase tracking-[0.15em]">
+              <span className=" text-white/90 text-sm md:text-base uppercase tracking-[0.15em]">
                 Welcome to
               </span>
             </motion.div>
@@ -56,7 +56,7 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mb-6 md:mb-8"
             >
-              <h1 className="relative inline-block">
+              <h1 className="relative inline-block whitespace-nowrap">
                 {/* Highlight Background - LHBS yellow */}
                 <span 
                   className="absolute inset-0 -left-3 -right-3 md:-left-4 md:-right-4 -top-1 -bottom-1 bg-[#FABA1E]"
@@ -64,7 +64,7 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
                 />
                 {/* Text - 40px mobile, 48px tablet, 64px desktop */}
                 <span 
-                  className="relative font-['Crimson_Pro'] text-[#1a5336] leading-tight px-3 md:px-4" 
+                  className="relative text-[#1a5336] leading-tight" 
                   style={{ 
                     fontSize: '48px',
                     lineHeight: '1.24'
@@ -80,7 +80,7 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="font-['Lexend_Deca'] text-white text-base md:text-lg leading-relaxed mb-8 md:mb-10 max-w-[600px]"
+              className=" text-white text-base md:text-lg leading-relaxed mb-8 md:mb-10 max-w-[600px]"
             >
               Lac Hong Bilingual School (LHBS) is a Vietnamese-owned independent school established in 2009, 
               providing high-quality education from kindergarten through grade 12. We nurture young minds with 
@@ -89,18 +89,21 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
             </motion.p>
 
             {/* CTA Button */}
-            <motion.div
+           <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <button
                 onClick={() => onNavigate('/admissions')}
-                className="px-8 md:px-10 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold uppercase text-sm md:text-base tracking-wider hover:bg-[#e5a812] transition-all focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-transparent"
+                className="px-8 md:px-10 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold uppercase text-sm md:text-base tracking-wider 
+                          hover:bg-[#e5a812] transition-all focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 
+                          focus:ring-offset-transparent rounded-full"
               >
                 Enquire Now
               </button>
             </motion.div>
+
           </motion.div>
         </div>
       </div>

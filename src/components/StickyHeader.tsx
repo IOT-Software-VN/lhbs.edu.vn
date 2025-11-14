@@ -25,7 +25,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
         backdropFilter: isTransparent ? 'blur(0px)' : 'blur(10px)'
       }}
     >
-      <div className="h-full max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between gap-8">
+      <div className="h-full max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between gap-8 py-4">
         {/* Logo - Left */}
         <motion.button
           onClick={onLogoClick}
@@ -46,7 +46,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
           {/* Primary CTA Button - Apply Now */}
           <motion.button
             onClick={onEnquireClick}
-            className="flex items-center justify-center px-6 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
+            className="rounded-full flex items-center justify-center px-6 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

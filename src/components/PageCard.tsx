@@ -24,20 +24,20 @@ export function PageCard({ title, description, image, onClick }: PageCardProps) 
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center text-[#1a5336]/30 font-['Crimson_Pro'] text-2xl">
+          <div className="w-full h-full flex items-center justify-center text-[#1a5336]/30  text-2xl">
             {title}
           </div>
         )}
       </div>
       <div className="p-6">
-        <h3 className="font-['Crimson_Pro'] text-[24px] md:text-[28px] text-[#1a5336] mb-3 group-hover:text-[#FABA1E] transition-colors">
+        <h3 className=" text-[24px] md:text-[28px] text-[#1a5336] mb-3 group-hover:text-[#FABA1E] transition-colors">
           {title}
         </h3>
-        <p className="font-['Lexend_Deca'] text-sm text-[#666] mb-4" style={{ lineHeight: '1.5' }}>
+        <p className=" text-sm text-[#666] mb-4" style={{ lineHeight: '1.5' }}>
           {description}
         </p>
         <div className="flex items-center gap-2 text-[#1a5336] group-hover:text-[#FABA1E] transition-colors">
-          <span className="font-['Arial'] font-bold text-sm">Learn More</span>
+          <span className=" font-bold text-sm">Learn More</span>
           <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
             <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>

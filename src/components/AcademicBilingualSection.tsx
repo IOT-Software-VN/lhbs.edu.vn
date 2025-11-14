@@ -128,7 +128,7 @@ export function AcademicBilingualSection({ onNavigate }: { onNavigate: (path: st
       {/* Header - Centered */}
       <div className="text-left mb-16 relative z-10">
         <motion.h2
-          className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#fffae9]"
+          className=" text-4xl md:text-5xl lg:text-6xl text-[#fffae9]"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -226,18 +226,18 @@ function AB_Card({ image, alt, title, description, link, onNavigate }: AB_CardPr
       {/* Body */}
       <div className="p-5 md:p-6">
         {/* Title */}
-        <h3 className="font-['Crimson_Pro'] text-xl md:text-2xl text-[#1a5336] mb-3">
+        <h3 className=" text-xl md:text-2xl text-[#1a5336] mb-3">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="font-['Lexend_Deca'] text-sm text-[#212121] mb-4 leading-relaxed">
+        <p className=" text-sm text-[#212121] mb-4 leading-relaxed">
           {description}
         </p>
 
         {/* Link Row */}
         <button
-          className="flex items-center gap-2 font-['Lexend_Deca'] text-sm text-[#1a5336] group/link focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+          className="flex items-center gap-2  text-sm text-[#1a5336] group/link focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
           onClick={(e) => {
             e.stopPropagation();
             onNavigate(link);

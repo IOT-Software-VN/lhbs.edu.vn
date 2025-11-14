@@ -85,7 +85,7 @@ function HeaderAcademics({ onNavigate }: { onNavigate: (path: string) => void })
               <li>
                 <ChevronRight className="w-4 h-4 text-[#fffae9]/70" />
               </li>
-              <li className="text-[#fffae9] font-['Lexend_Deca']">Academics</li>
+              <li className="text-[#fffae9] ">Academics</li>
             </ol>
           </nav>
           
@@ -95,17 +95,17 @@ function HeaderAcademics({ onNavigate }: { onNavigate: (path: string) => void })
             transition={{ duration: 0.8 }}
           >
             {/* Subhead */}
-            <p className="font-['Lexend_Deca'] text-sm md:text-base text-[#FABA1E] mb-4 tracking-wide uppercase">
+            <p className=" text-sm md:text-base text-[#FABA1E] mb-4 tracking-wide uppercase">
               {AO_SUB}
             </p>
             
             {/* Title */}
-            <h1 className="font-['Crimson_Pro'] text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
+            <h1 className=" text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
               {AO_TITLE}
             </h1>
             
             {/* Lead */}
-            <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
+            <p className=" text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
               {AO_LEAD}
             </p>
             
@@ -121,7 +121,7 @@ function HeaderAcademics({ onNavigate }: { onNavigate: (path: string) => void })
               <a
                 href="/downloads/lhbs-curriculum-guide-2025.pdf"
                 download
-                className="px-12 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] flex items-center justify-center gap-2"
+                className="px-12 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] flex items-center justify-center gap-2"
                 aria-label="Download curriculum guide PDF"
               >
                 <Download className="w-4 h-4" />
@@ -130,7 +130,7 @@ function HeaderAcademics({ onNavigate }: { onNavigate: (path: string) => void })
               
               <button
                 onClick={() => onNavigate('/contact/book-tour')}
-                className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
                 aria-label="Book a campus tour"
               >
                 BOOK A TOUR
@@ -140,7 +140,7 @@ function HeaderAcademics({ onNavigate }: { onNavigate: (path: string) => void })
             {/* Tertiary Link */}
             <button
               onClick={() => onNavigate('/contact/academic-counselor')}
-              className="flex items-center gap-2 text-[#fffae9]/90 hover:text-[#fffae9] transition-colors font-['Lexend_Deca'] text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="flex items-center gap-2 text-[#fffae9]/90 hover:text-[#fffae9] transition-colors  text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               aria-label="Talk to academic counselor"
             >
               <Users className="w-4 h-4" />
@@ -156,10 +156,10 @@ function HeaderAcademics({ onNavigate }: { onNavigate: (path: string) => void })
 function StatBadge({ value, label }: { value: string; label: string }) {
   return (
     <div className="bg-[#fffae9]/10 backdrop-blur-sm border border-[#fffae9]/20 p-4 text-center">
-      <div className="font-['Arial'] text-2xl md:text-3xl text-[#FABA1E] mb-1">
+      <div className=" text-2xl md:text-3xl text-[#FABA1E] mb-1">
         {value}
       </div>
-      <div className="font-['Lexend_Deca'] text-xs text-[#fffae9]/80 leading-tight">
+      <div className=" text-xs text-[#fffae9]/80 leading-tight">
         {label}
       </div>
     </div>
@@ -218,10 +218,10 @@ function ProgramHighlightsSection() {
     <section id="highlights" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]" ref={ref}>
       {/* Section Header */}
       <div className="text-center mb-16">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
+        <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
           What Makes Our Program Exceptional
         </h2>
-        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
           Our bilingual curriculum is built on research-backed principles and 15 years of proven success in Vietnamese education.
         </p>
       </div>
@@ -242,12 +242,12 @@ function ProgramHighlightsSection() {
             </div>
             
             {/* Title */}
-            <h3 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-3">
+            <h3 className=" text-xl text-[#1a5336] mb-3">
               {highlight.title}
             </h3>
             
             {/* Description */}
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121] leading-relaxed">
+            <p className=" text-sm text-[#212121] leading-relaxed">
               {highlight.description}
             </p>
           </motion.div>
@@ -331,10 +331,10 @@ function CurriculumStructureSection({ onNavigate }: { onNavigate: (path: string)
     <section id="curriculum" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
+        <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
           Curriculum Structure by Division
         </h2>
-        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
           Our curriculum evolves with students' developmental stages, maintaining bilingual excellence from early childhood through university preparation.
         </p>
       </div>
@@ -348,7 +348,7 @@ function CurriculumStructureSection({ onNavigate }: { onNavigate: (path: string)
             aria-selected={activeTab === tab}
             aria-controls={`${tab}-panel`}
             onClick={() => setActiveTab(tab)}
-            className={`px-8 h-12 font-['Lexend_Deca'] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] ${
+            className={`px-8 h-12  transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] ${
               activeTab === tab
                 ? 'bg-[#1a5336] text-[#fffae9]'
                 : 'bg-[#fffae9] text-[#1a5336] border-2 border-[#1a5336] hover:bg-[#1a5336]/10'
@@ -370,33 +370,33 @@ function CurriculumStructureSection({ onNavigate }: { onNavigate: (path: string)
         <div className="space-y-8">
           {/* Overview */}
           <div>
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-4 flex items-center gap-3">
+            <h3 className=" text-2xl text-[#1a5336] mb-4 flex items-center gap-3">
               <BookOpen className="w-6 h-6 text-[#FABA1E]" aria-hidden="true" />
               Program Overview
             </h3>
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121] leading-relaxed">
+            <p className=" text-sm text-[#212121] leading-relaxed">
               {activeData.overview}
             </p>
           </div>
           
           {/* Core Subjects */}
           <div>
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-4 flex items-center gap-3">
+            <h3 className=" text-2xl text-[#1a5336] mb-4 flex items-center gap-3">
               <GraduationCap className="w-6 h-6 text-[#FABA1E]" aria-hidden="true" />
               Core Subjects
             </h3>
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121] leading-relaxed">
+            <p className=" text-sm text-[#212121] leading-relaxed">
               {activeData.subjects}
             </p>
           </div>
           
           {/* Teaching Methods */}
           <div>
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-4 flex items-center gap-3">
+            <h3 className=" text-2xl text-[#1a5336] mb-4 flex items-center gap-3">
               <Lightbulb className="w-6 h-6 text-[#FABA1E]" aria-hidden="true" />
               Teaching Methods
             </h3>
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121] leading-relaxed">
+            <p className=" text-sm text-[#212121] leading-relaxed">
               {activeData.methods}
             </p>
           </div>
@@ -406,14 +406,14 @@ function CurriculumStructureSection({ onNavigate }: { onNavigate: (path: string)
         <div className="space-y-8">
           {/* Weekly Allocation */}
           <div className="border-2 border-[#1a5336] p-6">
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-4">
+            <h3 className=" text-2xl text-[#1a5336] mb-4">
               Weekly Time Allocation
             </h3>
             <div className="space-y-3">
               {activeData.allocation.map((item, index) => (
                 <div key={index} className="flex justify-between items-center pb-3 border-b border-[#1a5336]/20 last:border-0">
-                  <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{item.subject}</span>
-                  <span className="font-['Arial'] text-sm text-[#1a5336] font-bold">{item.hours}</span>
+                  <span className=" text-sm text-[#212121]">{item.subject}</span>
+                  <span className=" text-sm text-[#1a5336] font-bold">{item.hours}</span>
                 </div>
               ))}
             </div>
@@ -421,30 +421,30 @@ function CurriculumStructureSection({ onNavigate }: { onNavigate: (path: string)
           
           {/* Assessment */}
           <div className="bg-[#fffae9] p-6">
-            <h4 className="font-['Crimson_Pro'] text-lg text-[#1a5336] mb-3">
+            <h4 className=" text-lg text-[#1a5336] mb-3">
               Assessment & Reporting
             </h4>
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121]">
+            <p className=" text-sm text-[#212121]">
               {activeData.assess}
             </p>
           </div>
           
           {/* Homework */}
           <div className="bg-[#fffae9] p-6">
-            <h4 className="font-['Crimson_Pro'] text-lg text-[#1a5336] mb-3">
+            <h4 className=" text-lg text-[#1a5336] mb-3">
               Homework Policy
             </h4>
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121]">
+            <p className=" text-sm text-[#212121]">
               {activeData.homework}
             </p>
           </div>
           
           {/* Support */}
           <div className="bg-[#fffae9] p-6">
-            <h4 className="font-['Crimson_Pro'] text-lg text-[#1a5336] mb-3">
+            <h4 className=" text-lg text-[#1a5336] mb-3">
               Learning Support
             </h4>
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121]">
+            <p className=" text-sm text-[#212121]">
               {activeData.support}
             </p>
           </div>
@@ -456,7 +456,7 @@ function CurriculumStructureSection({ onNavigate }: { onNavigate: (path: string)
         <a
           href={`/downloads/${activeTab}-curriculum-detailed.pdf`}
           download
-          className="inline-flex items-center gap-2 px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+          className="inline-flex items-center gap-2 px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
         >
           <Download className="w-4 h-4" />
           Download {activeData.name} Detailed Curriculum
@@ -563,10 +563,10 @@ function PathwaysSection({ onNavigate }: { onNavigate: (path: string) => void })
     <section id="pathways" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
+        <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
           Academic Pathways & Specializations
         </h2>
-        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
           Choose the pathway that best fits your goals—all paths maintain bilingual excellence and lead to university success.
         </p>
       </div>
@@ -644,12 +644,12 @@ function PathwaysSection({ onNavigate }: { onNavigate: (path: string) => void })
               {/* Content */}
               <div className="p-6 flex-1 flex flex-col">
                 {/* Tag */}
-                <div className="inline-block px-3 py-1 bg-[#FABA1E] text-[#1a5336] font-['Lexend_Deca'] text-xs font-bold uppercase mb-4 self-start">
+                <div className="inline-block px-3 py-1 bg-[#FABA1E] text-[#1a5336]  text-xs font-bold uppercase mb-4 self-start">
                   {pathway.tag}
                 </div>
                 
                 {/* Title */}
-                <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-4">
+                <h3 className=" text-2xl text-[#1a5336] mb-4">
                   {pathway.title}
                 </h3>
                 
@@ -658,7 +658,7 @@ function PathwaysSection({ onNavigate }: { onNavigate: (path: string) => void })
                   {pathway.bullets.map((bullet, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="text-[#FABA1E] mt-1 flex-shrink-0">•</span>
-                      <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{bullet}</span>
+                      <span className=" text-sm text-[#212121]">{bullet}</span>
                     </li>
                   ))}
                 </ul>
@@ -666,7 +666,7 @@ function PathwaysSection({ onNavigate }: { onNavigate: (path: string) => void })
                 {/* CTA */}
                 <button
                   onClick={() => onNavigate(pathway.link)}
-                  className="w-full px-6 h-12 border-2 border-[#1a5336] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                  className="w-full px-6 h-12 border-2 border-[#1a5336] text-[#1a5336]  font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
                   aria-label={`Learn more about ${pathway.title}`}
                 >
                   LEARN MORE
@@ -681,7 +681,7 @@ function PathwaysSection({ onNavigate }: { onNavigate: (path: string) => void })
       <div className="mt-12 text-center">
         <button
           onClick={() => onNavigate('/academics/pathways')}
-          className="inline-flex items-center gap-2 text-[#1a5336] hover:text-[#FABA1E] transition-colors font-['Lexend_Deca'] focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+          className="inline-flex items-center gap-2 text-[#1a5336] hover:text-[#FABA1E] transition-colors  focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
         >
           <span>Compare All Academic Pathways</span>
           <ChevronRight className="w-4 h-4" />
@@ -697,10 +697,10 @@ function HelperFooterAcademics({ onNavigate }: { onNavigate: (path: string) => v
     <section className="bg-[#1a5336] py-12 px-4 md:px-20">
       <div className="max-w-[1440px] mx-auto text-center">
         {/* Header */}
-        <h2 className="font-['Crimson_Pro'] text-3xl md:text-4xl text-[#fffae9] mb-4">
+        <h2 className=" text-3xl md:text-4xl text-[#fffae9] mb-4">
           Questions About Our Curriculum?
         </h2>
-        <p className="font-['Lexend_Deca'] text-base text-[#fffae9]/90 mb-8 max-w-[60ch] mx-auto">
+        <p className=" text-base text-[#fffae9]/90 mb-8 max-w-[60ch] mx-auto">
           Our academic counselors are here to help you understand our programs and find the right pathway for your child.
         </p>
         
@@ -708,7 +708,7 @@ function HelperFooterAcademics({ onNavigate }: { onNavigate: (path: string) => v
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={() => onNavigate('/contact/academic-counselor')}
-            className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
+            className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
             aria-label="Ask an academic counselor"
           >
             ASK A COUNSELOR
@@ -716,7 +716,7 @@ function HelperFooterAcademics({ onNavigate }: { onNavigate: (path: string) => v
           
           <button
             onClick={() => onNavigate('/contact/book-tour')}
-            className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+            className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
             aria-label="Book a campus tour"
           >
             BOOK A TOUR
@@ -725,7 +725,7 @@ function HelperFooterAcademics({ onNavigate }: { onNavigate: (path: string) => v
           <a
             href="/downloads/lhbs-curriculum-guide-2025.pdf"
             download
-            className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center gap-2"
+            className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center gap-2"
             aria-label="Download curriculum guide"
           >
             <Download className="w-4 h-4" />

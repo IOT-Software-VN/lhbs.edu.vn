@@ -76,7 +76,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                         onMouseEnter={() => setActiveParent(parent)}
                         onFocus={() => setActiveParent(parent)}
                         onClick={() => handleNavClick(parent.path)}
-                        className={`block w-full text-left font-['Crimson_Pro'] text-[36px] uppercase tracking-wide transition-all group ${
+                        className={`block w-full text-left  text-[36px] uppercase tracking-wide transition-all group ${
                           activeParent?.id === parent.id
                             ? 'text-white'
                             : 'text-white/50 hover:text-white/80'
@@ -92,7 +92,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                 <div className="w-[30%] border-r border-white/20 pr-12">
                   {activeParent && (
                     <div>
-                      <h3 className="font-['Arial'] text-white text-[18px] uppercase tracking-wider mb-6">
+                      <h3 className=" text-white text-[18px] uppercase tracking-wider mb-6">
                         {activeParent.label}
                       </h3>
                       <nav className="space-y-3 mb-6" aria-label={`${activeParent.label} pages`}>
@@ -100,7 +100,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                           <button
                             key={child.id}
                             onClick={() => handleNavClick(child.path)}
-                            className={`block w-full text-left font-['Lexend_Deca'] text-[15px] transition-colors group ${
+                            className={`block w-full text-left  text-[15px] transition-colors group ${
                               currentPath === child.path
                                 ? 'text-[#FABA1E]'
                                 : 'text-white hover:text-[#FABA1E]'
@@ -116,7 +116,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                       {activeParent.cta && (
                         <button
                           onClick={() => handleNavClick(activeParent.cta!.path)}
-                          className="w-full px-6 py-3 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold text-sm hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                          className="w-full px-6 py-3 bg-[#FABA1E] text-[#1a5336]  font-bold text-sm hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
                         >
                           {activeParent.cta.text}
                         </button>
@@ -127,7 +127,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
 
                 {/* Column 3 - Discover More (30%) */}
                 <div className="w-[30%]">
-                  <h3 className="font-['Arial'] text-white/60 text-[14px] uppercase tracking-wider mb-6">
+                  <h3 className=" text-white/60 text-[14px] uppercase tracking-wider mb-6">
                     Discover More
                   </h3>
                   <nav className="space-y-3" aria-label="Additional pages">
@@ -135,7 +135,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                       <button
                         key={index}
                         onClick={() => handleNavClick(link.path)}
-                        className="block w-full text-left font-['Lexend_Deca'] text-[15px] text-white hover:text-[#FABA1E] transition-colors group"
+                        className="block w-full text-left  text-[15px] text-white hover:text-[#FABA1E] transition-colors group"
                       >
                         <div className="flex items-center justify-between">
                           <span>{link.label}</span>
@@ -150,7 +150,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
               {/* Bottom Cyan Strip */}
               <div className="absolute bottom-0 left-0 right-0 h-[52px] bg-[#3a8f66] flex items-center justify-center">
                 <div className="flex items-center gap-3">
-                  <span className="font-['Lexend_Deca'] text-white text-sm">
+                  <span className=" text-white text-sm">
                     Part of the LHBS bilingual education community
                   </span>
                   <button 
@@ -178,7 +178,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                     <div key={parent.id} className="border-b border-white/10">
                       <button
                         onClick={() => setExpandedMobile(expandedMobile === parent.id ? null : parent.id)}
-                        className="w-full text-left py-4 font-['Crimson_Pro'] text-[24px] text-white flex items-center justify-between"
+                        className="w-full text-left py-4  text-[24px] text-white flex items-center justify-between"
                       >
                         {parent.label}
                         <motion.div
@@ -202,7 +202,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                                 <button
                                   key={child.id}
                                   onClick={() => handleNavClick(child.path)}
-                                  className={`block w-full text-left py-2 font-['Lexend_Deca'] text-[15px] ${
+                                  className={`block w-full text-left py-2  text-[15px] ${
                                     currentPath === child.path
                                       ? 'text-[#FABA1E]'
                                       : 'text-white/80 hover:text-white'
@@ -221,7 +221,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
 
                 {/* Discover More - Mobile */}
                 <div className="mt-8 pt-8 border-t border-white/20">
-                  <h3 className="font-['Arial'] text-white/60 text-sm uppercase tracking-wider mb-4">
+                  <h3 className=" text-white/60 text-sm uppercase tracking-wider mb-4">
                     Discover More
                   </h3>
                   <div className="space-y-2">
@@ -229,7 +229,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                       <button
                         key={index}
                         onClick={() => handleNavClick(link.path)}
-                        className="block w-full text-left py-2 font-['Lexend_Deca'] text-[15px] text-white/80 hover:text-white"
+                        className="block w-full text-left py-2  text-[15px] text-white/80 hover:text-white"
                       >
                         {link.label}
                       </button>
@@ -241,7 +241,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
               {/* Bottom Strip - Mobile */}
               <div className="sticky bottom-0 h-[52px] bg-[#3a8f66] flex items-center justify-center px-6">
                 <div className="flex items-center gap-2">
-                  <span className="font-['Lexend_Deca'] text-white text-xs">
+                  <span className=" text-white text-xs">
                     LHBS Education Community
                   </span>
                   <button 

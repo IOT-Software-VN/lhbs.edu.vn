@@ -74,7 +74,7 @@ export function AcademicExcellenceSection() {
       {/* Header - Centered */}
       <div className="text-center max-w-[760px] mx-auto mb-16 relative z-10">
         <motion.h2
-          className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6"
+          className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -83,7 +83,7 @@ export function AcademicExcellenceSection() {
         </motion.h2>
         
         <motion.p
-          className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] leading-relaxed"
+          className=" text-base md:text-lg text-[#212121] leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -129,10 +129,10 @@ function AECard({ variant, image, title, body, alt }: AECardProps) {
         
         {/* Overlay at bottom-left */}
         <div className="absolute bottom-0 left-0 right-0 bg-[#1a5336] p-5 md:p-6 shadow-lg">
-          <h3 className="font-['Crimson_Pro'] text-xl md:text-2xl text-white mb-2">
+          <h3 className=" text-xl md:text-2xl text-white mb-2">
             {title}
           </h3>
-          <p className="font-['Lexend_Deca'] text-sm text-white/90 leading-relaxed">
+          <p className=" text-sm text-white/90 leading-relaxed">
             {body}
           </p>
         </div>
@@ -144,10 +144,10 @@ function AECard({ variant, image, title, body, alt }: AECardProps) {
       <div className="flex flex-col h-[500px] md:h-[600px]">
         {/* Overlay block at top */}
         <div className="bg-[#1a5336] p-5 md:p-6 shadow-lg flex-shrink-0">
-          <h3 className="font-['Crimson_Pro'] text-xl md:text-2xl text-white mb-2">
+          <h3 className=" text-xl md:text-2xl text-white mb-2">
             {title}
           </h3>
-          <p className="font-['Lexend_Deca'] text-sm text-white/90 leading-relaxed">
+          <p className=" text-sm text-white/90 leading-relaxed">
             {body}
           </p>
         </div>

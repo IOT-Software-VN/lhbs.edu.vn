@@ -159,12 +159,12 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
                   {item.onClick ? (
                     <button
                       onClick={item.onClick}
-                      className="font-['Lexend_Deca'] text-sm text-[#fffae9]/90 hover:text-[#fffae9] transition-colors focus:outline-none focus:text-[#fffae9] focus:underline whitespace-nowrap"
+                      className=" text-sm text-[#fffae9]/90 hover:text-[#fffae9] transition-colors focus:outline-none focus:text-[#fffae9] focus:underline whitespace-nowrap"
                     >
                       {item.label}
                     </button>
                   ) : (
-                    <span className="font-['Lexend_Deca'] text-sm text-[#fffae9]/70 whitespace-nowrap">{item.label}</span>
+                    <span className=" text-sm text-[#fffae9]/70 whitespace-nowrap">{item.label}</span>
                   )}
                 </div>
               ))}
@@ -173,7 +173,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
           
           <div className="relative z-10 w-full px-4 md:px-20 max-w-[1200px] mx-auto flex-1 flex flex-col justify-center pb-16 md:pb-24 pt-4">
             <motion.h1
-              className="font-['Crimson_Pro'] text-white text-[32px] md:text-[56px] mb-4 max-w-[22ch]"
+              className=" text-white text-[32px] md:text-[56px] mb-4 max-w-[22ch]"
               style={{ lineHeight: '1.1' }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -193,29 +193,29 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
               </svg>
             </div>
             
-            <h2 className="font-['Crimson_Pro'] text-[32px] md:text-[40px] text-[#1a5336] mb-6">
+            <h2 className=" text-[32px] md:text-[40px] text-[#1a5336] mb-6">
               Enquiry Submitted Successfully
             </h2>
             
-            <p className="font-['Lexend_Deca'] text-[#212121] mb-4" style={{ lineHeight: '1.5' }}>
+            <p className=" text-[#212121] mb-4" style={{ lineHeight: '1.5' }}>
               Thank you for your interest in LHBS. We have received your enquiry and a member of our admissions team will be in touch with you shortly.
             </p>
             
-            <p className="font-['Lexend_Deca'] text-[#666] mb-8" style={{ lineHeight: '1.5' }}>
+            <p className=" text-[#666] mb-8" style={{ lineHeight: '1.5' }}>
               Please check your email for a confirmation message. If you don't receive it within 24 hours, please contact us directly.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => onNavigate('/')}
-                className="px-8 h-12 bg-[#1a5336] text-white font-['Arial'] font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+                className="px-8 h-12 bg-[#1a5336] text-white  font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
               >
                 Return to Home
               </button>
               
               <button
                 onClick={() => onNavigate('/contact/book-tour')}
-                className="px-8 h-12 border-2 border-[#1a5336] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#1a5336] hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+                className="px-8 h-12 border-2 border-[#1a5336] text-[#1a5336]  font-bold hover:bg-[#1a5336] hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
               >
                 Book a School Tour
               </button>
@@ -245,12 +245,12 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
                 {item.onClick ? (
                   <button
                     onClick={item.onClick}
-                    className="font-['Lexend_Deca'] text-sm text-[#fffae9]/90 hover:text-[#fffae9] transition-colors focus:outline-none focus:text-[#fffae9] focus:underline whitespace-nowrap"
+                    className=" text-sm text-[#fffae9]/90 hover:text-[#fffae9] transition-colors focus:outline-none focus:text-[#fffae9] focus:underline whitespace-nowrap"
                   >
                     {item.label}
                   </button>
                 ) : (
-                  <span className="font-['Lexend_Deca'] text-sm text-[#fffae9]/70 whitespace-nowrap">{item.label}</span>
+                  <span className=" text-sm text-[#fffae9]/70 whitespace-nowrap">{item.label}</span>
                 )}
               </div>
             ))}
@@ -260,7 +260,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
         {/* Hero Content */}
         <div className="relative z-10 w-full px-4 md:px-20 max-w-[1200px] mx-auto flex-1 flex flex-col justify-center pb-16 md:pb-24 pt-4">
           <motion.h1
-            className="font-['Crimson_Pro'] text-white text-[32px] md:text-[48px] mb-4 max-w-[22ch]"
+            className=" text-white text-[32px] md:text-[48px] mb-4 max-w-[22ch]"
             style={{ lineHeight: '1.24' }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -270,7 +270,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
           </motion.h1>
           
           <motion.p
-            className="font-['Lexend_Deca'] text-white/95 text-[16px] md:text-[18px] max-w-[65ch]"
+            className=" text-white/95 text-[16px] md:text-[18px] max-w-[65ch]"
             style={{ lineHeight: '1.5' }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -290,10 +290,10 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
           transition={{ duration: 0.8 }}
         >
           <div className="mb-8 text-center">
-            <h2 className="font-['Crimson_Pro'] text-[32px] md:text-[40px] text-[#1a5336] mb-4">
+            <h2 className=" text-[32px] md:text-[40px] text-[#1a5336] mb-4">
               Enquiry Form
             </h2>
-            <p className="font-['Lexend_Deca'] text-[#666]" style={{ lineHeight: '1.5' }}>
+            <p className=" text-[#666]" style={{ lineHeight: '1.5' }}>
               Please complete the form below and our admissions team will be in touch shortly.
             </p>
           </div>
@@ -301,7 +301,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
           <form onSubmit={handleSubmit} noValidate className="bg-white p-6 md:p-10 border border-[#d0d0d0]">
             {/* Group A: Parent/Guardian Details */}
             <div className="mb-10 md:mb-12">
-              <h3 className="font-['Crimson_Pro'] text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
+              <h3 className=" text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
                 Parent/Guardian Details
               </h3>
               
@@ -431,7 +431,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
 
             {/* Group B: Children Details */}
             <div className="mb-10 md:mb-12">
-              <h3 className="font-['Crimson_Pro'] text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
+              <h3 className=" text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
                 Children Details
               </h3>
               
@@ -470,7 +470,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
 
             {/* Group C: Tell us more */}
             <div className="mb-10 md:mb-12">
-              <h3 className="font-['Crimson_Pro'] text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
+              <h3 className=" text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
                 Tell Us More
               </h3>
               
@@ -489,7 +489,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
 
             {/* Group D: Visit our school */}
             <div className="mb-10 md:mb-12">
-              <h3 className="font-['Crimson_Pro'] text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
+              <h3 className=" text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
                 Visit Our School
               </h3>
               
@@ -558,7 +558,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
 
             {/* Group E: Marketing Consent */}
             <div className="mb-10">
-              <h3 className="font-['Crimson_Pro'] text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
+              <h3 className=" text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
                 Stay Connected
               </h3>
               
@@ -569,7 +569,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
                 onChange={setMarketingConsent}
               />
               
-              <p className="font-['Lexend_Deca'] text-xs text-[#666] mt-4" style={{ lineHeight: '1.5' }}>
+              <p className=" text-xs text-[#666] mt-4" style={{ lineHeight: '1.5' }}>
                 By submitting this form, you agree to our{' '}
                 <button
                   type="button"
@@ -594,7 +594,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-between pt-6 border-t border-[#d0d0d0]">
               <button
                 type="submit"
-                className="w-full sm:w-auto px-10 h-12 bg-[#1a5336] text-white font-['Arial'] font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+                className="w-full sm:w-auto px-10 h-12 bg-[#1a5336] text-white  font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
               >
                 Submit Enquiry
               </button>
@@ -602,7 +602,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
               <button
                 type="button"
                 onClick={() => onNavigate('/contact/contact-us')}
-                className="font-['Lexend_Deca'] text-sm text-[#1a5336] underline hover:text-[#14432b] focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
+                className=" text-sm text-[#1a5336] underline hover:text-[#14432b] focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
               >
                 Or contact admissions directly
               </button>

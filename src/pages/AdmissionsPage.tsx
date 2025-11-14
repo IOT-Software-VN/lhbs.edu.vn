@@ -74,7 +74,7 @@ function HeaderAdmissions({ onNavigate }: { onNavigate: (path: string) => void }
             <li>
               <ChevronRight className="w-4 h-4 text-[#fffae9]/70" />
             </li>
-            <li className="text-[#fffae9] font-['Lexend_Deca']">Admissions</li>
+            <li className="text-[#fffae9] ">Admissions</li>
           </ol>
         </nav>
         
@@ -86,17 +86,17 @@ function HeaderAdmissions({ onNavigate }: { onNavigate: (path: string) => void }
             transition={{ duration: 0.8 }}
           >
             {/* Subhead */}
-            <p className="font-['Lexend_Deca'] text-sm md:text-base text-[#FABA1E] mb-4 tracking-wide uppercase">
+            <p className=" text-sm md:text-base text-[#FABA1E] mb-4 tracking-wide uppercase">
               {hdrSubhead}
             </p>
             
             {/* Title */}
-            <h1 className="font-['Crimson_Pro'] text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
+            <h1 className=" text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
               {hdrTitle}
             </h1>
             
             {/* Lead */}
-            <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
+            <p className=" text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
               {hdrLead}
             </p>
             
@@ -104,14 +104,14 @@ function HeaderAdmissions({ onNavigate }: { onNavigate: (path: string) => void }
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <button
                 onClick={() => onNavigate(applyLink)}
-                className="px-12 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
+                className="px-12 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
               >
                 APPLY NOW
               </button>
               
               <button
                 onClick={() => onNavigate(tourLink)}
-                className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               >
                 BOOK A TOUR
               </button>
@@ -122,7 +122,7 @@ function HeaderAdmissions({ onNavigate }: { onNavigate: (path: string) => void }
               <a
                 href={guidePdf}
                 download
-                className="flex items-center gap-2 text-[#fffae9]/90 hover:text-[#fffae9] transition-colors font-['Lexend_Deca'] text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="flex items-center gap-2 text-[#fffae9]/90 hover:text-[#fffae9] transition-colors  text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               >
                 <Download className="w-4 h-4" />
                 <span>Admissions Guide (PDF)</span>
@@ -130,7 +130,7 @@ function HeaderAdmissions({ onNavigate }: { onNavigate: (path: string) => void }
               
               <button
                 onClick={() => onNavigate(counselorLink)}
-                className="flex items-center gap-2 text-[#fffae9]/90 hover:text-[#fffae9] transition-colors font-['Lexend_Deca'] text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="flex items-center gap-2 text-[#fffae9]/90 hover:text-[#fffae9] transition-colors  text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               >
                 <Users className="w-4 h-4" />
                 <span>Talk to a Counselor</span>
@@ -194,10 +194,10 @@ function WhyChooseSection() {
     <section id="why-choose" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
+        <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
           Why Choose LHBS?
         </h2>
-        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
           Join a community dedicated to nurturing bilingual, globally-minded leaders with deep roots in Vietnamese culture.
         </p>
       </div>
@@ -217,22 +217,22 @@ function WhyChooseSection() {
             <div className="text-5xl mb-4">{feature.icon}</div>
             
             {/* Title */}
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] group-hover:text-[#fffae9] mb-3">
+            <h3 className=" text-2xl text-[#1a5336] group-hover:text-[#fffae9] mb-3">
               {feature.title}
             </h3>
             
             {/* Description */}
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121] group-hover:text-[#fffae9]/90 mb-4">
+            <p className=" text-sm text-[#212121] group-hover:text-[#fffae9]/90 mb-4">
               {feature.description}
             </p>
             
             {/* Stat Badge */}
             {feature.stat && (
               <div className="mt-6 pt-4 border-t border-[#1a5336]/20 group-hover:border-[#fffae9]/20">
-                <div className="font-['Arial'] text-3xl text-[#FABA1E] mb-1">
+                <div className=" text-3xl text-[#FABA1E] mb-1">
                   {feature.stat}
                 </div>
-                <div className="font-['Lexend_Deca'] text-xs text-[#212121] group-hover:text-[#fffae9]/70 uppercase tracking-wide">
+                <div className=" text-xs text-[#212121] group-hover:text-[#fffae9]/70 uppercase tracking-wide">
                   {feature.statLabel}
                 </div>
               </div>
@@ -266,13 +266,13 @@ function WhyChooseSection() {
 function MetricCard({ value, label, description }: { value: string; label: string; description: string }) {
   return (
     <div className="text-center p-6 bg-[#1a5336] text-[#fffae9]">
-      <div className="font-['Arial'] text-5xl md:text-6xl text-[#FABA1E] mb-3">
+      <div className=" text-5xl md:text-6xl text-[#FABA1E] mb-3">
         {value}
       </div>
-      <div className="font-['Crimson_Pro'] text-xl mb-2">
+      <div className=" text-xl mb-2">
         {label}
       </div>
-      <div className="font-['Lexend_Deca'] text-sm text-[#fffae9]/80">
+      <div className=" text-sm text-[#fffae9]/80">
         {description}
       </div>
     </div>
@@ -330,10 +330,10 @@ function ProcessSection({ onNavigate }: { onNavigate: (path: string) => void }) 
     <section id="process" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
+        <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
           Admissions Process
         </h2>
-        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
           Our straightforward 6-step process ensures a smooth journey from inquiry to enrollment.
         </p>
       </div>
@@ -350,29 +350,29 @@ function ProcessSection({ onNavigate }: { onNavigate: (path: string) => void }) 
               <div key={index} className="relative">
                 {/* Step Number Dot */}
                 <div className="relative z-10 w-16 h-16 mx-auto mb-4 bg-[#1a5336] flex items-center justify-center">
-                  <span className="font-['Arial'] text-2xl text-[#fffae9] font-bold">
+                  <span className=" text-2xl text-[#fffae9] font-bold">
                     {index + 1}
                   </span>
                 </div>
                 
                 {/* Content */}
                 <div className="text-center">
-                  <h3 className="font-['Crimson_Pro'] text-lg text-[#1a5336] mb-2">
+                  <h3 className=" text-lg text-[#1a5336] mb-2">
                     {step.title}
                   </h3>
-                  <p className="font-['Lexend_Deca'] text-xs text-[#212121] mb-3 line-clamp-3">
+                  <p className=" text-xs text-[#212121] mb-3 line-clamp-3">
                     {step.description}
                   </p>
                   
                   {step.sla && (
-                    <div className="font-['Lexend_Deca'] text-xs text-[#FABA1E] mb-3">
+                    <div className=" text-xs text-[#FABA1E] mb-3">
                       ⏱ {step.sla}
                     </div>
                   )}
                   
                   <button
                     onClick={() => onNavigate(step.ctaLink)}
-                    className="font-['Lexend_Deca'] text-xs text-[#1a5336] underline hover:text-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                    className=" text-xs text-[#1a5336] underline hover:text-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
                   >
                     {step.ctaText} →
                   </button>
@@ -389,29 +389,29 @@ function ProcessSection({ onNavigate }: { onNavigate: (path: string) => void }) 
           <div key={index} className="flex gap-4">
             {/* Step Number */}
             <div className="flex-shrink-0 w-12 h-12 bg-[#1a5336] flex items-center justify-center">
-              <span className="font-['Arial'] text-xl text-[#fffae9] font-bold">
+              <span className=" text-xl text-[#fffae9] font-bold">
                 {index + 1}
               </span>
             </div>
             
             {/* Content */}
             <div className="flex-1">
-              <h3 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-2">
+              <h3 className=" text-xl text-[#1a5336] mb-2">
                 {step.title}
               </h3>
-              <p className="font-['Lexend_Deca'] text-sm text-[#212121] mb-3">
+              <p className=" text-sm text-[#212121] mb-3">
                 {step.description}
               </p>
               
               {step.sla && (
-                <div className="font-['Lexend_Deca'] text-xs text-[#FABA1E] mb-3">
+                <div className=" text-xs text-[#FABA1E] mb-3">
                   ⏱ Processing time: {step.sla}
                 </div>
               )}
               
               <button
                 onClick={() => onNavigate(step.ctaLink)}
-                className="font-['Lexend_Deca'] text-sm text-[#1a5336] underline hover:text-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className=" text-sm text-[#1a5336] underline hover:text-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               >
                 {step.ctaText} →
               </button>
@@ -478,10 +478,10 @@ function TuitionFeesSection({ onNavigate }: { onNavigate: (path: string) => void
     <section id="tuition-fees" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
+        <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
           Tuition & Fees
         </h2>
-        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto mb-8">
+        <p className=" text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto mb-8">
           Transparent pricing for world-class bilingual education. All fees are in Vietnamese Dong (VND).
         </p>
         
@@ -489,7 +489,7 @@ function TuitionFeesSection({ onNavigate }: { onNavigate: (path: string) => void
           <a
             href="/downloads/tuition-fees-2025.pdf"
             download
-            className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold flex items-center gap-2 hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+            className="px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold flex items-center gap-2 hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
           >
             <Download className="w-4 h-4" />
             Download Full Fee Schedule (PDF)
@@ -497,7 +497,7 @@ function TuitionFeesSection({ onNavigate }: { onNavigate: (path: string) => void
           
           <button
             onClick={() => onNavigate('/admissions/fee-calculator')}
-            className="px-8 h-12 border-2 border-[#1a5336] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+            className="px-8 h-12 border-2 border-[#1a5336] text-[#1a5336]  font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
           >
             Estimate Your Total
           </button>
@@ -508,14 +508,14 @@ function TuitionFeesSection({ onNavigate }: { onNavigate: (path: string) => void
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         {/* One-Time Fees */}
         <div className="border-2 border-[#1a5336] p-8">
-          <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-6">
+          <h3 className=" text-2xl text-[#1a5336] mb-6">
             One-Time Fees
           </h3>
           <div className="space-y-4">
             {oneTimeFees.map((fee, index) => (
               <div key={index} className="flex justify-between items-start pb-3 border-b border-[#1a5336]/20 last:border-0">
-                <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{fee.item}</span>
-                <span className="font-['Arial'] text-sm text-[#1a5336] font-bold">{fee.amount}</span>
+                <span className=" text-sm text-[#212121]">{fee.item}</span>
+                <span className=" text-sm text-[#1a5336] font-bold">{fee.amount}</span>
               </div>
             ))}
           </div>
@@ -523,14 +523,14 @@ function TuitionFeesSection({ onNavigate }: { onNavigate: (path: string) => void
         
         {/* Optional Services */}
         <div className="border-2 border-[#1a5336] p-8">
-          <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-6">
+          <h3 className=" text-2xl text-[#1a5336] mb-6">
             Optional Services
           </h3>
           <div className="space-y-4">
             {optionalServices.map((service, index) => (
               <div key={index} className="flex justify-between items-start pb-3 border-b border-[#1a5336]/20 last:border-0">
-                <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{service.item}</span>
-                <span className="font-['Arial'] text-sm text-[#1a5336] font-bold">{service.amount}</span>
+                <span className=" text-sm text-[#212121]">{service.item}</span>
+                <span className=" text-sm text-[#1a5336] font-bold">{service.amount}</span>
               </div>
             ))}
           </div>
@@ -539,7 +539,7 @@ function TuitionFeesSection({ onNavigate }: { onNavigate: (path: string) => void
       
       {/* Annual Tuition by Division */}
       <div className="bg-white p-8 mb-8">
-        <h3 className="font-['Crimson_Pro'] text-3xl text-[#1a5336] mb-6 text-center">
+        <h3 className=" text-3xl text-[#1a5336] mb-6 text-center">
           Annual Tuition by Division
         </h3>
         
@@ -549,7 +549,7 @@ function TuitionFeesSection({ onNavigate }: { onNavigate: (path: string) => void
             <button
               key={key}
               onClick={() => setSelectedDivision(key)}
-              className={`px-6 h-10 font-['Lexend_Deca'] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] ${
+              className={`px-6 h-10  transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] ${
                 selectedDivision === key
                   ? 'bg-[#1a5336] text-[#fffae9]'
                   : 'bg-[#fffae9] text-[#1a5336] border-2 border-[#1a5336] hover:bg-[#1a5336]/10'
@@ -565,26 +565,26 @@ function TuitionFeesSection({ onNavigate }: { onNavigate: (path: string) => void
           <table className="w-full">
             <thead>
               <tr className="bg-[#1a5336] text-[#fffae9]">
-                <th className="font-['Crimson_Pro'] text-lg text-left p-4">Payment Plan</th>
-                <th className="font-['Crimson_Pro'] text-lg text-right p-4">Amount</th>
+                <th className=" text-lg text-left p-4">Payment Plan</th>
+                <th className=" text-lg text-right p-4">Amount</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-b border-[#1a5336]/20">
-                <td className="font-['Lexend_Deca'] text-sm p-4">Annual (Full Year)</td>
-                <td className="font-['Arial'] font-bold text-[#1a5336] text-right p-4">
+                <td className=" text-sm p-4">Annual (Full Year)</td>
+                <td className=" font-bold text-[#1a5336] text-right p-4">
                   {tuitionByDivision[selectedDivision as keyof typeof tuitionByDivision].annual}
                 </td>
               </tr>
               <tr className="border-b border-[#1a5336]/20">
-                <td className="font-['Lexend_Deca'] text-sm p-4">Per Term (3 terms/year)</td>
-                <td className="font-['Arial'] font-bold text-[#1a5336] text-right p-4">
+                <td className=" text-sm p-4">Per Term (3 terms/year)</td>
+                <td className=" font-bold text-[#1a5336] text-right p-4">
                   {tuitionByDivision[selectedDivision as keyof typeof tuitionByDivision].perTerm}
                 </td>
               </tr>
               <tr>
-                <td className="font-['Lexend_Deca'] text-sm p-4">Monthly Instalment (10 months)</td>
-                <td className="font-['Arial'] font-bold text-[#1a5336] text-right p-4">
+                <td className=" text-sm p-4">Monthly Instalment (10 months)</td>
+                <td className=" font-bold text-[#1a5336] text-right p-4">
                   {tuitionByDivision[selectedDivision as keyof typeof tuitionByDivision].instalment}
                 </td>
               </tr>
@@ -595,14 +595,14 @@ function TuitionFeesSection({ onNavigate }: { onNavigate: (path: string) => void
       
       {/* Discounts & Notes */}
       <div className="bg-[#FABA1E]/10 border-l-4 border-[#FABA1E] p-6">
-        <h4 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-4">
+        <h4 className=" text-xl text-[#1a5336] mb-4">
           Discounts & Financial Support
         </h4>
         <ul className="space-y-2">
           {discounts.map((discount, index) => (
             <li key={index} className="flex items-start gap-3">
               <CheckCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-              <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{discount}</span>
+              <span className=" text-sm text-[#212121]">{discount}</span>
             </li>
           ))}
         </ul>
@@ -675,20 +675,20 @@ function ScholarshipsSection({ onNavigate }: { onNavigate: (path: string) => voi
       <div className="grid lg:grid-cols-2 gap-16">
         {/* Left: Overview */}
         <div>
-          <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-6">
+          <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-6">
             Scholarships & Financial Support
           </h2>
           
-          <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] mb-6 leading-relaxed">
+          <p className=" text-base md:text-lg text-[#212121] mb-6 leading-relaxed">
             We believe that exceptional bilingual education should be accessible to talented students from all backgrounds. LHBS offers a comprehensive range of scholarships and financial aid options to support deserving families.
           </p>
           
-          <p className="font-['Lexend_Deca'] text-base text-[#212121] mb-8 leading-relaxed">
+          <p className=" text-base text-[#212121] mb-8 leading-relaxed">
             Our scholarship programs recognize academic excellence, bilingual achievement, leadership, and character. We also provide need-based financial aid to ensure that financial circumstances never prevent a qualified student from joining our community.
           </p>
           
           <div className="bg-[#FABA1E]/10 border-l-4 border-[#FABA1E] p-6 mb-8">
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121]">
+            <p className=" text-sm text-[#212121]">
               <strong className="text-[#1a5336]">💡 Pro Tip:</strong> Many scholarships can be combined! A student may be eligible for both merit-based awards and sibling discounts. Contact our admissions team to explore all options.
             </p>
           </div>
@@ -697,7 +697,7 @@ function ScholarshipsSection({ onNavigate }: { onNavigate: (path: string) => voi
             <a
               href="/downloads/scholarship-policy-2025.pdf"
               download
-              className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold flex items-center justify-center gap-2 hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold flex items-center justify-center gap-2 hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
             >
               <Download className="w-4 h-4" />
               Scholarship Policy (PDF)
@@ -705,7 +705,7 @@ function ScholarshipsSection({ onNavigate }: { onNavigate: (path: string) => voi
             
             <button
               onClick={() => onNavigate('/admissions/financial-aid-application')}
-              className="px-8 h-12 border-2 border-[#1a5336] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="px-8 h-12 border-2 border-[#1a5336] text-[#1a5336]  font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
             >
               Apply for Financial Aid
             </button>
@@ -750,10 +750,10 @@ function ScholarshipAccordion({ scholarship, index, isOpen, onToggle, onNavigate
         aria-expanded={isOpen}
       >
         <div className="flex-1">
-          <h3 className="font-['Crimson_Pro'] text-xl md:text-2xl text-[#1a5336] mb-1">
+          <h3 className=" text-xl md:text-2xl text-[#1a5336] mb-1">
             {scholarship.title}
           </h3>
-          <p className="font-['Lexend_Deca'] text-sm text-[#212121]">
+          <p className=" text-sm text-[#212121]">
             {scholarship.amount}
           </p>
         </div>
@@ -768,18 +768,18 @@ function ScholarshipAccordion({ scholarship, index, isOpen, onToggle, onNavigate
       {/* Content */}
       {isOpen && (
         <div className="p-6 pt-0 border-t border-[#1a5336]/20">
-          <p className="font-['Lexend_Deca'] text-sm text-[#212121] mb-6">
+          <p className=" text-sm text-[#212121] mb-6">
             {scholarship.description}
           </p>
           
           {/* Criteria */}
           <div className="mb-6">
-            <h4 className="font-['Crimson_Pro'] text-lg text-[#1a5336] mb-3">Eligibility Criteria:</h4>
+            <h4 className=" text-lg text-[#1a5336] mb-3">Eligibility Criteria:</h4>
             <ul className="space-y-2">
               {scholarship.criteria.map((criterion: string, i: number) => (
                 <li key={i} className="flex items-start gap-3">
                   <CheckCircle className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{criterion}</span>
+                  <span className=" text-sm text-[#212121]">{criterion}</span>
                 </li>
               ))}
             </ul>
@@ -787,12 +787,12 @@ function ScholarshipAccordion({ scholarship, index, isOpen, onToggle, onNavigate
           
           {/* Documents */}
           <div className="mb-6">
-            <h4 className="font-['Crimson_Pro'] text-lg text-[#1a5336] mb-3">Required Documents:</h4>
+            <h4 className=" text-lg text-[#1a5336] mb-3">Required Documents:</h4>
             <ul className="space-y-2">
               {scholarship.documents.map((doc: string, i: number) => (
                 <li key={i} className="flex items-start gap-3">
                   <FileText className="w-4 h-4 text-[#1a5336] flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{doc}</span>
+                  <span className=" text-sm text-[#212121]">{doc}</span>
                 </li>
               ))}
             </ul>
@@ -802,7 +802,7 @@ function ScholarshipAccordion({ scholarship, index, isOpen, onToggle, onNavigate
           <div className="bg-[#fffae9] p-4 mb-4">
             <div className="flex items-center gap-2 mb-3">
               <Clock className="w-4 h-4 text-[#1a5336]" />
-              <span className="font-['Lexend_Deca'] text-sm text-[#212121]">
+              <span className=" text-sm text-[#212121]">
                 <strong>Application Deadline:</strong> {scholarship.deadline}
               </span>
             </div>
@@ -810,7 +810,7 @@ function ScholarshipAccordion({ scholarship, index, isOpen, onToggle, onNavigate
           
           <button
             onClick={() => onNavigate('/admissions/scholarship-application')}
-            className="w-full px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
+            className="w-full px-8 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
           >
             Apply for This Scholarship
           </button>
@@ -896,10 +896,10 @@ function EntryRequirementsSection({ onNavigate }: { onNavigate: (path: string) =
     <section id="entry" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
+        <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
           Entry Requirements
         </h2>
-        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base md:text-lg text-[#212121] max-w-[70ch] mx-auto">
           Clear guidelines to help you prepare a complete application for your child.
         </p>
       </div>
@@ -907,11 +907,11 @@ function EntryRequirementsSection({ onNavigate }: { onNavigate: (path: string) =
       <div className="grid lg:grid-cols-2 gap-16 mb-12">
         {/* Left: Age & Grade Placement */}
         <div>
-          <h3 className="font-['Crimson_Pro'] text-3xl text-[#1a5336] mb-6">
+          <h3 className=" text-3xl text-[#1a5336] mb-6">
             Age & Grade Placement
           </h3>
           
-          <p className="font-['Lexend_Deca'] text-sm text-[#212121] mb-6">
+          <p className=" text-sm text-[#212121] mb-6">
             Students must meet the minimum age requirement for their grade level by the cutoff date. 
             Grade placement is determined by age, previous schooling, and assessment results.
           </p>
@@ -920,17 +920,17 @@ function EntryRequirementsSection({ onNavigate }: { onNavigate: (path: string) =
             <table className="w-full">
               <thead>
                 <tr className="bg-[#1a5336] text-[#fffae9]">
-                  <th className="font-['Crimson_Pro'] text-lg text-left p-4">Grade Level</th>
-                  <th className="font-['Crimson_Pro'] text-lg text-left p-4">Age</th>
-                  <th className="font-['Crimson_Pro'] text-lg text-left p-4">Cutoff Date</th>
+                  <th className=" text-lg text-left p-4">Grade Level</th>
+                  <th className=" text-lg text-left p-4">Age</th>
+                  <th className=" text-lg text-left p-4">Cutoff Date</th>
                 </tr>
               </thead>
               <tbody>
                 {ageChart.map((row, index) => (
                   <tr key={index} className="border-b border-[#1a5336]/20 last:border-0">
-                    <td className="font-['Lexend_Deca'] text-sm p-4">{row.grade}</td>
-                    <td className="font-['Lexend_Deca'] text-sm p-4">{row.age}</td>
-                    <td className="font-['Lexend_Deca'] text-sm p-4">{row.cutoffDate}</td>
+                    <td className=" text-sm p-4">{row.grade}</td>
+                    <td className=" text-sm p-4">{row.age}</td>
+                    <td className=" text-sm p-4">{row.cutoffDate}</td>
                   </tr>
                 ))}
               </tbody>
@@ -941,7 +941,7 @@ function EntryRequirementsSection({ onNavigate }: { onNavigate: (path: string) =
             <a
               href="/downloads/admissions-policy-2025.pdf"
               download
-              className="inline-flex items-center gap-2 px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="inline-flex items-center gap-2 px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
             >
               <Download className="w-4 h-4" />
               Download Admissions Policy (PDF)
@@ -957,7 +957,7 @@ function EntryRequirementsSection({ onNavigate }: { onNavigate: (path: string) =
                 <div className="flex-shrink-0 w-10 h-10 bg-[#1a5336] flex items-center justify-center">
                   <req.icon className="w-5 h-5 text-[#fffae9]" />
                 </div>
-                <h4 className="font-['Crimson_Pro'] text-xl text-[#1a5336]">
+                <h4 className=" text-xl text-[#1a5336]">
                   {req.title}
                 </h4>
               </div>
@@ -966,7 +966,7 @@ function EntryRequirementsSection({ onNavigate }: { onNavigate: (path: string) =
                 {req.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="text-[#FABA1E] mt-1">•</span>
-                    <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{item}</span>
+                    <span className=" text-sm text-[#212121]">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -1021,10 +1021,10 @@ function KeyDatesSection() {
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
         <div>
-          <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-4">
+          <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
             Key Dates & Deadlines
           </h2>
-          <p className="font-['Lexend_Deca'] text-base text-[#212121] max-w-[60ch]">
+          <p className=" text-base text-[#212121] max-w-[60ch]">
             Plan ahead with our admissions calendar. Mark important dates to ensure a smooth application process.
           </p>
         </div>
@@ -1033,7 +1033,7 @@ function KeyDatesSection() {
           <a
             href="/downloads/admissions-calendar-2025.ics"
             download
-            className="inline-flex items-center gap-2 px-6 h-10 border-2 border-[#1a5336] text-[#1a5336] font-['Lexend_Deca'] hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+            className="inline-flex items-center gap-2 px-6 h-10 border-2 border-[#1a5336] text-[#1a5336]  hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
           >
             <Calendar className="w-4 h-4" />
             Add to Calendar
@@ -1045,7 +1045,7 @@ function KeyDatesSection() {
       <div className="space-y-12">
         {dates.map((category, catIndex) => (
           <div key={catIndex}>
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-6">
+            <h3 className=" text-2xl text-[#1a5336] mb-6">
               {category.category}
             </h3>
             
@@ -1062,7 +1062,7 @@ function KeyDatesSection() {
                   }`}
                 >
                   <div className="flex items-start justify-between mb-3">
-                    <div className={`px-3 py-1 text-xs font-['Lexend_Deca'] uppercase ${
+                    <div className={`px-3 py-1 text-xs  uppercase ${
                       event.status === 'active'
                         ? 'bg-[#FABA1E] text-[#1a5336]'
                         : event.status === 'past'
@@ -1073,13 +1073,13 @@ function KeyDatesSection() {
                     </div>
                   </div>
                   
-                  <h4 className="font-['Crimson_Pro'] text-lg text-[#1a5336] mb-2">
+                  <h4 className=" text-lg text-[#1a5336] mb-2">
                     {event.title}
                   </h4>
                   
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4 text-[#1a5336]" />
-                    <span className="font-['Lexend_Deca'] text-sm text-[#212121]">
+                    <span className=" text-sm text-[#212121]">
                       {event.date}
                     </span>
                   </div>
@@ -1094,7 +1094,7 @@ function KeyDatesSection() {
       <div className="mt-12 text-center">
         <button
           onClick={() => window.open('mailto:admissions@lhbs.edu.vn?subject=Admissions Date Reminders', '_blank')}
-          className="px-12 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+          className="px-12 h-12 bg-[#1a5336] text-[#fffae9]  font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
         >
           Get Email Reminders
         </button>
@@ -1119,16 +1119,16 @@ function ApplyOnlineSection({ onNavigate }: { onNavigate: (path: string) => void
       <div className="max-w-[800px] mx-auto text-center">
         {/* Header */}
         <div className="mb-12">
-          <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
+          <h2 className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-6">
             Ready to Apply?
           </h2>
           
-          <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] mb-6">
+          <p className=" text-base md:text-lg text-[#212121] mb-6">
             Our online application makes it easy to start your LHBS journey. Complete the form at your own pace—you can save and continue later.
           </p>
           
           <div className="bg-[#1a5336]/5 border-l-4 border-[#1a5336] p-6 text-left">
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121]">
+            <p className=" text-sm text-[#212121]">
               <strong className="text-[#1a5336]">🔒 Your data is secure:</strong> We use industry-standard encryption to protect your personal information. We will never share your data with third parties without your consent. See our <button className="underline hover:text-[#FABA1E]">Privacy Policy</button> for details.
             </p>
           </div>
@@ -1136,7 +1136,7 @@ function ApplyOnlineSection({ onNavigate }: { onNavigate: (path: string) => void
         
         {/* What You'll Need */}
         <div className="mb-12 text-left">
-          <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-6 text-center">
+          <h3 className=" text-2xl text-[#1a5336] mb-6 text-center">
             What You'll Need
           </h3>
           
@@ -1144,7 +1144,7 @@ function ApplyOnlineSection({ onNavigate }: { onNavigate: (path: string) => void
             {checklist.map((item, index) => (
               <div key={index} className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{item}</span>
+                <span className=" text-sm text-[#212121]">{item}</span>
               </div>
             ))}
           </div>
@@ -1153,7 +1153,7 @@ function ApplyOnlineSection({ onNavigate }: { onNavigate: (path: string) => void
         {/* Estimated Time */}
         <div className="mb-12 flex items-center justify-center gap-3 text-[#212121]">
           <Clock className="w-5 h-5 text-[#1a5336]" />
-          <span className="font-['Lexend_Deca'] text-sm">
+          <span className=" text-sm">
             <strong>Estimated time:</strong> 20-30 minutes
           </span>
         </div>
@@ -1162,21 +1162,21 @@ function ApplyOnlineSection({ onNavigate }: { onNavigate: (path: string) => void
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
           <button
             onClick={() => onNavigate('/admissions/apply-now')}
-            className="px-12 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
+            className="px-12 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
           >
             START APPLICATION
           </button>
           
           <button
             onClick={() => onNavigate('/contact/admissions-counselor')}
-            className="px-12 h-12 border-2 border-[#1a5336] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+            className="px-12 h-12 border-2 border-[#1a5336] text-[#1a5336]  font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
           >
             TALK TO A COUNSELOR
           </button>
         </div>
         
         {/* Save & Continue Note */}
-        <p className="font-['Lexend_Deca'] text-sm text-[#212121]/70">
+        <p className=" text-sm text-[#212121]/70">
           💾 Don't worry—you can save your progress and continue later. We'll send you a link to resume.
         </p>
       </div>
@@ -1196,10 +1196,10 @@ function HelperFooterAdmissions() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           {/* Left: Text */}
           <div>
-            <p className="font-['Crimson_Pro'] text-xl text-[#fffae9] mb-1">
+            <p className=" text-xl text-[#fffae9] mb-1">
               Need Help With Your Application?
             </p>
-            <p className="font-['Lexend_Deca'] text-sm text-[#fffae9]/80">
+            <p className=" text-sm text-[#fffae9]/80">
               Our admissions team is here to assist you every step of the way.
             </p>
           </div>
@@ -1208,7 +1208,7 @@ function HelperFooterAdmissions() {
           <div className="flex flex-wrap gap-4">
             <a
               href={`tel:${hfHotline.replace(/\s/g, '')}`}
-              className="flex items-center gap-2 px-6 h-10 bg-[#fffae9] text-[#1a5336] font-['Lexend_Deca'] text-sm hover:bg-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="flex items-center gap-2 px-6 h-10 bg-[#fffae9] text-[#1a5336]  text-sm hover:bg-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
             >
               <Phone className="w-4 h-4" />
               <span>{hfHotline}</span>
@@ -1216,7 +1216,7 @@ function HelperFooterAdmissions() {
             
             <a
               href={`mailto:${hfEmail}`}
-              className="flex items-center gap-2 px-6 h-10 bg-[#fffae9] text-[#1a5336] font-['Lexend_Deca'] text-sm hover:bg-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="flex items-center gap-2 px-6 h-10 bg-[#fffae9] text-[#1a5336]  text-sm hover:bg-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
             >
               <Mail className="w-4 h-4" />
               <span>Email</span>
@@ -1226,7 +1226,7 @@ function HelperFooterAdmissions() {
               href={`https://wa.me/${hfWhatsApp.replace(/\s/g, '')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 h-10 bg-[#fffae9] text-[#1a5336] font-['Lexend_Deca'] text-sm hover:bg-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="flex items-center gap-2 px-6 h-10 bg-[#fffae9] text-[#1a5336]  text-sm hover:bg-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
             >
               <MessageCircle className="w-4 h-4" />
               <span>WhatsApp</span>

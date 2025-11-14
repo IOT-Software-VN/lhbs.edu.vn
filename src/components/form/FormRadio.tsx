@@ -38,7 +38,7 @@ export function FormRadio({
         aria-describedby={`${error ? errorId : ''} ${helpText ? helpId : ''}`.trim() || undefined}
         aria-invalid={error ? 'true' : 'false'}
       >
-        <legend className="font-['Lexend_Deca'] text-sm text-[#212121] mb-2">
+        <legend className=" text-sm text-[#212121] mb-2">
           {label}
           {required && <span className="text-[#d32f2f] ml-1">*</span>}
         </legend>
@@ -60,7 +60,7 @@ export function FormRadio({
                 />
                 <label
                   htmlFor={radioId}
-                  className={`font-['Lexend_Deca'] text-sm text-[#212121] cursor-pointer ${disabled ? 'cursor-not-allowed opacity-50' : ''}`}
+                  className={` text-sm text-[#212121] cursor-pointer ${disabled ? 'cursor-not-allowed opacity-50' : ''}`}
                 >
                   {option.label}
                 </label>
@@ -71,13 +71,13 @@ export function FormRadio({
       </fieldset>
       
       {helpText && !error && (
-        <p id={helpId} className="font-['Lexend_Deca'] text-xs text-[#666]">
+        <p id={helpId} className=" text-xs text-[#666]">
           {helpText}
         </p>
       )}
       
       {error && (
-        <p id={errorId} className="font-['Lexend_Deca'] text-xs text-[#d32f2f]" role="alert">
+        <p id={errorId} className=" text-xs text-[#d32f2f]" role="alert">
           {error}
         </p>
       )}

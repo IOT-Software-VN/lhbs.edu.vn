@@ -53,17 +53,17 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
               <li>
                 <ChevronRight className="w-4 h-4 text-[#fffae9]/70" />
               </li>
-              <li className="text-[#fffae9] font-['Lexend_Deca']">Kindergarten</li>
+              <li className="text-[#fffae9] ">Kindergarten</li>
             </ol>
           </nav>
 
           {/* Hero Content */}
           <div className="max-w-3xl">
-            <p className="text-[#FABA1E] mb-4 font-['Lexend_Deca'] uppercase tracking-wider">Ages 3-5</p>
-            <h1 className="font-['Crimson_Pro'] text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
+            <p className="text-[#FABA1E] mb-4  uppercase tracking-wider">Ages 3-5</p>
+            <h1 className=" text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
               A Safe & Loving Environment Where Learning Begins
             </h1>
-            <p className="text-[#fffae9]/90 mb-8 font-['Lexend_Deca'] text-lg leading-relaxed">
+            <p className="text-[#fffae9]/90 mb-8  text-lg leading-relaxed">
               Our Kindergarten program nurtures young minds through play-based bilingual learning, developing essential social, emotional, and cognitive skills in a warm, supportive environment designed specifically for early learners.
             </p>
 
@@ -73,8 +73,8 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                 <div className="flex items-start gap-3">
                   <Users className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
                   <div>
-                    <div className="font-['Crimson_Pro'] text-[#fffae9] text-2xl mb-1">1:8</div>
-                    <div className="font-['Lexend_Deca'] text-[#fffae9]/80 text-sm">Teacher-Student Ratio</div>
+                    <div className=" text-[#fffae9] text-2xl mb-1">1:8</div>
+                    <div className=" text-[#fffae9]/80 text-sm">Teacher-Student Ratio</div>
                   </div>
                 </div>
               </div>
@@ -82,8 +82,8 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                 <div className="flex items-start gap-3">
                   <Trees className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
                   <div>
-                    <div className="font-['Crimson_Pro'] text-[#fffae9] text-2xl mb-1">40%</div>
-                    <div className="font-['Lexend_Deca'] text-[#fffae9]/80 text-sm">Outdoor Learning Time</div>
+                    <div className=" text-[#fffae9] text-2xl mb-1">40%</div>
+                    <div className=" text-[#fffae9]/80 text-sm">Outdoor Learning Time</div>
                   </div>
                 </div>
               </div>
@@ -91,8 +91,8 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                 <div className="flex items-start gap-3">
                   <FileText className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
                   <div>
-                    <div className="font-['Crimson_Pro'] text-[#fffae9] text-2xl mb-1">Bi-weekly</div>
-                    <div className="font-['Lexend_Deca'] text-[#fffae9]/80 text-sm">Progress Reports</div>
+                    <div className=" text-[#fffae9] text-2xl mb-1">Bi-weekly</div>
+                    <div className=" text-[#fffae9]/80 text-sm">Progress Reports</div>
                   </div>
                 </div>
               </div>
@@ -102,18 +102,18 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={() => onNavigate('/contact/book-tour')}
-                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
+                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
               >
                 Book a School Tour
               </button>
               <button 
                 onClick={() => onNavigate('/contact/contact-us')}
-                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
+                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9]  hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
               >
                 Talk to a Counselor
               </button>
               <button 
-                className="px-8 h-12 bg-transparent text-[#fffae9] border border-[#fffae9]/50 font-['Arial'] hover:border-[#fffae9] hover:bg-white/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
+                className="px-8 h-12 bg-transparent text-[#fffae9] border border-[#fffae9]/50  hover:border-[#fffae9] hover:bg-white/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
               >
                 Download Curriculum PDF
               </button>
@@ -126,10 +126,10 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
       <section className="bg-white py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-['Crimson_Pro'] text-[48px] font-bold text-[#1a5336] mb-4">
+            <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
               Why This Stage Matters
             </h2>
-            <p className="font-['Lexend_Deca'] text-[#1a5336]/70 text-lg">
+            <p className=" text-[#1a5336]/70 text-lg">
               The kindergarten years are critical for building foundations in learning, relationships, and self-confidence.
             </p>
           </div>
@@ -138,8 +138,8 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             {/* Feature 1 */}
             <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
               <Heart className="w-12 h-12 text-[#FABA1E] mb-4" />
-              <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-3">Social-Emotional Growth</h3>
-              <p className="font-['Lexend_Deca'] text-[#1a5336]/70">
+              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Social-Emotional Growth</h3>
+              <p className=" text-[#1a5336]/70">
                 Children learn to express feelings, build friendships, and develop empathy through guided play and group activities.
               </p>
             </div>
@@ -147,8 +147,8 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             {/* Feature 2 */}
             <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
               <Brain className="w-12 h-12 text-[#FABA1E] mb-4" />
-              <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-3">Cognitive Foundation</h3>
-              <p className="font-['Lexend_Deca'] text-[#1a5336]/70">
+              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Cognitive Foundation</h3>
+              <p className=" text-[#1a5336]/70">
                 Early literacy, numeracy, and problem-solving skills are introduced through hands-on exploration and inquiry-based learning.
               </p>
             </div>
@@ -156,8 +156,8 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             {/* Feature 3 */}
             <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
               <Palette className="w-12 h-12 text-[#FABA1E] mb-4" />
-              <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-3">Creative Expression</h3>
-              <p className="font-['Lexend_Deca'] text-[#1a5336]/70">
+              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Creative Expression</h3>
+              <p className=" text-[#1a5336]/70">
                 Art, music, drama, and storytelling encourage imagination and help children communicate ideas in diverse ways.
               </p>
             </div>
@@ -165,8 +165,8 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             {/* Feature 4 */}
             <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
               <Search className="w-12 h-12 text-[#FABA1E] mb-4" />
-              <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-3">Curiosity & Discovery</h3>
-              <p className="font-['Lexend_Deca'] text-[#1a5336]/70">
+              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Curiosity & Discovery</h3>
+              <p className=" text-[#1a5336]/70">
                 Structured exploration time and nature-based activities foster a love of learning and scientific thinking.
               </p>
             </div>
@@ -174,8 +174,8 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             {/* Feature 5 */}
             <div className="bg-[#fffae9] p-8 shadow-sm hover:shadow-md transition-shadow group">
               <Zap className="w-12 h-12 text-[#FABA1E] mb-4" />
-              <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-3">Bilingual Advantage</h3>
-              <p className="font-['Lexend_Deca'] text-[#1a5336]/70">
+              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-3">Bilingual Advantage</h3>
+              <p className=" text-[#1a5336]/70">
                 Immersive dual-language environment enhances cognitive flexibility, cultural awareness, and future language learning.
               </p>
             </div>
@@ -187,10 +187,10 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
       <section className="bg-[#fffae9] py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="mb-12">
-            <h2 className="font-['Crimson_Pro'] text-[48px] font-bold text-[#1a5336] mb-4">
+            <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
               Curriculum Areas
             </h2>
-            <p className="font-['Lexend_Deca'] text-[#1a5336]/70 text-lg max-w-3xl">
+            <p className=" text-[#1a5336]/70 text-lg max-w-3xl">
               Our integrated curriculum covers seven key learning areas, delivered through play-based and inquiry-driven approaches.
             </p>
           </div>
@@ -198,50 +198,50 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Column - Curriculum Goals & Areas */}
             <div>
-              <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-6">Kindergarten Learning Goals</h3>
-              <p className="font-['Lexend_Deca'] text-[#1a5336]/70 mb-8">
+              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">Kindergarten Learning Goals</h3>
+              <p className=" text-[#1a5336]/70 mb-8">
                 By the end of Kindergarten, children will demonstrate age-appropriate skills in communication, collaboration, critical thinking, and creativity across all learning areas.
               </p>
 
               <div className="space-y-4">
                 <div className="bg-white p-6 border-l-4 border-[#FABA1E]">
-                  <h4 className="font-['Crimson_Pro'] text-[#1a5336] mb-2">Language & Literacy</h4>
-                  <p className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">
+                  <h4 className=" text-[#1a5336] mb-2">Language & Literacy</h4>
+                  <p className=" text-[#1a5336]/70 text-sm">
                     Phonemic awareness, letter recognition, storytelling, basic reading and writing in both languages.
                   </p>
                 </div>
 
                 <div className="bg-white p-6 border-l-4 border-[#FABA1E]">
-                  <h4 className="font-['Crimson_Pro'] text-[#1a5336] mb-2">Numeracy & Math</h4>
-                  <p className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">
+                  <h4 className=" text-[#1a5336] mb-2">Numeracy & Math</h4>
+                  <p className=" text-[#1a5336]/70 text-sm">
                     Counting, number sense, patterns, shapes, measurement, and simple problem-solving.
                   </p>
                 </div>
 
                 <div className="bg-white p-6 border-l-4 border-[#FABA1E]">
-                  <h4 className="font-['Crimson_Pro'] text-[#1a5336] mb-2">Social-Emotional Learning</h4>
-                  <p className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">
+                  <h4 className=" text-[#1a5336] mb-2">Social-Emotional Learning</h4>
+                  <p className=" text-[#1a5336]/70 text-sm">
                     Self-regulation, empathy, cooperation, conflict resolution, and emotional literacy.
                   </p>
                 </div>
 
                 <div className="bg-white p-6 border-l-4 border-[#FABA1E]">
-                  <h4 className="font-['Crimson_Pro'] text-[#1a5336] mb-2">Physical Development</h4>
-                  <p className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">
+                  <h4 className=" text-[#1a5336] mb-2">Physical Development</h4>
+                  <p className=" text-[#1a5336]/70 text-sm">
                     Gross and fine motor skills, balance, coordination, and healthy habits.
                   </p>
                 </div>
 
                 <div className="bg-white p-6 border-l-4 border-[#FABA1E]">
-                  <h4 className="font-['Crimson_Pro'] text-[#1a5336] mb-2">Creative Arts</h4>
-                  <p className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">
+                  <h4 className=" text-[#1a5336] mb-2">Creative Arts</h4>
+                  <p className=" text-[#1a5336]/70 text-sm">
                     Visual arts, music, movement, drama, and creative problem-solving.
                   </p>
                 </div>
 
                 <div className="bg-white p-6 border-l-4 border-[#FABA1E]">
-                  <h4 className="font-['Crimson_Pro'] text-[#1a5336] mb-2">Discovery & Science</h4>
-                  <p className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">
+                  <h4 className=" text-[#1a5336] mb-2">Discovery & Science</h4>
+                  <p className=" text-[#1a5336]/70 text-sm">
                     Exploration of nature, simple experiments, observation, and inquiry skills.
                   </p>
                 </div>
@@ -252,39 +252,39 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             <div className="space-y-8">
               {/* Weekly Allocation */}
               <div className="bg-white p-8 shadow-sm">
-                <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-6">At a Glance: Weekly Time Allocation</h3>
+                <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">At a Glance: Weekly Time Allocation</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
                       <tr className="border-b-2 border-[#1a5336]">
-                        <th className="text-left py-3 font-['Lexend_Deca'] text-[#1a5336]">Learning Area</th>
-                        <th className="text-right py-3 font-['Lexend_Deca'] text-[#1a5336]">Hours/Week</th>
+                        <th className="text-left py-3  text-[#1a5336]">Learning Area</th>
+                        <th className="text-right py-3  text-[#1a5336]">Hours/Week</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr className="border-b border-[#1a5336]/20">
-                        <td className="py-3 font-['Lexend_Deca'] text-[#1a5336]/70">Language & Literacy</td>
-                        <td className="text-right py-3 font-['Lexend_Deca'] text-[#1a5336]">8</td>
+                        <td className="py-3  text-[#1a5336]/70">Language & Literacy</td>
+                        <td className="text-right py-3  text-[#1a5336]">8</td>
                       </tr>
                       <tr className="border-b border-[#1a5336]/20">
-                        <td className="py-3 font-['Lexend_Deca'] text-[#1a5336]/70">Numeracy</td>
-                        <td className="text-right py-3 font-['Lexend_Deca'] text-[#1a5336]">5</td>
+                        <td className="py-3  text-[#1a5336]/70">Numeracy</td>
+                        <td className="text-right py-3  text-[#1a5336]">5</td>
                       </tr>
                       <tr className="border-b border-[#1a5336]/20">
-                        <td className="py-3 font-['Lexend_Deca'] text-[#1a5336]/70">Discovery/Science</td>
-                        <td className="text-right py-3 font-['Lexend_Deca'] text-[#1a5336]">4</td>
+                        <td className="py-3  text-[#1a5336]/70">Discovery/Science</td>
+                        <td className="text-right py-3  text-[#1a5336]">4</td>
                       </tr>
                       <tr className="border-b border-[#1a5336]/20">
-                        <td className="py-3 font-['Lexend_Deca'] text-[#1a5336]/70">Creative Arts</td>
-                        <td className="text-right py-3 font-['Lexend_Deca'] text-[#1a5336]">4</td>
+                        <td className="py-3  text-[#1a5336]/70">Creative Arts</td>
+                        <td className="text-right py-3  text-[#1a5336]">4</td>
                       </tr>
                       <tr className="border-b border-[#1a5336]/20">
-                        <td className="py-3 font-['Lexend_Deca'] text-[#1a5336]/70">Physical Education</td>
-                        <td className="text-right py-3 font-['Lexend_Deca'] text-[#1a5336]">3</td>
+                        <td className="py-3  text-[#1a5336]/70">Physical Education</td>
+                        <td className="text-right py-3  text-[#1a5336]">3</td>
                       </tr>
                       <tr className="border-b border-[#1a5336]/20">
-                        <td className="py-3 font-['Lexend_Deca'] text-[#1a5336]/70">Free Play & Outdoor</td>
-                        <td className="text-right py-3 font-['Lexend_Deca'] text-[#1a5336]">6</td>
+                        <td className="py-3  text-[#1a5336]/70">Free Play & Outdoor</td>
+                        <td className="text-right py-3  text-[#1a5336]">6</td>
                       </tr>
                     </tbody>
                   </table>
@@ -293,30 +293,30 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
 
               {/* Assessment & Reporting */}
               <div className="bg-white p-8 shadow-sm">
-                <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-4">Assessment & Reporting</h3>
-                <p className="font-['Lexend_Deca'] text-[#1a5336]/70 mb-4">
+                <h3 className=" text-[24px] font-bold text-[#1a5336] mb-4">Assessment & Reporting</h3>
+                <p className=" text-[#1a5336]/70 mb-4">
                   We use observation-based, developmental assessments rather than formal testing. Parents receive:
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                    <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Bi-weekly progress updates via parent portal</span>
+                    <span className=" text-[#1a5336]/70">Bi-weekly progress updates via parent portal</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                    <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Formal parent-teacher conferences twice per year</span>
+                    <span className=" text-[#1a5336]/70">Formal parent-teacher conferences twice per year</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                    <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Portfolio of student work showcasing growth</span>
+                    <span className=" text-[#1a5336]/70">Portfolio of student work showcasing growth</span>
                   </li>
                 </ul>
               </div>
 
               {/* Homework Policy */}
               <div className="bg-white p-8 shadow-sm">
-                <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-4">Homework Policy</h3>
-                <p className="font-['Lexend_Deca'] text-[#1a5336]/70">
+                <h3 className=" text-[24px] font-bold text-[#1a5336] mb-4">Homework Policy</h3>
+                <p className=" text-[#1a5336]/70">
                   No formal homework is assigned at the Kindergarten level. We encourage families to engage in reading together, outdoor play, and conversations about the school day to support learning at home.
                 </p>
               </div>
@@ -329,10 +329,10 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
       <section className="bg-white py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="mb-12">
-            <h2 className="font-['Crimson_Pro'] text-[48px] font-bold text-[#1a5336] mb-4">
+            <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
               Teachers & Learning Environment
             </h2>
-            <p className="font-['Lexend_Deca'] text-[#1a5336]/70 text-lg max-w-3xl">
+            <p className=" text-[#1a5336]/70 text-lg max-w-3xl">
               Our dedicated team creates a nurturing, safe, and stimulating space where every child feels valued.
             </p>
           </div>
@@ -347,19 +347,19 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                   alt="Bright and welcoming kindergarten classroom with learning centers"
                   className="w-full aspect-[4/3] object-cover"
                 />
-                <p className="font-['Lexend_Deca'] text-[#1a5336]/60 text-sm mt-2">
+                <p className=" text-[#1a5336]/60 text-sm mt-2">
                   Bright, organized classrooms with dedicated learning zones
                 </p>
               </div>
               
               {/* Content */}
               <div>
-                <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-4">Our Teaching Team</h3>
+                <h3 className=" text-[24px] font-bold text-[#1a5336] mb-4">Our Teaching Team</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-['Lexend_Deca'] text-[#1a5336]">
+                      <p className=" text-[#1a5336]">
                         <strong>Qualified early childhood educators</strong> with degrees in ECE or related fields
                       </p>
                     </div>
@@ -367,7 +367,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                   <li className="flex items-start gap-3">
                     <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-['Lexend_Deca'] text-[#1a5336]">
+                      <p className=" text-[#1a5336]">
                         <strong>1:8 teacher-student ratio</strong> ensuring individualized attention for each child
                       </p>
                     </div>
@@ -375,7 +375,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                   <li className="flex items-start gap-3">
                     <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-['Lexend_Deca'] text-[#1a5336]">
+                      <p className=" text-[#1a5336]">
                         <strong>Bilingual teaching assistants</strong> supporting language immersion
                       </p>
                     </div>
@@ -383,7 +383,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                   <li className="flex items-start gap-3">
                     <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-['Lexend_Deca'] text-[#1a5336]">
+                      <p className=" text-[#1a5336]">
                         <strong>Ongoing professional development</strong> in play-based pedagogy and child development
                       </p>
                     </div>
@@ -401,19 +401,19 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                   alt="Outdoor playground with age-appropriate equipment and natural elements"
                   className="w-full aspect-[4/3] object-cover"
                 />
-                <p className="font-['Lexend_Deca'] text-[#1a5336]/60 text-sm mt-2">
+                <p className=" text-[#1a5336]/60 text-sm mt-2">
                   Outdoor play areas with nature exploration zones
                 </p>
               </div>
               
               {/* Content */}
               <div>
-                <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-4">Learning Zones</h3>
+                <h3 className=" text-[24px] font-bold text-[#1a5336] mb-4">Learning Zones</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-['Lexend_Deca'] text-[#1a5336]">
+                      <p className=" text-[#1a5336]">
                         <strong>Reading corner</strong> with age-appropriate books in both languages
                       </p>
                     </div>
@@ -421,7 +421,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                   <li className="flex items-start gap-3">
                     <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-['Lexend_Deca'] text-[#1a5336]">
+                      <p className=" text-[#1a5336]">
                         <strong>STEAM exploration area</strong> with building blocks, puzzles, and manipulatives
                       </p>
                     </div>
@@ -429,7 +429,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                   <li className="flex items-start gap-3">
                     <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-['Lexend_Deca'] text-[#1a5336]">
+                      <p className=" text-[#1a5336]">
                         <strong>Creative arts station</strong> for painting, drawing, and crafts
                       </p>
                     </div>
@@ -437,7 +437,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                   <li className="flex items-start gap-3">
                     <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-['Lexend_Deca'] text-[#1a5336]">
+                      <p className=" text-[#1a5336]">
                         <strong>Dramatic play area</strong> for role-play and social interaction
                       </p>
                     </div>
@@ -455,19 +455,19 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                   alt="Children practicing proper hygiene and health routines"
                   className="w-full aspect-[4/3] object-cover"
                 />
-                <p className="font-['Lexend_Deca'] text-[#1a5336]/60 text-sm mt-2">
+                <p className=" text-[#1a5336]/60 text-sm mt-2">
                   Dedicated hygiene stations and health routines
                 </p>
               </div>
               
               {/* Content */}
               <div>
-                <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-4">Health & Safety</h3>
+                <h3 className=" text-[24px] font-bold text-[#1a5336] mb-4">Health & Safety</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-['Lexend_Deca'] text-[#1a5336]">
+                      <p className=" text-[#1a5336]">
                         <strong>Daily health checks</strong> and strict hygiene protocols
                       </p>
                     </div>
@@ -475,7 +475,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                   <li className="flex items-start gap-3">
                     <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-['Lexend_Deca'] text-[#1a5336]">
+                      <p className=" text-[#1a5336]">
                         <strong>Nurse on-site</strong> during school hours
                       </p>
                     </div>
@@ -483,7 +483,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                   <li className="flex items-start gap-3">
                     <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-['Lexend_Deca'] text-[#1a5336]">
+                      <p className=" text-[#1a5336]">
                         <strong>Parent communication app</strong> with real-time updates and photos
                       </p>
                     </div>
@@ -499,10 +499,10 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
       <section className="bg-[#fffae9] py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
-            <h2 className="font-['Crimson_Pro'] text-[48px] font-bold text-[#1a5336] mb-4">
+            <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
               Beyond the Classroom
             </h2>
-            <p className="font-['Lexend_Deca'] text-[#1a5336]/70 text-lg max-w-3xl mx-auto">
+            <p className=" text-[#1a5336]/70 text-lg max-w-3xl mx-auto">
               Enrichment activities that make learning joyful and build confidence through exploration and play.
             </p>
           </div>
@@ -517,20 +517,20 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
               />
               <div className="flex items-center gap-3 mb-3">
                 <Music className="w-6 h-6 text-[#FABA1E]" />
-                <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336]">Music & Movement</h3>
+                <h3 className=" text-[24px] font-bold text-[#1a5336]">Music & Movement</h3>
               </div>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Rhythm and dance sessions twice weekly</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Rhythm and dance sessions twice weekly</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Simple instruments and singing in both languages</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Simple instruments and singing in both languages</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Develops coordination and self-expression</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Develops coordination and self-expression</span>
                 </li>
               </ul>
             </div>
@@ -544,20 +544,20 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
               />
               <div className="flex items-center gap-3 mb-3">
                 <Beaker className="w-6 h-6 text-[#FABA1E]" />
-                <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336]">Mini Maker / STEAM</h3>
+                <h3 className=" text-[24px] font-bold text-[#1a5336]">Mini Maker / STEAM</h3>
               </div>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Age-appropriate building and tinkering projects</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Age-appropriate building and tinkering projects</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Simple science experiments and observations</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Simple science experiments and observations</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Encourages curiosity and problem-solving</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Encourages curiosity and problem-solving</span>
                 </li>
               </ul>
             </div>
@@ -571,20 +571,20 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
               />
               <div className="flex items-center gap-3 mb-3">
                 <Droplet className="w-6 h-6 text-[#FABA1E]" />
-                <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336]">Water & Sand Play</h3>
+                <h3 className=" text-[24px] font-bold text-[#1a5336]">Water & Sand Play</h3>
               </div>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Sensory exploration and fine motor development</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Sensory exploration and fine motor development</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Concepts of volume, texture, and cause-effect</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Concepts of volume, texture, and cause-effect</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Calming and therapeutic for young learners</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Calming and therapeutic for young learners</span>
                 </li>
               </ul>
             </div>
@@ -596,20 +596,20 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
               </div>
               <div className="flex items-center gap-3 mb-3">
                 <Activity className="w-6 h-6 text-[#FABA1E]" />
-                <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336]">Yoga & Mindfulness</h3>
+                <h3 className=" text-[24px] font-bold text-[#1a5336]">Yoga & Mindfulness</h3>
               </div>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Simple poses and breathing exercises</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Simple poses and breathing exercises</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Supports emotional regulation and focus</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Supports emotional regulation and focus</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Builds body awareness and calm</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Builds body awareness and calm</span>
                 </li>
               </ul>
             </div>
@@ -621,20 +621,20 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
               </div>
               <div className="flex items-center gap-3 mb-3">
                 <Search className="w-6 h-6 text-[#FABA1E]" />
-                <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336]">Field Trips</h3>
+                <h3 className=" text-[24px] font-bold text-[#1a5336]">Field Trips</h3>
               </div>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Monthly visits to parks, farms, or cultural sites</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Monthly visits to parks, farms, or cultural sites</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Real-world learning beyond the classroom</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Real-world learning beyond the classroom</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Builds social skills and widens horizons</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Builds social skills and widens horizons</span>
                 </li>
               </ul>
             </div>
@@ -646,20 +646,20 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
               </div>
               <div className="flex items-center gap-3 mb-3">
                 <Heart className="w-6 h-6 text-[#FABA1E]" />
-                <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336]">Cultural Festivals</h3>
+                <h3 className=" text-[24px] font-bold text-[#1a5336]">Cultural Festivals</h3>
               </div>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Celebrating Vietnamese and international traditions</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Celebrating Vietnamese and international traditions</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Performances, crafts, and storytelling</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Performances, crafts, and storytelling</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Fosters cultural awareness and pride</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Fosters cultural awareness and pride</span>
                 </li>
               </ul>
             </div>
@@ -671,10 +671,10 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
       <section className="bg-white py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="mb-12">
-            <h2 className="font-['Crimson_Pro'] text-[48px] font-bold text-[#1a5336] mb-4">
+            <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
               Student Support & Wellbeing
             </h2>
-            <p className="font-['Lexend_Deca'] text-[#1a5336]/70 text-lg max-w-3xl">
+            <p className=" text-[#1a5336]/70 text-lg max-w-3xl">
               We provide comprehensive support to ensure every child thrives emotionally, physically, and academically.
             </p>
           </div>
@@ -682,47 +682,47 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Panel - EAL & Speech */}
             <div className="bg-[#fffae9] p-8">
-              <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-6">Language & Development Support</h3>
+              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">Language & Development Support</h3>
               
               <div className="space-y-6">
                 <div>
-                  <h4 className="font-['Crimson_Pro'] text-[#1a5336] mb-3">EAL (English as Additional Language)</h4>
-                  <p className="font-['Lexend_Deca'] text-[#1a5336]/70 mb-3">
+                  <h4 className=" text-[#1a5336] mb-3">EAL (English as Additional Language)</h4>
+                  <p className=" text-[#1a5336]/70 mb-3">
                     For children new to English, we offer:
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Small-group language instruction</span>
+                      <span className=" text-[#1a5336]/70 text-sm">Small-group language instruction</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Visual aids and bilingual support</span>
+                      <span className=" text-[#1a5336]/70 text-sm">Visual aids and bilingual support</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Progress monitoring and parent coaching</span>
+                      <span className=" text-[#1a5336]/70 text-sm">Progress monitoring and parent coaching</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="font-['Crimson_Pro'] text-[#1a5336] mb-3">Speech & Language Screening</h4>
-                  <p className="font-['Lexend_Deca'] text-[#1a5336]/70 mb-3">
+                  <h4 className=" text-[#1a5336] mb-3">Speech & Language Screening</h4>
+                  <p className=" text-[#1a5336]/70 mb-3">
                     All Kindergarten students receive:
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Initial screening in the first month</span>
+                      <span className=" text-[#1a5336]/70 text-sm">Initial screening in the first month</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Referral to specialists if needed</span>
+                      <span className=" text-[#1a5336]/70 text-sm">Referral to specialists if needed</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">In-class articulation activities</span>
+                      <span className=" text-[#1a5336]/70 text-sm">In-class articulation activities</span>
                     </li>
                   </ul>
                 </div>
@@ -731,47 +731,47 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
 
             {/* Right Panel - Health & Emotional */}
             <div className="bg-[#fffae9] p-8">
-              <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-6">Health & Emotional Support</h3>
+              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">Health & Emotional Support</h3>
               
               <div className="space-y-6">
                 <div>
-                  <h4 className="font-['Crimson_Pro'] text-[#1a5336] mb-3">Separation Anxiety & Adjustment</h4>
-                  <p className="font-['Lexend_Deca'] text-[#1a5336]/70 mb-3">
+                  <h4 className=" text-[#1a5336] mb-3">Separation Anxiety & Adjustment</h4>
+                  <p className=" text-[#1a5336]/70 mb-3">
                     We understand that starting school can be challenging. Our approach includes:
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Gradual entry program for new students</span>
+                      <span className=" text-[#1a5336]/70 text-sm">Gradual entry program for new students</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Comfort items from home are welcomed</span>
+                      <span className=" text-[#1a5336]/70 text-sm">Comfort items from home are welcomed</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Daily communication with parents during transition</span>
+                      <span className=" text-[#1a5336]/70 text-sm">Daily communication with parents during transition</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="font-['Crimson_Pro'] text-[#1a5336] mb-3">Nutrition & Allergy Management</h4>
-                  <p className="font-['Lexend_Deca'] text-[#1a5336]/70 mb-3">
+                  <h4 className=" text-[#1a5336] mb-3">Nutrition & Allergy Management</h4>
+                  <p className=" text-[#1a5336]/70 mb-3">
                     Keeping your child safe and healthy:
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Nutritious snacks provided daily</span>
+                      <span className=" text-[#1a5336]/70 text-sm">Nutritious snacks provided daily</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Allergy-aware environment with strict protocols</span>
+                      <span className=" text-[#1a5336]/70 text-sm">Allergy-aware environment with strict protocols</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                      <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Staff trained in EpiPen and emergency response</span>
+                      <span className=" text-[#1a5336]/70 text-sm">Staff trained in EpiPen and emergency response</span>
                     </li>
                   </ul>
                 </div>
@@ -781,12 +781,12 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
 
           {/* Parent Workshops Note */}
           <div className="mt-8 bg-[#1a5336] p-8 text-center">
-            <p className="font-['Lexend_Deca'] text-[#fffae9] mb-4">
+            <p className=" text-[#fffae9] mb-4">
               <strong>Parent Workshops:</strong> We host monthly sessions on topics like positive discipline, bilingual parenting, and kindergarten readiness to support families.
             </p>
             <button 
               onClick={() => onNavigate('/contact/contact-us')}
-              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
+              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
             >
               <MessageCircle className="inline w-5 h-5 mr-2 mb-1" />
               Talk to Our Counselor
@@ -799,10 +799,10 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
       <section className="bg-[#fffae9] py-24 md:py-32">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
           <div className="mb-12">
-            <h2 className="font-['Crimson_Pro'] text-[48px] font-bold text-[#1a5336] mb-4">
+            <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
               Tuition & What's Included
             </h2>
-            <p className="font-['Lexend_Deca'] text-[#1a5336]/70 text-lg max-w-3xl">
+            <p className=" text-[#1a5336]/70 text-lg max-w-3xl">
               Transparent pricing with everything your child needs for a complete Kindergarten experience.
             </p>
           </div>
@@ -810,70 +810,70 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             {/* Included */}
             <div className="bg-white p-8 shadow-sm">
-              <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-6">Included in Tuition</h3>
+              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">Included in Tuition</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70">All core curriculum and bilingual instruction</span>
+                  <span className=" text-[#1a5336]/70">All core curriculum and bilingual instruction</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Daily healthy snacks and drinking water</span>
+                  <span className=" text-[#1a5336]/70">Daily healthy snacks and drinking water</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Learning materials, books, and supplies</span>
+                  <span className=" text-[#1a5336]/70">Learning materials, books, and supplies</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Music & Movement, Yoga, and STEAM classes</span>
+                  <span className=" text-[#1a5336]/70">Music & Movement, Yoga, and STEAM classes</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Monthly field trips and cultural celebrations</span>
+                  <span className=" text-[#1a5336]/70">Monthly field trips and cultural celebrations</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Progress reports and parent-teacher conferences</span>
+                  <span className=" text-[#1a5336]/70">Progress reports and parent-teacher conferences</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Access to parent portal and communication app</span>
+                  <span className=" text-[#1a5336]/70">Access to parent portal and communication app</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ChevronRight className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70">School uniform (first set)</span>
+                  <span className=" text-[#1a5336]/70">School uniform (first set)</span>
                 </li>
               </ul>
             </div>
 
             {/* Optional */}
             <div className="bg-white p-8 shadow-sm">
-              <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-6">Optional Add-Ons</h3>
+              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-6">Optional Add-Ons</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <ChevronRight className="w-5 h-5 text-[#1a5336]/30 flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Extended care (before/after school)</span>
+                  <span className=" text-[#1a5336]/70">Extended care (before/after school)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ChevronRight className="w-5 h-5 text-[#1a5336]/30 flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Hot lunch program</span>
+                  <span className=" text-[#1a5336]/70">Hot lunch program</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ChevronRight className="w-5 h-5 text-[#1a5336]/30 flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Swimming lessons (off-site)</span>
+                  <span className=" text-[#1a5336]/70">Swimming lessons (off-site)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ChevronRight className="w-5 h-5 text-[#1a5336]/30 flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Private language tutoring</span>
+                  <span className=" text-[#1a5336]/70">Private language tutoring</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ChevronRight className="w-5 h-5 text-[#1a5336]/30 flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Summer camp enrollment</span>
+                  <span className=" text-[#1a5336]/70">Summer camp enrollment</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ChevronRight className="w-5 h-5 text-[#1a5336]/30 flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70">Transportation service</span>
+                  <span className=" text-[#1a5336]/70">Transportation service</span>
                 </li>
               </ul>
             </div>
@@ -882,51 +882,51 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
           {/* Payment & Refund */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             <div className="bg-white p-8 border-l-4 border-[#1a5336]">
-              <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-4">Payment Options</h3>
-              <p className="font-['Lexend_Deca'] text-[#1a5336]/70 mb-4">
+              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-4">Payment Options</h3>
+              <p className=" text-[#1a5336]/70 mb-4">
                 We offer flexible payment plans to support families:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm"><strong>Annual:</strong> 5% discount for full payment</span>
+                  <span className=" text-[#1a5336]/70 text-sm"><strong>Annual:</strong> 5% discount for full payment</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm"><strong>Semester:</strong> 2 installments (Sept & Feb)</span>
+                  <span className=" text-[#1a5336]/70 text-sm"><strong>Semester:</strong> 2 installments (Sept & Feb)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm"><strong>Quarterly:</strong> 4 installments throughout the year</span>
+                  <span className=" text-[#1a5336]/70 text-sm"><strong>Quarterly:</strong> 4 installments throughout the year</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm"><strong>Monthly:</strong> 10 payments (Sept-June)</span>
+                  <span className=" text-[#1a5336]/70 text-sm"><strong>Monthly:</strong> 10 payments (Sept-June)</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-white p-8 border-l-4 border-[#1a5336]">
-              <h3 className="font-['Crimson_Pro'] text-[24px] font-bold text-[#1a5336] mb-4">Refund Policy</h3>
-              <p className="font-['Lexend_Deca'] text-[#1a5336]/70 mb-4">
+              <h3 className=" text-[24px] font-bold text-[#1a5336] mb-4">Refund Policy</h3>
+              <p className=" text-[#1a5336]/70 mb-4">
                 We understand that circumstances change:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Withdrawal before Sept 1: 100% refund minus registration fee</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Withdrawal before Sept 1: 100% refund minus registration fee</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Within first month: 50% refund of unused tuition</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Within first month: 50% refund of unused tuition</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">After first month: No refund, but can transfer to sibling</span>
+                  <span className=" text-[#1a5336]/70 text-sm">After first month: No refund, but can transfer to sibling</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-1" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]/70 text-sm">Medical/relocation: Considered case-by-case</span>
+                  <span className=" text-[#1a5336]/70 text-sm">Medical/relocation: Considered case-by-case</span>
                 </li>
               </ul>
             </div>
@@ -936,20 +936,20 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => onNavigate('/admissions/tuition-fees')}
-              className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] hover:bg-[#0f3a24] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
+              className="px-8 h-12 bg-[#1a5336] text-[#fffae9]  hover:bg-[#0f3a24] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
             >
               <DollarSign className="inline w-5 h-5 mr-2 mb-1" />
               View Full Fee Schedule
             </button>
             <button 
-              className="px-8 h-12 bg-transparent text-[#1a5336] border-2 border-[#1a5336] font-['Arial'] hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
+              className="px-8 h-12 bg-transparent text-[#1a5336] border-2 border-[#1a5336]  hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
             >
               <Calculator className="inline w-5 h-5 mr-2 mb-1" />
               Tuition Calculator
             </button>
             <button 
               onClick={() => onNavigate('/admissions/apply-now')}
-              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
             >
               <Send className="inline w-5 h-5 mr-2 mb-1" />
               Apply Now
@@ -961,28 +961,28 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
       {/* KG_HelperFooter */}
       <section className="bg-white py-16 md:py-24">
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12 text-center">
-          <h2 className="font-['Crimson_Pro'] text-[48px] font-bold text-[#1a5336] mb-4">
+          <h2 className=" text-[48px] font-bold text-[#1a5336] mb-4">
             Ready to Learn More?
           </h2>
-          <p className="font-['Lexend_Deca'] text-[#1a5336]/70 text-lg mb-8 max-w-2xl mx-auto">
+          <p className=" text-[#1a5336]/70 text-lg mb-8 max-w-2xl mx-auto">
             We'd love to show you our Kindergarten classrooms in person and answer any questions about your child's journey with us.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => onNavigate('/contact/book-tour')}
-              className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] hover:bg-[#0f3a24] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
+              className="px-8 h-12 bg-[#1a5336] text-[#fffae9]  hover:bg-[#0f3a24] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
             >
               Schedule a Tour
             </button>
             <button 
               onClick={() => onNavigate('/contact/contact-us')}
-              className="px-8 h-12 bg-transparent text-[#1a5336] border-2 border-[#1a5336] font-['Arial'] hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
+              className="px-8 h-12 bg-transparent text-[#1a5336] border-2 border-[#1a5336]  hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
             >
               Chat with Us
             </button>
             <button 
-              className="px-8 h-12 bg-transparent text-[#1a5336] border border-[#1a5336]/50 font-['Arial'] hover:border-[#1a5336] hover:bg-[#1a5336]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
+              className="px-8 h-12 bg-transparent text-[#1a5336] border border-[#1a5336]/50  hover:border-[#1a5336] hover:bg-[#1a5336]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] focus:ring-offset-2"
             >
               Download PDF Guide
             </button>

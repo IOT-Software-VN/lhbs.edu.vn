@@ -79,7 +79,7 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
             </div>
             
             {/* Tagline */}
-            <p className="font-['Lexend_Deca'] text-sm text-[#fffae9]/90 mb-6 leading-relaxed">
+            <p className=" text-sm text-[#fffae9]/90 mb-6 leading-relaxed">
               {footerTagline}
             </p>
             
@@ -91,7 +91,7 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
                   className="w-5 h-5 text-[#fffae9]/50 flex-shrink-0 mt-0.5" 
                   aria-hidden="true"
                 />
-                <span className="font-['Lexend_Deca'] text-sm text-[#fffae9]/90 whitespace-pre-line">
+                <span className=" text-sm text-[#fffae9]/90 whitespace-pre-line">
                   {addressLine}
                 </span>
               </div>
@@ -104,7 +104,7 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
                 />
                 <a 
                   href={`tel:${phone.replace(/\s/g, '')}`}
-                  className="font-['Lexend_Deca'] text-sm text-[#fffae9]/90 hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
+                  className=" text-sm text-[#fffae9]/90 hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
                 >
                   {phone}
                 </a>
@@ -118,7 +118,7 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
                 />
                 <a 
                   href={`mailto:${email}`}
-                  className="font-['Lexend_Deca'] text-sm text-[#fffae9]/90 hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
+                  className=" text-sm text-[#fffae9]/90 hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
                 >
                   {email}
                 </a>
@@ -128,7 +128,7 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
           
           {/* Column 2: About LHBS */}
           <div>
-            <h3 className="font-['Crimson_Pro'] text-xl text-[#fffae9] mb-6">
+            <h3 className=" text-xl text-[#fffae9] mb-6">
               About LHBS
             </h3>
             
@@ -137,7 +137,7 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
                 <li key={index}>
                   <button
                     onClick={() => onNavigate(link.url)}
-                    className="font-['Lexend_Deca'] text-sm text-[#fffae9]/90 hover:text-[#fffae9] hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336] text-left"
+                    className=" text-sm text-[#fffae9]/90 hover:text-[#fffae9] hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336] text-left"
                   >
                     {link.label}
                   </button>
@@ -148,7 +148,7 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
           
           {/* Column 3: Our Programs */}
           <div>
-            <h3 className="font-['Crimson_Pro'] text-xl text-[#fffae9] mb-6">
+            <h3 className=" text-xl text-[#fffae9] mb-6">
               Our Programs
             </h3>
             
@@ -157,7 +157,7 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
                 <li key={index}>
                   <button
                     onClick={() => onNavigate(link.url)}
-                    className="font-['Lexend_Deca'] text-sm text-[#fffae9]/90 hover:text-[#fffae9] hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336] text-left"
+                    className=" text-sm text-[#fffae9]/90 hover:text-[#fffae9] hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336] text-left"
                   >
                     {link.label}
                   </button>
@@ -168,11 +168,11 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
           
           {/* Column 4: Connect With Us */}
           <div>
-            <h3 className="font-['Crimson_Pro'] text-xl text-[#fffae9] mb-6">
+            <h3 className=" text-xl text-[#fffae9] mb-6">
               Connect With Us
             </h3>
             
-            <p className="font-['Lexend_Deca'] text-sm text-[#fffae9]/90 mb-6 leading-relaxed">
+            <p className=" text-sm text-[#fffae9]/90 mb-6 leading-relaxed">
               {socialCopy}
             </p>
             
@@ -200,7 +200,7 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
       <div className="max-w-[1440px] mx-auto px-4 md:px-20 py-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           {/* Copyright */}
-          <p className="font-['Lexend_Deca'] text-xs text-[#fffae9]/70">
+          <p className=" text-xs text-[#fffae9]/70">
             {copyrightText}
           </p>
           
@@ -210,7 +210,7 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
               <span key={index} className="flex items-center gap-6">
                 <button
                   onClick={() => onNavigate(link.url)}
-                  className="font-['Lexend_Deca'] text-xs text-[#fffae9]/70 hover:text-[#fffae9] hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
+                  className=" text-xs text-[#fffae9]/70 hover:text-[#fffae9] hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336]"
                 >
                   {link.label}
                 </button>

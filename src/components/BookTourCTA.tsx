@@ -51,19 +51,19 @@ export function BookTourCTA({ onNavigate }: BookTourCTAProps) {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             {/* Title */}
-            <h2 className="font-['Crimson_Pro'] text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6 text-[48px]">
+            <h2 className=" text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6 text-[48px]">
               {tourTitle}
             </h2>
             
             {/* Lead Copy */}
-            <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed max-w-[70ch]">
+            <p className=" text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed max-w-[70ch]">
               {tourDesc}
             </p>
             
             {/* CTA Button - Outline on Dark */}
             <motion.button
               onClick={() => onNavigate(ctaLink)}
-              className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9] font-['Arial'] font-bold cursor-pointer hover:bg-[#fffae9] hover:text-[#1a5336] transition-all focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336] w-full md:w-auto"
+              className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold cursor-pointer hover:bg-[#fffae9] hover:text-[#1a5336] transition-all focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-[#1a5336] w-full md:w-auto"
               aria-label={ctaText}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

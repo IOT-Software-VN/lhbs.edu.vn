@@ -71,12 +71,12 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               {item.onClick ? (
                 <button
                   onClick={item.onClick}
-                  className="font-['Lexend_Deca'] text-sm text-[#fffae9]/90 hover:text-[#FABA1E] transition-colors"
+                  className=" text-sm text-[#fffae9]/90 hover:text-[#FABA1E] transition-colors"
                 >
                   {item.label}
                 </button>
               ) : (
-                <span className="font-['Lexend_Deca'] text-sm text-[#fffae9] font-medium">
+                <span className=" text-sm text-[#fffae9] font-medium">
                   {item.label}
                 </span>
               )}
@@ -105,7 +105,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mb-4"
             >
-              <span className="font-['Arial'] text-[#FABA1E] uppercase tracking-[0.15em]">
+              <span className=" text-[#FABA1E] uppercase tracking-[0.15em]">
                 Our School
               </span>
             </motion.div>
@@ -115,7 +115,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="font-['Crimson_Pro'] text-white mb-6 md:mb-8"
+              className=" text-white mb-6 md:mb-8"
               style={{ fontSize: '48px', lineHeight: '1.24' }}
             >
               An environment made for lifelong learning
@@ -126,7 +126,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="font-['Lexend_Deca'] text-white/90 text-base md:text-lg leading-relaxed max-w-[600px]"
+              className=" text-white/90 text-base md:text-lg leading-relaxed max-w-[600px]"
             >
               LHBS is a leading bilingual school in Đồng Nai, dedicated to nurturing global citizens 
               through active learning in a dynamic, supportive environment that celebrates Vietnamese 
@@ -161,14 +161,14 @@ function IntroSection() {
         >
           {/* Section Heading */}
           <h2 
-            className="font-['Crimson_Pro'] text-[#1a5336] mb-6"
+            className=" text-[#1a5336] mb-6"
             style={{ fontSize: '48px', lineHeight: '1.2' }}
           >
             Solid foundations for future leaders
           </h2>
           
           {/* Body Copy */}
-          <div className="space-y-4 font-['Lexend_Deca'] text-base md:text-lg text-[#212121] leading-relaxed">
+          <div className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed">
             <p>
               Founded in 2009, Lac Hong Bilingual School (LHBS) has established itself as a pioneering 
               educational institution in Đồng Nai province. We offer a comprehensive bilingual curriculum 
@@ -241,12 +241,12 @@ function FacilitiesSection() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <h2 
-          className="font-['Crimson_Pro'] text-[#1a5336] mb-4"
+          className=" text-[#1a5336] mb-4"
           style={{ fontSize: '48px', lineHeight: '1.2' }}
         >
           Our modern facilities
         </h2>
-        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-3xl mx-auto leading-relaxed">
+        <p className=" text-base md:text-lg text-[#212121] max-w-3xl mx-auto leading-relaxed">
           LHBS campuses are designed to inspire learning and support holistic development. From state-of-the-art 
           classrooms to dynamic recreation spaces, every facility is built with our students' success in mind.
         </p>
@@ -263,7 +263,7 @@ function FacilitiesSection() {
             transition={{ duration: 0.5, delay: 0.3 + index * 0.05 }}
           >
             <div className="text-3xl flex-shrink-0">{facility.icon}</div>
-            <p className="font-['Lexend_Deca'] text-[#212121] text-base leading-relaxed">
+            <p className=" text-[#212121] text-base leading-relaxed">
               {facility.text}
             </p>
           </motion.div>
@@ -322,7 +322,7 @@ function ExperienceSection() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <h2 
-          className="font-['Crimson_Pro'] text-[#1a5336]"
+          className=" text-[#1a5336]"
           style={{ fontSize: '48px', lineHeight: '1.2' }}
         >
           A learning environment like no other
@@ -351,10 +351,10 @@ function ExperienceSection() {
             
             {/* Content */}
             <div className="p-6">
-              <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-3">
+              <h3 className=" text-2xl text-[#1a5336] mb-3">
                 {experience.title}
               </h3>
-              <p className="font-['Lexend_Deca'] text-[#212121] text-sm leading-relaxed">
+              <p className=" text-[#212121] text-sm leading-relaxed">
                 {experience.description}
               </p>
             </div>
@@ -381,7 +381,7 @@ function WelcomingCTASection({ onNavigate }: { onNavigate: (path: string) => voi
       <div className="max-w-3xl mx-auto text-center">
         {/* Heading */}
         <motion.h2
-          className="font-['Crimson_Pro'] text-white mb-6"
+          className=" text-white mb-6"
           style={{ fontSize: '48px', lineHeight: '1.2' }}
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -392,7 +392,7 @@ function WelcomingCTASection({ onNavigate }: { onNavigate: (path: string) => voi
 
         {/* Body Text */}
         <motion.p
-          className="font-['Lexend_Deca'] text-white/90 text-base md:text-lg leading-relaxed mb-10"
+          className=" text-white/90 text-base md:text-lg leading-relaxed mb-10"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -411,7 +411,7 @@ function WelcomingCTASection({ onNavigate }: { onNavigate: (path: string) => voi
         >
           <motion.button
             onClick={() => onNavigate('/admissions/apply-now')}
-            className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors"
+            className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -420,7 +420,7 @@ function WelcomingCTASection({ onNavigate }: { onNavigate: (path: string) => voi
           
           <motion.button
             onClick={() => onNavigate('/admissions')}
-            className="px-8 h-12 border-2 border-white text-white font-['Arial'] font-bold uppercase text-sm tracking-wider hover:bg-white hover:text-[#1a5336] transition-colors"
+            className="px-8 h-12 border-2 border-white text-white  font-bold uppercase text-sm tracking-wider hover:bg-white hover:text-[#1a5336] transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -455,8 +455,8 @@ function ContactSection({ onNavigate }: { onNavigate: (path: string) => void }) 
         >
           <MapPin className="w-6 h-6 text-[#1a5336] flex-shrink-0 mt-1" />
           <div>
-            <h3 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-2">Our Location</h3>
-            <p className="font-['Lexend_Deca'] text-[#212121] text-sm leading-relaxed">
+            <h3 className=" text-xl text-[#1a5336] mb-2">Our Location</h3>
+            <p className=" text-[#212121] text-sm leading-relaxed">
               Đồng Nai Province, Vietnam
             </p>
           </div>
@@ -470,8 +470,8 @@ function ContactSection({ onNavigate }: { onNavigate: (path: string) => void }) 
         >
           <Phone className="w-6 h-6 text-[#1a5336] flex-shrink-0 mt-1" />
           <div>
-            <h3 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-2">Call Us</h3>
-            <p className="font-['Lexend_Deca'] text-[#212121] text-sm leading-relaxed">
+            <h3 className=" text-xl text-[#1a5336] mb-2">Call Us</h3>
+            <p className=" text-[#212121] text-sm leading-relaxed">
               +84 (028) 3836 5555
             </p>
           </div>
@@ -485,8 +485,8 @@ function ContactSection({ onNavigate }: { onNavigate: (path: string) => void }) 
         >
           <Mail className="w-6 h-6 text-[#1a5336] flex-shrink-0 mt-1" />
           <div>
-            <h3 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-2">Email</h3>
-            <p className="font-['Lexend_Deca'] text-[#212121] text-sm leading-relaxed">
+            <h3 className=" text-xl text-[#1a5336] mb-2">Email</h3>
+            <p className=" text-[#212121] text-sm leading-relaxed">
               admissions@lhbs.edu.vn
             </p>
           </div>

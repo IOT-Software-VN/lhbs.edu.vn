@@ -115,22 +115,22 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               <li>
                 <ChevronRight className="w-4 h-4 text-[#fffae9]/70" />
               </li>
-              <li className="text-[#fffae9] font-['Lexend_Deca']">Tuition & Fees</li>
+              <li className="text-[#fffae9] ">Tuition & Fees</li>
             </ol>
           </nav>
           
           {/* Subhead */}
-          <p className="font-['Lexend_Deca'] text-sm md:text-base text-[#FABA1E] mb-4 tracking-wide uppercase">
+          <p className=" text-sm md:text-base text-[#FABA1E] mb-4 tracking-wide uppercase">
             {tfHeroSub}
           </p>
           
           {/* Title */}
-          <h1 className="font-['Crimson_Pro'] text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
+          <h1 className=" text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
             {tfHeroTitle}
           </h1>
           
           {/* Reassurance */}
-          <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
+          <p className=" text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
             {reassurance}
           </p>
           
@@ -141,7 +141,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
                 const calculatorSection = document.getElementById('calculator');
                 calculatorSection?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-12 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] flex items-center justify-center gap-2"
+              className="px-12 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] flex items-center justify-center gap-2"
             >
               <Calculator className="w-4 h-4" />
               CALCULATE YOUR FEES
@@ -150,7 +150,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
             <a
               href="/downloads/tuition-fees-policy-2025.pdf"
               download
-              className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center gap-2"
+              className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center gap-2"
             >
               <Download className="w-4 h-4" />
               DOWNLOAD POLICY (PDF)
@@ -223,7 +223,7 @@ function SummaryCardsSection() {
               <div className="w-10 h-10 bg-[#1a5336] flex items-center justify-center">
                 <card.icon className="w-5 h-5 text-[#FABA1E]" />
               </div>
-              <h3 className="font-['Crimson_Pro'] text-xl text-[#1a5336]">
+              <h3 className=" text-xl text-[#1a5336]">
                 {card.title}
               </h3>
             </div>
@@ -232,7 +232,7 @@ function SummaryCardsSection() {
               {card.items.map((item, i) => (
                 <li key={i} className="flex items-start gap-2">
                   <span className="text-[#FABA1E] mt-1">•</span>
-                  <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{item}</span>
+                  <span className=" text-sm text-[#212121]">{item}</span>
                 </li>
               ))}
             </ul>
@@ -290,10 +290,10 @@ function TuitionTablesSection() {
   return (
     <section id="tuition" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white">
       <div className="mb-12 text-center">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-4">
+        <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           Tuition Fees by Division
         </h2>
-        <p className="font-['Lexend_Deca'] text-base text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto">
           All fees are in Vietnamese Dong (VND). Prices may be adjusted annually with 60 days notice.
         </p>
       </div>
@@ -304,7 +304,7 @@ function TuitionTablesSection() {
           <button
             key={tab.key}
             onClick={() => setSelectedTab(tab.key)}
-            className={`px-8 h-10 font-['Lexend_Deca'] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] ${
+            className={`px-8 h-10  transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] ${
               selectedTab === tab.key
                 ? 'bg-[#1a5336] text-[#fffae9]'
                 : 'bg-[#fffae9] text-[#1a5336] border-2 border-[#1a5336] hover:bg-[#1a5336]/10'
@@ -318,28 +318,28 @@ function TuitionTablesSection() {
       {/* Table */}
       <div className="overflow-x-auto">
         <div className="min-w-[800px]">
-          <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-6">
+          <h3 className=" text-2xl text-[#1a5336] mb-6">
             {tuitionData[selectedTab as keyof typeof tuitionData].name}
           </h3>
           
           <table className="w-full border-2 border-[#1a5336]">
             <thead>
               <tr className="bg-[#1a5336] text-[#fffae9]">
-                <th className="font-['Crimson_Pro'] text-lg text-left p-4 border-r border-[#fffae9]/20">Grade Level</th>
-                <th className="font-['Crimson_Pro'] text-lg text-right p-4 border-r border-[#fffae9]/20">Annual (Full Year)</th>
-                <th className="font-['Crimson_Pro'] text-lg text-right p-4 border-r border-[#fffae9]/20">Per Term (3 terms)</th>
-                <th className="font-['Crimson_Pro'] text-lg text-right p-4 border-r border-[#fffae9]/20">Monthly (10 months)</th>
-                <th className="font-['Crimson_Pro'] text-lg text-left p-4">Included</th>
+                <th className=" text-lg text-left p-4 border-r border-[#fffae9]/20">Grade Level</th>
+                <th className=" text-lg text-right p-4 border-r border-[#fffae9]/20">Annual (Full Year)</th>
+                <th className=" text-lg text-right p-4 border-r border-[#fffae9]/20">Per Term (3 terms)</th>
+                <th className=" text-lg text-right p-4 border-r border-[#fffae9]/20">Monthly (10 months)</th>
+                <th className=" text-lg text-left p-4">Included</th>
               </tr>
             </thead>
             <tbody>
               {tuitionData[selectedTab as keyof typeof tuitionData].rows.map((row, index) => (
                 <tr key={index} className="border-b border-[#1a5336]/20 last:border-0">
-                  <td className="font-['Lexend_Deca'] text-sm p-4 border-r border-[#1a5336]/20">{row.grade}</td>
-                  <td className="font-['Arial'] font-bold text-[#1a5336] text-right p-4 border-r border-[#1a5336]/20">{row.annual}</td>
-                  <td className="font-['Arial'] font-bold text-[#1a5336] text-right p-4 border-r border-[#1a5336]/20">{row.term}</td>
-                  <td className="font-['Arial'] font-bold text-[#1a5336] text-right p-4 border-r border-[#1a5336]/20">{row.monthly}</td>
-                  <td className="font-['Lexend_Deca'] text-xs text-[#212121] p-4">{row.included}</td>
+                  <td className=" text-sm p-4 border-r border-[#1a5336]/20">{row.grade}</td>
+                  <td className=" font-bold text-[#1a5336] text-right p-4 border-r border-[#1a5336]/20">{row.annual}</td>
+                  <td className=" font-bold text-[#1a5336] text-right p-4 border-r border-[#1a5336]/20">{row.term}</td>
+                  <td className=" font-bold text-[#1a5336] text-right p-4 border-r border-[#1a5336]/20">{row.monthly}</td>
+                  <td className=" text-xs text-[#212121] p-4">{row.included}</td>
                 </tr>
               ))}
             </tbody>
@@ -349,7 +349,7 @@ function TuitionTablesSection() {
 
       {/* Under-table note */}
       <div className="mt-6 bg-[#FABA1E]/10 border-l-4 border-[#FABA1E] p-4">
-        <p className="font-['Lexend_Deca'] text-sm text-[#212121]">
+        <p className=" text-sm text-[#212121]">
           <strong className="text-[#1a5336]">📋 Note:</strong> Tuition fees are subject to annual review. 
           Any adjustments will be communicated at least 60 days in advance. All payments are non-refundable 
           after the term start date, except as outlined in our refund policy.
@@ -386,10 +386,10 @@ function IncludedExcludedSection() {
   return (
     <section id="included" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
       <div className="mb-12 text-center">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-4">
+        <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           What's Included in Tuition?
         </h2>
-        <p className="font-['Lexend_Deca'] text-base text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto">
           Clear breakdown of what your tuition covers and optional add-on services.
         </p>
       </div>
@@ -401,7 +401,7 @@ function IncludedExcludedSection() {
             <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
               <CheckCircle className="w-6 h-6 text-[#FABA1E]" />
             </div>
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336]">
+            <h3 className=" text-2xl text-[#1a5336]">
               Included in Tuition
             </h3>
           </div>
@@ -410,7 +410,7 @@ function IncludedExcludedSection() {
             {included.map((item, index) => (
               <li key={index} className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{item}</span>
+                <span className=" text-sm text-[#212121]">{item}</span>
               </li>
             ))}
           </ul>
@@ -422,7 +422,7 @@ function IncludedExcludedSection() {
             <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
               <X className="w-6 h-6 text-[#FABA1E]" />
             </div>
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336]">
+            <h3 className=" text-2xl text-[#1a5336]">
               Optional Add-On Services
             </h3>
           </div>
@@ -431,7 +431,7 @@ function IncludedExcludedSection() {
             {excluded.map((item, index) => (
               <li key={index} className="flex items-start gap-3">
                 <span className="text-[#1a5336]/40 mt-0.5">—</span>
-                <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{item}</span>
+                <span className=" text-sm text-[#212121]">{item}</span>
               </li>
             ))}
           </ul>
@@ -491,17 +491,17 @@ function OptionalServicesSection() {
   return (
     <section id="services" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white">
       <div className="mb-12 text-center">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-4">
+        <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           Optional Services
         </h2>
-        <p className="font-['Lexend_Deca'] text-base text-[#212121] max-w-[70ch] mx-auto mb-8">
+        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto mb-8">
           Enhance your child's experience with our convenient add-on services.
         </p>
         
         <a
           href="/downloads/optional-services-price-list-2025.pdf"
           download
-          className="inline-flex items-center gap-2 px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+          className="inline-flex items-center gap-2 px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
         >
           <Download className="w-4 h-4" />
           Download Full Price List (PDF)
@@ -511,25 +511,25 @@ function OptionalServicesSection() {
       <div className="grid md:grid-cols-2 gap-8">
         {services.map((service, index) => (
           <div key={index} className="border-2 border-[#1a5336] p-6 bg-[#fffae9]">
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-3">
+            <h3 className=" text-2xl text-[#1a5336] mb-3">
               {service.title}
             </h3>
             
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121] mb-6">
+            <p className=" text-sm text-[#212121] mb-6">
               {service.description}
             </p>
             
             <div className="space-y-3 mb-6">
               {service.priceRows.map((row, i) => (
                 <div key={i} className="flex justify-between items-center pb-3 border-b border-[#1a5336]/20 last:border-0">
-                  <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{row.label}</span>
-                  <span className="font-['Arial'] font-bold text-[#1a5336]">{row.price}</span>
+                  <span className=" text-sm text-[#212121]">{row.label}</span>
+                  <span className=" font-bold text-[#1a5336]">{row.price}</span>
                 </div>
               ))}
             </div>
             
             <div className="bg-[#FABA1E]/10 border-l-4 border-[#FABA1E] p-3">
-              <p className="font-['Lexend_Deca'] text-xs text-[#212121]">
+              <p className=" text-xs text-[#212121]">
                 {service.note}
               </p>
             </div>
@@ -580,10 +580,10 @@ function PaymentPlansSection() {
   return (
     <section id="payment" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
       <div className="mb-12 text-center">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-4">
+        <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           Payment Plans & Methods
         </h2>
-        <p className="font-['Lexend_Deca'] text-base text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto">
           Choose the payment plan that works best for your family budget.
         </p>
       </div>
@@ -598,20 +598,20 @@ function PaymentPlansSection() {
             }`}
           >
             {plan.recommended && (
-              <div className="absolute -top-3 left-6 px-3 py-1 bg-[#FABA1E] text-[#1a5336] font-['Lexend_Deca'] text-xs font-bold">
+              <div className="absolute -top-3 left-6 px-3 py-1 bg-[#FABA1E] text-[#1a5336]  text-xs font-bold">
                 MOST POPULAR
               </div>
             )}
             
-            <div className={`inline-block px-3 py-1 ${plan.badgeColor} font-['Lexend_Deca'] text-xs font-bold mb-4`}>
+            <div className={`inline-block px-3 py-1 ${plan.badgeColor}  text-xs font-bold mb-4`}>
               {plan.badge}
             </div>
             
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-3">
+            <h3 className=" text-2xl text-[#1a5336] mb-3">
               {plan.title}
             </h3>
             
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121] mb-6">
+            <p className=" text-sm text-[#212121] mb-6">
               {plan.description}
             </p>
             
@@ -619,7 +619,7 @@ function PaymentPlansSection() {
               {plan.features.map((feature, i) => (
                 <li key={i} className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{feature}</span>
+                  <span className=" text-sm text-[#212121]">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -632,7 +632,7 @@ function PaymentPlansSection() {
         <div className="border-2 border-[#1a5336] p-8 bg-white">
           <div className="flex items-center gap-3 mb-6">
             <CreditCard className="w-6 h-6 text-[#1a5336]" />
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336]">
+            <h3 className=" text-2xl text-[#1a5336]">
               Accepted Payment Methods
             </h3>
           </div>
@@ -641,7 +641,7 @@ function PaymentPlansSection() {
             {paymentMethods.map((method, index) => (
               <li key={index} className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{method}</span>
+                <span className=" text-sm text-[#212121]">{method}</span>
               </li>
             ))}
           </ul>
@@ -650,25 +650,25 @@ function PaymentPlansSection() {
         <div className="border-2 border-[#1a5336] p-8 bg-white">
           <div className="flex items-center gap-3 mb-6">
             <FileText className="w-6 h-6 text-[#1a5336]" />
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336]">
+            <h3 className=" text-2xl text-[#1a5336]">
               Invoice & Receipt
             </h3>
           </div>
           
           <div className="space-y-4">
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121]">
+            <p className=" text-sm text-[#212121]">
               <strong className="text-[#1a5336]">Official Invoices:</strong> Issued within 24-48 hours of payment confirmation
             </p>
             
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121]">
+            <p className=" text-sm text-[#212121]">
               <strong className="text-[#1a5336]">VAT Receipts:</strong> Red invoice (Hóa đơn đỏ) available for all payments
             </p>
             
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121]">
+            <p className=" text-sm text-[#212121]">
               <strong className="text-[#1a5336]">Payment Tracking:</strong> Access payment history via parent portal
             </p>
             
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121]">
+            <p className=" text-sm text-[#212121]">
               <strong className="text-[#1a5336]">Late Payment:</strong> 5% penalty fee applied after 7 days
             </p>
           </div>
@@ -718,17 +718,17 @@ function ScholarshipsAidSection({ onNavigate }: { onNavigate: (path: string) => 
       <div className="grid lg:grid-cols-2 gap-16">
         {/* Left: Overview */}
         <div>
-          <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-6">
+          <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-6">
             Scholarships & Financial Support
           </h2>
           
-          <p className="font-['Lexend_Deca'] text-base text-[#212121] mb-6 leading-relaxed">
+          <p className=" text-base text-[#212121] mb-6 leading-relaxed">
             Quality bilingual education should be accessible to all talented students. We offer comprehensive 
             scholarships and financial aid programs to support deserving families.
           </p>
           
           <div className="bg-[#FABA1E]/10 border-l-4 border-[#FABA1E] p-6 mb-8">
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121]">
+            <p className=" text-sm text-[#212121]">
               <strong className="text-[#1a5336]">💡 Can be combined:</strong> Students may qualify for multiple awards. 
               For example, a high-achieving student with siblings could receive both merit scholarship and sibling discount.
             </p>
@@ -738,7 +738,7 @@ function ScholarshipsAidSection({ onNavigate }: { onNavigate: (path: string) => 
             <a
               href="/downloads/scholarship-policy-2025.pdf"
               download
-              className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold flex items-center justify-center gap-2 hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold flex items-center justify-center gap-2 hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
             >
               <Download className="w-4 h-4" />
               Scholarship Policy (PDF)
@@ -746,7 +746,7 @@ function ScholarshipsAidSection({ onNavigate }: { onNavigate: (path: string) => 
             
             <button
               onClick={() => onNavigate('/admissions/scholarship-application')}
-              className="px-8 h-12 border-2 border-[#1a5336] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="px-8 h-12 border-2 border-[#1a5336] text-[#1a5336]  font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
             >
               Apply for Scholarship
             </button>
@@ -762,10 +762,10 @@ function ScholarshipsAidSection({ onNavigate }: { onNavigate: (path: string) => 
                 className="w-full p-6 flex items-center justify-between text-left hover:bg-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               >
                 <div className="flex-1">
-                  <h3 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-1">
+                  <h3 className=" text-xl text-[#1a5336] mb-1">
                     {scholarship.title}
                   </h3>
-                  <p className="font-['Lexend_Deca'] text-sm text-[#FABA1E]">
+                  <p className=" text-sm text-[#FABA1E]">
                     {scholarship.amount}
                   </p>
                 </div>
@@ -780,32 +780,32 @@ function ScholarshipsAidSection({ onNavigate }: { onNavigate: (path: string) => 
               {openAccordion === index && (
                 <div className="p-6 pt-0 border-t border-[#1a5336]/20">
                   <div className="mb-4">
-                    <h4 className="font-['Lexend_Deca'] font-bold text-sm text-[#1a5336] mb-2">Criteria:</h4>
+                    <h4 className=" font-bold text-sm text-[#1a5336] mb-2">Criteria:</h4>
                     <ul className="space-y-1">
                       {scholarship.criteria.map((c, i) => (
-                        <li key={i} className="font-['Lexend_Deca'] text-sm text-[#212121]">• {c}</li>
+                        <li key={i} className=" text-sm text-[#212121]">• {c}</li>
                       ))}
                     </ul>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="font-['Lexend_Deca'] font-bold text-sm text-[#1a5336] mb-2">Documents:</h4>
+                    <h4 className=" font-bold text-sm text-[#1a5336] mb-2">Documents:</h4>
                     <ul className="space-y-1">
                       {scholarship.documents.map((d, i) => (
-                        <li key={i} className="font-['Lexend_Deca'] text-sm text-[#212121]">• {d}</li>
+                        <li key={i} className=" text-sm text-[#212121]">• {d}</li>
                       ))}
                     </ul>
                   </div>
                   
                   <div className="bg-[#fffae9] p-3 mb-4">
-                    <span className="font-['Lexend_Deca'] text-sm text-[#212121]">
+                    <span className=" text-sm text-[#212121]">
                       <strong>Deadline:</strong> {scholarship.deadline}
                     </span>
                   </div>
                   
                   <button
                     onClick={() => onNavigate('/admissions/scholarship-application')}
-                    className="w-full px-8 h-10 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
+                    className="w-full px-8 h-10 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
                   >
                     Apply Now
                   </button>
@@ -858,10 +858,10 @@ function RefundPolicySection() {
   return (
     <section id="refund" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
       <div className="mb-12 text-center">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-4">
+        <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           Refund & Withdrawal Policy
         </h2>
-        <p className="font-['Lexend_Deca'] text-base text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto">
           Clear guidelines for tuition refunds and service cancellations.
         </p>
       </div>
@@ -869,7 +869,7 @@ function RefundPolicySection() {
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         {policies.map((policy, index) => (
           <div key={index} className="border-2 border-[#1a5336] p-6 bg-white">
-            <h3 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-4">
+            <h3 className=" text-xl text-[#1a5336] mb-4">
               {policy.title}
             </h3>
             
@@ -877,7 +877,7 @@ function RefundPolicySection() {
               {policy.items.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <AlertCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-sm text-[#212121]">{item}</span>
+                  <span className=" text-sm text-[#212121]">{item}</span>
                 </li>
               ))}
             </ul>
@@ -886,14 +886,14 @@ function RefundPolicySection() {
       </div>
 
       <div className="bg-[#1a5336]/5 border-l-4 border-[#1a5336] p-6">
-        <p className="font-['Lexend_Deca'] text-sm text-[#212121] mb-3">
+        <p className=" text-sm text-[#212121] mb-3">
           <strong className="text-[#1a5336]">⏰ Seat Deposit:</strong> Your enrollment deposit of 20M VND 
           secures your child's place. This deposit is fully refundable if you withdraw your application 
           <strong className="text-[#1a5336]"> within 14 days</strong> of payment. After 14 days, the deposit 
           is non-refundable but will be applied to your first tuition payment.
         </p>
         
-        <p className="font-['Lexend_Deca'] text-sm text-[#212121]">
+        <p className=" text-sm text-[#212121]">
           All refund requests must be submitted in writing to admissions@lhbs.edu.vn. Processing time: 15-30 business days.
         </p>
       </div>
@@ -939,11 +939,11 @@ function CalculatorCTASection({ onShowCalculator }: { onShowCalculator: () => vo
               <Calculator className="w-8 h-8 text-[#FABA1E]" />
             </div>
             
-            <h2 className="font-['Crimson_Pro'] text-3xl md:text-4xl text-[#1a5336] mb-4">
+            <h2 className=" text-3xl md:text-4xl text-[#1a5336] mb-4">
               Quick Fee Estimator
             </h2>
             
-            <p className="font-['Lexend_Deca'] text-sm text-[#212121]">
+            <p className=" text-sm text-[#212121]">
               Get an instant estimate of your total annual costs
             </p>
           </div>
@@ -951,13 +951,13 @@ function CalculatorCTASection({ onShowCalculator }: { onShowCalculator: () => vo
           {/* Quick Form */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div>
-              <label className="block font-['Lexend_Deca'] text-sm text-[#1a5336] mb-2">
+              <label className="block  text-sm text-[#1a5336] mb-2">
                 Select Division
               </label>
               <select
                 value={division}
                 onChange={(e) => setDivision(e.target.value)}
-                className="w-full h-10 px-4 border-2 border-[#1a5336] font-['Lexend_Deca'] text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="w-full h-10 px-4 border-2 border-[#1a5336]  text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               >
                 <option value="kg">Galaxy KG</option>
                 <option value="primary">Primary School</option>
@@ -967,13 +967,13 @@ function CalculatorCTASection({ onShowCalculator }: { onShowCalculator: () => vo
             </div>
 
             <div>
-              <label className="block font-['Lexend_Deca'] text-sm text-[#1a5336] mb-2">
+              <label className="block  text-sm text-[#1a5336] mb-2">
                 Payment Plan
               </label>
               <select
                 value={plan}
                 onChange={(e) => setPlan(e.target.value)}
-                className="w-full h-10 px-4 border-2 border-[#1a5336] font-['Lexend_Deca'] text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="w-full h-10 px-4 border-2 border-[#1a5336]  text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               >
                 <option value="annual">Full Year (Save 5%)</option>
                 <option value="term">Per Term</option>
@@ -989,7 +989,7 @@ function CalculatorCTASection({ onShowCalculator }: { onShowCalculator: () => vo
                   onChange={(e) => setBus(e.target.checked)}
                   className="w-5 h-5 border-2 border-[#1a5336] focus:ring-2 focus:ring-[#FABA1E]"
                 />
-                <span className="font-['Lexend_Deca'] text-sm text-[#212121]">
+                <span className=" text-sm text-[#212121]">
                   School Bus Service (+8,000,000 VND)
                 </span>
               </label>
@@ -1001,7 +1001,7 @@ function CalculatorCTASection({ onShowCalculator }: { onShowCalculator: () => vo
                   onChange={(e) => setLunch(e.target.checked)}
                   className="w-5 h-5 border-2 border-[#1a5336] focus:ring-2 focus:ring-[#FABA1E]"
                 />
-                <span className="font-['Lexend_Deca'] text-sm text-[#212121]">
+                <span className=" text-sm text-[#212121]">
                   Lunch Program (+15,000,000 VND)
                 </span>
               </label>
@@ -1011,13 +1011,13 @@ function CalculatorCTASection({ onShowCalculator }: { onShowCalculator: () => vo
           {/* Result */}
           <div className="bg-[#1a5336] p-6 mb-6">
             <div className="text-center">
-              <p className="font-['Lexend_Deca'] text-sm text-[#fffae9]/80 mb-2">
+              <p className=" text-sm text-[#fffae9]/80 mb-2">
                 Estimated Annual Cost
               </p>
-              <div className="font-['Arial'] text-4xl md:text-5xl text-[#FABA1E] font-bold">
+              <div className=" text-4xl md:text-5xl text-[#FABA1E] font-bold">
                 {calculateTotal()} VND
               </div>
-              <p className="font-['Lexend_Deca'] text-xs text-[#fffae9]/70 mt-3">
+              <p className=" text-xs text-[#fffae9]/70 mt-3">
                 *Estimate only. Does not include one-time fees or uniforms.
               </p>
             </div>
@@ -1026,7 +1026,7 @@ function CalculatorCTASection({ onShowCalculator }: { onShowCalculator: () => vo
           {/* Full Calculator Button */}
           <button
             onClick={onShowCalculator}
-            className="w-full px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
+            className="w-full px-8 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
           >
             Open Detailed Calculator
           </button>
@@ -1078,10 +1078,10 @@ function FAQSection() {
   return (
     <section id="faq" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9]">
       <div className="mb-12 text-center">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-4">
+        <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           Frequently Asked Questions
         </h2>
-        <p className="font-['Lexend_Deca'] text-base text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto">
           Common questions about tuition, payments, and financial policies
         </p>
       </div>
@@ -1095,7 +1095,7 @@ function FAQSection() {
             >
               <div className="flex-1 flex items-start gap-4">
                 <HelpCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
-                <span className="font-['Crimson_Pro'] text-lg text-[#1a5336]">
+                <span className=" text-lg text-[#1a5336]">
                   {faq.question}
                 </span>
               </div>
@@ -1110,7 +1110,7 @@ function FAQSection() {
             {openFaq === index && (
               <div className="px-6 pb-6 border-t border-[#1a5336]/20">
                 <div className="pl-9">
-                  <p className="font-['Lexend_Deca'] text-sm text-[#212121] leading-relaxed">
+                  <p className=" text-sm text-[#212121] leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -1137,11 +1137,11 @@ function DownloadsContactsSection({ onNavigate }: { onNavigate: (path: string) =
       <div className="grid lg:grid-cols-2 gap-12">
         {/* Left: Downloads */}
         <div>
-          <h2 className="font-['Crimson_Pro'] text-3xl text-[#1a5336] mb-6">
+          <h2 className=" text-3xl text-[#1a5336] mb-6">
             Download Documents
           </h2>
           
-          <p className="font-['Lexend_Deca'] text-sm text-[#212121] mb-8">
+          <p className=" text-sm text-[#212121] mb-8">
             Access detailed fee schedules, policies, and payment information
           </p>
           
@@ -1156,10 +1156,10 @@ function DownloadsContactsSection({ onNavigate }: { onNavigate: (path: string) =
                 <div className="flex items-center gap-4 flex-1">
                   <FileText className="w-6 h-6 text-[#1a5336] flex-shrink-0" />
                   <div>
-                    <div className="font-['Lexend_Deca'] text-sm text-[#1a5336] group-hover:text-[#FABA1E]">
+                    <div className=" text-sm text-[#1a5336] group-hover:text-[#FABA1E]">
                       {doc.name}
                     </div>
-                    <div className="font-['Lexend_Deca'] text-xs text-[#212121]/60">
+                    <div className=" text-xs text-[#212121]/60">
                       PDF • {doc.size}
                     </div>
                   </div>
@@ -1173,11 +1173,11 @@ function DownloadsContactsSection({ onNavigate }: { onNavigate: (path: string) =
         {/* Right: Help Card (Sticky on Desktop) */}
         <div className="lg:sticky lg:top-24 lg:self-start">
           <div className="bg-[#1a5336] p-8 text-[#fffae9]">
-            <h3 className="font-['Crimson_Pro'] text-2xl mb-4">
+            <h3 className=" text-2xl mb-4">
               Need Help?
             </h3>
             
-            <p className="font-['Lexend_Deca'] text-sm text-[#fffae9]/90 mb-6">
+            <p className=" text-sm text-[#fffae9]/90 mb-6">
               Our finance team is here to assist you with any questions about tuition, payment plans, or financial aid.
             </p>
             
@@ -1188,7 +1188,7 @@ function DownloadsContactsSection({ onNavigate }: { onNavigate: (path: string) =
                 className="flex items-center gap-3 text-[#fffae9] hover:text-[#FABA1E] transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                <span className="font-['Lexend_Deca'] text-sm">+84 (28) 3771 4568</span>
+                <span className=" text-sm">+84 (28) 3771 4568</span>
               </a>
               
               <a
@@ -1196,7 +1196,7 @@ function DownloadsContactsSection({ onNavigate }: { onNavigate: (path: string) =
                 className="flex items-center gap-3 text-[#fffae9] hover:text-[#FABA1E] transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span className="font-['Lexend_Deca'] text-sm">finance@lhbs.edu.vn</span>
+                <span className=" text-sm">finance@lhbs.edu.vn</span>
               </a>
               
               <a
@@ -1206,12 +1206,12 @@ function DownloadsContactsSection({ onNavigate }: { onNavigate: (path: string) =
                 className="flex items-center gap-3 text-[#fffae9] hover:text-[#FABA1E] transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span className="font-['Lexend_Deca'] text-sm">WhatsApp / Zalo</span>
+                <span className=" text-sm">WhatsApp / Zalo</span>
               </a>
               
               <div className="flex items-start gap-3 text-[#fffae9]/80">
                 <Calendar className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <div className="font-['Lexend_Deca'] text-sm">
+                <div className=" text-sm">
                   <div>Mon-Fri: 8:00 AM - 5:00 PM</div>
                   <div>Sat: 8:00 AM - 12:00 PM</div>
                 </div>
@@ -1222,14 +1222,14 @@ function DownloadsContactsSection({ onNavigate }: { onNavigate: (path: string) =
             <div className="space-y-3">
               <button
                 onClick={() => onNavigate('/contact/finance-appointment')}
-                className="w-full px-6 h-10 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
+                className="w-full px-6 h-10 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
               >
                 Schedule Consultation
               </button>
               
               <button
                 onClick={() => onNavigate('/admissions/apply-now')}
-                className="w-full px-6 h-10 border-2 border-[#fffae9] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="w-full px-6 h-10 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               >
                 Start Application
               </button>
@@ -1246,7 +1246,7 @@ function StickyHelper() {
   return (
     <div className="hidden xl:block fixed right-8 top-1/2 -translate-y-1/2 z-40">
       <div className="bg-[#1a5336] p-4 shadow-lg w-[200px]">
-        <p className="font-['Crimson_Pro'] text-lg text-[#fffae9] mb-4">
+        <p className=" text-lg text-[#fffae9] mb-4">
           Need Help?
         </p>
         
@@ -1256,14 +1256,14 @@ function StickyHelper() {
             className="flex items-center gap-2 text-[#fffae9] hover:text-[#FABA1E] transition-colors"
           >
             <Phone className="w-4 h-4" />
-            <span className="font-['Lexend_Deca'] text-xs">Call Us</span>
+            <span className=" text-xs">Call Us</span>
           </a>
           
           <a
             href="https://wa.me/84901234567"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 h-8 bg-[#FABA1E] text-[#1a5336] font-['Lexend_Deca'] text-xs font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
+            className="flex items-center gap-2 px-4 h-8 bg-[#FABA1E] text-[#1a5336]  text-xs font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
           >
             <MessageCircle className="w-4 h-4" />
             <span>WhatsApp</span>
@@ -1281,7 +1281,7 @@ function CalculatorModal({ onClose }: { onClose: () => void }) {
       <div className="bg-[#fffae9] max-w-[600px] w-full max-h-[90vh] overflow-y-auto">
         <div className="p-8">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336]">
+            <h3 className=" text-2xl text-[#1a5336]">
               Detailed Fee Calculator
             </h3>
             <button
@@ -1292,14 +1292,14 @@ function CalculatorModal({ onClose }: { onClose: () => void }) {
             </button>
           </div>
           
-          <p className="font-['Lexend_Deca'] text-sm text-[#212121] mb-6">
+          <p className=" text-sm text-[#212121] mb-6">
             Coming soon: Interactive calculator with detailed breakdown of all fees, payment schedules, 
             and scholarship applications.
           </p>
           
           <button
             onClick={onClose}
-            className="w-full px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+            className="w-full px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
           >
             Close
           </button>

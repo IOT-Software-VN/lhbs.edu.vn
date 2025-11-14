@@ -73,19 +73,19 @@ export function LetsBeginCTA({ onNavigate }: { onNavigate: (path: string) => voi
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           {/* Title */}
-          <h2 className="font-['Crimson_Pro'] text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-4">
+          <h2 className=" text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-4">
             {lbTitle}
           </h2>
           
           {/* Subcopy */}
-          <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
+          <p className=" text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
             {lbSubcopy}
           </p>
           
           {/* CTA Button */}
           <motion.button
             onClick={() => onNavigate(lbCtaLink)}
-            className="px-12 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold cursor-pointer hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] focus:ring-offset-2 focus:ring-offset-[#1a5336] w-full md:w-auto"
+            className="px-12 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold cursor-pointer hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] focus:ring-offset-2 focus:ring-offset-[#1a5336] w-full md:w-auto"
             aria-label={lbCtaText}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

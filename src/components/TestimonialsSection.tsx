@@ -50,7 +50,7 @@ export function TestimonialsSection() {
       {/* Header - Centered */}
       <div className="text-center mb-16">
         <motion.h2
-          className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-4"
+          className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-4"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -59,7 +59,7 @@ export function TestimonialsSection() {
         </motion.h2>
         
         <motion.p
-          className="font-['Lexend_Deca'] text-sm text-[#212121] max-w-[720px] mx-auto"
+          className=" text-sm text-[#212121] max-w-[720px] mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -98,7 +98,7 @@ function T_Card({ quote, avatar, avatarAlt, name, role }: T_CardProps) {
       </div>
 
       {/* Quote Text */}
-      <blockquote className="font-['Lexend_Deca'] text-base text-[#212121] mb-4 leading-relaxed flex-grow">
+      <blockquote className=" text-base text-[#212121] mb-4 leading-relaxed flex-grow">
         "{quote}"
       </blockquote>
 
@@ -115,10 +115,10 @@ function T_Card({ quote, avatar, avatarAlt, name, role }: T_CardProps) {
 
         {/* Name & Role */}
         <div className="flex-1 min-w-0">
-          <p className="font-['Lexend_Deca'] text-sm text-[#1a5336] font-semibold truncate">
+          <p className=" text-sm text-[#1a5336] font-semibold truncate">
             {name}
           </p>
-          <p className="font-['Lexend_Deca'] text-xs text-[#212121]/70 line-clamp-2">
+          <p className=" text-xs text-[#212121]/70 line-clamp-2">
             {role}
           </p>
         </div>

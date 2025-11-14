@@ -74,12 +74,12 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               {item.onClick ? (
                 <button
                   onClick={item.onClick}
-                  className="font-['Lexend_Deca'] text-sm text-[#fffae9]/90 hover:text-[#FABA1E] transition-colors"
+                  className=" text-sm text-[#fffae9]/90 hover:text-[#FABA1E] transition-colors"
                 >
                   {item.label}
                 </button>
               ) : (
-                <span className="font-['Lexend_Deca'] text-sm text-[#fffae9] font-medium">
+                <span className=" text-sm text-[#fffae9] font-medium">
                   {item.label}
                 </span>
               )}
@@ -108,7 +108,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mb-4"
             >
-              <span className="font-['Arial'] text-[#FABA1E] uppercase tracking-[0.15em]">
+              <span className=" text-[#FABA1E] uppercase tracking-[0.15em]">
                 Our Facilities
               </span>
             </motion.div>
@@ -118,7 +118,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="font-['Crimson_Pro'] text-white mb-6 md:mb-8"
+              className=" text-white mb-6 md:mb-8"
               style={{ fontSize: '48px', lineHeight: '1.24' }}
             >
               LHBS School Facilities
@@ -129,7 +129,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="font-['Lexend_Deca'] text-white/90 text-base md:text-lg leading-relaxed max-w-[600px]"
+              className=" text-white/90 text-base md:text-lg leading-relaxed max-w-[600px]"
             >
               Lac Hong Bilingual School in Biên Hòa offers purpose-built learning spaces designed to nurture 
               global citizens. Our modern facilities provide a dynamic, supportive environment where students 
@@ -158,7 +158,7 @@ function DiscoverFacilitiesSection() {
       <div className="max-w-4xl mx-auto">
         {/* Section Heading */}
         <motion.h2
-          className="font-['Crimson_Pro'] text-[#1a5336] mb-8 text-center"
+          className=" text-[#1a5336] mb-8 text-center"
           style={{ fontSize: '48px', lineHeight: '1.2' }}
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -169,7 +169,7 @@ function DiscoverFacilitiesSection() {
 
         {/* Body Text */}
         <motion.div
-          className="space-y-4 font-['Lexend_Deca'] text-base md:text-lg text-[#212121] leading-relaxed mb-12"
+          className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -246,14 +246,14 @@ function CreativitySection() {
         >
           {/* Section Heading */}
           <h2 
-            className="font-['Crimson_Pro'] text-[#1a5336] mb-6"
+            className=" text-[#1a5336] mb-6"
             style={{ fontSize: '48px', lineHeight: '1.2' }}
           >
             Unleashing creativity and self-expression
           </h2>
           
           {/* Body Copy */}
-          <div className="space-y-4 font-['Lexend_Deca'] text-base md:text-lg text-[#212121] leading-relaxed">
+          <div className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed">
             <p>
               At LHBS, we believe the arts are essential to a well-rounded education. Our dedicated art rooms, 
               music studios, and performance spaces encourage students to explore their creative talents through 
@@ -293,14 +293,14 @@ function TechLearningSection() {
         >
           {/* Section Heading */}
           <h2 
-            className="font-['Crimson_Pro'] text-[#1a5336] mb-6"
+            className=" text-[#1a5336] mb-6"
             style={{ fontSize: '48px', lineHeight: '1.2' }}
           >
             Tech-driven learning environments
           </h2>
           
           {/* Body Copy */}
-          <div className="space-y-4 font-['Lexend_Deca'] text-base md:text-lg text-[#212121] leading-relaxed">
+          <div className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed">
             <p>
               LHBS equips students with the skills they need for the digital age. Our STEAM and STEM labs 
               provide hands-on experiences in science, technology, engineering, arts, and mathematics, 
@@ -370,14 +370,14 @@ function SportsSection() {
         >
           {/* Section Heading */}
           <h2 
-            className="font-['Crimson_Pro'] text-[#1a5336] mb-6"
+            className=" text-[#1a5336] mb-6"
             style={{ fontSize: '48px', lineHeight: '1.2' }}
           >
             Sporting opportunities for all
           </h2>
           
           {/* Body Copy */}
-          <div className="space-y-4 font-['Lexend_Deca'] text-base md:text-lg text-[#212121] leading-relaxed">
+          <div className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed">
             <p>
               Physical education is a vital part of student life at LHBS. Our campus features outdoor sports 
               fields, multi-purpose halls, and playgrounds where students can engage in a variety of athletic 
@@ -440,12 +440,12 @@ function ServicesSection() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <h2 
-          className="font-['Crimson_Pro'] text-[#1a5336] mb-4"
+          className=" text-[#1a5336] mb-4"
           style={{ fontSize: '48px', lineHeight: '1.2' }}
         >
           Services that support every family
         </h2>
-        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-3xl mx-auto leading-relaxed">
+        <p className=" text-base md:text-lg text-[#212121] max-w-3xl mx-auto leading-relaxed">
           Beyond classrooms and labs, LHBS provides comprehensive support services designed to make 
           school life convenient, safe, and enriching for students and families.
         </p>
@@ -465,10 +465,10 @@ function ServicesSection() {
               {service.icon}
             </div>
             <div>
-              <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-3">
+              <h3 className=" text-2xl text-[#1a5336] mb-3">
                 {service.title}
               </h3>
-              <p className="font-['Lexend_Deca'] text-[#212121] text-base leading-relaxed">
+              <p className=" text-[#212121] text-base leading-relaxed">
                 {service.description}
               </p>
             </div>
@@ -508,7 +508,7 @@ function VisitCTASection({ onNavigate }: { onNavigate: (path: string) => void })
       <div className="relative z-20 max-w-3xl mx-auto text-center">
         {/* Heading */}
         <motion.h2
-          className="font-['Crimson_Pro'] text-white mb-6"
+          className=" text-white mb-6"
           style={{ fontSize: '48px', lineHeight: '1.2' }}
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -519,7 +519,7 @@ function VisitCTASection({ onNavigate }: { onNavigate: (path: string) => void })
 
         {/* Body Text */}
         <motion.p
-          className="font-['Lexend_Deca'] text-white/90 text-base md:text-lg leading-relaxed mb-10"
+          className=" text-white/90 text-base md:text-lg leading-relaxed mb-10"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -538,7 +538,7 @@ function VisitCTASection({ onNavigate }: { onNavigate: (path: string) => void })
         >
           <motion.button
             onClick={() => onNavigate('/admissions/apply-now')}
-            className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors"
+            className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -547,7 +547,7 @@ function VisitCTASection({ onNavigate }: { onNavigate: (path: string) => void })
           
           <motion.button
             onClick={() => onNavigate('/admissions')}
-            className="px-8 h-12 border-2 border-white text-white font-['Arial'] font-bold uppercase text-sm tracking-wider hover:bg-white hover:text-[#1a5336] transition-colors"
+            className="px-8 h-12 border-2 border-white text-white  font-bold uppercase text-sm tracking-wider hover:bg-white hover:text-[#1a5336] transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

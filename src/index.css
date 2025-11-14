@@ -1,4 +1,102 @@
 /*! tailwindcss v4.1.3 | MIT License | https://tailwindcss.com */
+
+/* Local Font Declarations - SVN-Gotham */
+@font-face {
+  font-family: 'SVN-Gotham';
+  src: url('./assets/fonts/SVN-Gotham Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SVN-Gotham';
+  src: url('./assets/fonts/SVN-Gotham Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SVN-Gotham';
+  src: url('./assets/fonts/SVN-Gotham Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SVN-Gotham';
+  src: url('./assets/fonts/SVN-Gotham Light Italic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SVN-Gotham';
+  src: url('./assets/fonts/SVN-Gotham Book.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SVN-Gotham';
+  src: url('./assets/fonts/SVN-Gotham Book Italic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SVN-Gotham';
+  src: url('./assets/fonts/SVN-Gotham Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SVN-Gotham';
+  src: url('./assets/fonts/SVN-Gotham Bold Italic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SVN-Gotham';
+  src: url('./assets/fonts/SVN-Gotham Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SVN-Gotham';
+  src: url('./assets/fonts/SVN-Gotham Black Italic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Font Fallbacks - Comment out original Google Fonts and add fallbacks */
+/* Original Google Fonts (commented out):
+font-family: 'Crimson Pro', serif;
+font-family: 'Lexend Deca', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Mona Sans', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+/* New font declarations with SVN-Gotham as primary */
+/* :root {
+  --font-primary: 'SVN-Gotham', 'Inter', system-ui, sans-serif;
+  --font-serif: 'SVN-Gotham', 'Crimson Pro', Georgia, serif;
+  --font-display: 'SVN-Gotham', 'Outfit', system-ui, sans-serif;
+} */
+
+/* Custom Button Styles - Border Radius Full */
+button,
+[data-testid*="button"],
+.button {
+  border-radius: 9999px;
+}
+
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
     *, :before, :after, ::backdrop {
@@ -72,8 +170,12 @@
 
 @layer theme {
   :root, :host {
-    --font-sans: "Crimson Pro", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-serif: "Crimson Pro", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    /* --font-sans: "Crimson Pro", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: "Crimson Pro", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; */
+    --font-primary: 'SVN-Gotham', 'Inter', system-ui, sans-serif;
+    --font-serif: 'SVN-Gotham', 'Crimson Pro', Georgia, serif;
+    --font-sans: 'SVN-Gotham', 'Inter', system-ui, sans-serif;;
+    --font-serif: 'SVN-Gotham', 'Crimson Pro', Georgia, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --color-gray-100: oklch(.967 .003 264.542);
     --color-black: #000;

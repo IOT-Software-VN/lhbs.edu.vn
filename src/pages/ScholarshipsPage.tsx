@@ -117,22 +117,22 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               <li>
                 <ChevronRight className="w-4 h-4 text-[#fffae9]/70" />
               </li>
-              <li className="text-[#fffae9] font-['Lexend_Deca']">Scholarships</li>
+              <li className="text-[#fffae9] ">Scholarships</li>
             </ol>
           </nav>
           
           {/* Subhead */}
-          <p className="font-['Lexend_Deca'] text-sm md:text-base text-[#FABA1E] mb-4 tracking-wide uppercase">
+          <p className=" text-sm md:text-base text-[#FABA1E] mb-4 tracking-wide uppercase">
             {scHeroSub}
           </p>
           
           {/* Title */}
-          <h1 className="font-['Crimson_Pro'] text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
+          <h1 className=" text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
             {scHeroTitle}
           </h1>
           
           {/* Reassurance */}
-          <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
+          <p className=" text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
             {reassurance}
           </p>
           
@@ -143,7 +143,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
                 const criteriaSection = document.getElementById('criteria');
                 criteriaSection?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-12 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
+              className="px-12 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
               aria-label="View scholarship eligibility criteria"
             >
               CHECK ELIGIBILITY
@@ -151,7 +151,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
             
             <button
               onClick={() => onNavigate('/admissions/apply-now')}
-              className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               aria-label="Start scholarship application"
             >
               APPLY NOW
@@ -209,10 +209,10 @@ function SummaryCardsSection() {
                 className="bg-white border-2 border-[#1a5336] p-6 hover:shadow-lg transition-shadow"
               >
                 <Icon className="w-10 h-10 text-[#FABA1E] mb-4" />
-                <h3 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-2">
+                <h3 className=" text-xl text-[#1a5336] mb-2">
                   {card.title}
                 </h3>
-                <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/80 leading-relaxed">
+                <p className=" text-sm text-[#1a5336]/80 leading-relaxed">
                   {card.desc}
                 </p>
               </motion.div>
@@ -241,10 +241,10 @@ function WhoShouldApplySection() {
     <section id="who" className="relative py-16 md:py-24 bg-white">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
         <div className="max-w-[900px] mx-auto">
-          <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-4 text-center">
+          <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4 text-center">
             Who Should Apply?
           </h2>
-          <p className="font-['Lexend_Deca'] text-lg text-[#1a5336]/70 mb-12 text-center">
+          <p className=" text-lg text-[#1a5336]/70 mb-12 text-center">
             We encourage applications from diverse students who demonstrate excellence, potential, and motivation.
           </p>
           
@@ -252,7 +252,7 @@ function WhoShouldApplySection() {
             {whoList.map((item, idx) => (
               <div key={idx} className="flex gap-3">
                 <CheckCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
-                <p className="font-['Lexend_Deca'] text-[#1a5336]">{item}</p>
+                <p className=" text-[#1a5336]">{item}</p>
               </div>
             ))}
           </div>
@@ -261,7 +261,7 @@ function WhoShouldApplySection() {
           <div className="bg-[#fffae9] border-l-4 border-[#FABA1E] p-6">
             <div className="flex gap-3">
               <AlertCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
-              <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/80 leading-relaxed">
+              <p className=" text-sm text-[#1a5336]/80 leading-relaxed">
                 <strong>Not sure if you qualify?</strong> We encourage you to apply anyway. Our admissions team reviews each application holistically, considering potential alongside current achievements. Contact our scholarship office for guidance.
               </p>
             </div>
@@ -323,16 +323,16 @@ function CriteriaMatrixSection() {
   return (
     <section id="criteria" className="relative py-16 md:py-24 bg-[#fffae9]">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-4 text-center">
+        <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4 text-center">
           Scholarship Criteria & Selection
         </h2>
-        <p className="font-['Lexend_Deca'] text-lg text-[#1a5336]/70 mb-12 text-center max-w-[800px] mx-auto">
+        <p className=" text-lg text-[#1a5336]/70 mb-12 text-center max-w-[800px] mx-auto">
           Our selection process evaluates multiple dimensions of student excellence and potential.
         </p>
         
         {/* Weighting Bar */}
         <div className="mb-12 max-w-[900px] mx-auto">
-          <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-4">
+          <h3 className=" text-2xl text-[#1a5336] mb-4">
             Evaluation Weighting
           </h3>
           <div className="flex h-16 border-2 border-[#1a5336] overflow-hidden">
@@ -342,8 +342,8 @@ function CriteriaMatrixSection() {
                 style={{ width: `${weight.value}%`, backgroundColor: weight.color }}
                 className="flex flex-col items-center justify-center text-[#fffae9] relative group"
               >
-                <span className="font-['Arial'] font-bold text-sm md:text-base">{weight.value}%</span>
-                <span className="font-['Lexend_Deca'] text-xs hidden md:block">{weight.label}</span>
+                <span className=" font-bold text-sm md:text-base">{weight.value}%</span>
+                <span className=" text-xs hidden md:block">{weight.label}</span>
                 
                 {/* Mobile tooltip */}
                 <span className="md:hidden absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-[#1a5336] whitespace-nowrap">
@@ -359,19 +359,19 @@ function CriteriaMatrixSection() {
           <table className="w-full border-2 border-[#1a5336] bg-white">
             <thead>
               <tr className="bg-[#1a5336] text-[#fffae9]">
-                <th className="p-4 text-left font-['Crimson_Pro'] text-xl border-r-2 border-[#fffae9]/20">
+                <th className="p-4 text-left  text-xl border-r-2 border-[#fffae9]/20">
                   Scholarship Type
                 </th>
-                <th className="p-4 text-left font-['Crimson_Pro'] text-xl border-r-2 border-[#fffae9]/20">
+                <th className="p-4 text-left  text-xl border-r-2 border-[#fffae9]/20">
                   Key Criteria
                 </th>
-                <th className="p-4 text-left font-['Crimson_Pro'] text-xl border-r-2 border-[#fffae9]/20">
+                <th className="p-4 text-left  text-xl border-r-2 border-[#fffae9]/20">
                   Max Value
                 </th>
-                <th className="p-4 text-left font-['Crimson_Pro'] text-xl border-r-2 border-[#fffae9]/20">
+                <th className="p-4 text-left  text-xl border-r-2 border-[#fffae9]/20">
                   Seats
                 </th>
-                <th className="p-4 text-left font-['Crimson_Pro'] text-xl">
+                <th className="p-4 text-left  text-xl">
                   Renewal
                 </th>
               </tr>
@@ -379,19 +379,19 @@ function CriteriaMatrixSection() {
             <tbody>
               {scholarshipTypes.map((scholarship, idx) => (
                 <tr key={idx} className="border-t-2 border-[#1a5336] hover:bg-[#fffae9]/50">
-                  <td className="p-4 font-['Lexend_Deca'] font-bold text-[#1a5336] border-r border-[#1a5336]/20">
+                  <td className="p-4  font-bold text-[#1a5336] border-r border-[#1a5336]/20">
                     {scholarship.type}
                   </td>
-                  <td className="p-4 font-['Lexend_Deca'] text-sm text-[#1a5336]/80 border-r border-[#1a5336]/20">
+                  <td className="p-4  text-sm text-[#1a5336]/80 border-r border-[#1a5336]/20">
                     {scholarship.criteria}
                   </td>
-                  <td className="p-4 font-['Lexend_Deca'] text-[#1a5336] border-r border-[#1a5336]/20">
+                  <td className="p-4  text-[#1a5336] border-r border-[#1a5336]/20">
                     {scholarship.maxValue}
                   </td>
-                  <td className="p-4 font-['Lexend_Deca'] text-[#1a5336] border-r border-[#1a5336]/20">
+                  <td className="p-4  text-[#1a5336] border-r border-[#1a5336]/20">
                     {scholarship.seats}
                   </td>
-                  <td className="p-4 font-['Lexend_Deca'] text-sm text-[#1a5336]/80">
+                  <td className="p-4  text-sm text-[#1a5336]/80">
                     {scholarship.renewal}
                   </td>
                 </tr>
@@ -401,7 +401,7 @@ function CriteriaMatrixSection() {
         </div>
         
         <div className="mt-6 bg-white border-l-4 border-[#FABA1E] p-6">
-          <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/80 leading-relaxed">
+          <p className=" text-sm text-[#1a5336]/80 leading-relaxed">
             <strong>Note:</strong> All scholarship recipients must maintain good academic standing and conduct. Specific renewal criteria may vary by scholarship type. Awards are reviewed annually and are not automatically guaranteed for subsequent years.
           </p>
         </div>
@@ -453,10 +453,10 @@ function ProcessTimelineSection() {
   return (
     <section id="process" className="relative py-16 md:py-24 bg-white">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-4 text-center">
+        <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4 text-center">
           Application Process
         </h2>
-        <p className="font-['Lexend_Deca'] text-lg text-[#1a5336]/70 mb-12 text-center">
+        <p className=" text-lg text-[#1a5336]/70 mb-12 text-center">
           A transparent 5-step journey from application to award notification
         </p>
         
@@ -471,24 +471,24 @@ function ProcessTimelineSection() {
                 <div key={idx} className="relative">
                   {/* Step Number Circle */}
                   <div className="relative z-10 w-24 h-24 mx-auto mb-6 bg-[#1a5336] border-4 border-[#FABA1E] flex items-center justify-center">
-                    <span className="font-['Crimson_Pro'] text-3xl text-[#fffae9]">{idx + 1}</span>
+                    <span className=" text-3xl text-[#fffae9]">{idx + 1}</span>
                   </div>
                   
                   {/* Content */}
                   <div className="text-center">
-                    <h3 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-2">
+                    <h3 className=" text-xl text-[#1a5336] mb-2">
                       {step.label}
                     </h3>
-                    <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/70 mb-2 leading-relaxed">
+                    <p className=" text-sm text-[#1a5336]/70 mb-2 leading-relaxed">
                       {step.desc}
                     </p>
                     <div className="inline-flex items-center gap-1 px-3 py-1 bg-[#FABA1E] text-[#1a5336]">
                       <Clock className="w-3 h-3" />
-                      <span className="font-['Lexend_Deca'] text-xs font-bold">{step.sla}</span>
+                      <span className=" text-xs font-bold">{step.sla}</span>
                     </div>
                     
                     {step.cta && (
-                      <button className="mt-4 px-6 h-10 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]">
+                      <button className="mt-4 px-6 h-10 bg-[#1a5336] text-[#fffae9]  font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]">
                         {step.cta}
                       </button>
                     )}
@@ -505,24 +505,24 @@ function ProcessTimelineSection() {
             <div key={idx} className="flex gap-4">
               {/* Step Number Circle */}
               <div className="flex-shrink-0 w-16 h-16 bg-[#1a5336] border-4 border-[#FABA1E] flex items-center justify-center">
-                <span className="font-['Crimson_Pro'] text-2xl text-[#fffae9]">{idx + 1}</span>
+                <span className=" text-2xl text-[#fffae9]">{idx + 1}</span>
               </div>
               
               {/* Content */}
               <div className="flex-1 pb-6 border-b-2 border-[#1a5336]/10 last:border-b-0">
-                <h3 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-2">
+                <h3 className=" text-xl text-[#1a5336] mb-2">
                   {step.label}
                 </h3>
-                <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/70 mb-3 leading-relaxed">
+                <p className=" text-sm text-[#1a5336]/70 mb-3 leading-relaxed">
                   {step.desc}
                 </p>
                 <div className="inline-flex items-center gap-1 px-3 py-1 bg-[#FABA1E] text-[#1a5336] mb-3">
                   <Clock className="w-3 h-3" />
-                  <span className="font-['Lexend_Deca'] text-xs font-bold">{step.sla}</span>
+                  <span className=" text-xs font-bold">{step.sla}</span>
                 </div>
                 
                 {step.cta && (
-                  <button className="block px-6 h-10 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]">
+                  <button className="block px-6 h-10 bg-[#1a5336] text-[#fffae9]  font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]">
                     {step.cta}
                   </button>
                 )}
@@ -558,10 +558,10 @@ function DocumentChecklistSection() {
   return (
     <section id="docs" className="relative py-16 md:py-24 bg-[#fffae9]">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-4 text-center">
+        <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4 text-center">
           Document Checklist
         </h2>
-        <p className="font-['Lexend_Deca'] text-lg text-[#1a5336]/70 mb-12 text-center">
+        <p className=" text-lg text-[#1a5336]/70 mb-12 text-center">
           Prepare these materials before starting your application
         </p>
         
@@ -572,7 +572,7 @@ function DocumentChecklistSection() {
               <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
                 <CheckCircle className="w-6 h-6 text-[#FABA1E]" />
               </div>
-              <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336]">
+              <h3 className=" text-2xl text-[#1a5336]">
                 Required Documents
               </h3>
             </div>
@@ -581,7 +581,7 @@ function DocumentChecklistSection() {
               {requiredDocs.map((doc, idx) => (
                 <li key={idx} className="flex gap-3">
                   <CheckCircle className="w-5 h-5 text-[#1a5336] flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]">{doc}</span>
+                  <span className=" text-[#1a5336]">{doc}</span>
                 </li>
               ))}
             </ul>
@@ -593,7 +593,7 @@ function DocumentChecklistSection() {
               <div className="w-12 h-12 bg-[#FABA1E] flex items-center justify-center">
                 <Star className="w-6 h-6 text-[#1a5336]" />
               </div>
-              <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336]">
+              <h3 className=" text-2xl text-[#1a5336]">
                 Optional (Recommended)
               </h3>
             </div>
@@ -602,7 +602,7 @@ function DocumentChecklistSection() {
               {optionalDocs.map((doc, idx) => (
                 <li key={idx} className="flex gap-3">
                   <Star className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
-                  <span className="font-['Lexend_Deca'] text-[#1a5336]">{doc}</span>
+                  <span className=" text-[#1a5336]">{doc}</span>
                 </li>
               ))}
             </ul>
@@ -611,10 +611,10 @@ function DocumentChecklistSection() {
         
         {/* Document Note */}
         <div className="mt-8 max-w-[1000px] mx-auto bg-white border-l-4 border-[#1a5336] p-6">
-          <h4 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-3">
+          <h4 className=" text-xl text-[#1a5336] mb-3">
             Document Guidelines
           </h4>
-          <ul className="space-y-2 font-['Lexend_Deca'] text-sm text-[#1a5336]/80">
+          <ul className="space-y-2  text-sm text-[#1a5336]/80">
             <li className="flex gap-2">
               <span>•</span>
               <span>All documents in Vietnamese must include certified English translations</span>
@@ -670,13 +670,13 @@ function KeyDatesSection() {
         <div className="grid lg:grid-cols-[1fr_auto] gap-12 items-start">
           {/* Left: Header & Description */}
           <div>
-            <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-4">
+            <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
               Key Application Dates
             </h2>
-            <p className="font-['Lexend_Deca'] text-lg text-[#1a5336]/70 mb-6 max-w-[600px]">
+            <p className=" text-lg text-[#1a5336]/70 mb-6 max-w-[600px]">
               We accept applications in three rounds. Early Decision applicants receive priority review and earlier notification.
             </p>
-            <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/60 mb-6">
+            <p className=" text-sm text-[#1a5336]/60 mb-6">
               <strong>Note:</strong> Applications are reviewed on a rolling basis. Apply early to maximize your chances, especially for limited scholarship categories.
             </p>
           </div>
@@ -685,7 +685,7 @@ function KeyDatesSection() {
           <a
             href="/downloads/scholarship-calendar-2025-26.ics"
             download
-            className="flex items-center gap-2 px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] whitespace-nowrap"
+            className="flex items-center gap-2 px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] whitespace-nowrap"
           >
             <Calendar className="w-4 h-4" />
             ADD TO CALENDAR
@@ -705,28 +705,28 @@ function KeyDatesSection() {
             >
               {/* Badge */}
               <div className={`absolute top-0 right-0 px-3 py-1 ${round.badgeColor}`}>
-                <span className="font-['Lexend_Deca'] text-xs font-bold">{round.badge}</span>
+                <span className=" text-xs font-bold">{round.badge}</span>
               </div>
               
-              <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-6 pr-20">
+              <h3 className=" text-2xl text-[#1a5336] mb-6 pr-20">
                 {round.name}
               </h3>
               
               <div className="space-y-4">
                 <div>
-                  <p className="font-['Lexend_Deca'] text-xs text-[#1a5336]/60 uppercase mb-1">
+                  <p className=" text-xs text-[#1a5336]/60 uppercase mb-1">
                     Application Deadline
                   </p>
-                  <p className="font-['Lexend_Deca'] font-bold text-[#1a5336]">
+                  <p className=" font-bold text-[#1a5336]">
                     {round.deadline}
                   </p>
                 </div>
                 
                 <div>
-                  <p className="font-['Lexend_Deca'] text-xs text-[#1a5336]/60 uppercase mb-1">
+                  <p className=" text-xs text-[#1a5336]/60 uppercase mb-1">
                     Notification Date
                   </p>
-                  <p className="font-['Lexend_Deca'] font-bold text-[#1a5336]">
+                  <p className=" font-bold text-[#1a5336]">
                     {round.notification}
                   </p>
                 </div>
@@ -744,17 +744,17 @@ function AwardRenewalSection() {
   return (
     <section id="renewal" className="relative py-16 md:py-24 bg-[#fffae9]">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-12 text-center">
+        <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-12 text-center">
           Award Application & Renewal
         </h2>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-[1100px] mx-auto">
           {/* How Awards Are Applied */}
           <div className="bg-white border-2 border-[#1a5336] p-8">
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-6">
+            <h3 className=" text-2xl text-[#1a5336] mb-6">
               How Awards Are Applied
             </h3>
-            <ul className="space-y-3 font-['Lexend_Deca'] text-[#1a5336]">
+            <ul className="space-y-3  text-[#1a5336]">
               <li className="flex gap-3">
                 <CheckCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
                 <span>Scholarships are applied directly to tuition fees each term</span>
@@ -776,10 +776,10 @@ function AwardRenewalSection() {
           
           {/* Renewal Rules */}
           <div className="bg-white border-2 border-[#1a5336] p-8">
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-6">
+            <h3 className=" text-2xl text-[#1a5336] mb-6">
               Annual Renewal Requirements
             </h3>
-            <ul className="space-y-3 font-['Lexend_Deca'] text-[#1a5336]">
+            <ul className="space-y-3  text-[#1a5336]">
               <li className="flex gap-3">
                 <CheckCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
                 <span>Maintain minimum GPA specified in award letter</span>
@@ -803,7 +803,7 @@ function AwardRenewalSection() {
         {/* Performance Requirements Table */}
         <div className="mt-8 max-w-[1100px] mx-auto bg-white border-2 border-[#1a5336] overflow-hidden">
           <div className="bg-[#1a5336] p-4">
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#fffae9]">
+            <h3 className=" text-2xl text-[#fffae9]">
               Minimum Performance Standards
             </h3>
           </div>
@@ -811,23 +811,23 @@ function AwardRenewalSection() {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-[#FABA1E] mx-auto mb-3 flex items-center justify-center">
-                  <span className="font-['Crimson_Pro'] text-3xl text-[#1a5336]">3.0+</span>
+                  <span className=" text-3xl text-[#1a5336]">3.0+</span>
                 </div>
-                <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/70">Minimum GPA</p>
+                <p className=" text-sm text-[#1a5336]/70">Minimum GPA</p>
               </div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-[#FABA1E] mx-auto mb-3 flex items-center justify-center">
-                  <span className="font-['Crimson_Pro'] text-3xl text-[#1a5336]">90%</span>
+                  <span className=" text-3xl text-[#1a5336]">90%</span>
                 </div>
-                <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/70">Attendance Rate</p>
+                <p className=" text-sm text-[#1a5336]/70">Attendance Rate</p>
               </div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-[#FABA1E] mx-auto mb-3 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-[#1a5336]" />
                 </div>
-                <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/70">Good Conduct</p>
+                <p className=" text-sm text-[#1a5336]/70">Good Conduct</p>
               </div>
             </div>
           </div>
@@ -835,10 +835,10 @@ function AwardRenewalSection() {
         
         {/* Mentoring Note */}
         <div className="mt-8 max-w-[1100px] mx-auto bg-white border-l-4 border-[#FABA1E] p-6">
-          <h4 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-3">
+          <h4 className=" text-xl text-[#1a5336] mb-3">
             Scholarship Mentoring Program
           </h4>
-          <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/80 leading-relaxed">
+          <p className=" text-sm text-[#1a5336]/80 leading-relaxed">
             All scholarship recipients are paired with a faculty mentor who provides academic guidance, monitors progress, and offers support throughout the school year. Quarterly check-ins help ensure students stay on track for renewal and maximize their LHBS experience.
           </p>
         </div>
@@ -852,23 +852,23 @@ function StackingPaymentSection() {
   return (
     <section id="stacking" className="relative py-16 md:py-24 bg-white">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-12 text-center">
+        <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-12 text-center">
           Scholarship Stacking & Payment
         </h2>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-[1100px] mx-auto">
           {/* Stacking Rules */}
           <div className="bg-[#fffae9] border-2 border-[#1a5336] p-8">
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-6">
+            <h3 className=" text-2xl text-[#1a5336] mb-6">
               Combining Multiple Scholarships
             </h3>
             
             <div className="space-y-6">
               <div>
-                <h4 className="font-['Lexend_Deca'] font-bold text-[#1a5336] mb-2">
+                <h4 className=" font-bold text-[#1a5336] mb-2">
                   ✓ Allowed Combinations
                 </h4>
-                <ul className="space-y-2 font-['Lexend_Deca'] text-sm text-[#1a5336]/80">
+                <ul className="space-y-2  text-sm text-[#1a5336]/80">
                   <li>• Academic + Creative Talent</li>
                   <li>• Leadership + Sports</li>
                   <li>• Any merit scholarship + Need-Based Aid</li>
@@ -877,30 +877,30 @@ function StackingPaymentSection() {
               </div>
               
               <div className="bg-white border-l-4 border-[#FABA1E] p-4">
-                <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/80">
+                <p className=" text-sm text-[#1a5336]/80">
                   <strong>Maximum Total:</strong> Combined scholarships cannot exceed 100% of tuition fees. If total awards exceed tuition, the excess is not refundable or transferable.
                 </p>
               </div>
               
               <div>
-                <h4 className="font-['Lexend_Deca'] font-bold text-[#1a5336] mb-2">
+                <h4 className=" font-bold text-[#1a5336] mb-2">
                   Examples
                 </h4>
                 <div className="space-y-3 text-sm">
                   <div className="bg-white p-3">
-                    <p className="font-['Lexend_Deca'] text-[#1a5336] mb-1">
+                    <p className=" text-[#1a5336] mb-1">
                       Academic 50% + Creative 25% = <strong>75% total</strong>
                     </p>
-                    <p className="font-['Lexend_Deca'] text-xs text-[#1a5336]/60">
+                    <p className=" text-xs text-[#1a5336]/60">
                       Family pays remaining 25%
                     </p>
                   </div>
                   
                   <div className="bg-white p-3">
-                    <p className="font-['Lexend_Deca'] text-[#1a5336] mb-1">
+                    <p className=" text-[#1a5336] mb-1">
                       Leadership 40% + Need-Based 60% = <strong>100% total</strong>
                     </p>
-                    <p className="font-['Lexend_Deca'] text-xs text-[#1a5336]/60">
+                    <p className=" text-xs text-[#1a5336]/60">
                       Full tuition coverage
                     </p>
                   </div>
@@ -911,23 +911,23 @@ function StackingPaymentSection() {
           
           {/* Payment & Refund */}
           <div className="bg-[#fffae9] border-2 border-[#1a5336] p-8">
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-6">
+            <h3 className=" text-2xl text-[#1a5336] mb-6">
               How Discounts Apply
             </h3>
             
             <div className="space-y-6">
               <div>
-                <h4 className="font-['Lexend_Deca'] font-bold text-[#1a5336] mb-2">
+                <h4 className=" font-bold text-[#1a5336] mb-2">
                   Term-by-Term Application
                 </h4>
-                <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/80 mb-3">
+                <p className=" text-sm text-[#1a5336]/80 mb-3">
                   Scholarships are divided equally across 3 terms per year:
                 </p>
                 <div className="bg-white p-4 border border-[#1a5336]/20">
-                  <p className="font-['Lexend_Deca'] text-sm text-[#1a5336] mb-2">
+                  <p className=" text-sm text-[#1a5336] mb-2">
                     <strong>Example:</strong> 60% annual scholarship
                   </p>
-                  <ul className="space-y-1 font-['Lexend_Deca'] text-sm text-[#1a5336]/80">
+                  <ul className="space-y-1  text-sm text-[#1a5336]/80">
                     <li>• Term 1: 20% discount applied</li>
                     <li>• Term 2: 20% discount applied</li>
                     <li>• Term 3: 20% discount applied</li>
@@ -936,28 +936,28 @@ function StackingPaymentSection() {
               </div>
               
               <div>
-                <h4 className="font-['Lexend_Deca'] font-bold text-[#1a5336] mb-2">
+                <h4 className=" font-bold text-[#1a5336] mb-2">
                   Mid-Year Withdrawal
                 </h4>
-                <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/80">
+                <p className=" text-sm text-[#1a5336]/80">
                   If a student withdraws mid-year, the scholarship is forfeited for remaining terms. Families are responsible for any balance owed according to the standard refund policy.
                 </p>
               </div>
               
               <div className="bg-white border-l-4 border-[#1a5336] p-4">
-                <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/80">
+                <p className=" text-sm text-[#1a5336]/80">
                   <strong>Important:</strong> Scholarships do not apply to registration fees, deposits, uniforms, meals, or transportation. These must be paid separately.
                 </p>
               </div>
               
               <div>
-                <h4 className="font-['Lexend_Deca'] font-bold text-[#1a5336] mb-2">
+                <h4 className=" font-bold text-[#1a5336] mb-2">
                   Payment Plans Available
                 </h4>
-                <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/80">
+                <p className=" text-sm text-[#1a5336]/80">
                   Remaining balance after scholarships can be paid via:
                 </p>
-                <ul className="mt-2 space-y-1 font-['Lexend_Deca'] text-sm text-[#1a5336]/80">
+                <ul className="mt-2 space-y-1  text-sm text-[#1a5336]/80">
                   <li>• Full year (5% discount)</li>
                   <li>• Per term (3 installments)</li>
                   <li>• Monthly (10 installments)</li>
@@ -983,10 +983,10 @@ function NeedBasedAidSection() {
                 <HelpCircle className="w-8 h-8 text-[#1a5336]" />
               </div>
               <div>
-                <h2 className="font-['Crimson_Pro'] text-3xl md:text-4xl text-[#1a5336] mb-3">
+                <h2 className=" text-3xl md:text-4xl text-[#1a5336] mb-3">
                   Need-Based Financial Aid
                 </h2>
-                <p className="font-['Lexend_Deca'] text-lg text-[#1a5336]/70">
+                <p className=" text-lg text-[#1a5336]/70">
                   Supporting families who demonstrate financial need
                 </p>
               </div>
@@ -994,19 +994,19 @@ function NeedBasedAidSection() {
             
             <div className="space-y-6">
               <div>
-                <h3 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-3">
+                <h3 className=" text-xl text-[#1a5336] mb-3">
                   What is Need-Based Aid?
                 </h3>
-                <p className="font-['Lexend_Deca'] text-[#1a5336]/80 leading-relaxed">
+                <p className=" text-[#1a5336]/80 leading-relaxed">
                   Need-based financial aid is awarded to students whose families demonstrate genuine financial need but whose children show strong academic potential and motivation to succeed. Awards range from 25% to 100% of tuition based on documented financial circumstances and available funding.
                 </p>
               </div>
               
               <div>
-                <h3 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-3">
+                <h3 className=" text-xl text-[#1a5336] mb-3">
                   Eligibility Requirements
                 </h3>
-                <ul className="space-y-2 font-['Lexend_Deca'] text-[#1a5336]/80">
+                <ul className="space-y-2  text-[#1a5336]/80">
                   <li className="flex gap-3">
                     <CheckCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-0.5" />
                     <span>Student maintains minimum GPA of 3.0 or demonstrates strong potential</span>
@@ -1027,10 +1027,10 @@ function NeedBasedAidSection() {
               </div>
               
               <div>
-                <h3 className="font-['Crimson_Pro'] text-xl text-[#1a5336] mb-3">
+                <h3 className=" text-xl text-[#1a5336] mb-3">
                   Required Financial Documentation
                 </h3>
-                <ul className="space-y-2 font-['Lexend_Deca'] text-sm text-[#1a5336]/80">
+                <ul className="space-y-2  text-sm text-[#1a5336]/80">
                   <li>• Tax returns or income statements (most recent 2 years)</li>
                   <li>• Bank statements (all accounts, last 6 months)</li>
                   <li>• Property ownership documentation</li>
@@ -1045,10 +1045,10 @@ function NeedBasedAidSection() {
                 <div className="flex items-start gap-3">
                   <AlertCircle className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-['Lexend_Deca'] font-bold text-[#1a5336] mb-2">
+                    <h4 className=" font-bold text-[#1a5336] mb-2">
                       Strict Confidentiality
                     </h4>
-                    <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/80 leading-relaxed">
+                    <p className=" text-sm text-[#1a5336]/80 leading-relaxed">
                       All financial information is reviewed by our Financial Aid Committee only and kept strictly confidential. Student identities are anonymized during review. Your financial situation will never be shared with faculty, staff, or other families.
                     </p>
                   </div>
@@ -1060,7 +1060,7 @@ function NeedBasedAidSection() {
                 <a
                   href="/downloads/financial-aid-application-guide.pdf"
                   download
-                  className="inline-flex items-center gap-2 px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                  className="inline-flex items-center gap-2 px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
                 >
                   <Download className="w-4 h-4" />
                   DOWNLOAD FINANCIAL AID GUIDE (PDF)
@@ -1116,10 +1116,10 @@ function FAQSection() {
   return (
     <section id="faq" className="relative py-16 md:py-24 bg-white">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-4 text-center">
+        <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4 text-center">
           Frequently Asked Questions
         </h2>
-        <p className="font-['Lexend_Deca'] text-lg text-[#1a5336]/70 mb-12 text-center">
+        <p className=" text-lg text-[#1a5336]/70 mb-12 text-center">
           Common questions about LHBS scholarship program
         </p>
         
@@ -1136,7 +1136,7 @@ function FAQSection() {
                   className="w-full p-6 flex items-center justify-between gap-4 text-left hover:bg-[#1a5336]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#FABA1E]"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-['Crimson_Pro'] text-xl text-[#1a5336]">
+                  <span className=" text-xl text-[#1a5336]">
                     {faq.q}
                   </span>
                   {isOpen ? (
@@ -1148,7 +1148,7 @@ function FAQSection() {
                 
                 {isOpen && (
                   <div className="px-6 pb-6">
-                    <p className="font-['Lexend_Deca'] text-[#1a5336]/80 leading-relaxed">
+                    <p className=" text-[#1a5336]/80 leading-relaxed">
                       {faq.a}
                     </p>
                   </div>
@@ -1159,7 +1159,7 @@ function FAQSection() {
         </div>
         
         <div className="mt-12 text-center">
-          <p className="font-['Lexend_Deca'] text-[#1a5336]/70 mb-4">
+          <p className=" text-[#1a5336]/70 mb-4">
             Have more questions about scholarships?
           </p>
           <button
@@ -1167,7 +1167,7 @@ function FAQSection() {
               const contactSection = document.getElementById('downloads');
               contactSection?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+            className="px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
           >
             CONTACT SCHOLARSHIP OFFICE
           </button>
@@ -1209,14 +1209,14 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
   return (
     <section id="downloads" className="relative py-16 md:py-24 bg-[#fffae9]">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
-        <h2 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-[#1a5336] mb-12 text-center">
+        <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-12 text-center">
           Downloads & Contact
         </h2>
         
         <div className="grid lg:grid-cols-[1fr_400px] gap-12">
           {/* Left: Downloads */}
           <div>
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-6">
+            <h3 className=" text-2xl text-[#1a5336] mb-6">
               Helpful Resources
             </h3>
             
@@ -1231,15 +1231,15 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
                   <div className="flex items-start gap-4">
                     <FileText className="w-8 h-8 text-[#1a5336] group-hover:text-[#FABA1E] transition-colors flex-shrink-0" />
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-['Lexend_Deca'] font-bold text-[#1a5336] mb-1 group-hover:text-[#FABA1E] transition-colors">
+                      <h4 className=" font-bold text-[#1a5336] mb-1 group-hover:text-[#FABA1E] transition-colors">
                         {doc.title}
                       </h4>
-                      <p className="font-['Lexend_Deca'] text-xs text-[#1a5336]/60 mb-2">
+                      <p className=" text-xs text-[#1a5336]/60 mb-2">
                         {doc.desc}
                       </p>
                       <div className="flex items-center gap-2">
                         <Download className="w-3 h-3 text-[#1a5336]/40" />
-                        <span className="font-['Lexend_Deca'] text-xs text-[#1a5336]/40">
+                        <span className=" text-xs text-[#1a5336]/40">
                           {doc.size}
                         </span>
                       </div>
@@ -1252,13 +1252,13 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
           
           {/* Right: Contact Card */}
           <div className="bg-white border-2 border-[#1a5336] p-8 h-fit lg:sticky lg:top-24">
-            <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-6">
+            <h3 className=" text-2xl text-[#1a5336] mb-6">
               Need Help?
             </h3>
             
             <div className="space-y-6">
               <div>
-                <h4 className="font-['Lexend_Deca'] text-sm text-[#1a5336]/60 uppercase mb-3">
+                <h4 className=" text-sm text-[#1a5336]/60 uppercase mb-3">
                   Scholarship Office
                 </h4>
                 
@@ -1271,10 +1271,10 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
                       <Phone className="w-5 h-5 text-[#1a5336] group-hover:text-[#FABA1E]" />
                     </div>
                     <div>
-                      <p className="font-['Lexend_Deca'] text-xs text-[#1a5336]/60">
+                      <p className=" text-xs text-[#1a5336]/60">
                         Hotline
                       </p>
-                      <p className="font-['Lexend_Deca'] font-bold text-[#1a5336]">
+                      <p className=" font-bold text-[#1a5336]">
                         +84 28 3898 9898
                       </p>
                     </div>
@@ -1288,10 +1288,10 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
                       <Mail className="w-5 h-5 text-[#1a5336] group-hover:text-[#FABA1E]" />
                     </div>
                     <div>
-                      <p className="font-['Lexend_Deca'] text-xs text-[#1a5336]/60">
+                      <p className=" text-xs text-[#1a5336]/60">
                         Email
                       </p>
-                      <p className="font-['Lexend_Deca'] font-bold text-[#1a5336] text-sm">
+                      <p className=" font-bold text-[#1a5336] text-sm">
                         scholarships@lhbs.edu.vn
                       </p>
                     </div>
@@ -1305,7 +1305,7 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
                       className="flex-1 flex items-center justify-center gap-2 h-10 border-2 border-[#1a5336] text-[#1a5336] hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors"
                     >
                       <MessageCircle className="w-4 h-4" />
-                      <span className="font-['Lexend_Deca'] text-xs font-bold">Zalo</span>
+                      <span className=" text-xs font-bold">Zalo</span>
                     </a>
                     
                     <a
@@ -1315,24 +1315,24 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
                       className="flex-1 flex items-center justify-center gap-2 h-10 border-2 border-[#1a5336] text-[#1a5336] hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors"
                     >
                       <MessageCircle className="w-4 h-4" />
-                      <span className="font-['Lexend_Deca'] text-xs font-bold">WhatsApp</span>
+                      <span className=" text-xs font-bold">WhatsApp</span>
                     </a>
                   </div>
                 </div>
               </div>
               
               <div className="pt-6 border-t-2 border-[#1a5336]/10">
-                <h4 className="font-['Lexend_Deca'] text-sm text-[#1a5336]/60 uppercase mb-3">
+                <h4 className=" text-sm text-[#1a5336]/60 uppercase mb-3">
                   Office Hours
                 </h4>
-                <p className="font-['Lexend_Deca'] text-sm text-[#1a5336]/80 mb-4">
+                <p className=" text-sm text-[#1a5336]/80 mb-4">
                   Monday - Friday: 8:00 - 17:00<br />
                   Saturday: 8:00 - 12:00
                 </p>
                 
                 <a
                   href="/contact/book-tour"
-                  className="block text-center px-6 h-10 border-2 border-[#1a5336] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center"
+                  className="block text-center px-6 h-10 border-2 border-[#1a5336] text-[#1a5336]  font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center"
                 >
                   BOOK 15-MIN CONSULTATION
                 </a>
@@ -1341,7 +1341,7 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
               <div className="pt-6 border-t-2 border-[#1a5336]/10">
                 <button
                   onClick={() => onNavigate('/admissions/apply-now')}
-                  className="w-full px-6 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
+                  className="w-full px-6 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
                   aria-label="Start your scholarship application"
                 >
                   START APPLICATION
@@ -1360,7 +1360,7 @@ function StickyHelper() {
   return (
     <div className="hidden xl:block fixed bottom-8 right-8 z-40">
       <div className="bg-[#1a5336] border-4 border-[#FABA1E] p-6 w-[280px] shadow-2xl">
-        <h3 className="font-['Crimson_Pro'] text-xl text-[#fffae9] mb-4">
+        <h3 className=" text-xl text-[#fffae9] mb-4">
           Quick Help
         </h3>
         
@@ -1371,8 +1371,8 @@ function StickyHelper() {
           >
             <Phone className="w-5 h-5" />
             <div>
-              <p className="font-['Lexend_Deca'] text-xs opacity-70">Hotline</p>
-              <p className="font-['Lexend_Deca'] text-sm font-bold">+84 28 3898 9898</p>
+              <p className=" text-xs opacity-70">Hotline</p>
+              <p className=" text-sm font-bold">+84 28 3898 9898</p>
             </div>
           </a>
           
@@ -1382,8 +1382,8 @@ function StickyHelper() {
           >
             <Mail className="w-5 h-5" />
             <div>
-              <p className="font-['Lexend_Deca'] text-xs opacity-70">Email</p>
-              <p className="font-['Lexend_Deca'] text-sm font-bold">scholarships@...</p>
+              <p className=" text-xs opacity-70">Email</p>
+              <p className=" text-sm font-bold">scholarships@...</p>
             </div>
           </a>
           
@@ -1392,7 +1392,7 @@ function StickyHelper() {
               const criteriaSection = document.getElementById('criteria');
               criteriaSection?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="w-full mt-4 px-4 h-10 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
+            className="w-full mt-4 px-4 h-10 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9]"
           >
             CHECK ELIGIBILITY
           </button>

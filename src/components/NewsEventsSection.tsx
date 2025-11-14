@@ -59,7 +59,7 @@ export function NewsEventsSection({ onNavigate }: { onNavigate: (path: string) =
         {/* Left: Title & Subtitle */}
         <div>
           <motion.h2
-            className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-2"
+            className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-2"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -68,7 +68,7 @@ export function NewsEventsSection({ onNavigate }: { onNavigate: (path: string) =
           </motion.h2>
           
           <motion.p
-            className="font-['Lexend_Deca'] text-sm text-[#212121]"
+            className=" text-sm text-[#212121]"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -80,7 +80,7 @@ export function NewsEventsSection({ onNavigate }: { onNavigate: (path: string) =
         {/* Right: View All Link */}
         <motion.button
           onClick={() => onNavigate('/news-events')}
-          className="flex items-center gap-2 font-['Lexend_Deca'] text-sm text-[#1a5336] font-semibold group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 self-start md:self-auto"
+          className="flex items-center gap-2  text-sm text-[#1a5336] font-semibold group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 self-start md:self-auto"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -139,7 +139,7 @@ function N_Card({ image, imageAlt, tag, date, title, excerpt, link, onNavigate }
         {/* Optional Tag Pill */}
         {tag && (
           <div className="absolute top-3 left-3 bg-[#FABA1E] px-3 py-1">
-            <span className="font-['Lexend_Deca'] text-xs text-[#1a5336] font-semibold">
+            <span className=" text-xs text-[#1a5336] font-semibold">
               {tag}
             </span>
           </div>
@@ -151,24 +151,24 @@ function N_Card({ image, imageAlt, tag, date, title, excerpt, link, onNavigate }
         {/* Meta Row - Date */}
         <div className="flex items-center gap-2 mb-3">
           <Calendar className="w-4 h-4 text-[#1a5336]/60" />
-          <span className="font-['Lexend_Deca'] text-xs text-[#212121]/70">
+          <span className=" text-xs text-[#212121]/70">
             {date}
           </span>
         </div>
 
         {/* Headline */}
-        <h3 className="font-['Crimson_Pro'] text-xl md:text-2xl text-[#1a5336] mb-3 leading-tight">
+        <h3 className=" text-xl md:text-2xl text-[#1a5336] mb-3 leading-tight">
           {title}
         </h3>
 
         {/* Excerpt */}
-        <p className="font-['Lexend_Deca'] text-sm text-[#212121] mb-4 leading-relaxed line-clamp-3 flex-grow">
+        <p className=" text-sm text-[#212121] mb-4 leading-relaxed line-clamp-3 flex-grow">
           {excerpt}
         </p>
 
         {/* Read More Link */}
         <button
-          className="flex items-center gap-2 font-['Lexend_Deca'] text-sm text-[#1a5336] font-semibold group/link focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 self-start"
+          className="flex items-center gap-2  text-sm text-[#1a5336] font-semibold group/link focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 self-start"
           onClick={(e) => {
             e.stopPropagation();
             onNavigate(link);

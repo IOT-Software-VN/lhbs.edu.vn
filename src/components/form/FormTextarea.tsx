@@ -35,7 +35,7 @@ export function FormTextarea({
     <div className="flex flex-col gap-2">
       <label 
         htmlFor={textareaId}
-        className="font-['Lexend_Deca'] text-sm text-[#212121]"
+        className=" text-sm text-[#212121]"
       >
         {label}
         {required && <span className="text-[#d32f2f] ml-1">*</span>}
@@ -55,7 +55,7 @@ export function FormTextarea({
         aria-invalid={error ? 'true' : 'false'}
         className={`
           px-4 py-3
-          font-['Lexend_Deca'] text-[#212121]
+           text-[#212121]
           bg-white border
           ${error ? 'border-[#d32f2f]' : 'border-[#d0d0d0]'}
           ${disabled ? 'bg-[#f5f5f5] cursor-not-allowed' : ''}
@@ -66,19 +66,19 @@ export function FormTextarea({
       />
       
       {showCharCount && maxLength && (
-        <p className="font-['Lexend_Deca'] text-xs text-[#666] text-right">
+        <p className=" text-xs text-[#666] text-right">
           {value.length} / {maxLength}
         </p>
       )}
       
       {helpText && !error && (
-        <p id={helpId} className="font-['Lexend_Deca'] text-xs text-[#666]">
+        <p id={helpId} className=" text-xs text-[#666]">
           {helpText}
         </p>
       )}
       
       {error && (
-        <p id={errorId} className="font-['Lexend_Deca'] text-xs text-[#d32f2f]" role="alert">
+        <p id={errorId} className=" text-xs text-[#d32f2f]" role="alert">
           {error}
         </p>
       )}

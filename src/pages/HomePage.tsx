@@ -101,16 +101,21 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Title - Green background with yellow text */}
+          {/* Title - Green background only on "Solid education" */}
           <h2 
-            className="font-['Crimson_Pro'] text-[#FABA1E] bg-[#1a5336] mb-6 inline-block px-6 py-4"
+            className=" text-[#1a5336] mb-6"
             style={{ fontSize: '48px', lineHeight: '1.24' }}
           >
-            Solid education foundation to Future
+            <span className="text-[#1a5336] bg-[#FABA1E] px-2 inline-block">
+              Solid education
+            </span>
+            <span className="block mt-2">
+              foundation to Future
+            </span>
           </h2>
           
           {/* Body copy */}
-          <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] mb-8 leading-relaxed max-w-[70ch]">
+          <p className=" text-base md:text-lg text-[#212121] mb-8 leading-relaxed max-w-[70ch]">
             At LHBS, we believe that a strong educational foundation is the cornerstone of lifelong success. 
             Our comprehensive programs span from early childhood through high school, providing a seamless journey 
             of bilingual excellence. Each stage is carefully designed to build upon the previous, ensuring students 
@@ -120,7 +125,7 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
           </p>
           
           {/* Education levels list */}
-          <div className="space-y-0">
+          <div className="space-y-3">
             {educationLevels.map((level, index) => (
               <EducationLevelItem
                 key={index}
@@ -171,7 +176,7 @@ function EducationLevelItem({ label, link, onNavigate, delay, isInView }: Educat
       transition={{ duration: 0.6, delay: 0.6 + delay }}
       whileHover={{ borderColor: '#14432b' }}
     >
-      <span className="font-['Crimson_Pro'] text-lg md:text-xl text-[#1a5336]">
+      <span className=" text-lg md:text-xl text-[#1a5336]">
         {label}
       </span>
       <motion.svg 
@@ -234,21 +239,21 @@ function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => 
           </div>
           
           {/* Title */}
-          <h2 className="font-['Crimson_Pro'] text-3xl md:text-4xl lg:text-5xl text-[#fffae9] mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#fffae9] mb-6">
             For ourself, our community, and our society
           </h2>
           
           {/* Body copy */}
-          <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
+          <p className="text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
             LHBS is committed to creating a humanistic learning environment that nurtures and educates young generations to appreciate Vietnamese heritage and identity while embracing global knowledge, skills, and citizenship—contributing positively to themselves, their communities, and society.
           </p>
           
           {/* Attribution */}
           <div className="mb-8">
-            <p className="font-['Lexend_Deca'] text-sm md:text-base text-[#fffae9] font-semibold mb-1">
+            <p className=" text-sm md:text-base text-[#fffae9] font-semibold mb-1">
               The late People's Teacher, Dr. Do Huu Tai
             </p>
-            <p className="font-['Lexend_Deca'] text-xs md:text-sm text-[#fffae9]/70">
+            <p className=" text-xs md:text-sm text-[#fffae9]/70">
               Founder of Lac Hong Bilingual Primary - Secondary - High School
             </p>
           </div>
@@ -257,7 +262,7 @@ function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => 
           <div>
             <motion.button
               onClick={() => onNavigate('/our-school/leadership')}
-              className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9] font-['Arial'] font-bold cursor-pointer hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors w-full md:w-auto"
+              className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold cursor-pointer hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors w-full md:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -308,10 +313,7 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
           <h2 className="font-['SVN-Gotham'] text-3xl md:text-4xl lg:text-5xl text-[#1a5336] mb-6 leading-tight">
             15 years{' '}
             <span 
-              className="relative inline-block px-2"
-              style={{
-                background: 'linear-gradient(to bottom, transparent 0%, transparent 40%, #3FD97F 40%, #3FD97F 80%, transparent 80%)'
-              }}
+              className="relative inline-block px-2 bg-[#FABA1E]"
             >
               and continuing
             </span>
@@ -320,15 +322,15 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
           
           {/* Body copy - 3 paragraphs */}
           <div className="space-y-4 mb-8">
-            <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] leading-relaxed">
+            <p className=" text-base md:text-lg text-[#212121] leading-relaxed">
               Founded in 2011, Lac Hong Bilingual School offers a modern education to unlock students' potential through innovative methods.
             </p>
             
-            <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] leading-relaxed">
+            <p className=" text-base md:text-lg text-[#212121] leading-relaxed">
               We celebrate each student's unique dreams and talents, providing a Learning Pathways that builds a foundation in academics, 21st-century skills, English proficiency, and values, fostering Global Citizens.
             </p>
             
-            <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] leading-relaxed">
+            <p className=" text-base md:text-lg text-[#212121] leading-relaxed">
               Our transparent international learning pathways address parental concerns, guiding students to success and future leadership roles.
             </p>
           </div>
@@ -337,7 +339,7 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
           <div>
             <motion.button
               onClick={() => onNavigate('/our-school/about-us')}
-              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold cursor-pointer hover:bg-[#e5a812] transition-colors"
+              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold cursor-pointer hover:bg-[#e5a812] transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -432,7 +434,7 @@ function PillarModal({ pillarIndex, onClose }: { pillarIndex: number; onClose: (
           <div className="flex justify-between items-start mb-6">
             <div className="flex items-center gap-4">
               <div className="text-6xl">{pillar.icon}</div>
-              <h2 className="font-['Crimson_Pro'] text-4xl text-[#1a5336]">{pillar.title}</h2>
+              <h2 className=" text-4xl text-[#1a5336]">{pillar.title}</h2>
             </div>
             <button
               onClick={onClose}
@@ -442,23 +444,23 @@ function PillarModal({ pillarIndex, onClose }: { pillarIndex: number; onClose: (
             </button>
           </div>
           
-          <p className="font-['Lexend_Deca'] text-lg text-[#212121] mb-6 leading-relaxed">
+          <p className=" text-lg text-[#212121] mb-6 leading-relaxed">
             {pillar.description}
           </p>
           
-          <h3 className="font-['Crimson_Pro'] text-2xl text-[#1a5336] mb-4">Key Features:</h3>
+          <h3 className=" text-2xl text-[#1a5336] mb-4">Key Features:</h3>
           <ul className="space-y-3 mb-8">
             {pillar.points.map((point, index) => (
               <li key={index} className="flex items-start gap-3">
                 <span className="text-[#FABA1E] text-xl">✓</span>
-                <span className="font-['Lexend_Deca'] text-[#212121]">{point}</span>
+                <span className=" text-[#212121]">{point}</span>
               </li>
             ))}
           </ul>
           
           <button
             onClick={onClose}
-            className="w-full px-8 py-4 bg-[#1a5336] text-white font-['Arial'] font-bold hover:bg-[#14432b] transition-colors cursor-pointer"
+            className="w-full px-8 py-4 bg-[#1a5336] text-white  font-bold hover:bg-[#14432b] transition-colors cursor-pointer"
           >
             Close
           </button>

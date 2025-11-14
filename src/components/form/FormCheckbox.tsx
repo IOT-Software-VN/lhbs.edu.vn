@@ -37,7 +37,7 @@ export function FormCheckbox({
         />
         <label
           htmlFor={checkboxId}
-          className={`font-['Lexend_Deca'] text-sm text-[#212121] cursor-pointer flex-1 ${disabled ? 'cursor-not-allowed opacity-50' : ''}`}
+          className={` text-sm text-[#212121] cursor-pointer flex-1 ${disabled ? 'cursor-not-allowed opacity-50' : ''}`}
         >
           {label}
           {required && <span className="text-[#d32f2f] ml-1">*</span>}
@@ -45,7 +45,7 @@ export function FormCheckbox({
       </div>
       
       {error && (
-        <p id={errorId} className="font-['Lexend_Deca'] text-xs text-[#d32f2f] ml-8" role="alert">
+        <p id={errorId} className=" text-xs text-[#d32f2f] ml-8" role="alert">
           {error}
         </p>
       )}

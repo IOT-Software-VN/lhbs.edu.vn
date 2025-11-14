@@ -74,12 +74,12 @@ export function PageTemplate({
                   {item.onClick ? (
                     <button
                       onClick={item.onClick}
-                      className="font-['Lexend_Deca'] text-sm text-[#fffae9]/90 hover:text-[#fffae9] transition-colors focus:outline-none focus:text-[#fffae9] focus:underline whitespace-nowrap"
+                      className=" text-sm text-[#fffae9]/90 hover:text-[#fffae9] transition-colors focus:outline-none focus:text-[#fffae9] focus:underline whitespace-nowrap"
                     >
                       {item.label}
                     </button>
                   ) : (
-                    <span className="font-['Lexend_Deca'] text-sm text-[#fffae9]/70 whitespace-nowrap">{item.label}</span>
+                    <span className=" text-sm text-[#fffae9]/70 whitespace-nowrap">{item.label}</span>
                   )}
                 </div>
               ))}
@@ -90,7 +90,7 @@ export function PageTemplate({
         {/* Hero Content - constrained width, proper spacing */}
         <div className="relative z-10 w-full px-4 md:px-20 max-w-[1200px] mx-auto flex-1 flex flex-col justify-center pb-16 md:pb-24" style={{ paddingTop: breadcrumbs.length > 0 ? '16px' : '32px' }}>
           <motion.h1
-            className="font-['Crimson_Pro'] text-white text-[32px] md:text-[48px] mb-4 max-w-[22ch]"
+            className=" text-white text-[32px] md:text-[48px] mb-4 max-w-[22ch]"
             style={{ lineHeight: '1.24' }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -101,7 +101,7 @@ export function PageTemplate({
           
           {subtitle && (
             <motion.p
-              className="font-['Lexend_Deca'] text-white/95 text-[16px] md:text-[18px] max-w-[65ch]"
+              className=" text-white/95 text-[16px] md:text-[18px] max-w-[65ch]"
               style={{ lineHeight: '1.5' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ export function PageTemplate({
       <section className="py-12 md:py-16 px-4 md:px-20">
         <div className="max-w-[760px] mx-auto text-center">
           <motion.p
-            className="font-['Lexend_Deca'] text-[#212121] mb-8"
+            className=" text-[#212121] mb-8"
             style={{ lineHeight: '1.5' }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -130,7 +130,7 @@ export function PageTemplate({
           {onCtaClick && (
             <motion.button
               onClick={onCtaClick}
-              className="px-8 h-12 bg-[#1a5336] text-white font-['Arial'] font-bold hover:bg-[#14432b] transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+              className="px-8 h-12 bg-[#1a5336] text-white  font-bold hover:bg-[#14432b] transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -162,7 +162,7 @@ export function PageTemplate({
       {relatedPages.length > 0 && (
         <section className="py-16 md:py-24 px-4 md:px-20 bg-[#FFFAE9]">
           <div className="max-w-[1200px] mx-auto">
-            <h2 className="font-['Crimson_Pro'] text-[32px] md:text-[40px] text-[#1a5336] mb-12 text-center">
+            <h2 className=" text-[32px] md:text-[40px] text-[#1a5336] mb-12 text-center">
               Explore Related
             </h2>
             <div className="grid md:grid-cols-3 gap-8">

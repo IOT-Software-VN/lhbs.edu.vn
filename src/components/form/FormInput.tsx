@@ -31,7 +31,7 @@ export function FormInput({
     <div className="flex flex-col gap-2">
       <label 
         htmlFor={inputId}
-        className="font-['Lexend_Deca'] text-sm text-[#212121]"
+        className=" text-sm text-[#212121]"
       >
         {label}
         {required && <span className="text-[#d32f2f] ml-1">*</span>}
@@ -50,7 +50,7 @@ export function FormInput({
         aria-invalid={error ? 'true' : 'false'}
         className={`
           h-12 px-4 
-          font-['Lexend_Deca'] text-[#212121]
+           text-[#212121]
           bg-white border
           ${error ? 'border-[#d32f2f]' : 'border-[#d0d0d0]'}
           ${disabled ? 'bg-[#f5f5f5] cursor-not-allowed' : ''}
@@ -60,13 +60,13 @@ export function FormInput({
       />
       
       {helpText && !error && (
-        <p id={helpId} className="font-['Lexend_Deca'] text-xs text-[#666]">
+        <p id={helpId} className=" text-xs text-[#666]">
           {helpText}
         </p>
       )}
       
       {error && (
-        <p id={errorId} className="font-['Lexend_Deca'] text-xs text-[#d32f2f]" role="alert">
+        <p id={errorId} className=" text-xs text-[#d32f2f]" role="alert">
           {error}
         </p>
       )}

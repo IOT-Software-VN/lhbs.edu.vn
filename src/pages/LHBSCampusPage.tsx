@@ -70,12 +70,12 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               {item.onClick ? (
                 <button
                   onClick={item.onClick}
-                  className="font-['Lexend_Deca'] text-sm text-[#fffae9]/90 hover:text-[#FABA1E] transition-colors"
+                  className=" text-sm text-[#fffae9]/90 hover:text-[#FABA1E] transition-colors"
                 >
                   {item.label}
                 </button>
               ) : (
-                <span className="font-['Lexend_Deca'] text-sm text-[#fffae9] font-medium">
+                <span className=" text-sm text-[#fffae9] font-medium">
                   {item.label}
                 </span>
               )}
@@ -104,7 +104,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mb-4"
             >
-              <span className="font-['Arial'] text-[#FABA1E] uppercase tracking-[0.15em]">
+              <span className=" text-[#FABA1E] uppercase tracking-[0.15em]">
                 LHBS Campus
               </span>
             </motion.div>
@@ -114,7 +114,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="font-['Crimson_Pro'] text-white mb-6 md:mb-8"
+              className=" text-white mb-6 md:mb-8"
               style={{ fontSize: '48px', lineHeight: '1.24' }}
             >
               An environment made for lifelong learning
@@ -125,7 +125,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="font-['Lexend_Deca'] text-white/90 text-base md:text-lg leading-relaxed max-w-[600px]"
+              className=" text-white/90 text-base md:text-lg leading-relaxed max-w-[600px]"
             >
               LHBS is a K–12 bilingual school in Biên Hòa that nurtures future global leaders through active 
               learning, 21st-century education, and a deep respect for Vietnamese cultural values.
@@ -159,14 +159,14 @@ function IntroSection() {
         >
           {/* Section Heading */}
           <h2 
-            className="font-['Crimson_Pro'] text-[#1a5336] mb-6"
+            className=" text-[#1a5336] mb-6"
             style={{ fontSize: '48px', lineHeight: '1.2' }}
           >
             An environment made for learning
           </h2>
           
           {/* Body Copy */}
-          <div className="space-y-4 font-['Lexend_Deca'] text-base md:text-lg text-[#212121] leading-relaxed">
+          <div className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed">
             <p>
               Established in 2011 in Biên Hòa, Lac Hong Bilingual School offers a modern bilingual education 
               that empowers students to unlock their full potential. Our comprehensive K–12 program blends 
@@ -235,12 +235,12 @@ function FacilitiesHighlightSection({ onNavigate }: { onNavigate: (path: string)
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <h2 
-          className="font-['Crimson_Pro'] text-[#1a5336] mb-4"
+          className=" text-[#1a5336] mb-4"
           style={{ fontSize: '48px', lineHeight: '1.2' }}
         >
           Our modern learning facilities
         </h2>
-        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-3xl mx-auto leading-relaxed">
+        <p className=" text-base md:text-lg text-[#212121] max-w-3xl mx-auto leading-relaxed">
           LHBS provides purpose-built classrooms, laboratories, and shared spaces that support bilingual 
           learning and 21st-century skills including STEAM/STEM, ICT, English proficiency, and essential 
           soft skills for future success.
@@ -266,7 +266,7 @@ function FacilitiesHighlightSection({ onNavigate }: { onNavigate: (path: string)
               <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#1a5336] flex items-center justify-center mt-0.5">
                 <Check className="w-4 h-4 text-white" />
               </div>
-              <p className="font-['Lexend_Deca'] text-[#212121] text-base leading-relaxed">
+              <p className=" text-[#212121] text-base leading-relaxed">
                 {facility}
               </p>
             </motion.div>
@@ -283,7 +283,7 @@ function FacilitiesHighlightSection({ onNavigate }: { onNavigate: (path: string)
       >
         <motion.button
           onClick={() => onNavigate('/our-school/facilities')}
-          className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors"
+          className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -352,12 +352,12 @@ function ExperienceCarouselSection() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <h2 
-          className="font-['Crimson_Pro'] text-[#1a5336] mb-4"
+          className=" text-[#1a5336] mb-4"
           style={{ fontSize: '48px', lineHeight: '1.2' }}
         >
           A learning environment like no other
         </h2>
-        <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#212121] max-w-3xl mx-auto leading-relaxed">
+        <p className=" text-base md:text-lg text-[#212121] max-w-3xl mx-auto leading-relaxed">
           LHBS blends Vietnamese culture, bilingual learning, and global programs including Dual Diploma and 
           summer study abroad to create a unique campus experience that prepares students for worldwide opportunities.
         </p>
@@ -389,10 +389,10 @@ function ExperienceCarouselSection() {
                     
                     {/* Content */}
                     <div className="py-8">
-                      <h3 className="font-['Crimson_Pro'] text-3xl md:text-4xl text-[#1a5336] mb-4">
+                      <h3 className=" text-3xl md:text-4xl text-[#1a5336] mb-4">
                         {experience.title}
                       </h3>
-                      <p className="font-['Lexend_Deca'] text-[#212121] text-base md:text-lg leading-relaxed">
+                      <p className=" text-[#212121] text-base md:text-lg leading-relaxed">
                         {experience.description}
                       </p>
                     </div>
@@ -467,7 +467,7 @@ function AdmissionsCTASection({ onNavigate }: { onNavigate: (path: string) => vo
       <div className="relative z-20 max-w-3xl mx-auto text-center">
         {/* Heading */}
         <motion.h2
-          className="font-['Crimson_Pro'] text-white mb-6"
+          className=" text-white mb-6"
           style={{ fontSize: '48px', lineHeight: '1.2' }}
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -478,7 +478,7 @@ function AdmissionsCTASection({ onNavigate }: { onNavigate: (path: string) => vo
 
         {/* Body Text */}
         <motion.p
-          className="font-['Lexend_Deca'] text-white/90 text-base md:text-lg leading-relaxed mb-10"
+          className=" text-white/90 text-base md:text-lg leading-relaxed mb-10"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -497,7 +497,7 @@ function AdmissionsCTASection({ onNavigate }: { onNavigate: (path: string) => vo
         >
           <motion.button
             onClick={() => onNavigate('/admissions')}
-            className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors"
+            className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -506,7 +506,7 @@ function AdmissionsCTASection({ onNavigate }: { onNavigate: (path: string) => vo
           
           <motion.button
             onClick={() => onNavigate('/admissions/apply-now')}
-            className="px-8 h-12 border-2 border-white text-white font-['Arial'] font-bold uppercase text-sm tracking-wider hover:bg-white hover:text-[#1a5336] transition-colors"
+            className="px-8 h-12 border-2 border-white text-white  font-bold uppercase text-sm tracking-wider hover:bg-white hover:text-[#1a5336] transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -533,7 +533,7 @@ function NewsletterSection() {
     >
       <div className="max-w-3xl mx-auto text-center">
         <motion.h3
-          className="font-['Crimson_Pro'] text-3xl text-[#1a5336] mb-4"
+          className=" text-3xl text-[#1a5336] mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -542,7 +542,7 @@ function NewsletterSection() {
         </motion.h3>
         
         <motion.p
-          className="font-['Lexend_Deca'] text-[#212121] text-base mb-6"
+          className=" text-[#212121] text-base mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -559,9 +559,9 @@ function NewsletterSection() {
           <input
             type="email"
             placeholder="Enter your email"
-            className="flex-1 px-4 h-12 border-2 border-[#1a5336]/30 bg-white font-['Lexend_Deca'] text-[#212121] focus:outline-none focus:border-[#1a5336]"
+            className="flex-1 px-4 h-12 border-2 border-[#1a5336]/30 bg-white  text-[#212121] focus:outline-none focus:border-[#1a5336]"
           />
-          <button className="px-6 h-12 bg-[#1a5336] text-white font-['Arial'] font-bold uppercase text-sm tracking-wider hover:bg-[#14432b] transition-colors">
+          <button className="px-6 h-12 bg-[#1a5336] text-white  font-bold uppercase text-sm tracking-wider hover:bg-[#14432b] transition-colors">
             Subscribe
           </button>
         </motion.div>

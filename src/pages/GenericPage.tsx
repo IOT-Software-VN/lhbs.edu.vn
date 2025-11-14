@@ -33,11 +33,11 @@ export function GenericPage({ path, onNavigate, breadcrumbs = [] }: GenericPageP
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#fffae9]">
         <div className="text-center">
-          <h1 className="font-['Crimson_Pro'] text-6xl text-[#1a5336] mb-4">404</h1>
-          <p className="font-['Lexend_Deca'] text-xl text-[#666] mb-8">Page not found</p>
+          <h1 className=" text-6xl text-[#1a5336] mb-4">404</h1>
+          <p className=" text-xl text-[#666] mb-8">Page not found</p>
           <button
             onClick={() => onNavigate('/')}
-            className="px-8 h-12 bg-[#1a5336] text-white font-['Arial'] font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+            className="px-8 h-12 bg-[#1a5336] text-white  font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
           >
             Return Home
           </button>
@@ -77,51 +77,51 @@ export function GenericPage({ path, onNavigate, breadcrumbs = [] }: GenericPageP
     >
       <div className="grid md:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="font-['Crimson_Pro'] text-[32px] md:text-[40px] text-[#1a5336] mb-6">Our Approach</h2>
-          <p className="font-['Lexend_Deca'] text-[#212121] mb-4" style={{ lineHeight: '1.5' }}>
+          <h2 className=" text-[32px] md:text-[40px] text-[#1a5336] mb-6">Our Approach</h2>
+          <p className=" text-[#212121] mb-4" style={{ lineHeight: '1.5' }}>
             At LHBS, we believe in nurturing the whole child through a balanced approach that emphasizes academic excellence, character development, and global citizenship.
           </p>
-          <p className="font-['Lexend_Deca'] text-[#212121]" style={{ lineHeight: '1.5' }}>
+          <p className=" text-[#212121]" style={{ lineHeight: '1.5' }}>
             Our experienced educators create engaging, student-centered learning environments where every child can thrive and reach their full potential.
           </p>
         </div>
         <div className="bg-[#1a5336]/10 p-8">
-          <h3 className="font-['Crimson_Pro'] text-[24px] md:text-[28px] text-[#1a5336] mb-4">Key Highlights</h3>
+          <h3 className=" text-[24px] md:text-[28px] text-[#1a5336] mb-4">Key Highlights</h3>
           <ul className="space-y-3">
             <li className="flex items-start gap-3">
               <span className="text-[#FABA1E] text-xl">✓</span>
-              <span className="font-['Lexend_Deca'] text-[#212121]">Bilingual education in Vietnamese and English</span>
+              <span className=" text-[#212121]">Bilingual education in Vietnamese and English</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-[#FABA1E] text-xl">✓</span>
-              <span className="font-['Lexend_Deca'] text-[#212121]">International curriculum standards</span>
+              <span className=" text-[#212121]">International curriculum standards</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-[#FABA1E] text-xl">✓</span>
-              <span className="font-['Lexend_Deca'] text-[#212121]">Experienced, dedicated teaching staff</span>
+              <span className=" text-[#212121]">Experienced, dedicated teaching staff</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-[#FABA1E] text-xl">✓</span>
-              <span className="font-['Lexend_Deca'] text-[#212121]">Modern facilities and resources</span>
+              <span className=" text-[#212121]">Modern facilities and resources</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-[#FABA1E] text-xl">✓</span>
-              <span className="font-['Lexend_Deca'] text-[#212121]">Strong community partnerships</span>
+              <span className=" text-[#212121]">Strong community partnerships</span>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="bg-gradient-to-r from-[#1a5336] to-[#14432b] p-12 text-center">
-        <h3 className="font-['Crimson_Pro'] text-[32px] md:text-[40px] text-white mb-4">
+        <h3 className=" text-[32px] md:text-[40px] text-white mb-4">
           Ready to Learn More?
         </h3>
-        <p className="font-['Lexend_Deca'] text-white/90 mb-8" style={{ lineHeight: '1.5' }}>
+        <p className=" text-white/90 mb-8" style={{ lineHeight: '1.5' }}>
           Schedule a campus tour or speak with our admissions team today.
         </p>
         <button
           onClick={() => onNavigate('/contact/book-tour')}
-          className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#1a5336]"
+          className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e5a812] transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#1a5336]"
         >
           Contact Us
         </button>

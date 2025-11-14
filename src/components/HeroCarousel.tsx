@@ -235,7 +235,7 @@ function HeroSlide({
           {/* Kicker */}
           {slide.kicker && (
             <motion.p
-              className="font-['Lexend_Deca'] text-[#FABA1E] text-sm md:text-base uppercase tracking-wider mb-4"
+              className=" text-[#FABA1E] text-sm md:text-base uppercase tracking-wider mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -246,7 +246,7 @@ function HeroSlide({
 
           {/* Title */}
           <motion.h1
-            className="font-['Crimson_Pro'] text-white text-4xl md:text-6xl lg:text-7xl text-center mb-6 md:mb-8"
+            className=" text-white text-4xl md:text-6xl lg:text-7xl text-center mb-6 md:mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.14 }}
@@ -256,7 +256,7 @@ function HeroSlide({
 
           {/* Body */}
           <motion.p
-            className="font-['Lexend_Deca'] text-white/90 text-base md:text-lg lg:text-xl text-center mb-8 md:mb-12 leading-relaxed"
+            className=" text-white/90 text-base md:text-lg lg:text-xl text-center mb-8 md:mb-12 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.18 }}
@@ -273,7 +273,7 @@ function HeroSlide({
           >
             <button
               onClick={() => onNavigate?.(slide.ctaLink)}
-              className="w-full md:w-auto px-8 h-12 bg-[#1a5336] text-white font-['Arial'] font-bold cursor-pointer hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+              className="w-full md:w-auto px-8 h-12 bg-[#1a5336] text-white  font-bold cursor-pointer hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
             >
               {slide.ctaText}
             </button>
@@ -281,7 +281,7 @@ function HeroSlide({
             {slide.cta2Text && slide.cta2Link && (
               <button
                 onClick={() => onNavigate?.(slide.cta2Link)}
-                className="w-full md:w-auto px-8 h-12 border-2 border-white text-white font-['Arial'] font-bold cursor-pointer hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+                className="w-full md:w-auto px-8 h-12 border-2 border-white text-white  font-bold cursor-pointer hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
               >
                 {slide.cta2Text}
               </button>

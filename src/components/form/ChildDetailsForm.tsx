@@ -23,7 +23,7 @@ export function ChildDetailsForm({ index, data, onChange, errors }: ChildDetails
 
   return (
     <div className="p-6 border border-[#d0d0d0] bg-[#fafafa]">
-      <h4 className="font-['Crimson_Pro'] text-[20px] text-[#1a5336] mb-6">
+      <h4 className=" text-[20px] text-[#1a5336] mb-6">
         Child {index + 1} Details
       </h4>
       

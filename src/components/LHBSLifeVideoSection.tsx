@@ -50,12 +50,12 @@ export function LHBSLifeVideoSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             {/* Title */}
-            <h2 className="font-['Crimson_Pro'] text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
+            <h2 className=" text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
               {lifeTitle}
             </h2>
             
             {/* Body */}
-            <p className="font-['Lexend_Deca'] text-base md:text-lg text-[#fffae9]/90 mb-12 leading-relaxed max-w-[70ch] mx-auto">
+            <p className=" text-base md:text-lg text-[#fffae9]/90 mb-12 leading-relaxed max-w-[70ch] mx-auto">
               {lifeBody}
             </p>
             

@@ -39,36 +39,36 @@ export function AcademicResultsPage({ onNavigate }: AcademicResultsPageProps) {
       relatedPages={relatedPages}
     >
       <div className="mb-16">
-        <h2 className="font-['Crimson_Pro'] text-[32px] md:text-[40px] text-[#1a5336] mb-6 text-center">
+        <h2 className=" text-[32px] md:text-[40px] text-[#1a5336] mb-6 text-center">
           Outstanding Achievements
         </h2>
         <div className="grid md:grid-cols-4 gap-8">
           <div className="text-center p-6 bg-white">
-            <div className="font-['Crimson_Pro'] text-[48px] text-[#1a5336] mb-2">98%</div>
-            <p className="font-['Lexend_Deca'] text-[#666]">University Placement Rate</p>
+            <div className=" text-[48px] text-[#1a5336] mb-2">98%</div>
+            <p className=" text-[#666]">University Placement Rate</p>
           </div>
           <div className="text-center p-6 bg-white">
-            <div className="font-['Crimson_Pro'] text-[48px] text-[#1a5336] mb-2">85%</div>
-            <p className="font-['Lexend_Deca'] text-[#666]">International Scholarships</p>
+            <div className=" text-[48px] text-[#1a5336] mb-2">85%</div>
+            <p className=" text-[#666]">International Scholarships</p>
           </div>
           <div className="text-center p-6 bg-white">
-            <div className="font-['Crimson_Pro'] text-[48px] text-[#1a5336] mb-2">15+</div>
-            <p className="font-['Lexend_Deca'] text-[#666]">Countries Students Attend</p>
+            <div className=" text-[48px] text-[#1a5336] mb-2">15+</div>
+            <p className=" text-[#666]">Countries Students Attend</p>
           </div>
           <div className="text-center p-6 bg-white">
-            <div className="font-['Crimson_Pro'] text-[48px] text-[#1a5336] mb-2">100%</div>
-            <p className="font-['Lexend_Deca'] text-[#666]">Cambridge Pass Rate</p>
+            <div className=" text-[48px] text-[#1a5336] mb-2">100%</div>
+            <p className=" text-[#666]">Cambridge Pass Rate</p>
           </div>
         </div>
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="font-['Crimson_Pro'] text-[32px] md:text-[40px] text-[#1a5336] mb-6">National Excellence</h2>
-          <p className="font-['Lexend_Deca'] text-[#666] leading-relaxed mb-6">
+          <h2 className=" text-[32px] md:text-[40px] text-[#1a5336] mb-6">National Excellence</h2>
+          <p className=" text-[#666] leading-relaxed mb-6">
             Our students consistently achieve top marks in Vietnamese national examinations, demonstrating strong mastery of the national curriculum while developing critical thinking and problem-solving skills.
           </p>
-          <ul className="font-['Lexend_Deca'] text-[#666] space-y-3">
+          <ul className=" text-[#666] space-y-3">
             <li className="flex items-start gap-2">
               <span className="text-[#FABA1E] mt-1">•</span>
               <span>Top 5% in National High School Graduation Exam</span>
@@ -85,11 +85,11 @@ export function AcademicResultsPage({ onNavigate }: AcademicResultsPageProps) {
         </div>
 
         <div>
-          <h2 className="font-['Crimson_Pro'] text-[32px] md:text-[40px] text-[#1a5336] mb-6">International Recognition</h2>
-          <p className="font-['Lexend_Deca'] text-[#666] leading-relaxed mb-6">
+          <h2 className=" text-[32px] md:text-[40px] text-[#1a5336] mb-6">International Recognition</h2>
+          <p className=" text-[#666] leading-relaxed mb-6">
             LHBS students excel in international assessments and competitions, earning recognition from prestigious institutions worldwide and securing places at top universities globally.
           </p>
-          <ul className="font-['Lexend_Deca'] text-[#666] space-y-3">
+          <ul className=" text-[#666] space-y-3">
             <li className="flex items-start gap-2">
               <span className="text-[#FABA1E] mt-1">•</span>
               <span>Cambridge International Examinations: Distinction Level</span>
@@ -107,40 +107,40 @@ export function AcademicResultsPage({ onNavigate }: AcademicResultsPageProps) {
       </div>
 
       <div className="bg-[#1a5336] text-white p-8 md:p-12 mb-16">
-        <h2 className="font-['Crimson_Pro'] text-[32px] md:text-[40px] mb-6 text-center">University Destinations</h2>
-        <p className="font-['Lexend_Deca'] text-center mb-8 max-w-3xl mx-auto">
+        <h2 className=" text-[32px] md:text-[40px] mb-6 text-center">University Destinations</h2>
+        <p className=" text-center mb-8 max-w-3xl mx-auto">
           Our graduates have been accepted to world-renowned universities across Asia, Europe, North America, and Australia, including:
         </p>
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           <div className="text-center p-4 bg-white/10">
-            <p className="font-['Lexend_Deca']">National University of Singapore</p>
+            <p className="">National University of Singapore</p>
           </div>
           <div className="text-center p-4 bg-white/10">
-            <p className="font-['Lexend_Deca']">University of Melbourne</p>
+            <p className="">University of Melbourne</p>
           </div>
           <div className="text-center p-4 bg-white/10">
-            <p className="font-['Lexend_Deca']">University of British Columbia</p>
+            <p className="">University of British Columbia</p>
           </div>
           <div className="text-center p-4 bg-white/10">
-            <p className="font-['Lexend_Deca']">Seoul National University</p>
+            <p className="">Seoul National University</p>
           </div>
           <div className="text-center p-4 bg-white/10">
-            <p className="font-['Lexend_Deca']">Hanoi National University</p>
+            <p className="">Hanoi National University</p>
           </div>
           <div className="text-center p-4 bg-white/10">
-            <p className="font-['Lexend_Deca']">Ho Chi Minh City University of Technology</p>
+            <p className="">Ho Chi Minh City University of Technology</p>
           </div>
         </div>
       </div>
 
       <div className="bg-white p-8 md:p-12">
-        <h2 className="font-['Crimson_Pro'] text-[32px] md:text-[40px] text-[#1a5336] mb-6">Beyond Academic Scores</h2>
-        <p className="font-['Lexend_Deca'] text-[#666] leading-relaxed mb-6">
+        <h2 className=" text-[32px] md:text-[40px] text-[#1a5336] mb-6">Beyond Academic Scores</h2>
+        <p className=" text-[#666] leading-relaxed mb-6">
           While we celebrate academic achievements, at LHBS we measure success holistically. Our students develop leadership skills, creative talents, athletic abilities, and social responsibility—preparing them not just for university, but for life.
         </p>
         <button
           onClick={() => onNavigate('/academics/overview')}
-          className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+          className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
         >
           Discover Our Holistic Approach
         </button>
