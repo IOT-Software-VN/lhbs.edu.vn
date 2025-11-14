@@ -32,7 +32,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
         <motion.button
           onClick={onLogoClick}
           className={`flex-shrink-0 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 ${
-            isTransparent ? 'focus:ring-offset-[#1a5336]' : 'focus:ring-offset-white'
+            isTransparent ? 'focus:ring-offset-[#1a5336]' : menuOpen ? 'focus:ring-offset-[#1a5336]' : 'focus:ring-offset-white'
           }`}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
@@ -51,7 +51,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
           <motion.button
             onClick={onEnquireClick}
             className={`rounded-full flex items-center justify-center px-6 h-12 bg-[#FABA1E] text-[#1a5336] font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 ${
-              isTransparent ? 'focus:ring-offset-[#1a5336]' : 'focus:ring-offset-white'
+              isTransparent ? 'focus:ring-offset-[#1a5336]' : menuOpen ? 'focus:ring-offset-[#1a5336]' : 'focus:ring-offset-white'
             }`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -65,7 +65,9 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
             className={`p-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 ${
               isTransparent 
                 ? 'text-white hover:text-[#FABA1E] focus:ring-offset-[#1a5336]' 
-                : 'text-[#1a5336] hover:text-[#FABA1E] focus:ring-offset-white'
+                : menuOpen 
+                  ? 'text-white hover:text-[#FABA1E] focus:ring-offset-[#1a5336]'
+                  : 'text-[#1a5336] hover:text-[#FABA1E] focus:ring-offset-white'
             }`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
