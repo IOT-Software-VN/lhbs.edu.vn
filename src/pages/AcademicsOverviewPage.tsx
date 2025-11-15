@@ -121,7 +121,7 @@ function HeaderAcademics({ onNavigate }: { onNavigate: (path: string) => void })
               <a
                 href="/downloads/lhbs-curriculum-guide-2025.pdf"
                 download
-                className="px-12 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] flex items-center justify-center gap-2"
+                className="px-12 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#fffae9] flex items-center justify-center gap-2 rounded-full"
                 aria-label="Download curriculum guide PDF"
               >
                 <Download className="w-4 h-4" />
@@ -456,7 +456,7 @@ function CurriculumStructureSection({ onNavigate }: { onNavigate: (path: string)
         <a
           href={`/downloads/${activeTab}-curriculum-detailed.pdf`}
           download
-          className="inline-flex items-center gap-2 px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+          className="inline-flex items-center gap-2 px-8 h-12 bg-[#1a5336] text-[#fffae9]  font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-full"
         >
           <Download className="w-4 h-4" />
           Download {activeData.name} Detailed Curriculum
@@ -725,7 +725,7 @@ function HelperFooterAcademics({ onNavigate }: { onNavigate: (path: string) => v
           <a
             href="/downloads/lhbs-curriculum-guide-2025.pdf"
             download
-            className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover: hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center gap-2"
+            className="px-8 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover: hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center gap-2 rounded-full"
             aria-label="Download curriculum guide"
           >
             <Download className="w-4 h-4" />

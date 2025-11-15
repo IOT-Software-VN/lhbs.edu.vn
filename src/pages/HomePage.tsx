@@ -216,11 +216,11 @@ function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => 
   return (
     <motion.section
       ref={ref}
-      className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto"
+      className="mx-auto bg-[#1a5336] flex align-center justify-center"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
     >
-      <div className="grid md:grid-cols-2 gap-16 items-stretch">
+      <div className="max-w-[1440px] grid md:grid-cols-2 gap-16 items-stretch  ">
         {/* Left: Portrait Image - 6 columns */}
         <motion.div
           className="relative h-[500px] md:h-auto overflow-hidden order-2 md:order-1"
