@@ -272,6 +272,7 @@ function WhoShouldApplySection() {
   );
 }
 
+
 // ==================== CRITERIA MATRIX ====================
 function CriteriaMatrixSection() {
   const weights = [
