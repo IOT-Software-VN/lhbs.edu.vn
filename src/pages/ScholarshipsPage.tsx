@@ -206,7 +206,7 @@ function SummaryCardsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white border-2 border-[#1a5336] p-6 hover:shadow-lg transition-shadow rounded-lg"
+                className="bg-white p-6 hover:shadow-lg transition-shadow rounded-lg border-none"
               >
                 <Icon className="w-10 h-10 text-[#FABA1E] mb-4" />
                 <h3 className=" text-xl text-[#1a5336] mb-2">

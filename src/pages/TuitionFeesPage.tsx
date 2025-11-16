@@ -213,7 +213,7 @@ function SummaryCardsSection() {
         {summaryCards.map((card, index) => (
           <motion.div
             key={index}
-            className="bg-white border-2 border-[#1a5336] p-6 shadow-sm hover:shadow-md transition-shadow rounded-lg"
+            className="bg-white border-none p-6 transition-shadow rounded-lg"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

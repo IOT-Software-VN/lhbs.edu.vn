@@ -11,7 +11,7 @@ interface FullScreenMenuProps {
 }
 
 export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: FullScreenMenuProps) {
-  const [activeParent, setActiveParent] = useState<NavParent | null>(siteNavigation[0]);
+  const [activeParent, setActiveParent] = useState<NavParent | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
 
@@ -39,6 +39,14 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
   const handleNavClick = (path: string) => {
     onNavigate(path);
     onClose();
+  };
+
+  const handleParentClick = (parent: NavParent) => {
+    if (activeParent?.id === parent.id) {
+      setActiveParent(null); // Toggle off if already active
+    } else {
+      setActiveParent(parent); // Set new active parent
+    }
   };
 
   return (
@@ -77,9 +85,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
         {siteNavigation.map((parent) => (
           <button
             key={parent.id}
-            onMouseEnter={() => setActiveParent(parent)}
-            onFocus={() => setActiveParent(parent)}
-            onClick={() => handleNavClick(parent.path)}
+            onClick={() => handleParentClick(parent)}
             className={`block w-full text-left text-[32px] md:text-[36px] uppercase tracking-wide transition-all group whitespace-normal break-words leading-snug ${
               activeParent?.id === parent.id
                 ? 'text-white'
@@ -100,6 +106,22 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
             {activeParent.label}
           </h3>
           <nav className="space-y-3 mb-6" aria-label={`${activeParent.label} pages`}>
+            {/* Link to main parent page */}
+            <button
+              onClick={() => handleNavClick(activeParent.path)}
+              className={`block w-full text-left text-[15px] transition-colors group font-semibold ${
+                currentPath === activeParent.path
+                  ? 'text-[#FABA1E]'
+                  : 'text-white hover:text-[#FABA1E]'
+              }`}
+            >
+              <div className="flex items-center justify-between">
+                <span className="truncate">{activeParent.label} Overview</span>
+                <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+            </button>
+            
+            {/* Child pages */}
             {activeParent.children.map((child) => (
               <button
                 key={child.id}

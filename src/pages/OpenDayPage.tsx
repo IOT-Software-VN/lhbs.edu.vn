@@ -791,7 +791,7 @@ function WelcomingMessageSection({ onNavigate }: { onNavigate: (path: string) =>
       <div className="max-w-[1440px] mx-auto grid md:grid-cols-2 gap-16 items-center">
         {/* Left: Image */}
         <motion.div
-          className="relative h-[500px] md:h-[600px] order-2 md:order-1"
+          className="relative h-[500px] md:h-[600px] order-2 md:order-1 "
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -799,7 +799,7 @@ function WelcomingMessageSection({ onNavigate }: { onNavigate: (path: string) =>
           <img
             src={WM_IMAGE}
             alt="Welcoming LHBS community celebrating student achievements"
-            className="w-full h-full object-cover"
+            className="w-full h-full"
           />
         </motion.div>
         

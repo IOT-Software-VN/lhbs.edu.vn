@@ -507,65 +507,88 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
       </section>
 
       {/* 7. TUITION FEES */}
-      <section className=" py-24 md:py-32">
-        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
-          <div className="text-center mb-12">
-            <h2 
-              className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
-              style={{ fontSize: '48px', lineHeight: '1.24' }}
-            >
-              Tuition Fees
-            </h2>
-            <p className="text-[#212121]/70 text-lg max-w-3xl mx-auto">
-              LHBS provides a transparent fee structure aligned with the quality of our education, modern facilities, comprehensive extracurricular programmes, and services including semi-boarding and school transportation.
-            </p>
-          </div>
+    <section className="py-24 md:py-32">
+  <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
 
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-8 text-center border-t-4 border-[#1a5336] rounded-lg">
-              <DollarSign className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
-              <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-4">Primary–Lower Secondary–High School Fees</h3>
-              <p className="text-[#212121]/70 text-sm mb-6">
-                Tuition fees for Primary, Lower Secondary, and High School levels
-              </p>
-              <button 
-                onClick={() => onNavigate('/admissions/tuition-fees')}
-                className="px-6 h-10 bg-[#1a5336] text-[#fffae9] font-['Arial'] text-sm hover:bg-[#14432b] transition-colors w-full"
-              >
-                View Details
-              </button>
-            </div>
+    <div className="text-center mb-12">
+      <h2
+        className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+        style={{ fontSize: "48px", lineHeight: "1.24" }}
+      >
+        Tuition Fees
+      </h2>
+      <p className="text-[#212121]/70 text-lg max-w-3xl mx-auto">
+        LHBS provides a transparent fee structure aligned with our quality education.
+      </p>
+    </div>
 
-            <div className="bg-white p-8 text-center border-t-4 border-[#1a5336] rounded-lg">
-              <BookOpen className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
-              <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-4">Kindergarten Bien Hoa Fees</h3>
-              <p className="text-[#212121]/70 text-sm mb-6">
-                Tuition fees for Kindergarten at Bien Hoa campus
-              </p>
-              <button 
-                onClick={() => onNavigate('/admissions/tuition-fees')}
-                className="px-6 h-10 bg-[#1a5336] text-[#fffae9] font-['Arial'] text-sm hover:bg-[#14432b] transition-colors w-full"
-              >
-                View Details
-              </button>
-            </div>
+    {/* GRID ÉP TẤT CẢ ITEM BẰNG CHIỀU CAO */}
+    <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
 
-            <div className="bg-white p-8 text-center border-t-4 border-[#1a5336] rounded-lg">
-              <Building className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
-              <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-4">Kindergarten Long Khanh Fees</h3>
-              <p className="text-[#212121]/70 text-sm mb-6">
-                Tuition fees for Kindergarten at Long Khanh campus
-              </p>
-              <button 
-                onClick={() => onNavigate('/admissions/tuition-fees')}
-                className="px-6 h-10 bg-[#1a5336] text-[#fffae9] font-['Arial'] text-sm hover:bg-[#14432b] transition-colors w-full"
-              >
-                View Details
-              </button>
-            </div>
-          </div>
+      {/* CARD */}
+      <div className="bg-white p-8 border-t-4 border-[#1a5336] rounded-lg h-full flex flex-col">
+        <div className="flex flex-col flex-1 text-center">
+          <DollarSign className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
+          <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-4">
+            Primary–Lower Secondary–High School Fees
+          </h3>
+          <p className="text-[#212121]/70 text-sm">
+            Tuition fees for Primary, Lower Secondary, and High School levels
+          </p>
         </div>
-      </section>
+
+        <button
+          onClick={() => onNavigate("/admissions/tuition-fees")}
+          className="mt-auto px-6 h-10 bg-[#1a5336] text-[#fffae9] text-sm hover:bg-[#14432b] transition-colors w-full"
+        >
+          View Details
+        </button>
+      </div>
+
+      {/* CARD 2 */}
+      <div className="bg-white p-8 border-t-4 border-[#1a5336] rounded-lg h-full flex flex-col">
+        <div className="flex flex-col flex-1 text-center">
+          <BookOpen className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
+          <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-4">
+            Kindergarten Bien Hoa Fees
+          </h3>
+          <p className="text-[#212121]/70 text-sm">
+            Tuition fees for Kindergarten at Bien Hoa campus
+          </p>
+        </div>
+
+        <button
+          onClick={() => onNavigate("/admissions/tuition-fees")}
+          className="mt-auto px-6 h-10 bg-[#1a5336] text-[#fffae9] text-sm hover:bg-[#14432b] transition-colors w-full"
+        >
+          View Details
+        </button>
+      </div>
+
+      {/* CARD 3 */}
+      <div className="bg-white p-8 border-t-4 border-[#1a5336] rounded-lg h-full flex flex-col">
+        <div className="flex flex-col flex-1 text-center">
+          <Building className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
+          <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-4">
+            Kindergarten Long Khanh Fees
+          </h3>
+          <p className="text-[#212121]/70 text-sm">
+            Tuition fees for Kindergarten at Long Khanh campus
+          </p>
+        </div>
+
+        <button
+          onClick={() => onNavigate("/admissions/tuition-fees")}
+          className="mt-auto px-6 h-10 bg-[#1a5336] text-[#fffae9] text-sm hover:bg-[#14432b] transition-colors w-full"
+        >
+          View Details
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
       {/* 8. SCHOLARSHIPS & SPECIAL PROGRAMMES */}
       <section className="bg-white py-24 md:py-32">
