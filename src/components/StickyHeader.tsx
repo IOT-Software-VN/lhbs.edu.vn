@@ -17,7 +17,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
   
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 mb-2${
         isTransparent ? 'py-2' : 'py-1 shadow-sm'
       } ${menuOpen ? 'shadow-none' : ''}`}
       style={{ minHeight: '72px' }}
@@ -27,7 +27,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
         backdropFilter: isTransparent ? 'blur(0px)' : 'blur(10px)'
       }}
     >
-      <div className="h-full max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between gap-8 py-4">
+      <div className="h-full max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between gap-8 py-4 mb-2">
         {/* Logo - Left */}
         <motion.div
           onClick={onLogoClick}

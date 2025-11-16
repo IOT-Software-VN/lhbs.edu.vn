@@ -27,7 +27,7 @@ export const moreLinks: MoreLink[] = [
   { label: 'About Our School', path: '/our-school/about-us' },
   // { label: 'Parents', path: '/parents' },
   { label: 'Parent Essentials', path: '/parents/essentials' },
-  { label: 'News / Events', path: '/news-events' },
+  { label: 'News & Events', path: '/news-events' },
   { label: 'Academic Results', path: '/academic-results' },
   { label: 'Apply Now', path: '/admissions/apply-now' },
   { label: 'Q & A', path: '/admissions/faqs' },
@@ -43,7 +43,7 @@ export const siteNavigation: NavParent[] = [
     children: [
       { id: 'admission-tuition', label: 'Tuition & Fees', path: '/admissions/tuition-fees', description: 'Transparent pricing and flexible payment options' },
       { id: 'admission-scholarships', label: 'Scholarships', path: '/admissions/scholarships', description: 'Financial support for deserving students' },
-      { id: 'admission-requirements', label: 'Entry Requirements', path: '/admissions', description: 'Admission criteria and documentation needed' },
+      { id: 'admission-requirements', label: 'Entry Requirements', path: '/admission/requirementss', description: 'Admission criteria and documentation needed' },
       { id: 'admission-opensday', label: 'Open days', path: '/admissions/opendays', description: 'Open days' },
 
     ],
@@ -89,7 +89,7 @@ export const siteNavigation: NavParent[] = [
   {
     id: 'paths-to-passion',
     label: 'Paths to Passion',
-    path: '/student-life',
+    path: '/student-life/outstanding-experiences',
     description: 'Beyond the classroom experiences',
     children: [
       { id: 'passion-clubs', label: 'Clubs & Activities', path: '/student-life/clubs-activities', description: 'Diverse extracurricular programs for every interest' },
@@ -98,8 +98,8 @@ export const siteNavigation: NavParent[] = [
       // { id: 'passion-arts', label: 'Arts & Culture', path: '/student-life/clubs-activities', description: 'Creative expression and cultural activities' },
     ],
     cta: {
-      text: 'See Activities & Clubs',
-      path: '/student-life/clubs-activities'
+      text: 'Explore Outstanding Experiences',
+      path: '/student-life/outstanding-experiences'
     }
   },
 ];
