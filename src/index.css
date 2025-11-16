@@ -91,9 +91,9 @@ font-family: 'Roboto', sans-serif;
 } */
 
 /* Custom Button Styles - Border Radius Full */
-button,
+button, 
 [data-testid*="button"],
-.button {
+.button, a {
   border-radius: 9999px;
 }
 
