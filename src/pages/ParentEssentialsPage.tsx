@@ -69,13 +69,13 @@ export function ParentEssentialsPage({ onNavigate }: ParentEssentialsPageProps) 
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={() => onNavigate('/contact/book-tour')}
-                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors"
+                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-bold hover:bg-[#e5a812] transition-colors"
               >
                 Book a School Tour
               </button>
               <button 
                 onClick={() => onNavigate('/admissions/apply-now')}
-                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
+                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
               >
                 Contact Us
               </button>

@@ -62,13 +62,13 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={() => onNavigate('/admissions/apply-now')}
-                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors"
+                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-bold hover:bg-[#e5a812] transition-colors"
               >
                 Apply Now
               </button>
               <button 
                 onClick={() => onNavigate('/contact/book-tour')}
-                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover: hover:text-[#1a5336] transition-colors"
+                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-bold hover: hover:text-[#1a5336] transition-colors"
               >
                 Book a Tour
               </button>
@@ -418,7 +418,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
               </div>
               <button 
                 onClick={() => onNavigate('/academics/kindergarten')}
-                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors self-start"
+                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-bold hover:bg-[#e5a812] transition-colors self-start"
               >
                 Explore Kindergarten programme
               </button>
@@ -436,7 +436,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
               </div>
               <button 
                 onClick={() => onNavigate('/our-school/facilities')}
-                className="px-8 h-12 bg-transparent border-2 border-[#1a5336] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors self-start"
+                className="px-8 h-12 bg-transparent border-2 border-[#1a5336] text-[#1a5336] font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors self-start"
               >
                 Explore our campus
               </button>

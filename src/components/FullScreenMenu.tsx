@@ -102,25 +102,17 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
     <div className="w-[30%] border-r border-white/20 pr-12 overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent">
       {activeParent && (
         <div>
-          <h3 className="text-white text-[18px] uppercase tracking-wider mb-6">
+          <button
+            onClick={() => handleNavClick(activeParent.path)}
+            className={`block w-full text-left text-[18px] uppercase tracking-wider mb-6 transition-colors ${
+              currentPath === activeParent.path
+                ? 'text-[#FABA1E]'
+                : 'text-white hover:text-[#FABA1E]'
+            }`}
+          >
             {activeParent.label}
-          </h3>
+          </button>
           <nav className="space-y-3 mb-6" aria-label={`${activeParent.label} pages`}>
-            {/* Link to main parent page */}
-            <button
-              onClick={() => handleNavClick(activeParent.path)}
-              className={`block w-full text-left text-[15px] transition-colors group font-semibold ${
-                currentPath === activeParent.path
-                  ? 'text-[#FABA1E]'
-                  : 'text-white hover:text-[#FABA1E]'
-              }`}
-            >
-              <div className="flex items-center justify-between">
-                <span className="truncate">{activeParent.label} Overview</span>
-                <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
-            </button>
-            
             {/* Child pages */}
             {activeParent.children.map((child) => (
               <button

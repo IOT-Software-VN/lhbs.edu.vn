@@ -92,13 +92,13 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                 href="https://tuyensinh.lhbs.vn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors flex items-center justify-center rounded-full"
+                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-bold hover:bg-[#e5a812] transition-colors flex items-center justify-center rounded-full"
               >
                 Apply Online
               </a>
               <button 
                 onClick={() => onNavigate('/contact/contact-us')}
-                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover: hover:text-[#1a5336] transition-colors"
+                className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-bold hover: hover:text-[#1a5336] transition-colors"
               >
                 Contact Admissions Office
               </button>
@@ -207,7 +207,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
               <div className="mt-8">
                 <button 
                   onClick={() => onNavigate('/admissions/announcement')}
-                  className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#14432b] transition-colors"
+                  className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-bold hover:bg-[#14432b] transition-colors"
                 >
                   View Full Admissions Announcement 2025–2026
                 </button>
@@ -305,7 +305,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
               </div>
               <button 
                 onClick={() => onNavigate('/contact/contact-us')}
-                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors"
+                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-bold hover:bg-[#e5a812] transition-colors"
               >
                 Request Admissions Consultation
               </button>
@@ -344,7 +344,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                   </p>
                   <button 
                     onClick={() => onNavigate('/contact/contact-us')}
-                    className="px-6 h-10 bg-[#FABA1E] text-[#1a5336] font-['Arial'] text-sm hover:bg-[#e5a812] transition-colors"
+                    className="px-6 h-10 bg-[#FABA1E] text-[#1a5336] text-sm hover:bg-[#e5a812] transition-colors"
                   >
                     Request Consultation
                   </button>
@@ -365,7 +365,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                   </p>
                   <button 
                     onClick={() => onNavigate('/contact/book-tour')}
-                    className="px-6 h-10 bg-[#FABA1E] text-[#1a5336] font-['Arial'] text-sm hover:bg-[#e5a812] transition-colors"
+                    className="px-6 h-10 bg-[#FABA1E] text-[#1a5336] text-sm hover:bg-[#e5a812] transition-colors"
                   >
                     Book a Tour
                   </button>
@@ -384,14 +384,14 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                   <p className="text-[#212121]/70 mb-4 leading-relaxed">
                     Parents complete the online application via tuyensinh.lhbs.vn and submit required documents (student information, previous academic reports, health certificate, etc.). Our system guides you through each step.
                   </p>
-                  <a 
+                  <button
                     href="https://tuyensinh.lhbs.vn"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block px-6 h-10 bg-[#FABA1E] text-[#1a5336] font-['Arial'] text-sm hover:bg-[#e5a812] transition-colors leading-10 flex items-center justify-center rounded-full"
+                    className="inline-block px-8 h-10 bg-[#FABA1E] text-[#1a5336] text-sm hover:bg-[#e5a812] transition-colors leading-10 rounded-full"
                   >
                     Apply Online
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -497,7 +497,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
             <div className="text-center mt-8">
               <button 
                 onClick={() => onNavigate('/academics/calendar')}
-                className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#14432b] transition-colors"
+                className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-bold hover:bg-[#14432b] transition-colors"
               >
                 View Academic Calendar
               </button>
@@ -613,7 +613,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
             </p>
             <button 
               onClick={() => onNavigate('/admissions/scholarships')}
-              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors"
+              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-bold hover:bg-[#e5a812] transition-colors"
             >
               View Scholarship Information
             </button>
@@ -743,7 +743,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
             </p>
             <button 
               onClick={() => onNavigate('/resources/parent-handbook')}
-              className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-['Arial'] font-bold hover:bg-[#14432b] transition-colors"
+              className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-bold hover:bg-[#14432b] transition-colors"
             >
               Download Parent Handbook
             </button>
@@ -774,13 +774,13 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
               href="https://tuyensinh.lhbs.vn"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors flex items-center justify-center rounded-full"
+              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-bold hover:bg-[#e5a812] transition-colors flex items-center justify-center rounded-full"
             >
               Apply Online
             </a>
             <button 
               onClick={() => onNavigate('/contact/contact-us')}
-              className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-['Arial'] font-bold hover: hover:text-[#1a5336] transition-colors"
+              className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-bold hover: hover:text-[#1a5336] transition-colors"
             >
               Request Admissions Consultation
             </button>

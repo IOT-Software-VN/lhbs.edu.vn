@@ -176,7 +176,7 @@ function StatCard({ icon, value, body, isExtended, minHeight }: StatCardData) {
       </div>
 
       {/* Value - size lớn hơn */}
-      <h3 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white mb-4">
+      <h3 className="font-serif text-5xl md:text-6xl lg:text-5xl text-white mb-4">
         {value}
       </h3>
 
