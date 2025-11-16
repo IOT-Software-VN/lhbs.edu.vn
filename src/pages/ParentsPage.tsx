@@ -12,6 +12,11 @@ export function ParentsPage({ onNavigate }: ParentsPageProps) {
 
   const relatedPages = [
     {
+      title: 'Parent Essentials',
+      description: 'Everything you need to know to support your child at LHBS',
+      onClick: () => onNavigate('/parents/essentials')
+    },
+    {
       title: 'Apply Now',
       description: 'Start your LHBS journey with our application process',
       onClick: () => onNavigate('/admissions/apply-now')

@@ -25,7 +25,8 @@ export interface MoreLink {
 
 export const moreLinks: MoreLink[] = [
   { label: 'About Our School', path: '/our-school/about-us' },
-  { label: 'Parents', path: '/parents' },
+  // { label: 'Parents', path: '/parents' },
+  { label: 'Parent Essentials', path: '/parents/essentials' },
   { label: 'News / Events', path: '/news-events' },
   { label: 'Academic Results', path: '/academic-results' },
   { label: 'Apply Now', path: '/admissions/apply-now' },

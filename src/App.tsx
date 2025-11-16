@@ -16,6 +16,7 @@ import { AcademicsHighSchoolPage } from './pages/AcademicsHighSchoolPage';
 import { HowWeTeachPage } from './pages/HowWeTeachPage';
 import { OpenDayPage } from './pages/OpenDayPage';
 import { ParentsPage } from './pages/ParentsPage';
+import { ParentEssentialsPage } from './pages/ParentEssentialsPage';
 import { GenericPage } from './pages/GenericPage';
 import { AcademicResultsPage } from './pages/AcademicResultsPage';
 import { OurSchoolPage } from './pages/OurSchoolPage';
@@ -113,6 +114,8 @@ export default function App() {
         <OpenDayPage onNavigate={handleNavigate} />
       ) : currentPath === '/parents' ? (
         <ParentsPage onNavigate={handleNavigate} />
+      ) : currentPath === '/parents/essentials' ? (
+        <ParentEssentialsPage onNavigate={handleNavigate} />
       ) : currentPath === '/academic-results' ? (
         <AcademicResultsPage onNavigate={handleNavigate} />
       ) : currentPath === '/our-school' ? (

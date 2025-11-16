@@ -340,7 +340,12 @@ function CriteriaMatrixSection() {
             {weights.map((weight, idx) => (
               <div
                 key={idx}
-                style={{ width: `${weight.value}%`, backgroundColor: weight.color }}
+                      style={{
+        flexBasis: `${weight.value}%`,
+        flexGrow: weight.value,     // giữ tỷ lệ rộng hợp lý
+        minWidth: "120px",           // 👈 CHỐT – label luôn nhìn thấy
+        backgroundColor: weight.color,
+      }}
                 className="flex flex-col items-center justify-center text-[#fffae9] relative group"
               >
                 <span className=" font-bold text-sm md:text-base">{weight.value}%</span>
