@@ -776,6 +776,10 @@ function SurroundingsMadeForLearningSection() {
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
+         style={{ 
+        minHeight: '420px',
+        backgroundColor: '#064e29ff'
+      }}
     >
       <div className="max-w-[1440px] mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">

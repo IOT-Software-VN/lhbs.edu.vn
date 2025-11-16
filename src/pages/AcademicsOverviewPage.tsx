@@ -694,7 +694,11 @@ function PathwaysSection({ onNavigate }: { onNavigate: (path: string) => void })
 // ==================== SECTION 5: HELPER FOOTER ====================
 function HelperFooterAcademics({ onNavigate }: { onNavigate: (path: string) => void }) {
   return (
-    <section className="bg-[#1a5336] py-12 px-4 md:px-20">
+    <section className="bg-[#1a5336] py-12 px-4 md:px-20"
+       style={{ 
+        minHeight: '420px',
+        backgroundColor: '#064e29ff'
+      }}>
       <div className="max-w-[1440px] mx-auto text-center">
         {/* Header */}
         <h2 className=" text-3xl md:text-4xl text-[#fffae9] mb-4">

@@ -752,7 +752,11 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
       </section>
 
       {/* 11. FINAL CTA - READY TO APPLY */}
-      <section className="bg-[#1a5336] py-24 md:py-32">
+      <section className="bg-[#1a5336] py-24 md:py-32"
+            style={{ 
+        minHeight: '420px',
+        backgroundColor: '#064e29ff'
+      }}>
         <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12 text-center">
           <h2 
             className="font-['SVN-Gotham'] text-[#fffae9] mb-6"
