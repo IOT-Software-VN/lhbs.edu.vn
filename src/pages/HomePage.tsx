@@ -20,6 +20,7 @@ import items02 from '../assets/items-02.png';
 import items03 from '../assets/items-03.png';
 import anniversaryImage from '../assets/anyver.png';
 import bgAcademicBilingual from '../assets/bg-Academic&Bilingual.png'
+import { ImQuotesRight } from "react-icons/im";
 
 export function HomePage({ onNavigate }: { onNavigate: (path: string) => void }) {
   const [showPillarModal, setShowPillarModal] = useState<number | null>(null);
@@ -256,23 +257,23 @@ function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => 
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           {/* Decorative quote mark */}
-          <div className="text-[#fffae9] text-6xl md:text-7xl mb-4 leading-none opacity-40">
-            "
+          <div className="text-[#E5A812] text-6xl md:text-7xl mb-4 leading-none opacity-40">
+            <ImQuotesRight/>
           </div>
           
           {/* Title */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#fffae9] mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#fffae9] mb-6">
             For ourself, our community, and our society
           </h2>
           
           {/* Body copy */}
-          <p className="text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
+          <p className="font-medium text-base md:text-xl text-[#fffae9]/90 mb-8 leading-relaxed">
             LHBS is committed to creating a humanistic learning environment that nurtures and educates young generations to appreciate Vietnamese heritage and identity while embracing global knowledge, skills, and citizenship—contributing positively to themselves, their communities, and society.
           </p>
           
           {/* Attribution */}
           <div className="mb-8">
-            <p className=" text-sm md:text-base text-[#fffae9] font-semibold mb-1">
+            <p className=" text-sm md:text-xl text-[#fffae9] font-semibold mb-1">
               The late People's Teacher, Dr. Do Huu Tai
             </p>
             <p className=" text-xs md:text-sm text-[#fffae9]/70">
