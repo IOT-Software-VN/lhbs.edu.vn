@@ -190,6 +190,26 @@ function IntroSection() {
               their potential and pursue their passions with confidence.
             </p>
           </div>
+          
+          {/* CTA Button */}
+          <motion.div
+            className="mt-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <motion.button
+              onClick={() => window.open('https://360.lhu.edu.vn/', '_blank', 'noopener,noreferrer')}
+              className="px-8 h-12 bg-[#1a5336] text-white font-bold hover:bg-[#14432b] transition-colors rounded-lg inline-flex items-center gap-2"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span>Take a Virtual Tour</span>
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </motion.button>
+          </motion.div>
         </motion.div>
         
         {/* Right: Image */}
