@@ -157,9 +157,9 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <img
-            src="https://lhbs.edu.vn/wp-content/uploads/2025/02/BL8Q9742.jpg"
+            src={heroImage}
             alt="Students engaged in hands-on learning activities with educational materials"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-left object-cover"
           />
         </motion.div>
       </div>

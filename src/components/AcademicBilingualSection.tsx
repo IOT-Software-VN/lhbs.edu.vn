@@ -72,7 +72,7 @@ export function AcademicBilingualSection({ onNavigate }: { onNavigate: (path: st
       image: 'https://images.unsplash.com/photo-1673515334717-da4d85aaf38b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWxpbmd1YWwlMjBjbGFzc3Jvb20lMjBsYW5ndWFnZXxlbnwxfHx8fDE3NjI5NjM2Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080',
       alt: 'Students engaged in bilingual language instruction and cultural exchange',
       title: 'True Bilingual Education',
-      description: 'Balanced Vietnamese-English curriculum delivered by native speakers, enabling students to achieve fluency and cultural competence in both languages naturally, world.',
+      description: 'Balanced Vietnamese-English curriculum delivered by native speakers, enabling students to achieve fluency and cultural competence in both languages naturally',
       link: '/academics/bilingual-program'
     },
     {
@@ -140,7 +140,7 @@ export function AcademicBilingualSection({ onNavigate }: { onNavigate: (path: st
       {/* Cards Slider */}
       <div className="relative z-10 mb-16">
         {/* Navigation Buttons */}
-        <div className="absolute top-1/2 -translate-y-1/2 left-0 z-20">
+        {/* <div className="absolute top-1/2 -translate-y-1/2 left-0 z-20">
           <button
             className="/90 hover: text-[#1a5336] p-3 rounded-full shadow-lg transition-all duration-300 backdrop-blur-sm"
             onClick={scrollPrev}
@@ -158,14 +158,14 @@ export function AcademicBilingualSection({ onNavigate }: { onNavigate: (path: st
           >
             <ChevronRight className="w-5 h-5" />
           </button>
-        </div>
+        </div> */}
 
         <div className="overflow-hidden mx-12" ref={emblaRef}>
           <div className="flex gap-4">
             {cards.map((card, index) => (
               <motion.div
                 key={index}
-                className="h-full flex-[0_0_calc(100%-1rem)] md:flex-[0_0_calc(50%-0.5rem)] lg:flex-[0_0_calc(33.333%-0.67rem)] xl:flex-[0_0_calc(25%-0.75rem)] bg-[#fffae9] h-full flex flex-col"
+                className="flex-[0_0_calc(100%-1rem)] md:flex-[0_0_calc(50%-0.5rem)] lg:flex-[0_0_calc(33.333%-0.67rem)] xl:flex-[0_0_calc(25%-0.75rem)] bg-[#fffae9] flex flex-col h-[420px]"
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
@@ -210,12 +210,12 @@ function AB_Card({ image, alt, title, description, link, onNavigate }: AB_CardPr
       {/* Body - Flexible Content */}
       <div className="p-5 md:p-6 flex flex-col flex-grow">
         {/* Title - Fixed Height */}
-        <h3 className="text-xl md:text-2xl text-[#1a5336] mb-3 min-h-[3.5rem] flex items-start">
+        <h3 className="text-xl md:text-2xl text-[#1a5336] mb-3 h-[3.5rem] flex items-start leading-tight">
           {title}
         </h3>
 
-        {/* Description - Flexible Height */}
-        <p className="text-sm text-[#212121] mb-4 leading-relaxed flex-grow">
+        {/* Description - Fixed Height with overflow handling */}
+        <p className="text-sm text-[#212121] mb-4 leading-relaxed flex-grow h-[4.5rem] overflow-hidden">
           {description}
         </p>
 
