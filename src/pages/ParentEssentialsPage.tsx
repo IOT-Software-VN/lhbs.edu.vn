@@ -19,7 +19,7 @@ export function ParentEssentialsPage({ onNavigate }: ParentEssentialsPageProps) 
       <section 
         className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.8), rgba(26, 83, 54, 0.8)), url(https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBzY2hvb2wlMjBwYXJlbnRzJTIwbWVldGluZyUyMGVkdWNhdGlvbnxlbnwwfHx8fDE2OTQ1MTQwNjd8MA&ixlib=rb-4.1.0&q=80&w=1080)`,
+          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.8), rgba(26, 83, 54, 0.8)), url(https://lhbs.edu.vn/wp-content/uploads/2025/09/333A9396a.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}

@@ -459,18 +459,18 @@ function CoreStrengthsSection() {
 
   {/* Line 1 */}
   <h2 className="whitespace-nowrap font-['SVN-Gotham'] text-2xl md:text-3xl lg:text-4xl text-[#1a5336]">
-    We &nbsp;&nbsp;
-    <AnimatedHighlight delay={0.4} duration={0.6} className="px-2">educate</AnimatedHighlight>
-    &nbsp;&nbsp; not just for success, but &nbsp;&nbsp;
-    <AnimatedHighlight delay={0.8} duration={0.6} className="px-2">for significance.</AnimatedHighlight>
+    We&nbsp;
+    <AnimatedHighlight delay={0.4} duration={0.6} className="px-0">educate</AnimatedHighlight>
+    &nbsp;not just for success, but&nbsp;
+    <AnimatedHighlight delay={0.8} duration={0.6} className="px-0">for significance.</AnimatedHighlight>
   </h2>
 
   {/* Line 2 */}
   <h2 className="whitespace-nowrap font-['SVN-Gotham'] text-2xl md:text-3xl lg:text-4xl text-[#1a5336] mt-4">
-    We &nbsp;&nbsp;
-    <AnimatedHighlight delay={1.0} duration={0.6} className="px-2">nurture</AnimatedHighlight>
-    &nbsp;&nbsp; not just bright minds, but &nbsp;&nbsp;
-    <AnimatedHighlight delay={1.4} duration={0.6} className="px-2">bright futures.</AnimatedHighlight>
+    We&nbsp;
+    <AnimatedHighlight delay={1.0} duration={0.6} className="px-0">nurture</AnimatedHighlight>
+    &nbsp;not just bright minds, but&nbsp;
+    <AnimatedHighlight delay={1.4} duration={0.6} className="px-0">bright futures.</AnimatedHighlight>
   </h2>
 
 </motion.div>

@@ -52,7 +52,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
     <section 
       className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.8), rgba(26, 83, 54, 0.8)), url(https://images.unsplash.com/photo-1497486751825-1233686d5d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMHJlYWRpbmclMjBuZXdzfGVufDF8fHx8MTc2MzA4NzQ1M3ww&ixlib=rb-4.1.0&q=80&w=1080)`,
+        backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.8), rgba(26, 83, 54, 0.8)), url(https://lhbs.edu.vn/wp-content/uploads/2025/10/571245925_802836849045124_2591148448699073034_n.jpg)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
@@ -160,7 +160,7 @@ function WeeklyHighlightsSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <img
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHNjaG9vbCUyMGFjdGl2aXRpZXN8ZW58MXx8fHwxNzYzMDg3NDUzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+              src="https://lhbs.edu.vn/wp-content/uploads/2025/10/572331153_803654888963320_928581099648076096_n.jpg"
               alt="Students participating in school activities"
               className="w-full h-full object-cover min-h-[400px]"
             />
@@ -196,7 +196,7 @@ function NewsHighlight1Section() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <img
-              src="https://plus.unsplash.com/premium_photo-1663106423058-c5242333348c?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2Nob29sJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D"
+              src="https://lhbs.edu.vn/wp-content/uploads/2025/10/572262221_803658985629577_1981257385305393448_n.jpg"
               alt="Students presenting science fair projects"
               className="w-full h-[400px] object-cover"
             />
@@ -292,7 +292,7 @@ function NewsHighlight2Section() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <img
-              src="https://images.unsplash.com/photo-1509062522246-3755977927d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBkYXklMjBzY2hvb2x8ZW58MXx8fHwxNzYzMDg3NDUzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+              src="https://lhbs.edu.vn/wp-content/uploads/2025/10/571428052_803656362296506_9197451681763964301_n.jpg"
               alt="Students participating in sports day activities"
               className="w-full h-[400px] object-cover"
             />
@@ -364,7 +364,7 @@ function FeaturedStorySection() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXJlbnQlMjB0ZWFjaGVyJTIwbWVldGluZ3xlbnwxfHx8fDE3NjMwODc0NTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              src="https://lhbs.edu.vn/wp-content/uploads/2025/10/571581337_803653715630104_1682710536098559455_n.jpg"
               alt="Parent-teacher conference meeting"
               className="w-full h-[400px] object-cover"
             />
@@ -606,7 +606,7 @@ function NewsletterCTASection() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <img
-              src="https://plus.unsplash.com/premium_photo-1663090643334-63ff2ed9c3e8?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2Nob29sJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D"
+              src="https://lhbs.edu.vn/wp-content/uploads/2025/10/571581337_803653715630104_1682710536098559455_n.jpg"
               alt="Students learning and staying connected"
               className="w-full h-[400px] object-cover"
             />
