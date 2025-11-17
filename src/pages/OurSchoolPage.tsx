@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'motion/react';
 import { ChevronRight, Phone, Mail, MapPin, X } from 'lucide-react';
+import { AnimatedHighlight } from '../components/ui/animated-highlight';
 
 interface OurSchoolPageProps {
   onNavigate: (path: string) => void;
@@ -163,11 +164,19 @@ function IntroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           {/* Section Heading */}
+          <AnimatedHighlight>
+             <h2 
+            className=" text-[#1a5336]"
+            style={{ fontSize: '48px' }}
+          >
+              Solid foundations 
+          </h2>
+          </AnimatedHighlight>
           <h2 
             className=" text-[#1a5336] mb-6"
             style={{ fontSize: '48px', lineHeight: '1.2' }}
           >
-            Solid foundations for future leaders
+            for future leaders
           </h2>
           
           {/* Body Copy */}
