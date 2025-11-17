@@ -312,7 +312,7 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
       <div className="grid md:grid-cols-2 gap-16 items-center">
         {/* Left: Anniversary Image - 6 columns */}
         <motion.div
-          className="relative h-[600px] md:h-[7700px] overflow-hidden"
+          className="relative h-[650px] md:h-[750px] overflow-hidden rounded-lg"
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -320,7 +320,7 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
           <img
             src={anniversaryImage}
             alt="Student holding trophy celebrating 15 years of LHBS excellence"
-            className="w-full h-full object-fit"
+            className="w-full h-full object-cover"
           />
         </motion.div>
         
@@ -332,7 +332,7 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           {/* Title with highlight */}
-          <h2 className="font-['SVN-Gotham'] text-3xl md:text-4xl lg:text-5xl text-[#1a5336] mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#1a5336] mb-6 leading-tight font-semi">
             15 years{' '}
             <AnimatedHighlight 
               delay={0.5} 
@@ -346,15 +346,15 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
           
           {/* Body copy - 3 paragraphs */}
           <div className="space-y-4 mb-8">
-            <p className=" text-base md:text-lg text-[#212121] leading-relaxed">
+            <p className="text-base md:text-lg text-[#212121] leading-relaxed">
               Founded in 2011, Lac Hong Bilingual School offers a modern education to unlock students' potential through innovative methods.
             </p>
             
-            <p className=" text-base md:text-lg text-[#212121] leading-relaxed">
+            <p className="text-base md:text-lg text-[#212121] leading-relaxed">
               We celebrate each student's unique dreams and talents, providing a Learning Pathways that builds a foundation in academics, 21st-century skills, English proficiency, and values, fostering Global Citizens.
             </p>
             
-            <p className=" text-base md:text-lg text-[#212121] leading-relaxed">
+            <p className="text-base md:text-lg text-[#212121] leading-relaxed">
               Our transparent international learning pathways address parental concerns, guiding students to success and future leadership roles.
             </p>
           </div>
@@ -363,7 +363,7 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
           <div>
             <motion.button
               onClick={() => onNavigate('/our-school/about-us')}
-              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold cursor-pointer hover:bg-[#e5a812] transition-colors"
+              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-bold cursor-pointer hover:bg-[#e5a812] transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

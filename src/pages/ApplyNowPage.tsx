@@ -181,66 +181,67 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
 
   return (
     <div className="min-h-screen bg-white flex">
-      {/* Left Column - Sticky Sidebar */}
-  <div className="min-w-[700px] bg-gradient-to-br from-[#1a5336] to-[#14432b] justify-center p-8 md:p-12 sticky top-0 z-30 overflow-y-auto">
-    {/* Background Pattern */}
-    <div className="absolute inset-0 bg-gradient-to-br from-[#1a5336]/90 to-[#14432b]/90" />
-
-    {/* Decorative Elements */}
-    <div className="absolute top-8 right-8 w-24 h-24 border border-[#FABA1E]/30 rounded-full" />
-    <div className="absolute bottom-8 left-8 w-16 h-16 bg-[#FABA1E]/20 rounded-full" />
-
+      {/* Left Column - Fixed Sidebar */}
+      <div 
+        className="hidden lg:block fixed content-center top-0 left-0 h-screen w-[40%] bg-gradient-to-br from-[#1a5336] to-[#14432b] p-8 md:p-12 z-40 overflow-y-auto"
+        style={{ bottom: '100px' }}
+      >
     {/* Content */}
     <div className="relative z-10 text-white">
-      {/* Logo Area */}
-      <div className="mb-8">
-        <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-4">
-          <span className="text-[#1a5336] font-bold text-xl">LHBS</span>
-        </div>
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">Welcome to</h2>
-        <h1 className="text-3xl md:text-4xl font-bold text-[#FABA1E] mb-2">Lac Hong Bilingual School</h1>
-        <p className="text-white/80 text-sm">Ho Chi Minh City Campus</p>
+      {/* <div className="mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold mb-2">Welcome to</h2>
+        <h1 className="text-4xl md:text-5xl font-bold text-[#FABA1E] mb-2">Lac Hong Bilingual School</h1>
+        <p className="text-white/80 text-lg">Ho Chi Minh City Campus</p>
       </div>
 
-      {/* Key Points */}
-      <div className="space-y-4 mb-8">
+      <div className="space-y-6 mb-10">
         <div className="flex items-start gap-3">
-          <div className="w-2 h-2 bg-[#FABA1E] rounded-full mt-2 flex-shrink-0" />
-          <p className="text-white/90 text-sm leading-relaxed">
+          <div className="w-3 h-3 bg-[#FABA1E] rounded-full mt-2 flex-shrink-0" />
+          <p className="text-white/90 text-lg leading-relaxed">
             World-class bilingual education with British curriculum
           </p>
         </div>
         <div className="flex items-start gap-3">
-          <div className="w-2 h-2 bg-[#FABA1E] rounded-full mt-2 flex-shrink-0" />
-          <p className="text-white/90 text-sm leading-relaxed">
+          <div className="w-3 h-3 bg-[#FABA1E] rounded-full mt-2 flex-shrink-0" />
+          <p className="text-white/90 text-lg leading-relaxed">
             Experienced international teaching staff
           </p>
         </div>
         <div className="flex items-start gap-3">
-          <div className="w-2 h-2 bg-[#FABA1E] rounded-full mt-2 flex-shrink-0" />
-          <p className="text-white/90 text-sm leading-relaxed">
+          <div className="w-3 h-3 bg-[#FABA1E] rounded-full mt-2 flex-shrink-0" />
+          <p className="text-white/90 text-lg leading-relaxed">
             Modern facilities and innovative learning environment
           </p>
         </div>
-      </div>
+        <div className="flex items-start gap-3">
+          <div className="w-3 h-3 bg-[#FABA1E] rounded-full mt-2 flex-shrink-0" />
+          <p className="text-white/90 text-lg leading-relaxed">
+            Personalized learning pathways for every student
+          </p>
+        </div>
+      </div> */}
 
       {/* Statistics */}
-      <div className="grid grid-cols-1 gap-4">
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-          <div className="text-2xl font-bold text-[#FABA1E]">97%</div>
-          <div className="text-xs text-white/80">University acceptance rate</div>
+      <div className="grid grid-cols-1 gap-6">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+          <div className="text-3xl md:text-4xl font-bold text-[#FABA1E]">97%</div>
+          <div className="text-base text-white/80 mt-1">University acceptance rate</div>
         </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-          <div className="text-2xl font-bold text-[#FABA1E]">15+</div>
-          <div className="text-xs text-white/80">Years of excellence</div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+          <div className="text-3xl md:text-4xl font-bold text-[#FABA1E]">15+</div>
+          <div className="text-base text-white/80 mt-1">Years of excellence</div>
+        </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+          <div className="text-3xl md:text-4xl font-bold text-[#FABA1E]">500+</div>
+          <div className="text-base text-white/80 mt-1">Global university partnerships</div>
         </div>
       </div>
     </div>
   </div>
 
   {/* Right Column - Scrollable Form */}
-  <div className="w-full overflow-y-auto">
-    <div className="p-8 lg:p-12 pt-24 lg:pt-12 border-b border-gray-200">
+  <div className="w-full lg:w-[60%] lg:ml-[45%] overflow-y-auto mt-20">
+    <div className="p-8 lg:px-16 lg:py-12 pt-28 lg:pt-24 border-b border-gray-200 max-w-4xl">
       <h1 className="text-3xl lg:text-4xl font-medium text-[#2c3e50] mb-4">
         Welcome to LHBS HCMC
       </h1>
@@ -265,7 +266,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
 
         
         {/* Form Section */}
-        <div className="flex-1 p-8 lg:p-16 pb-16 overflow-y-auto">
+        <div className="flex-1 p-8 lg:px-16 lg:py-16 pt-12 pb-16 overflow-y-auto max-w-4xl">
           <motion.div
             ref={formRef}
             initial={{ opacity: 0, y: 30 }}
