@@ -12,7 +12,7 @@ export function AcademicsLowerSecondaryPage({ onNavigate }: AcademicsLowerSecond
       <section 
         className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.8), rgba(26, 83, 54, 0.8)), url(https://images.unsplash.com/photo-1636772523547-5577d04e8dc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZWNvbmRhcnklMjBzY2hvb2wlMjBzdHVkZW50cyUyMGNsYXNzcm9vbSUyMHZpZXRuYW18ZW58MXx8fHwxNzYzMTAyOTk4fDA&ixlib=rb-4.1.0&q=80&w=1080)`,
+          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.8), rgba(26, 83, 54, 0.8)), url(https://lhbs.edu.vn/wp-content/uploads/2024/07/IMG_8049.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -265,7 +265,7 @@ export function AcademicsLowerSecondaryPage({ onNavigate }: AcademicsLowerSecond
             {/* Right: Image */}
             <div className="relative h-[700px] lg:h-[800px]">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1646579885920-0c9a01cb7078?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGVuZ2xpc2glMjByZWFkaW5nJTIwY2xhc3N8ZW58MXx8fHwxNzYzMTAyOTk4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/07/IMG_8013.jpg"
                 alt="Students engaged in English reading and learning activities"
                 className="w-full h-full object-cover"
               />
@@ -440,7 +440,7 @@ export function AcademicsLowerSecondaryPage({ onNavigate }: AcademicsLowerSecond
             {/* Right: Image */}
             <div className="relative h-[500px] lg:h-[600px]">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1593270066815-9c7bd05560f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZWNvbmRhcnklMjBzY2hvb2wlMjB0ZWFjaGVyJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzYzMTAyOTk5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/05/IMG_1381.jpg"
                 alt="LHBS teacher inspiring Lower Secondary students"
                 className="w-full h-full object-cover"
               />
@@ -468,7 +468,7 @@ export function AcademicsLowerSecondaryPage({ onNavigate }: AcademicsLowerSecond
             {/* Left: Image */}
             <div className="relative h-[500px] lg:h-[600px] order-2 lg:order-1">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1759722144262-c084e801c8b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzY2hvb2wlMjBjYW1wdXMlMjBmYWNpbGl0aWVzfGVufDF8fHx8MTc2MzEwMjk5OXww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/05/IMG_0552.jpg"
                 alt="Modern LHBS campus facilities designed for learning"
                 className="w-full h-full object-cover"
               />

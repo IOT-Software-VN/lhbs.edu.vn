@@ -38,7 +38,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
       ref={ref}
       className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.85), rgba(26, 83, 54, 0.85)), url(https://images.unsplash.com/photo-1577896851231-70ef18881754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFjaGVyJTIwZ3VpZGluZyUyMHN0dWRlbnQlMjBhcHBsaWNhdGlvbnxlbnwxfHx8fDE3NjMwODc0NTN8MA&ixlib=rb-4.1.0&q=80&w=1080)`,
+        backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.85), rgba(26, 83, 54, 0.85)), url(https://lhbs.edu.vn/wp-content/uploads/2023/02/IMG_1957-605x510.jpg)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
@@ -197,7 +197,7 @@ function HowToApplyIntroSection() {
             </div>
             
             <ImageWithFallback 
-              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwYWR2aXNvciUyMGludGVyYWN0aW9ufGVufDF8fHx8MTc2MzA4NzQ1M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+              src="https://lhbs.edu.vn/wp-content/uploads/2023/02/Dieu-che-san-pham-xua-muoi-phong-chong-benh-sot-xuat-huyet-tu-tinh-dau-bach-dan-chanh.jpg"
               alt="{HTA_IMAGE} Student advisor helping family with application guidance and school enrollment process"
               className="w-full h-full object-cover"
             />
@@ -342,7 +342,7 @@ function ImportantNotesSection() {
             </div>
             
             <ImageWithFallback 
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZG1pc3Npb25zJTIwc3RhZmYlMjBoZWxwaW5nJTIwcGFyZW50c3xlbnwxfHx8fDE3NjMwODc0NTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              src="https://lhbs.edu.vn/wp-content/uploads/2023/02/He-thong-cua-thong-minh.jpg"
               alt="{IN_IMAGE} Admissions staff helping parents during school visit and enrollment consultation"
               className="w-full h-full object-cover"
             />

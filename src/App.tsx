@@ -10,7 +10,7 @@ import { ScholarshipsPage } from './pages/ScholarshipsPage';
 import { AcademicsOverviewPage } from './pages/AcademicsOverviewPage';
 import { AcademicsKindergartenPage } from './pages/AcademicsKindergartenPage';
 import { AcademicsPrimaryPage } from './pages/AcademicsPrimaryPage';
-import { AcademicsSecondaryPage } from './pages/AcademicsSecondaryPage';
+// import { AcademicsSecondaryPage } from './pages/AcademicsSecondaryPage';
 import { AcademicsLowerSecondaryPage } from './pages/AcademicsLowerSecondaryPage';
 import { AcademicsHighSchoolPage } from './pages/AcademicsHighSchoolPage';
 import { HowWeTeachPage } from './pages/HowWeTeachPage';

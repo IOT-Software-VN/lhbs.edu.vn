@@ -12,7 +12,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
       <section 
         className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.8), rgba(26, 83, 54, 0.8)), url(https://images.unsplash.com/photo-1565373086464-c8af0d586c0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmltYXJ5JTIwc2Nob29sJTIwc3R1ZGVudHMlMjBjbGFzc3Jvb20lMjB2aWV0bmFtfGVufDF8fHx8MTc2MzEwMjQzMHww&ixlib=rb-4.1.0&q=80&w=1080)`,
+          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.8), rgba(26, 83, 54, 0.8)), url(https://lhbs.edu.vn/wp-content/uploads/2024/07/DSC04962.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -93,7 +93,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
             {/* Left: Image */}
             <div className="relative h-[600px]">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1690192435015-319c1d5065b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWxpbmd1YWwlMjBzdHVkZW50cyUyMGxlYXJuaW5nfGVufDF8fHx8MTc2MzA4NzkyMHww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/07/z5633818664921_9dd3faec93cd8c9c2e86d325df8d03a4.jpg"
                 alt="LHBS Primary students engaged in bilingual learning activities"
                 className="w-full h-full object-cover"
               />
@@ -174,7 +174,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
             {/* Right: Image */}
             <div className="relative h-[500px] lg:h-[600px]">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1565373086464-c8af0d586c0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmltYXJ5JTIwc2Nob29sJTIwc3R1ZGVudHMlMjBjbGFzc3Jvb20lMjB2aWV0bmFtfGVufDF8fHx8MTc2MzEwMjQzMHww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/08/IMG_9717.jpg"
                 alt="LHBS students preparing for secondary education"
                 className="w-full h-full object-cover"
               />
@@ -190,7 +190,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
             {/* Left: Image */}
             <div className="relative h-[500px] lg:h-[600px] order-2 lg:order-1">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1567057420215-0afa9aa9253a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMGVuZ2xpc2glMjBjbGFzc3Jvb20lMjBsZWFybmluZ3xlbnwxfHx8fDE3NjMxMDI0MzF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/08/IMG_0297.jpg"
                 alt="Students learning English through Cambridge curriculum"
                 className="w-full h-full object-cover"
               />
@@ -266,7 +266,7 @@ export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) 
             {/* Right: Image */}
             <div className="relative h-[600px] lg:h-[700px]">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1588072432836-e10032774350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmltYXJ5JTIwc3R1ZGVudHMlMjBwZXJzb25hbGl6ZWQlMjBsZWFybmluZ3xlbnwxfHx8fDE3NjMxMDI0MzF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/07/IMG_8029.jpg"
                 alt="Teacher providing personalized support to primary student"
                 className="w-full h-full object-cover"
               />

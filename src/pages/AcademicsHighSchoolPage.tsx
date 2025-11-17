@@ -12,7 +12,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
       <section 
         className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.8), rgba(26, 83, 54, 0.8)), url(https://images.unsplash.com/photo-1632834380561-d1e05839a33a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwc2Nob29sJTIwc3R1ZGVudHMlMjBjYW1wdXN8ZW58MXx8fHwxNzYzMTA0MDkyfDA&ixlib=rb-4.1.0&q=80&w=1080)`,
+          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.8), rgba(26, 83, 54, 0.8)), url(https://lhbs.edu.vn/wp-content/uploads/2023/02/IMG_3025-2048x1227.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -238,7 +238,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
             {/* Right: Image */}
             <div className="relative h-[700px] lg:h-[800px]">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1757141975400-27fa436fbfbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZW5pb3IlMjBzdHVkZW50cyUyMHN0dWR5aW5nfGVufDF8fHx8MTc2MzEwNDA5Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2025/01/333A0863.jpg"
                 alt="High School students engaged in bilingual education and IELTS preparation"
                 className="w-full h-full object-cover"
               />
@@ -254,7 +254,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
             {/* Left: Image */}
             <div className="relative h-[500px] lg:h-[600px] order-2 lg:order-1">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1557734864-c78b6dfef1b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGxlYWRlcnNoaXAlMjBjbHViJTIwYWN0aXZpdGllc3xlbnwxfHx8fDE3NjMxMDQwOTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/10/333A9221.jpg"
                 alt="Students participating in leadership and extracurricular activities"
                 className="w-full h-full object-cover"
               />
@@ -376,7 +376,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
             {/* Right: Image */}
             <div className="relative h-[500px] lg:h-[600px]">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1583830379747-195159d0de82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwc2Nob29sJTIwc3RlbSUyMHJvYm90aWNzfGVufDF8fHx8MTc2MzEwNDA5M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/08/DSC09904.jpg"
                 alt="Students working on STEM and robotics projects"
                 className="w-full h-full object-cover"
               />
@@ -507,7 +507,7 @@ export function AcademicsHighSchoolPage({ onNavigate }: AcademicsHighSchoolPageP
             {/* Right: Image */}
             <div className="relative h-[500px] lg:h-[600px]">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1746513399803-e988cc54e812?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwc2Nob29sJTIwdGVhY2hlciUyMGNvdW5zZWxvcnxlbnwxfHx8fDE3NjMxMDQwOTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/08/454409330_478747051454107_457976828510559190_n.jpg"
                 alt="LHBS teacher and counselor guiding High School students"
                 className="w-full h-full object-cover"
               />

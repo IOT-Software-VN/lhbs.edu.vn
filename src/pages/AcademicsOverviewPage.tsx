@@ -473,7 +473,7 @@ function PathwaysSection({ onNavigate }: { onNavigate: (path: string) => void })
 
   const pathways = [
     {
-      image: "https://images.unsplash.com/photo-1605781645799-c9c7d820b4ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwbGFib3JhdG9yeSUyMHN0dWRlbnRzfGVufDF8fHx8MTc2MjkwNjMxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://lhbs.edu.vn/wp-content/uploads/2024/10/333A9092.MP4_snapshot_00.00.799.jpg",
       title: "Vietnamese National Track",
       bullets: [
         "Complete Vietnamese national curriculum",
@@ -485,7 +485,7 @@ function PathwaysSection({ onNavigate }: { onNavigate: (path: string) => void })
       link: "/academics/vietnamese-track"
     },
     {
-      image: "https://images.unsplash.com/photo-1678340458877-ea3d3ddd6710?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcm5hdGlvbmFsJTIwYmFjY2FsYXVyZWF0ZSUyMGVkdWNhdGlvbnxlbnwxfHx8fDE3NjI5OTY5MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://lhbs.edu.vn/wp-content/uploads/2025/08/IMG_1315.jpg",
       title: "International Baccalaureate (IB)",
       bullets: [
         "IB Diploma Programme (IBDP) pathway",
@@ -497,7 +497,7 @@ function PathwaysSection({ onNavigate }: { onNavigate: (path: string) => void })
       link: "/academics/ib-programme"
     },
     {
-      image: "https://images.unsplash.com/photo-1758270704025-0e1a1793e1ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwcHJlcGFyYXRpb24lMjBzdHVkZW50c3xlbnwxfHx8fDE3NjI5OTY5MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://lhbs.edu.vn/wp-content/uploads/2025/01/3.png",
       title: "Cambridge IGCSE/A-Level",
       bullets: [
         "Cambridge International curriculum",
@@ -509,7 +509,7 @@ function PathwaysSection({ onNavigate }: { onNavigate: (path: string) => void })
       link: "/academics/cambridge-pathway"
     },
     {
-      image: "https://images.unsplash.com/photo-1760907218312-ababb81393f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRzJTIwbXVzaWMlMjBlZHVjYXRpb258ZW58MXx8fHwxNzYyOTk2OTI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://lhbs.edu.vn/wp-content/uploads/2025/01/IMG_4929.jpg",
       title: "Arts & Performing Arts Track",
       bullets: [
         "Specialized curriculum for arts-focused students",
@@ -521,7 +521,7 @@ function PathwaysSection({ onNavigate }: { onNavigate: (path: string) => void })
       link: "/academics/arts-track"
     },
     {
-      image: "https://images.unsplash.com/photo-1690192435015-319c1d5065b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWxpbmd1YWwlMjBjbGFzc3Jvb20lMjBzdHVkZW50c3xlbnwxfHx8fDE3NjI5Mjg3OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://lhbs.edu.vn/wp-content/uploads/2025/04/487416882_640655751929902_4676467757656853160_n.jpg",
       title: "STEAM Excellence Programme",
       bullets: [
         "Advanced Science, Technology, Engineering, Arts & Math",

@@ -12,7 +12,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
       <section 
         className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.8), rgba(26, 83, 54, 0.8)), url(https://images.unsplash.com/photo-1761208664165-99a2f57e937d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraW5kZXJnYXJ0ZW4lMjBjaGlsZHJlbiUyMGxlYXJuaW5nJTIwY2xhc3Nyb29tfGVufDF8fHx8MTc2MzEwMTY0MXww&ixlib=rb-4.1.0&q=80&w=1080)`,
+          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.8), rgba(26, 83, 54, 0.8)), url(https://lhbs.edu.vn/wp-content/uploads/2022/10/Da-ngoai-Mam-non-Song-ngu-Lac-Hong-1.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -148,7 +148,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             {/* Right: Image */}
             <div className="relative h-[500px] lg:h-[600px]">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1761208664165-99a2f57e937d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraW5kZXJnYXJ0ZW4lMjBjaGlsZHJlbiUyMGxlYXJuaW5nJTIwY2xhc3Nyb29tfGVufDF8fHx8MTc2MzEwMTY0MXww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2022/10/Da-ngoai-Mam-non-Song-ngu-Lac-Hong-2.jpg"
                 alt="Children engaged in learning activities in a bright kindergarten classroom"
                 className="w-full h-full object-cover"
               />
@@ -164,7 +164,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             {/* Left: Image */}
             <div className="relative h-[500px] lg:h-[600px] order-2 lg:order-1">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1733824204474-e1b329a33612?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMGVuZ2xpc2glMjBwaG9uaWNzJTIwY2xhc3Nyb29tfGVufDF8fHx8MTc2MzEwMTY0MXww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2022/10/Da-ngoai-Mam-non-Song-ngu-Lac-Hong-3.jpg"
                 alt="Children learning English through interactive phonics activities"
                 className="w-full h-full object-cover"
               />
@@ -212,7 +212,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             {/* Right: Image */}
             <div className="relative h-[500px] lg:h-[600px]">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1761604478724-13fe879468cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraW5kZXJnYXJ0ZW4lMjB0ZWFjaGVyJTIwY2hpbGRyZW58ZW58MXx8fHwxNzYzMTAxNjQyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/03/429931205_384895710839242_744982184744869447_n.jpg"
                 alt="Teacher engaging with kindergarten students in classroom activities"
                 className="w-full h-full object-cover"
               />
@@ -228,7 +228,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             {/* Left: Image */}
             <div className="relative h-[500px] lg:h-[600px] order-2 lg:order-1">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1588072432836-e10032774350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMGxlYXJuaW5nJTIwcGVyc29uYWxpemVkJTIwY2xhc3Nyb29tfGVufDF8fHx8MTc2MzEwMTY0M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2022/10/Da-ngoai-Mam-non-Song-ngu-Lac-Hong-6.jpg"
                 alt="Teacher providing individual attention to a young student"
                 className="w-full h-full object-cover"
               />
@@ -361,7 +361,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             {/* Right: Image */}
             <div className="relative h-[500px] lg:h-[600px]">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1576673196028-cd681592bd61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXJlbnQlMjB0ZWFjaGVyJTIwbWVldGluZyUyMHNjaG9vbHxlbnwxfHx8fDE3NjMxMDE2NDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/03/428707223_384782534183893_4931832570144914514_n.jpg"
                 alt="Parent and teacher collaborating during a school meeting"
                 className="w-full h-full object-cover"
               />
@@ -377,7 +377,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             {/* Left: Image */}
             <div className="relative h-[500px] lg:h-[600px] order-2 lg:order-1">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1600792170156-7fdc12ed6733?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHJlYWR5JTIwcHJpbWFyeSUyMHNjaG9vbHxlbnwxfHx8fDE3NjMxMDE2NDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/03/429926235_384893624172784_5003837416810017032_n.jpg"
                 alt="Kindergarten students prepared and ready for primary school transition"
                 className="w-full h-full object-cover"
               />
