@@ -478,9 +478,9 @@ function AdmissionsHelpSection({ onNavigate }: { onNavigate: (path: string) => v
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <ImageWithFallback 
-              src="https://images.unsplash.com/photo-1555854877-bab0e5a07302?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBidWlsZGluZyUyMGNhbXB1c3xlbnwxfHx8fDE3NjMwODc0NTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="{AH_IMAGE} LHBS campus building and admissions office welcoming families to our learning community"
-              className="w-full h-full object-cover"
+              src="https://lhbs.edu.vn/wp-content/uploads/2025/02/COVER-WEB_TUYEN-SINH_2526_LHBS-09-1.png"
+              alt="LHBS campus building and admissions office welcoming families to our learning community"
+              className="w-full h-full object-cover object-right"
             />
           </motion.div>
         </div>
