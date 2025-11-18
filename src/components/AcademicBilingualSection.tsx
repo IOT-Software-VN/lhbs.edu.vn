@@ -76,14 +76,14 @@ export function AcademicBilingualSection({ onNavigate }: { onNavigate: (path: st
       link: '/academics/bilingual-program'
     },
     {
-      image: 'https://images.unsplash.com/photo-1752649937256-38d4a6a71e04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGFydCUyMGNyZWF0aXZlfGVufDF8fHx8MTc2Mjk2MzYyOHww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://lhbs.edu.vn/wp-content/uploads/2025/10/572331153_803654888963320_928581099648076096_n.jpg',
       alt: 'Students expressing creativity through arts and design projects',
       title: 'Arts & Creativity',
       description: 'Comprehensive arts education nurtures creative expression, cultural appreciation, and innovative thinking through music, visual arts, drama, and design.',
       link: '/academics/arts'
     },
     {
-      image: 'https://images.unsplash.com/photo-1612468552791-27742d57610b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMHNwb3J0cyUyMHRlYW13b3JrfGVufDF8fHx8MTc2Mjk2MzYyOXww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://lhbs.edu.vn/wp-content/uploads/2021/07/122482938_1797344593750963_7347811336665844878_n.jpg',
       alt: 'Students building teamwork and leadership through sports activities',
       title: 'Sports & Wellness',
       description: 'Holistic physical education program developing teamwork, leadership, resilience, and healthy lifestyles through diverse sports and wellness activities.',

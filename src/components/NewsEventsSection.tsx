@@ -18,30 +18,30 @@ export function NewsEventsSection({ onNavigate }: { onNavigate: (path: string) =
 
   const newsEvents: NewsEvent[] = [
     {
-      image: 'https://images.unsplash.com/photo-1761469354504-8d14b3a33757?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBhd2FyZCUyMGNlcmVtb255fGVufDF8fHx8MTc2Mjk2Mzk5MHww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/578369959_810928768235932_2189832322315432240_n.jpg',
       imageAlt: 'LHBS students receiving academic excellence awards at annual ceremony',
       tag: 'ACHIEVEMENT',
       date: 'November 8, 2025',
-      title: 'LHBS Students Win National Science Competition',
-      excerpt: 'Our Grade 11 students secured first place in the National STEM Innovation Challenge with their groundbreaking environmental monitoring project, beating 150 teams nationwide.',
+      title: 'Grade 7 Students Of Lac Hong Bilingual School Explore Local Education – Learning From Tradition, Growing With Pride In Dong Nai',
+      excerpt: 'Local Education – Learning from Tradition, Growing with Pride in Dong Nai As part of the Local Education Program, Grade 7 students of Lac...',
       link: '/news/national-science-competition-win'
     },
     {
-      image: 'https://images.unsplash.com/photo-1760098571181-705c0f9925fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGN1bHR1cmFsJTIwZmVzdGl2YWx8ZW58MXx8fHwxNzYyOTYzOTkwfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/2.jpg',
       imageAlt: 'Students celebrating cultural diversity at LHBS International Day festival',
       tag: 'EVENT',
       date: 'November 20, 2025',
-      title: 'International Day Festival Celebrates Global Unity',
-      excerpt: 'Join us for our annual International Day featuring cultural performances, global cuisine, art exhibitions, and interactive workshops representing 30+ countries.',
+      title: 'Lac Hong Bilingual School Annual Food Safety Training – Raising Awareness, Protecting Student Health',
+      excerpt: 'Lac Hong Bilingual School Staff Enhance Knowledge and Professional Skills in Food Safety and Hygiene To ensure a safe, clean, and healthy learning environment,...',
       link: '/events/international-day-2025'
     },
     {
-      image: 'https://images.unsplash.com/photo-1663246544917-9fa8f65b8359?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBvcGVuJTIwaG91c2UlMjBldmVudHxlbnwxfHx8fDE3NjI5NjM5OTF8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/576931936_808502421811900_4863998363654667053_n.jpg',
       imageAlt: 'Families touring LHBS campus during open house event',
       tag: 'ADMISSIONS',
       date: 'December 7-8, 2025',
-      title: 'Open House Weekend: Discover LHBS Excellence',
-      excerpt: 'Experience LHBS firsthand with campus tours, curriculum showcases, student performances, and meet-and-greets with teachers and administrators. Register now for limited spots.',
+      title: 'Career Guidance Program: “Right Career – Bright Future”',
+      excerpt: 'Career Orientation Program “Right Major – Bright Future” organized by the Department of Education & Training of Dong Nai Province and Ho Chi Minh...',
       link: '/events/open-house-december-2025'
     }
   ];

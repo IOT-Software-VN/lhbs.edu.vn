@@ -49,8 +49,8 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
 
   const breadcrumbs = [
     { label: 'Home', onClick: () => onNavigate('/') },
-    { label: 'LHBS Campus', onClick: () => onNavigate('/our-school') },
-    { label: 'About Our Campus' }
+    { label: 'LHBS School', onClick: () => onNavigate('/our-school') },
+    { label: 'About Our School' }
   ];
 
   return (

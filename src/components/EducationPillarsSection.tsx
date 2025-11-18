@@ -86,7 +86,7 @@ export default function EducationPillarsSectionComponent() {
       body: 'Partnerships with international schools across Asia, Europe, and North America'
     } as StatCardData,
     {
-      image: img064,
+      image: "https://lhbs.edu.vn/wp-content/uploads/2025/10/571224197_816046061447624_4563907960086315049_n.jpg",
       alt: 'LHBS graduation ceremony celebrating student achievements',
       heightRatio: 0.8
     } as PhotoCardData,
