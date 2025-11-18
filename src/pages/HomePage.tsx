@@ -565,16 +565,18 @@ function CoreStrengthsSection({ showModal, setShowModal }: CoreStrengthsSectionP
       </div> */}
 
       {/* 5 Vertical Pillar Cards */}
-      <div className="py-16 px-8 rounded-lg">
+      <div className="py-16 px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-[1440px] mx-auto">
           {pillars.map((pillar, index) => (
-            <motion.div
+            <motion.button
               key={index}
-              className="bg-[#fffae9] flex flex-col relative overflow-hidden rounded-2xl"
+              onClick={() => handleImageClick(pillar)}
+              className="bg-[#fffae9] flex flex-col rounded-lg relative overflow-hidden cursor-pointer hover:bg-[#f5f3e7] hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FABA1E]/50 text-left"
               style={{ minHeight: '520px' }}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 + (index * 0.1) }}
+              whileHover={{ y: -5 }}
             >
               {/* Title at top-left */}
               <div className="p-6 pb-4">
@@ -592,9 +594,8 @@ function CoreStrengthsSection({ showModal, setShowModal }: CoreStrengthsSectionP
 
               {/* Circular photo overlapping bottom of icon */}
               <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-                <button 
-                  onClick={() => handleImageClick(pillar)}
-                  className="w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white hover:border-[#FABA1E] transition-all duration-300 hover:scale-105 cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#FABA1E]/50"
+                <div 
+                  className="w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white group-hover:border-[#FABA1E] transition-all duration-300"
                   style={{
                     boxShadow: '0 6px 20px rgba(0,0,0,0.15)'
                   }}
@@ -604,12 +605,12 @@ function CoreStrengthsSection({ showModal, setShowModal }: CoreStrengthsSectionP
                     alt={`${pillar.title} at LHBS`}
                     className="w-full h-full object-cover"
                   />
-                </button>
+                </div>
               </div>
 
               {/* Bottom spacing */}
               <div className="h-24"></div>
-            </motion.div>
+            </motion.button>
           ))}
         </div>
       </div>
