@@ -289,7 +289,7 @@ function HistoryHeritageSection() {
           
           <div className="space-y-4 text-base md:text-lg text-[#212121] leading-relaxed">
             <p>
-              LHBS school opened in March 2011, when Hanoi Campus was established. The reason for the school's establishment is the passion for education. 
+              LHBS school opened in March 2011, The reason for the school's establishment is the passion for education. 
             </p>
             <p>
               Established by Lac Hong Construction Corporation, the story of the building of the school here and there in the location in our new buildings.
