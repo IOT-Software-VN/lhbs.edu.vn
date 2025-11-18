@@ -11,7 +11,7 @@ export function BookTourCTA({ onNavigate }: BookTourCTAProps) {
   const isInView = useInView(ref, { once: true, amount: 0.4 });
 
   const tourTitle = "Book a school tour!";
-  const tourDesc = "Experience LHBS firsthand. Visit our campus, meet our educators, and discover how we nurture young minds in a truly bilingual environment.";
+  const tourDesc = "Give the solid foundation for your child. Start today…";
   const ctaText = "BOOK YOUR VISIT";
   const ctaLink = "/admissions/apply-now";
 

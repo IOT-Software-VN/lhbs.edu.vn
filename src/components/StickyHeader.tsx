@@ -50,7 +50,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
   
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 mb-2${
+      className={`fixed top-0 left-0 right-0 z-70 transition-all duration-300 mb-2${
         isTransparent ? 'py-2' : 'py-1 shadow-sm'
       } ${menuOpen ? 'shadow-none' : ''}`}
       style={{ minHeight: '72px' }}
