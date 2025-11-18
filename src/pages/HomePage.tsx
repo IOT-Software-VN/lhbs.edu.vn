@@ -465,17 +465,6 @@ function CoreStrengthsSection() {
   animate={isInView ? { opacity: 1, y: 0 } : {}}
   transition={{ duration: 0.8, delay: 0.2 }}
 >
-
-  <div className="text-center mb-16 relative z-10">
-        <motion.h2
-          className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1a5336]"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          LHBS UNIQUE Education Pillars
-        </motion.h2>
-      </div>
       
   {/* Line 1 */}
   <h2 className="whitespace-nowrap font-['SVN-Gotham'] text-2xl md:text-3xl lg:text-4xl text-[#1a5336]">
@@ -494,6 +483,18 @@ function CoreStrengthsSection() {
   </h2>
 
 </motion.div>
+
+
+  <div className="text-center mb-16 relative z-10">
+        <motion.h2
+          className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1a5336]"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          LHBS UNIQUE Education Pillars
+        </motion.h2>
+      </div>
 
 
       {/* 5 Vertical Pillar Cards */}
