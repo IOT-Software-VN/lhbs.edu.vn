@@ -48,19 +48,19 @@ export function UniversityCareerCounsellingPage({ onNavigate }: UniversityCareer
           {/* Hero Content */}
           <div className="max-w-3xl">
             <p className="text-[#FABA1E] mb-4 uppercase tracking-wider text-sm">
-              UNIVERSITY & CAREER GUIDANCE
+              INTERNATIONAL UNIVERSITY GUIDANCE
             </p>
             <h1 
               className="font-['SVN-Gotham'] text-white mb-4"
               style={{ fontSize: '48px', lineHeight: '1.24' }}
             >
-              University & Career Counselling
+              Study Abroad & University Counselling
             </h1>
             <p className="text-[#FABA1E] mb-6 text-xl">
-              Guiding students towards their future aspirations
+              Your pathway to world-class universities
             </p>
             <p className="text-[#fffae9]/90 mb-8 text-lg leading-relaxed max-w-2xl">
-              Our dedicated counselling team provides personalised guidance to help students navigate university applications, career pathways, and personal development throughout their journey at LHBS.
+              Our expert study abroad advisors provide comprehensive support for international university applications, helping LHBS students gain admission to prestigious institutions worldwide including Australia, Canada, UK, USA, and beyond.
             </p>
 
             {/* CTA Buttons */}
@@ -69,13 +69,13 @@ export function UniversityCareerCounsellingPage({ onNavigate }: UniversityCareer
                 onClick={() => onNavigate('/admissions/apply-now')}
                 className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-bold hover:bg-[#e5a812] transition-colors flex items-center justify-center rounded-full"
               >
-                Book Consultation
+                Book Study Abroad Consultation
               </button>
               <button 
                 onClick={() => onNavigate('/contact/contact-us')}
                 className="px-8 h-12 bg-transparent text-[#fffae9] border-2 border-[#fffae9] font-bold hover:bg-[#fffae9] hover:text-[#1a5336] transition-colors"
               >
-                Learn More
+                Download University Guide
               </button>
             </div>
           </div>
@@ -92,32 +92,32 @@ export function UniversityCareerCounsellingPage({ onNavigate }: UniversityCareer
                 className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
                 style={{ fontSize: '48px', lineHeight: '1.24' }}
               >
-                Personalised Consultation and Support
+                Comprehensive University Application Support
               </h2>
               <p className="text-[#212121] text-lg leading-relaxed mb-6">
-                Our experienced counsellors provide one-on-one guidance tailored to each student's unique strengths, interests, and aspirations. We understand that choosing a university and career path is one of the most important decisions students will make.
+                Our dedicated study abroad advisors work closely with each student to navigate the complex international university application process. From selecting the right universities to crafting compelling personal statements, we provide expert guidance every step of the way.
               </p>
               <p className="text-[#212121] text-lg leading-relaxed mb-8">
-                Through regular meetings and comprehensive assessments, we help students identify their potential career options and develop a strategic plan to achieve their academic and professional goals.
+                With deep knowledge of admission requirements across major study destinations, we help students maximize their chances of acceptance to their dream universities while ensuring they find the perfect academic and cultural fit.
               </p>
 
               {/* List Items */}
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-[#FABA1E] rounded-full mt-3 flex-shrink-0"></div>
-                  <p className="text-[#212121]">Individual career aptitude assessments and personality profiling</p>
+                  <p className="text-[#212121]">University selection strategy based on academic profile and preferences</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-[#FABA1E] rounded-full mt-3 flex-shrink-0"></div>
-                  <p className="text-[#212121]">University application guidance and essay support</p>
+                  <p className="text-[#212121]">Personal statement and essay writing workshops</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-[#FABA1E] rounded-full mt-3 flex-shrink-0"></div>
-                  <p className="text-[#212121]">Scholarship and financial aid application assistance</p>
+                  <p className="text-[#212121]">International scholarship and funding guidance</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-[#FABA1E] rounded-full mt-3 flex-shrink-0"></div>
-                  <p className="text-[#212121]">Interview preparation and communication skills development</p>
+                  <p className="text-[#212121]">Visa application support and pre-departure preparation</p>
                 </div>
               </div>
             </div>
@@ -171,20 +171,20 @@ export function UniversityCareerCounsellingPage({ onNavigate }: UniversityCareer
                 className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
                 style={{ fontSize: '48px', lineHeight: '1.24' }}
               >
-                Parents and Alumni Support
+                Family & Alumni Study Abroad Network
               </h2>
               <p className="text-[#212121] text-lg leading-relaxed mb-6">
-                We believe that university and career planning is a collaborative effort involving students, parents, and our extensive alumni network. Our counselling programme facilitates meaningful connections and ongoing support throughout the decision-making process.
+                Studying abroad is a family journey. We provide comprehensive support for parents throughout the application process, from understanding international education systems to managing finances and logistics. Our sessions help families make informed decisions about their child's global education path.
               </p>
               <p className="text-[#212121] text-lg leading-relaxed mb-8">
-                Through regular parent workshops, alumni mentorship programmes, and family consultation sessions, we ensure that every stakeholder is informed and engaged in supporting student success.
+                Connect with our extensive network of LHBS alumni currently studying or working internationally. These mentors provide invaluable insights into university life, cultural adaptation, and academic success strategies in their respective countries.
               </p>
 
               <button 
                 onClick={() => onNavigate('/parents/essentials')}
                 className="px-8 h-12 bg-[#1a5336] text-[#fffae9] font-bold hover:bg-[#14432b] transition-colors"
               >
-                Parent Resources
+                Study Abroad Parent Guide
               </button>
             </div>
           </div>
@@ -216,12 +216,12 @@ export function UniversityCareerCounsellingPage({ onNavigate }: UniversityCareer
               </div>
 
               <blockquote className="text-[#212121] text-xl leading-relaxed mb-8 font-medium">
-                "I'd like to express my gratitude to the dedicated support from LHBS teachers, especially our Head of Secondary and Ms. Dung, College & University Guidance Counsellor. They organised useful mock interview sessions to help me prepare for real university admissions interviews."
+                "The university guidance team at LHBS was instrumental in my successful application to the University of Melbourne. From helping me craft my personal statement to preparing for interviews, their expertise and support made all the difference. I couldn't have navigated the complex application process without their guidance."
               </blockquote>
 
               <div>
                 <p className="text-[#1a5336] font-bold text-lg mb-1">Minh Nguyen</p>
-                <p className="text-[#212121]/70">LHBS Graduate, Class of 2023 • University of Melbourne</p>
+                <p className="text-[#212121]/70">LHBS Graduate, Class of 2023 • University of Melbourne, Australia</p>
               </div>
             </div>
           </div>
@@ -241,13 +241,13 @@ export function UniversityCareerCounsellingPage({ onNavigate }: UniversityCareer
                 className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
                 style={{ fontSize: '48px', lineHeight: '1.24' }}
               >
-                University Fair & Networking Opportunities
+                International University Fairs & Study Abroad Expo
               </h2>
               <p className="text-[#212121] text-lg leading-relaxed mb-6">
-                Each year, LHBS hosts comprehensive university fairs featuring representatives from leading institutions worldwide. These events provide students with direct access to admissions officers, current university students, and alumni working in various fields.
+                LHBS annually hosts exclusive international university fairs where students meet directly with admissions representatives from top-tier universities across Australia, Canada, UK, USA, and other study destinations. These events provide firsthand information about programs, scholarships, and application requirements.
               </p>
               <p className="text-[#212121] text-lg leading-relaxed mb-8">
-                Our networking events create valuable connections that extend beyond graduation, helping students build professional relationships and gain insights into their chosen career paths.
+                Students gain valuable insights into university life, admission strategies, and study abroad experiences through interactive sessions, workshops, and one-on-one consultations with university representatives and current international students.
               </p>
 
               {/* Decorative line element */}
@@ -288,13 +288,13 @@ export function UniversityCareerCounsellingPage({ onNavigate }: UniversityCareer
                 className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
                 style={{ fontSize: '48px', lineHeight: '1.24' }}
               >
-                Showcase Alumni & Graduate Success
+                International University Admission Success Stories
               </h2>
               <p className="text-[#212121] text-lg leading-relaxed mb-6">
-                Our graduates have gained admission to prestigious universities worldwide, including institutions in Australia, Canada, the UK, and the US. Their success reflects the effectiveness of our comprehensive counselling programme and academic preparation.
+                LHBS students consistently gain admission to world-renowned universities including University of Melbourne, University of Toronto, Imperial College London, UCLA, and many more. Our comprehensive study abroad preparation program has helped hundreds of students achieve their international education dreams.
               </p>
               <p className="text-[#212121] text-lg leading-relaxed mb-8">
-                From medicine and engineering to business and the arts, LHBS alumni are making significant contributions in diverse fields globally, serving as inspiration and mentors for current students.
+                With dedicated support for applications to universities in Australia, Canada, UK, USA, and beyond, we maintain strong relationships with international institutions and provide ongoing support from application to graduation and beyond.
               </p>
 
               {/* Stats */}
@@ -314,16 +314,16 @@ export function UniversityCareerCounsellingPage({ onNavigate }: UniversityCareer
                   onClick={() => onNavigate('/academic-results')}
                   className="block w-full sm:w-auto px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-bold hover:bg-[#e5a812] transition-colors"
                 >
-                  View Graduate Outcomes
+                  View International University Acceptances
                 </button>
                 
                 <div className="flex items-center gap-2 text-[#1a5336]">
                   <Download className="w-5 h-5" />
                   <button 
-                    onClick={() => window.open('/resources/university-preparation-guide.pdf', '_blank')}
+                    onClick={() => window.open('/resources/study-abroad-guide.pdf', '_blank')}
                     className="text-sm underline hover:no-underline"
                   >
-                    Download University Preparation Guide
+                    Download Study Abroad Application Guide
                   </button>
                 </div>
               </div>
