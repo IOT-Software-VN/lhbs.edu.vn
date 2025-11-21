@@ -381,12 +381,6 @@ function AccreditationsSection() {
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="mb-6">
-            <div className="w-16 h-16 bg-[#FABA1E] rounded-full flex items-center justify-center mb-6">
-              <span className="text-2xl font-bold text-[#1a5336]">✓</span>
-            </div>
-          </div>
-          
           <h2 
             className="text-[#1a5336] mb-6"
             style={{ fontSize: '48px', lineHeight: '1.2' }}
