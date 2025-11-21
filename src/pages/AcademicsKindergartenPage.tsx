@@ -1,11 +1,78 @@
 import { ChevronRight, Check, Clock, Users, Globe, Heart, BookOpen, Paintbrush, Music, Activity, Utensils, Moon, Sparkles, Calendar } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { Card, CardContent } from '../components/ui/card';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '../components/ui/carousel';
 
 interface AcademicsKindergartenPageProps {
   onNavigate: (path: string) => void;
 }
 
 export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenPageProps) {
+  // Daily activities data
+  const dailyActivities = [
+  {
+    id: 1,
+    title: "First things first",
+    description:
+      "When our Early Years students arrive at school at 8:30am, they enjoy a quick warm-up activity to get ready for the day ahead. These range from building Ho Chi Minh City’s next skyscraper with our range of play equipment to becoming whoever they want in our role-play area.",
+    image:
+      "https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/eyfs-chuong-trnh-mam-non-quoc-te-bvis-hcmc-(4).jpg?h=4000&iar=0&w=6000&rev=3eb563f8079645d0b5c7ee7ec1d8acda&extension=webp&hash=7CF74FAF838DCCF306526D9F7B2A908A",
+    alt: "Children building blocks in play area",
+    timeLabel: "Morning arrival",
+    timelineColor: "#1A5336",
+    backgroundColor: "#E8F5E8", // Light green
+  },
+  {
+    id: 2,
+    title: "Music in the morning",
+    description:
+      "It's time to listen to the melodies of traditional songs and express themselves using a range of instruments! This develops their communication, language, and physical skills through creative play.",
+    image:
+      "https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/eyfs-chuong-trnh-mam-non-quoc-te-bvis-hcmc-(5).jpg?h=4000&iar=0&w=6000&rev=33d45eb048f140ddb46c7e46e4b8f161&extension=webp&hash=3649DA0EDBEB8F7EB05AB7C2EBF92E48",
+    alt: "Children wearing pirate hats playing music",
+    timeLabel: "Morning music",
+    timelineColor: "#FABA1E",
+    backgroundColor: "#ffcb00", // Light yellow
+  },
+  {
+    id: 3,
+    title: "Healthy eating",
+    description:
+      "At lunchtime, fresh, nutritious, and delicious Asian and Western meals are prepared onsite for students to enjoy with their friends.",
+    image:
+      "https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/fy22-23/dsc03911_11zon/33-eyfs11zon/dsc03897_11zon.jpg?h=5065&iar=0&w=7594&rev=7bd0a9ff989d4c3f966eed75045762d6&extension=webp&hash=6513642867256C811423751D51655AF4",
+    alt: "Child having lunch happily at school",
+    timeLabel: "Lunch time",
+    timelineColor: "#1A5336",
+    backgroundColor: "#F0FDF4", // Very light green
+  },
+  {
+    id: 4,
+    title: "Continuing the learning journey",
+    description:
+      "An afternoon of inside and outside play, with teacher-led and student-initiated activities, helps develop our children's interests and passions. Before home time, our students settle down for a thought-provoking story.",
+    image:
+      "https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/eyfs-chuong-trnh-mam-non-quoc-te-bvis-hcmc-(3).jpg?h=4158&iar=0&w=6234&rev=65e1c9b4f5ec464590dcaf0fabfe74a7&extension=webp&hash=79B3720A41ED262F520F77A1A7CBAC46",
+    alt: "Students learning and playing in classroom",
+    timeLabel: "Afternoon learning",
+    timelineColor: "#FABA1E",
+    backgroundColor: "#ffcb00", // Very light orange/yellow
+  },
+  {
+    id: 5,
+    title: "After school",
+    description:
+      "After another busy day of learning, fun, and discovery, our little learners return home at 3:05 pm on the school bus. Alternatively, they can continue to do what they love at specially designed EYFS after-school clubs.",
+    image:
+      "https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/fy22-23/early-year-3511zon.jpg?h=6240&iar=0&w=4162&rev=2c0b6a46fb804d5cb089bf6b31c6c80c&extension=webp&hash=4A853B427858573CD456248656D18F10",
+    alt: "Children dancing in after-school ballet class",
+    timeLabel: "After school",
+    timelineColor: "#FABA1E",
+    backgroundColor: "#FEF7ED", // Very light peach
+  },
+];
+
+
   return (
     <div className="w-full ">
       {/* 1. HERO SECTION - KINDERGARTEN */}
@@ -254,145 +321,100 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
       </section>
 
       {/* 6. A TYPICAL DAY AT LHBS KINDERGARTEN */}
-      <section className="bg-white py-24 md:py-32">
-        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
-            <h2 
-              className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
-              style={{ fontSize: '48px', lineHeight: '1.24' }}
-            >
-              A typical day at LHBS Kindergarten
-            </h2>
-            <p className=" text-[#212121] text-lg max-w-3xl mx-auto">
-              From arrival to home time, children learn through play in a safe and joyful full-day environment designed to nurture curiosity, creativity, and a love of learning.
-            </p>
-          </div>
-
-          {/* Cards with Timeline */}
-          <div className="relative overflow-hidden">
-            {/* Timeline Cards - Horizontal scrollable layout */}
-            <div className="flex gap-6 mb-16 overflow-x-auto pb-4" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-              <style jsx>{`
-                div::-webkit-scrollbar {
-                  display: none;
-                }
-              `}</style>
-              
-              {/* Card 1: Early Morning Arrival */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200 flex-shrink-0 w-[280px]">
-                <div className="relative h-[250px] overflow-hidden">
-                  <img
-                    src="https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/fy22-23/ks3-3111zon.jpg?h=3986&iar=0&w=5976&rev=bd0f178b43d041a2bc0dc98d120a8be7&extension=webp&hash=02A588539A379C0E44C2B399583C2B51"
-                    alt="Children arriving at school in the morning"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-3">
-                    Early birds
-                  </h3>
-                  <p className="text-[#212121]/70 text-sm leading-relaxed">
-                    Our students arrive at 8:30am and spend time with their tutor or study personal, social, health, and economic (PSHE) education. Regular whole-school celebration assemblies give our students a huge boost, ensuring they start the day on a positive note.
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 2: Morning Learning */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200 flex-shrink-0 w-[280px]">
-                <div className="relative h-[250px] overflow-hidden">
-                  <img
-                    src="https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/fy22-23/ks3-3211zon.jpg?h=4507&iar=0&w=6758&rev=78ef55189bac4109a4542ffa03604eb2&extension=webp&hash=E63E12FC839D4C8D9A19B14FE057B54A"
-                    alt="Students engaged in morning learning activities"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-3">
-                    Design your morning
-                  </h3>
-                  <p className="text-[#212121]/70 text-sm leading-relaxed">
-                    Fresh ideas are brainstormed and tricky challenges tackled in our STEAM rooms, equipped with the latest equipment in design technology. A whole computer suite helps our students to complete a 3D design which can be laser-cut in a matter of minutes!
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 3: Lunch & Social Time */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200 flex-shrink-0 w-[280px]">
-                <div className="relative h-[250px] overflow-hidden">
-                  <img
-                    src="https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/fy22-23/ks3-3311zon.jpg?h=4412&iar=0&w=6616&rev=caf134b818834447ac1a7cdfa6fb4a57&extension=webp&hash=3C13EC74475348D2D05D3788D4AA974E"
-                    alt="Children enjoying healthy lunch together"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-3">
-                    Healthy food
-                  </h3>
-                  <p className="text-[#212121]/70 text-sm leading-relaxed">
-                    At lunchtime, fresh, nutritious, and delicious Asian and Western meals are prepared onsite for students to enjoy with their friends.
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 4: Afternoon Activities */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200 flex-shrink-0 w-[280px]">
-                <div className="relative h-[250px] overflow-hidden">
-                  <img
-                    src="https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/fy22-23/ks3-34.jpg?h=3824&iar=0&w=5734&rev=7e7308b6c26342caa118a88297460227&extension=webp&hash=515D85938E836B86879A433274D09E97"
-                    alt="Students learning through movement and arts"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-3">
-                    Learning through movement
-                  </h3>
-                  <p className="text-[#212121]/70 text-sm leading-relaxed">
-                    It's not all a flute, piano, or guitar class or creative dance session! The performing arts is enhanced by our expert colleagues from Juilliard School, who deliver innovative sessions in our fabulous purpose-built studio.
-                  </p>
-                </div>
-              </div>
+      <section className="bg-[#FAF5ED] py-24 md:py-32">
+        <div className="w-full !mr-0 max-w-screen-2xl mx-auto ">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            {/* Left Column: Title & Description - 30% width */}
+            <div className="lg:col-span-4 my-auto">
+              <h2 
+                className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+                style={{ fontSize: '48px', lineHeight: '1.24' }}
+              >
+                A typical day at LHBS Kindergarten
+              </h2>
+              <p className="text-[#212121] font-medium text-lg">
+                From arrival to home time, children learn through play in a safe and joyful full-day environment designed to nurture curiosity, creativity, and a love of learning.
+              </p>
             </div>
 
-            {/* Timeline Navigation with connecting lines */}
-            <div className="relative px-[140px]">
-              {/* Timeline Line */}
-              <div className="absolute top-1/2 left-[140px] right-[140px] h-0.5 bg-[#1a5336]/20 transform -translate-y-1/2"></div>
-              
-              {/* Vertical connecting lines from cards to timeline */}
-              <div className="absolute top-[-40px] left-[140px] w-0.5 h-12 bg-[#1a5336]/30"></div>
-              <div className="absolute top-[-40px] left-[426px] w-0.5 h-12 bg-[#FABA1E]/60"></div>
-              <div className="absolute top-[-40px] left-[712px] w-0.5 h-12 bg-[#1a5336]/30"></div>
-              <div className="absolute top-[-40px] left-[998px] w-0.5 h-12 bg-[#FABA1E]/60"></div>
-              
-              {/* Timeline Dots with exact positioning */}
-              <div className="flex justify-between items-center relative">
-                <div className="w-4 h-4 bg-[#1a5336] rounded-full border-4 border-white shadow-lg relative z-10"></div>
-                <div className="w-4 h-4 bg-[#FABA1E] rounded-full border-4 border-white shadow-lg relative z-10"></div>
-                <div className="w-4 h-4 bg-[#1a5336] rounded-full border-4 border-white shadow-lg relative z-10"></div>
-                <div className="w-4 h-4 bg-[#FABA1E] rounded-full border-4 border-white shadow-lg relative z-10"></div>
-              </div>
-              
-              {/* Timeline Labels */}
-              <div className="flex justify-between mt-4">
-                <div className="text-center">
-                  <p className="text-[#1a5336] text-sm font-bold">8:30 AM</p>
-                  <p className="text-[#212121]/60 text-xs">Arrival</p>
+            {/* Right Column: Carousel - 70% width */}
+            <div className="lg:col-span-8 relative">
+              <Carousel className="relative" style={{ overflow: 'initial' }}>
+                <CarouselContent className="-ml-6" style={{ overflow: 'initial' }}>
+                  {dailyActivities.map((activity, index) => (
+                    <CarouselItem key={activity.id} className="pl-6 basis-auto" style={{ overflow: 'initial' }}>
+                      {/* Card with higher z-index */}
+                      <div className="relative z-20" style={{ overflow: 'initial' }}>
+                        <Card className="bg-white shadow-lg border border-gray-200 w-[374px] h-[457px] overflow-hidden">
+                          <CardContent className="p-0 h-full">
+                            <div className="relative h-[250px] overflow-hidden">
+                              <img
+                                src={activity.image}
+                                alt={activity.alt}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                            <div 
+                              className="p-6 h-[207px] flex flex-col"
+                              style={{ backgroundColor: activity.backgroundColor }}
+                            >
+                              <h3 className="font-['SVN-Gotham'] text-xl text-black mb-3">
+                                {activity.title}
+                              </h3>
+                              <p 
+                                className="text-black/70 text-sm leading-relaxed flex-grow min-h-[80px] line-clamp-5 overflow-hidden"
+                                style={{
+                                  display: '-webkit-box',
+                                  WebkitLineClamp: 5,
+                                  WebkitBoxOrient: 'vertical',
+                                  overflow: 'hidden'
+                                }}
+                              >
+                                {activity.description}
+                              </p>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+
+                      {/* Synchronized Timeline Elements positioned under each card */}
+                      <div className="flex flex-col items-center mt-6 relative z-30" style={{ overflow: 'visible' }}>
+                        {/* Vertical connecting line from card center to timeline */}
+                        <div 
+                          className="w-0.5 h-16 relative z-30"
+                          style={{ 
+                            backgroundColor: activity.timelineColor === "#1A5336" ? 'rgba(26, 83, 54, 0.8)' : 'rgba(250, 186, 30, 0.8)',
+                            overflow: 'visible'
+                          }}
+                        ></div>
+                        
+                        {/* Timeline dot positioned at the center */}
+                        <div 
+                          className="w-4 h-4 rounded-full border-4 border-white shadow-lg relative z-30"
+                          style={{ 
+                            backgroundColor: activity.timelineColor,
+                            overflow: 'visible'
+                          }}
+                        ></div>
+                        
+                        {/* Timeline label below dot */}
+                        <div className="text-center mt-1 relative z-30" style={{ overflow: 'visible' }}>
+                          <p className="text-[#212121] text-sm uppercase whitespace-nowrap font-medium">{activity.timeLabel}</p>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                
+                {/* Timeline line that moves with carousel */}
+                <div className="absolute bottom-0 left-0 right-0 z-10" style={{ overflow: 'visible' }}>
+                  <div className="relative h-0.5 bg-[#1a5336]/20" style={{ top: '-29px', overflow: 'visible' }}></div>
                 </div>
-                <div className="text-center">
-                  <p className="text-[#1a5336] text-sm font-bold">9:00 AM</p>
-                  <p className="text-[#212121]/60 text-xs">Learning</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-[#1a5336] text-sm font-bold">12:00 PM</p>
-                  <p className="text-[#212121]/60 text-xs">Lunch</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-[#1a5336] text-sm font-bold">2:00 PM</p>
-                  <p className="text-[#212121]/60 text-xs">Activities</p>
-                </div>
-              </div>
+                
+                {/* Navigation Buttons positioned at top right */}
+                <CarouselPrevious className="translate-x-0 translate-y-0 h-12 w-12 bg-white border-2 border-[#1a5336] text-[#1a5336] hover:bg-[#1a5336] hover:text-white transition-colors" />
+                <CarouselNext className="absolute right-2 translate-x-0 translate-y-0 h-12 w-12 bg-white border-2 border-[#1a5336] text-[#1a5336] hover:bg-[#1a5336] hover:text-white transition-colors" />
+              </Carousel>
             </div>
           </div>
         </div>
