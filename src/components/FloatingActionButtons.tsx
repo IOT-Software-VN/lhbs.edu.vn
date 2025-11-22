@@ -36,7 +36,7 @@ export function FloatingActionButtons({ onNavigate }: FloatingActionButtonsProps
   ];
 
   return (
-    <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-3">
+    <div className="fixed right-0 top-32 z-50 flex flex-col gap-2">
       {buttons.map((button) => {
         const IconComponent = button.icon;
         const isHovered = hoveredButton === button.id;
@@ -50,7 +50,7 @@ export function FloatingActionButtons({ onNavigate }: FloatingActionButtonsProps
           >
             {/* Label - shows on hover */}
             <div
-              className={`absolute right-16 px-4 py-2 bg-white shadow-lg rounded-lg border border-gray-200 whitespace-nowrap transition-all duration-300 ${
+              className={`absolute right-16 px-4 py-2 bg-white shadow-lg border border-gray-200 whitespace-nowrap transition-all duration-300 ${
                 isHovered 
                   ? 'opacity-100 translate-x-0 visible' 
                   : 'opacity-0 translate-x-2 invisible'
@@ -73,7 +73,7 @@ export function FloatingActionButtons({ onNavigate }: FloatingActionButtonsProps
             {/* Button */}
             <button
               onClick={button.action}
-              className={`w-12 h-12 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center`}
+              className={`!rounded-none w-12 h-12 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center`}
               style={{ 
                 backgroundColor: button.bgColor,
                 color: button.textColor

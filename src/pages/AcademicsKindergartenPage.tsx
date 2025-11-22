@@ -14,7 +14,7 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
     id: 1,
     title: "First things first",
     description:
-      "When our Early Years students arrive at school at 8:30am, they enjoy a quick warm-up activity to get ready for the day ahead. These range from building Ho Chi Minh City’s next skyscraper with our range of play equipment to becoming whoever they want in our role-play area.",
+      "When our Early Years students arrive at school at 8:30am, they enjoy a quick warm-up activity to get ready for the day ahead. These range from building Dong Nai next skyscraper with our range of play equipment to becoming whoever they want in our role-play area.",
     image:
       "https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/eyfs-chuong-trnh-mam-non-quoc-te-bvis-hcmc-(4).jpg?h=4000&iar=0&w=6000&rev=3eb563f8079645d0b5c7ee7ec1d8acda&extension=webp&hash=7CF74FAF838DCCF306526D9F7B2A908A",
     alt: "Children building blocks in play area",

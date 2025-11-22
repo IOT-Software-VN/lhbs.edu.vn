@@ -41,7 +41,7 @@ export function NewsEventsSection({ onNavigate }: { onNavigate: (path: string) =
       tag: 'ADMISSIONS',
       date: 'December 7-8, 2025',
       title: 'Career Guidance Program: “Right Career – Bright Future”',
-      excerpt: 'Career Orientation Program “Right Major – Bright Future” organized by the Department of Education & Training of Dong Nai Province and Ho Chi Minh...',
+      excerpt: 'Career Orientation Program “Right Major – Bright Future” organized by the Department of Education & Training of Dong Nai Province',
       link: '/events/open-house-december-2025'
     }
   ];

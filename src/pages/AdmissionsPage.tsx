@@ -26,7 +26,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
       backgroundColor: "#fff",
     },
     {
-      id: 4,
+      id: 2,
       title: "Assessment & Placement",
       description:
         "LHBS reviews the application and arranges assessments or interviews if needed. We evaluate each student's readiness and propose the most suitable class level to ensure their success and comfort in our learning environment.",
@@ -34,24 +34,24 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
         "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwaW50ZXJ2aWV3JTIwYXNzZXNzbWVudHxlbnwwfHx8fDE3Mzc1NDQyNDh8MA&ixlib=rb-4.0.3&q=80&w=1080",
       alt: "Student during friendly assessment interview with teacher",
       hasImage: true,
-      timeLabel: "Step 4",
+      timeLabel: "Step 2",
       timelineColor: "#FABA1E",
       backgroundColor: "#FFCB00",
     },
     {
-      id: 2,
+      id: 3,
       title: "School Tour",
       description:
         "The admissions team arranges a campus tour or online consultation so families can experience our learning environment, meet teachers, and see our facilities firsthand. This helps you understand what makes LHBS special.",
       hasImage: false,
       buttonText: "Book a Tour",
       buttonAction: () => onNavigate('/contact/book-tour'),
-      timeLabel: "Step 2",
+      timeLabel: "Step 3",
       timelineColor: "#FABA1E",
       backgroundColor: "#fff",
     },
      {
-      id: 5,
+      id: 4,
       title: "Offer & Enrolment",
       description:
         "LHBS confirms the admission result. Parents complete registration fees and deposit within the given timeframe to secure the seat. Our admissions team guides you through the enrolment process and answers any final questions.",
@@ -59,19 +59,19 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
         "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxhY2NlcHRhbmNlJTIwbGV0dGVyfGVufDB8fHx8MTczNzU0NDI0OHww&ixlib=rb-4.0.3&q=80&w=1080",
       alt: "Happy family receiving acceptance letter from school",
       hasImage: true,
-      timeLabel: "Step 5",
+      timeLabel: "Step 4",
       timelineColor: "#1A5336",
       backgroundColor: "#E8F5E8",
     },
     {
-      id: 3,
+      id: 5,
       title: "Online Application",
       description:
         "Parents complete the online application via tuyensinh.lhbs.vn and submit required documents (student information, previous academic reports, health certificate, etc.). Our system guides you through each step.",
       hasImage: false,
       buttonText: "Apply Online",
       buttonAction: () => window.open('https://tuyensinh.lhbs.vn', '_blank'),
-      timeLabel: "Step 3",
+      timeLabel: "Step 5",
       timelineColor: "#1A5336",
       backgroundColor: "#fff",
     },
@@ -431,77 +431,95 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                   {admissionsSteps.map((step, index) => (
                     <CarouselItem key={step.id} className="pl-6 basis-auto" style={{ overflow: 'initial' }}>
                       {/* Card Container with fixed height for alignment */}
-                      <div className="content-end z-20" style={{ overflow: 'initial', height: '457px' }}>
-                        {step.hasImage ? (
-                          /* Card with Image */
-                          <Card className="bg-white shadow-lg border border-gray-200 w-[374px] h-[457px] overflow-hidden">
-                            <CardContent className="p-0 h-full">
-                              <div className="relative h-[250px] overflow-hidden">
-                                <img
-                                  src={step.image}
-                                  alt={step.alt}
-                                  className="w-full h-full object-cover"
-                                />
-                              </div>
-                              <div 
-                                className="p-6 h-[207px] flex flex-col"
-                                style={{ backgroundColor: step.backgroundColor }}
-                              >
-                                <h3 className="font-['SVN-Gotham'] text-xl text-black mb-3">
+                      <div className="relative" style={{ overflow: 'initial' }}>
+                        {/* Card positioned in center of container */}
+                        <div className="flex items-center justify-center" style={{ height: '457px' }}>
+                          {step.hasImage ? (
+                            /* Card with Image */
+                            <Card className="bg-white shadow-lg border border-gray-200 w-[374px] h-[457px] overflow-hidden">
+                              <CardContent className="p-0 h-full">
+                                <div className="relative h-[250px] overflow-hidden">
+                                  <img
+                                    src={step.image}
+                                    alt={step.alt}
+                                    className="w-full h-full object-cover"
+                                  />
+                                </div>
+                                <div 
+                                  className="p-6 h-[207px] flex flex-col"
+                                  style={{ backgroundColor: step.backgroundColor }}
+                                >
+                                  <h3 className="font-['SVN-Gotham'] text-xl text-black mb-3">
+                                    {step.title}
+                                  </h3>
+                                  <p 
+                                    className="text-black/70 text-sm leading-relaxed flex-grow min-h-[80px] line-clamp-5 overflow-hidden"
+                                    style={{
+                                      display: '-webkit-box',
+                                      WebkitLineClamp: 5,
+                                      WebkitBoxOrient: 'vertical',
+                                      overflow: 'hidden'
+                                    }}
+                                  >
+                                    {step.description}
+                                  </p>
+                                </div>
+                              </CardContent>
+                            </Card>
+                          ) : (
+                            /* Card without Image - with Button - Centered in container */
+                            <Card 
+                              className="bg-white shadow-lg border border-gray-200 w-[374px] overflow-hidden"
+                              style={{ backgroundColor: step.backgroundColor }}
+                            >
+                              <CardContent className="p-6 flex flex-col justify-center" style={{ minHeight: '300px' }}>
+                                <h3 className="font-['SVN-Gotham'] text-xl text-black mb-4 text-center">
                                   {step.title}
                                 </h3>
-                                <p 
-                                  className="text-black/70 text-sm leading-relaxed flex-grow min-h-[80px] line-clamp-5 overflow-hidden"
-                                  style={{
-                                    display: '-webkit-box',
-                                    WebkitLineClamp: 5,
-                                    WebkitBoxOrient: 'vertical',
-                                    overflow: 'hidden'
-                                  }}
-                                >
+                                <p className="text-black/70 text-sm leading-relaxed mb-6">
                                   {step.description}
                                 </p>
-                              </div>
-                            </CardContent>
-                          </Card>
+                                {step.buttonText && (
+                                  <button 
+                                    onClick={step.buttonAction}
+                                    className="px-6 py-3 bg-[#FABA1E] text-[#1a5336] font-bold hover:bg-[#e5a812] transition-colors rounded-full w-full"
+                                  >
+                                    {step.buttonText}
+                                  </button>
+                                )}
+                              </CardContent>
+                            </Card>
+                          )}
+                        </div>
+
+                        {/* Vertical line - different positioning for image vs non-image cards */}
+                        {step.hasImage ? (
+                          /* Vertical line for image cards - positioned at bottom of fixed height card */
+                          <div 
+                            className="absolute left-1/2 transform -translate-x-1/2 w-0.5 z-30"
+                            style={{ 
+                              top: '457px', // Fixed height for image cards
+                              height: '25px',
+                              backgroundColor: step.timelineColor === "#1A5336" ? 'rgba(26, 83, 54, 0.8)' : 'rgba(250, 186, 30, 0.8)',
+                              overflow: 'visible'
+                            }}
+                          ></div>
                         ) : (
-                          /* Card without Image - with Button - Centered in container */
-                          <Card 
-                            className="bg-white shadow-lg border border-gray-200 w-[374px] overflow-hidden"
-                            style={{ backgroundColor: step.backgroundColor }}
-                          >
-                            <CardContent className="p-6 flex flex-col justify-center" style={{ minHeight: '300px' }}>
-                              <h3 className="font-['SVN-Gotham'] text-xl text-black mb-4 text-center">
-                                {step.title}
-                              </h3>
-                              <p className="text-black/70 text-sm leading-relaxed mb-6">
-                                {step.description}
-                              </p>
-                              {step.buttonText && (
-                                <button 
-                                  onClick={step.buttonAction}
-                                  className="px-6 py-3 bg-[#FABA1E] text-[#1a5336] font-bold hover:bg-[#e5a812] transition-colors rounded-full w-full"
-                                >
-                                  {step.buttonText}
-                                </button>
-                              )}
-                            </CardContent>
-                          </Card>
+                          /* Vertical line for non-image cards - positioned relative to card center */
+                          <div 
+                            className="absolute left-1/2 transform -translate-x-1/2 w-0.5 z-30"
+                            style={{ 
+                              top: 'calc(50% + 150px)', // Positioned relative to centered card
+                              height: '110px',
+                              backgroundColor: step.timelineColor === "#1A5336" ? 'rgba(26, 83, 54, 0.8)' : 'rgba(250, 186, 30, 0.8)',
+                              overflow: 'visible'
+                            }}
+                          ></div>
                         )}
                       </div>
 
-                      {/* Synchronized Timeline Elements positioned under each card */}
-                      <div className="flex flex-col items-center relative z-30" style={{ overflow: 'visible' }}>
-                        {/* Vertical connecting line from card bottom to timeline - longer line */}
-                        <div 
-                          className="w-0.5 relative z-30"
-                          style={{ 
-                            height: '100px',
-                            backgroundColor: step.timelineColor === "#1A5336" ? 'rgba(26, 83, 54, 0.8)' : 'rgba(250, 186, 30, 0.8)',
-                            overflow: 'visible'
-                          }}
-                        ></div>
-                        
+                      {/* Timeline Elements positioned below card */}
+                      <div className="flex flex-col items-center mt-6 relative z-30" style={{ overflow: 'visible' }}>
                         {/* Timeline dot positioned at the center */}
                         <div 
                           className="w-4 h-4 rounded-full border-4 border-white shadow-lg relative z-30"

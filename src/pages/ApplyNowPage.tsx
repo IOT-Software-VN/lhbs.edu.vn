@@ -246,7 +246,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
         Welcome to LHBS
       </h1>
       <p className="text-gray-600 mb-4 leading-relaxed">
-        We're delighted that you're considering Lac Hong Bilingual School Ho Chi Minh City for your child's education.
+        We're delighted that you're considering Lac Hong Bilingual School Dong Nai Province for your child's education.
       </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
             To have the best experience of our school, share your availability for a tour. Our team will respond within 24 hours (Mon-Fri).
@@ -458,9 +458,6 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
                     options={[
                       { value: '', label: 'Please select...' },
                       { value: 'not-sure', label: 'Not sure' },
-                      { value: 'hanoi-main', label: 'Hanoi Main Campus' },
-                      { value: 'hcmc', label: 'Ho Chi Minh City Campus' },
-                      { value: 'danang', label: 'Da Nang Campus' }
                     ]}
                     helpText="Select the campus you're most interested in visiting"
                   />
