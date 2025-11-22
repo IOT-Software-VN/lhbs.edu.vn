@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { ChevronRight, ChevronDown, ChevronUp, Phone, Mail, Users, Calendar, FileText, CheckCircle, Award, Trophy, DollarSign, BookOpen, Target, Heart, Globe, Sparkles, Building, GraduationCap } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { Card, CardContent } from '../components/ui/card';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '../components/ui/carousel';
 
 interface AdmissionsPageProps {
   onNavigate: (path: string) => void;
@@ -8,6 +10,85 @@ interface AdmissionsPageProps {
 
 export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  // Admissions Process Steps Data
+  const admissionsSteps = [
+    {
+      id: 1,
+      title: "Enquiry",
+      description:
+        "Parents contact LHBS via hotline, email, website, or in-person visit to learn more about our programmes, facilities, and admissions process. Our team is ready to answer all your questions.",
+      hasImage: false,
+      buttonText: "Request Consultation",
+      buttonAction: () => onNavigate('/contact/contact-us'),
+      timeLabel: "Step 1",
+      timelineColor: "#1A5336",
+      backgroundColor: "#fff",
+    },
+    {
+      id: 4,
+      title: "Assessment & Placement",
+      description:
+        "LHBS reviews the application and arranges assessments or interviews if needed. We evaluate each student's readiness and propose the most suitable class level to ensure their success and comfort in our learning environment.",
+      image:
+        "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwaW50ZXJ2aWV3JTIwYXNzZXNzbWVudHxlbnwwfHx8fDE3Mzc1NDQyNDh8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      alt: "Student during friendly assessment interview with teacher",
+      hasImage: true,
+      timeLabel: "Step 4",
+      timelineColor: "#FABA1E",
+      backgroundColor: "#FFCB00",
+    },
+    {
+      id: 2,
+      title: "School Tour",
+      description:
+        "The admissions team arranges a campus tour or online consultation so families can experience our learning environment, meet teachers, and see our facilities firsthand. This helps you understand what makes LHBS special.",
+      hasImage: false,
+      buttonText: "Book a Tour",
+      buttonAction: () => onNavigate('/contact/book-tour'),
+      timeLabel: "Step 2",
+      timelineColor: "#FABA1E",
+      backgroundColor: "#fff",
+    },
+     {
+      id: 5,
+      title: "Offer & Enrolment",
+      description:
+        "LHBS confirms the admission result. Parents complete registration fees and deposit within the given timeframe to secure the seat. Our admissions team guides you through the enrolment process and answers any final questions.",
+      image:
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxhY2NlcHRhbmNlJTIwbGV0dGVyfGVufDB8fHx8MTczNzU0NDI0OHww&ixlib=rb-4.0.3&q=80&w=1080",
+      alt: "Happy family receiving acceptance letter from school",
+      hasImage: true,
+      timeLabel: "Step 5",
+      timelineColor: "#1A5336",
+      backgroundColor: "#E8F5E8",
+    },
+    {
+      id: 3,
+      title: "Online Application",
+      description:
+        "Parents complete the online application via tuyensinh.lhbs.vn and submit required documents (student information, previous academic reports, health certificate, etc.). Our system guides you through each step.",
+      hasImage: false,
+      buttonText: "Apply Online",
+      buttonAction: () => window.open('https://tuyensinh.lhbs.vn', '_blank'),
+      timeLabel: "Step 3",
+      timelineColor: "#1A5336",
+      backgroundColor: "#fff",
+    },
+    {
+      id: 6,
+      title: "Orientation & First School Day",
+      description:
+        "The school prepares orientation activities so students can familiarise themselves with the campus, meet teachers and classmates, and feel confident before or during their first days at LHBS. Welcome to the LHBS family!",
+      image:
+        "https://images.unsplash.com/photo-1509062522246-3755977927d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBvcmllbnRhdGlvbiUyMGZhbWlseXxlbnwwfHx8fDE3Mzc1NDQyNDh8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      alt: "New students and families at school orientation welcome event",
+      hasImage: true,
+      timeLabel: "Step 6",
+      timelineColor: "#FABA1E",
+      backgroundColor: "#FEF7ED",
+    },
+  ];
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -325,130 +406,127 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
       </section>
 
       {/* 5. STEP-BY-STEP ADMISSIONS PROCESS */}
-      <section className=" py-24 md:py-32">
-        <div className="w-full max-w-screen-xl mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
-            <h2 
-              className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
-              style={{ fontSize: '48px', lineHeight: '1.24' }}
-            >
-              Step-by-Step Admissions Process
-            </h2>
-            <p className="text-[#212121]/70 text-lg max-w-3xl mx-auto">
-              We've designed a clear, supportive admissions journey to make the process smooth for every family.
-            </p>
-          </div>
-
-          {/* Timeline Steps */}
-          <div className="space-y-8">
-            {/* Step 1 */}
-            <div className="bg-white p-8 border-l-4 border-[#1a5336] rounded-r">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
-                  <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">1</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-3">Enquiry</h3>
-                  <p className="text-[#212121]/70 mb-4 leading-relaxed">
-                    Parents contact LHBS via hotline, email, website, or in-person visit to learn more about our programmes, facilities, and admissions process. Our team is ready to answer all your questions.
-                  </p>
-                  <button 
-                    onClick={() => onNavigate('/contact/contact-us')}
-                    className="px-6 h-10 bg-[#FABA1E] text-[#1a5336] text-sm hover:bg-[#e5a812] transition-colors"
-                  >
-                    Request Consultation
-                  </button>
-                </div>
-              </div>
+      <section className="bg-[#FAF5ED] py-24 md:py-32">
+        <div className="w-full !mr-0 max-w-screen-2xl mx-auto ">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            {/* Left Column: Title & Description - 30% width */}
+            <div className="lg:col-span-4 my-auto">
+              <h2 
+                className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+                style={{ fontSize: '48px', lineHeight: '1.24' }}
+              >
+                Step-by-Step Admissions Process
+              </h2>
+              <p className="text-[#212121] font-medium text-lg">
+                We've designed a clear, supportive admissions journey to make the process smooth for every family.
+              </p>
             </div>
 
-            {/* Step 2 */}
-            <div className="bg-white p-8 border-l-4 border-[#1a5336] rounded-r">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
-                  <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">2</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-3">School Tour</h3>
-                  <p className="text-[#212121]/70 mb-4 leading-relaxed">
-                    The admissions team arranges a campus tour or online consultation so families can experience our learning environment, meet teachers, and see our facilities firsthand. This helps you understand what makes LHBS special.
-                  </p>
-                  <button 
-                    onClick={() => onNavigate('/contact/book-tour')}
-                    className="px-6 h-10 bg-[#FABA1E] text-[#1a5336] text-sm hover:bg-[#e5a812] transition-colors"
-                  >
-                    Book a Tour
-                  </button>
-                </div>
-              </div>
-            </div>
+            {/* Right Column: Carousel - 70% width */}
+            <div className="lg:col-span-8 relative">
+              <Carousel className="relative" style={{ overflow: 'initial' }}>
+                <CarouselContent className="-ml-6" style={{ overflow: 'initial' }}>
+                  {admissionsSteps.map((step, index) => (
+                    <CarouselItem key={step.id} className="pl-6 basis-auto" style={{ overflow: 'initial' }}>
+                      {/* Card Container with fixed height for alignment */}
+                      <div className="content-end z-20" style={{ overflow: 'initial', height: '457px' }}>
+                        {step.hasImage ? (
+                          /* Card with Image */
+                          <Card className="bg-white shadow-lg border border-gray-200 w-[374px] h-[457px] overflow-hidden">
+                            <CardContent className="p-0 h-full">
+                              <div className="relative h-[250px] overflow-hidden">
+                                <img
+                                  src={step.image}
+                                  alt={step.alt}
+                                  className="w-full h-full object-cover"
+                                />
+                              </div>
+                              <div 
+                                className="p-6 h-[207px] flex flex-col"
+                                style={{ backgroundColor: step.backgroundColor }}
+                              >
+                                <h3 className="font-['SVN-Gotham'] text-xl text-black mb-3">
+                                  {step.title}
+                                </h3>
+                                <p 
+                                  className="text-black/70 text-sm leading-relaxed flex-grow min-h-[80px] line-clamp-5 overflow-hidden"
+                                  style={{
+                                    display: '-webkit-box',
+                                    WebkitLineClamp: 5,
+                                    WebkitBoxOrient: 'vertical',
+                                    overflow: 'hidden'
+                                  }}
+                                >
+                                  {step.description}
+                                </p>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        ) : (
+                          /* Card without Image - with Button - Centered in container */
+                          <Card 
+                            className="bg-white shadow-lg border border-gray-200 w-[374px] overflow-hidden"
+                            style={{ backgroundColor: step.backgroundColor }}
+                          >
+                            <CardContent className="p-6 flex flex-col justify-center" style={{ minHeight: '300px' }}>
+                              <h3 className="font-['SVN-Gotham'] text-xl text-black mb-4 text-center">
+                                {step.title}
+                              </h3>
+                              <p className="text-black/70 text-sm leading-relaxed mb-6">
+                                {step.description}
+                              </p>
+                              {step.buttonText && (
+                                <button 
+                                  onClick={step.buttonAction}
+                                  className="px-6 py-3 bg-[#FABA1E] text-[#1a5336] font-bold hover:bg-[#e5a812] transition-colors rounded-full w-full"
+                                >
+                                  {step.buttonText}
+                                </button>
+                              )}
+                            </CardContent>
+                          </Card>
+                        )}
+                      </div>
 
-            {/* Step 3 */}
-            <div className="bg-white p-8 border-l-4 border-[#1a5336] rounded-r">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
-                  <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">3</span>
+                      {/* Synchronized Timeline Elements positioned under each card */}
+                      <div className="flex flex-col items-center relative z-30" style={{ overflow: 'visible' }}>
+                        {/* Vertical connecting line from card bottom to timeline - longer line */}
+                        <div 
+                          className="w-0.5 relative z-30"
+                          style={{ 
+                            height: '100px',
+                            backgroundColor: step.timelineColor === "#1A5336" ? 'rgba(26, 83, 54, 0.8)' : 'rgba(250, 186, 30, 0.8)',
+                            overflow: 'visible'
+                          }}
+                        ></div>
+                        
+                        {/* Timeline dot positioned at the center */}
+                        <div 
+                          className="w-4 h-4 rounded-full border-4 border-white shadow-lg relative z-30"
+                          style={{ 
+                            backgroundColor: step.timelineColor,
+                            overflow: 'visible'
+                          }}
+                        ></div>
+                        
+                        {/* Timeline label below dot */}
+                        <div className="text-center mt-1 relative z-30" style={{ overflow: 'visible' }}>
+                          <p className="text-[#212121] text-sm uppercase whitespace-nowrap font-medium">{step.timeLabel}</p>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                
+                {/* Timeline line that moves with carousel */}
+                <div className="absolute bottom-0 left-0 right-0 z-10" style={{ overflow: 'visible' }}>
+                  <div className="relative h-0.5 bg-[#1a5336]/20" style={{ top: '-29px', overflow: 'visible' }}></div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-3">Online Application</h3>
-                  <p className="text-[#212121]/70 mb-4 leading-relaxed">
-                    Parents complete the online application via tuyensinh.lhbs.vn and submit required documents (student information, previous academic reports, health certificate, etc.). Our system guides you through each step.
-                  </p>
-                  <button
-                    href="https://tuyensinh.lhbs.vn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-8 h-10 bg-[#FABA1E] text-[#1a5336] text-sm hover:bg-[#e5a812] transition-colors leading-10 rounded-full"
-                  >
-                    Apply Online
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 4 */}
-            <div className="bg-white p-8 border-l-4 border-[#1a5336] rounded-r">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
-                  <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">4</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-3">Assessment & Placement</h3>
-                  <p className="text-[#212121]/70 leading-relaxed">
-                    LHBS reviews the application and arranges assessments or interviews if needed. We evaluate each student's readiness and propose the most suitable class level to ensure their success and comfort in our learning environment.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 5 */}
-            <div className="bg-white p-8 border-l-4 border-[#1a5336] rounded-r">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
-                  <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">5</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-3">Offer & Enrolment</h3>
-                  <p className="text-[#212121]/70 leading-relaxed">
-                    LHBS confirms the admission result. Parents complete registration fees and deposit within the given timeframe to secure the seat. Our admissions team guides you through the enrolment process and answers any final questions.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 6 */}
-            <div className="bg-white p-8 border-l-4 border-[#FABA1E] rounded-r">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-[#FABA1E] flex items-center justify-center flex-shrink-0">
-                  <span className="font-['SVN-Gotham'] text-2xl text-[#1a5336]">6</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-['SVN-Gotham'] text-2xl text-[#1a5336] mb-3">Orientation & First School Day</h3>
-                  <p className="text-[#212121]/70 leading-relaxed">
-                    The school prepares orientation activities so students can familiarise themselves with the campus, meet teachers and classmates, and feel confident before or during their first days at LHBS. Welcome to the LHBS family!
-                  </p>
-                </div>
-              </div>
+                
+                {/* Navigation Buttons positioned at top right */}
+                <CarouselPrevious className="translate-x-0 translate-y-0 h-12 w-12 bg-white border-2 border-[#1a5336] text-[#1a5336] hover:bg-[#1a5336] hover:text-white transition-colors" />
+                <CarouselNext className="absolute right-2 translate-x-0 translate-y-0 h-12 w-12 bg-white border-2 border-[#1a5336] text-[#1a5336] hover:bg-[#1a5336] hover:text-white transition-colors" />
+              </Carousel>
             </div>
           </div>
         </div>

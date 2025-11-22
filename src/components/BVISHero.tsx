@@ -80,17 +80,17 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
       {/* Dark Overlay focused on bottom-left content area */}
       {/* <div className="absolute inset-0 z-10 bg-gradient-to-tr from-black/80 via-black/30 to-transparent" /> */}
 
-<div 
-  className="absolute inset-0 z-10" 
-  style={{
-    background: `linear-gradient(45deg, 
-      rgba(39, 41, 17, 0.45) 0%, 
-      rgba(39, 41, 17, 0.32) 30%, 
-      rgba(39, 41, 17, 0.18) 60%, 
-      rgba(39, 41, 17, 0.08) 85%, 
-      transparent 100%)`
-  }}
-/>
+      <div 
+        className="absolute inset-0 z-10" 
+        style={{
+          background: `linear-gradient(45deg, 
+            rgba(39, 41, 17, 0.45) 0%, 
+            rgba(39, 41, 17, 0.32) 30%, 
+            rgba(39, 41, 17, 0.18) 60%, 
+            rgba(39, 41, 17, 0.08) 85%, 
+            transparent 100%)`
+        }}
+      />
 
 
 
