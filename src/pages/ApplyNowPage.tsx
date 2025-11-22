@@ -243,7 +243,7 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
   <div className="w-full lg:w-[60%] lg:ml-[45%] overflow-y-auto mt-20">
     <div className="p-8 lg:px-16 lg:py-12 pt-28 lg:pt-24 border-b border-gray-200 max-w-4xl">
       <h1 className="text-3xl lg:text-4xl font-medium text-[#2c3e50] mb-4">
-        Welcome to LHBS HCMC
+        Welcome to LHBS
       </h1>
       <p className="text-gray-600 mb-4 leading-relaxed">
         We're delighted that you're considering Lac Hong Bilingual School Ho Chi Minh City for your child's education.
