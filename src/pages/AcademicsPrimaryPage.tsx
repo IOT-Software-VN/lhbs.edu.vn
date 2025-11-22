@@ -8,68 +8,69 @@ interface AcademicsPrimaryPageProps {
 
 export function AcademicsPrimaryPage({ onNavigate }: AcademicsPrimaryPageProps) {
 
-    const dailyActivities = [
+ const dailyActivities = [
   {
     id: 1,
-    title: "First things first",
+    title: "Morning readiness",
     description:
-      "When our Early Years students arrive at school at 8:30am, they enjoy a quick warm-up activity to get ready for the day ahead. These range from building Ho Chi Minh City’s next skyscraper with our range of play equipment to becoming whoever they want in our role-play area.",
+      "Our Primary students begin their day with engaging morning activities designed to build focus and enthusiasm for learning. They review lessons, set daily goals, and participate in quick brain-boosting games to start the day positively.",
     image:
       "https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/eyfs-chuong-trnh-mam-non-quoc-te-bvis-hcmc-(4).jpg?h=4000&iar=0&w=6000&rev=3eb563f8079645d0b5c7ee7ec1d8acda&extension=webp&hash=7CF74FAF838DCCF306526D9F7B2A908A",
-    alt: "Children building blocks in play area",
-    timeLabel: "Morning arrival",
+    alt: "Primary students starting the school day with morning review",
+    timeLabel: "Morning start",
     timelineColor: "#1A5336",
-    backgroundColor: "#E8F5E8", // Light green
+    backgroundColor: "#E8F5E8",
   },
   {
     id: 2,
-    title: "Music in the morning",
+    title: "Interactive learning",
     description:
-      "It's time to listen to the melodies of traditional songs and express themselves using a range of instruments! This develops their communication, language, and physical skills through creative play.",
+      "Students engage in core subjects such as English, Math, and Science through interactive lessons that encourage collaboration, questioning, and creativity. Teachers guide them to think critically and apply knowledge in real-world contexts.",
     image:
       "https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/eyfs-chuong-trnh-mam-non-quoc-te-bvis-hcmc-(5).jpg?h=4000&iar=0&w=6000&rev=33d45eb048f140ddb46c7e46e4b8f161&extension=webp&hash=3649DA0EDBEB8F7EB05AB7C2EBF92E48",
-    alt: "Children wearing pirate hats playing music",
-    timeLabel: "Morning music",
+    alt: "Primary students engaged in interactive classroom activities",
+    timeLabel: "Morning classes",
     timelineColor: "#FABA1E",
-    backgroundColor: "#ffcb00", // Light yellow
+    backgroundColor: "#FFF7CC",
   },
   {
     id: 3,
-    title: "Healthy eating",
+    title: "Lunch and friendship",
     description:
-      "At lunchtime, fresh, nutritious, and delicious Asian and Western meals are prepared onsite for students to enjoy with their friends.",
+      "Lunchtime is a chance for students to recharge and connect with friends. Balanced meals are served onsite, promoting healthy habits and social interaction in a supportive school environment.",
     image:
       "https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/fy22-23/dsc03911_11zon/33-eyfs11zon/dsc03897_11zon.jpg?h=5065&iar=0&w=7594&rev=7bd0a9ff989d4c3f966eed75045762d6&extension=webp&hash=6513642867256C811423751D51655AF4",
-    alt: "Child having lunch happily at school",
-    timeLabel: "Lunch time",
+    alt: "Primary students enjoying lunch together at school cafeteria",
+    timeLabel: "Lunch break",
     timelineColor: "#1A5336",
-    backgroundColor: "#F0FDF4", // Very light green
+    backgroundColor: "#F0FDF4",
   },
   {
     id: 4,
-    title: "Continuing the learning journey",
+    title: "Afternoon exploration",
     description:
-      "An afternoon of inside and outside play, with teacher-led and student-initiated activities, helps develop our children's interests and passions. Before home time, our students settle down for a thought-provoking story.",
+      "Afternoons are filled with creative and exploratory lessons such as Art, STEAM, and Global Citizenship. Students express themselves, experiment, and work together to solve real-world challenges.",
     image:
       "https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/eyfs-chuong-trnh-mam-non-quoc-te-bvis-hcmc-(3).jpg?h=4158&iar=0&w=6234&rev=65e1c9b4f5ec464590dcaf0fabfe74a7&extension=webp&hash=79B3720A41ED262F520F77A1A7CBAC46",
-    alt: "Students learning and playing in classroom",
+    alt: "Students participating in afternoon creative and STEAM projects",
     timeLabel: "Afternoon learning",
     timelineColor: "#FABA1E",
-    backgroundColor: "#ffcb00", // Very light orange/yellow
+    backgroundColor: "#FFF1CC",
   },
   {
     id: 5,
-    title: "After school",
+    title: "After-school clubs",
     description:
-      "After another busy day of learning, fun, and discovery, our little learners return home at 3:05 pm on the school bus. Alternatively, they can continue to do what they love at specially designed EYFS after-school clubs.",
+      "At the end of the day, students can join after-school clubs and enrichment activities such as sports, music, robotics, or art. These programs help them discover passions, develop teamwork, and build confidence.",
     image:
       "https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/fy22-23/early-year-3511zon.jpg?h=6240&iar=0&w=4162&rev=2c0b6a46fb804d5cb089bf6b31c6c80c&extension=webp&hash=4A853B427858573CD456248656D18F10",
-    alt: "Children dancing in after-school ballet class",
+    alt: "Primary students joining after-school sports and art clubs",
     timeLabel: "After school",
     timelineColor: "#FABA1E",
-    backgroundColor: "#FEF7ED", // Very light peach
+    backgroundColor: "#FEF7ED",
   },
 ];
+
 
   return (
     <div className="w-full ">

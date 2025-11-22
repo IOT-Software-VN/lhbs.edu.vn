@@ -71,14 +71,27 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
               src={image}
               alt="LHBS campus with students"
               className="w-full h-full object-cover"
-              style={{ filter: 'blur(1px) brightness(0.7)' }}
+              style={{ filter: 'brightness(1)' }}
             />
           </motion.div>
         ))}
       </div>
 
-      {/* Dark Overlay with gradient for better text readability */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/60 via-black/40 to-black/30" />
+      {/* Dark Overlay focused on bottom-left content area */}
+      {/* <div className="absolute inset-0 z-10 bg-gradient-to-tr from-black/80 via-black/30 to-transparent" /> */}
+
+<div 
+  className="absolute inset-0 z-10" 
+  style={{
+    background: `linear-gradient(45deg, 
+      rgba(39, 41, 17, 0.45) 0%, 
+      rgba(39, 41, 17, 0.32) 30%, 
+      rgba(39, 41, 17, 0.18) 60%, 
+      rgba(39, 41, 17, 0.08) 85%, 
+      transparent 100%)`
+  }}
+/>
+
 
 
       {/* Content Container */}
@@ -98,7 +111,7 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mb-4"
             >
-              <span className="text-white/90 text-sm md:text-base uppercase tracking-[0.15em]">
+              <span className="text-white/95 text-sm md:text-base uppercase tracking-[0.15em] font-medium drop-shadow-lg">
                 Welcome to
               </span>
             </motion.div>
@@ -117,10 +130,10 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
                   backgroundColor="#FABA1E"
                 >
                   <span 
-                    className="text-[#1a5336] leading-tight font-semibold" 
+                    className="text-[#1a5336] leading-tight font-semibold drop-shadow-2xl" 
                     style={{ 
                       fontSize: '48px',
-                      lineHeight: '1.24'
+                      lineHeight: '1.24',
                     }}
                   >
                     Lac Hong Bilingual School
@@ -134,7 +147,8 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-white text-base md:text-lg leading-relaxed mb-8 md:mb-10 max-w-[600px]"
+              className="text-white text-base md:text-lg leading-relaxed mb-8 md:mb-10 max-w-[600px] drop-shadow-lg font-semibold"
+              style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}
             >
              Lac Hong Bilingual School is a leading bilingual school in Dong Nai, 
              where every student is nurtured to develop intellectually, ethically, 
@@ -155,7 +169,8 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
                 onClick={() => onNavigate('/admissions')}
                 className="px-8 md:px-10 h-12 bg-[#FABA1E] text-[#1a5336] font-bold uppercase text-sm md:text-base tracking-wider 
                           hover:bg-[#e5a812] transition-all focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 
-                          focus:ring-offset-transparent rounded-full"
+                          focus:ring-offset-transparent rounded-full shadow-xl drop-shadow-lg"
+                style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))' }}
               >
                 Enquire Now
               </button>

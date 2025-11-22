@@ -53,7 +53,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
       className={`fixed top-0 left-0 right-0 z-70 transition-all duration-300 mb-2${
         isTransparent ? 'py-2' : 'py-1 shadow-sm'
       } ${menuOpen ? 'shadow-none' : ''}`}
-      style={{ minHeight: '72px' }}
+      style={{ minHeight: '66px' }}
       initial={{ y: 0 }}
       animate={{ 
         y: isVisible ? 0 : '-100%',
@@ -66,7 +66,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
         backdropFilter: { duration: 0.3 }
       }}
     >
-      <div className="h-full max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between gap-8  py-4 mb-2">
+      <div className="h-full max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between gap-8  py-4">
         {/* Logo - Left */}
         <motion.div
           onClick={onLogoClick}
@@ -80,7 +80,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
          <img 
               src={logoImage} 
               alt="LHBS - Lac Hong Bilingual School" 
-              className="h-23 w-auto rounded-none"
+              className="h-18 w-auto rounded-none"
             />
         </motion.div>
         
