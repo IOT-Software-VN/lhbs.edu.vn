@@ -409,23 +409,22 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
 
       {/* 5. STEP-BY-STEP ADMISSIONS PROCESS */}
       <section className="bg-[#FAF5ED] py-24 md:py-32">
-        <div className="w-full !mr-0 max-w-screen-2xl mx-auto ">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-            {/* Left Column: Title & Description - 30% width */}
-            <div className="lg:col-span-4 my-auto">
-              <h2 
-                className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
-                style={{ fontSize: '48px', lineHeight: '1.24' }}
-              >
-                Step-by-Step Admissions Process
-              </h2>
-              <p className="text-[#212121] font-medium text-lg">
-                We've designed a clear, supportive admissions journey to make the process smooth for every family.
-              </p>
-            </div>
+        <div className="w-full px-6 md:px-12">
+          {/* Title & Description - Moved to top */}
+          <div className="text-center mb-16">
+            <h2 
+              className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
+              style={{ fontSize: '48px', lineHeight: '1.24' }}
+            >
+              Step-by-Step Admissions Process
+            </h2>
+            <p className="text-[#212121] font-medium text-lg max-w-3xl mx-auto">
+              We've designed a clear, supportive admissions journey to make the process smooth for every family.
+            </p>
+          </div>
 
-            {/* Right Column: Carousel - 70% width */}
-            <div className="lg:col-span-8 relative">
+          {/* Carousel - Full width */}
+          <div className="relative max-w-screen-2xl mx-auto">
               <Carousel className="relative" style={{ overflow: 'initial' }}>
                 <CarouselContent className="-ml-6" style={{ overflow: 'initial' }}>
                   {admissionsSteps.map((step, index) => (
@@ -548,7 +547,6 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                 <CarouselNext className="absolute right-2 translate-x-0 translate-y-0 h-12 w-12 bg-white border-2 border-[#1a5336] text-[#1a5336] hover:bg-[#1a5336] hover:text-white transition-colors" />
               </Carousel>
             </div>
-          </div>
         </div>
       </section>
 
