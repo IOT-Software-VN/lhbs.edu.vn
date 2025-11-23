@@ -334,8 +334,8 @@ function LeadershipQuoteSection() {
             </p>
             
             <div className="border-t border-[#1a5336]/20 pt-4">
-              <p className="text-[#1a5336] font-semibold">Ms. Dang Thi Tuyet</p>
-              <p className="text-[#1a5336]/70 text-sm">Principal of Lac Hong Bilingual Kindergarten Bien Hoa Campus</p>
+              <p className="text-[#1a5336] font-semibold">Ms. Hoang Thi Diem Trang</p>
+              <p className="text-[#1a5336]/70 text-sm">Principal of Lac Hong Bilingual Primary – Secondary – High School</p>
             </div>
           </div>
         </motion.div>
@@ -350,8 +350,8 @@ function LeadershipQuoteSection() {
           <div className="relative w-[200px] h-[300px] mx-auto ">
             <div className="absolute inset-0 rounded-full transform rotate-12"></div>
             <img
-              src="https://lhbs.edu.vn/wp-content/uploads/2023/08/DANG-THI-TUYET_HIEU-TRUONG-MN_LHBS-01-01-200x300.jpg"
-              alt="Ms. Dang Thi Tuyet"
+              src="https://lhbs.edu.vn/wp-content/uploads/2025/08/z6919167807030_50bfac5d1dbb89531e6e5552034497ae.jpg"
+              alt="Ms. Hoang Thi Diem Trang"
               className="relative z-10 w-full h-full"
             />
           </div>

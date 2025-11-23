@@ -593,29 +593,6 @@ function LearningWithoutLimitsSection() {
       transition={{ duration: 0.8 }}
     >
       <div className="max-w-[1440px] mx-auto grid md:grid-cols-2 gap-16 items-center">
-        {/* Left: Text Content */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <h3 className="text-4xl md:text-5xl font-bold text-[#1a5336] mb-6">
-            {LWL_TITLE}
-          </h3>
-          
-          <p className="text-lg text-[#212121] mb-8 leading-relaxed">
-            {LWL_DESC}
-          </p>
-          
-          <div className="border-l-4 border-[#FABA1E] pl-6">
-            <h4 className="text-2xl font-bold text-[#1a5336] mb-4">
-              {LWL_SUBTITLE}
-            </h4>
-            <p className="text-lg text-[#212121] leading-relaxed">
-              {LWL_SUBDESC}
-            </p>
-          </div>
-        </motion.div>
         
         {/* Right: Image Carousel */}
         <motion.div
@@ -659,6 +636,29 @@ function LearningWithoutLimitsSection() {
                 aria-label={`Go to image ${index + 1}`}
               />
             ))}
+          </div>
+        </motion.div>
+                {/* Left: Text Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <h3 className="text-4xl md:text-5xl font-bold text-[#1a5336] mb-6">
+            {LWL_TITLE}
+          </h3>
+          
+          <p className="text-lg text-[#212121] mb-8 leading-relaxed">
+            {LWL_DESC}
+          </p>
+          
+          <div className="border-l-4 border-[#FABA1E] pl-6">
+            <h4 className="text-2xl font-bold text-[#1a5336] mb-4">
+              {LWL_SUBTITLE}
+            </h4>
+            <p className="text-lg text-[#212121] leading-relaxed">
+              {LWL_SUBDESC}
+            </p>
           </div>
         </motion.div>
       </div>

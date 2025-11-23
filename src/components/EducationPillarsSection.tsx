@@ -49,7 +49,7 @@ export default function EducationPillarsSectionComponent({ showModal, setShowMod
     {
       image: img061,
       alt: 'LHBS students winning NASA Space Apps Challenge with ATMOS GUARD project',
-      heightRatio: 0.6,
+      heightRatio: 1,
       title: 'NASA Space Apps Challenge Winners',
       subtitle: 'LHBS students achieved remarkable success in the prestigious NASA Space Apps Challenge with their innovative ATMOS GUARD project, showcasing their scientific excellence and global competitiveness.'
     } as PhotoCardData

@@ -66,9 +66,9 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
     <footer className="bg-[#1a5336] text-[#fffae9] relative z-50">
       {/* Footer Top - 4 Columns */}
       <div className="max-w-[1440px] mx-auto px-4 md:px-20 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Column 1: Brand & Address */}
-          <div>
+          <div className="lg:mr-8">
             {/* Logo */}
             <div className="mb-6">
               <img 
