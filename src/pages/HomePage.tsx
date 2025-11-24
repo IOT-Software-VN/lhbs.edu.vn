@@ -15,7 +15,7 @@ import heroImage from '../assets/hero-01.jpg';
 import founderImage from '../assets/hero-01.jpg';
 import founderPortrait from '../assets/Section-03.png';
 import educationImage from '../assets/hero-01.jpg';
-import items01 from '../assets/items-01.png';
+import core2 from '../assets/section275/core2.jpg';
 import items02 from '../assets/items-02.png';
 import items03 from '../assets/items-03.png';
 import anniversaryImage from '../assets/anyver.png';
@@ -126,23 +126,36 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
           transition={{ duration: 0.8, delay: 0.2 }}
           className=" py-24 px-4 md:px-20"
         >
-          {/* Title - Green background only on "Solid education" */}
-          <h2 
-            className="text-[#1a5336] mb-6"
-            style={{ fontSize: '48px', lineHeight: '1.24' }}
-          >
-            <AnimatedHighlight 
-              delay={1.5} 
-              duration={1.5}
-              backgroundColor="#95F77E"
-              className="text-[#1a5336]"
-            >
-              Solid education
-            </AnimatedHighlight>
-            <span className="block mt-2">
-              foundation to Future
-            </span>
-          </h2>
+      <h2 
+        className="text-[#1a5336] mb-6 font-['SVN-Gotham']"
+        style={{ fontSize: '48px', lineHeight: '1.24' }}
+      >
+        {/* Phần tiêu đề chính có sự khác biệt */}
+        <span 
+          className="block mb-3 text-[#FABA1E] tracking-[0.1em] uppercase font-medium"
+          style={{
+            fontSize: '22px',
+            letterSpacing: '2px'
+          }}
+        >
+          LHBS Holistic Education:
+        </span>
+
+        {/* Phần tiêu đề được nhấn mạnh bằng animation */}
+        <AnimatedHighlight 
+          delay={1.5} 
+          duration={1.5}
+          backgroundColor="#95F77E"
+          className="text-[#1a5336]"
+        >
+          A Solid Education
+        </AnimatedHighlight>
+
+        <span className="block mt-2 text-[#1a5336]/90">
+          for an Innovative Future
+        </span>
+      </h2>
+
           
           {/* Body copy */}
           <p className=" text-base md:text-lg text-[#212121] mb-8 leading-relaxed max-w-[70ch]">
@@ -278,7 +291,10 @@ function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => 
           
           {/* Title */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#fffae9] mb-6">
-            For ourself, our community, and our society
+            <span className="block whitespace-nowrap">
+              Vietnamese Identity,
+            </span>
+            Global Vision 
           </h2>
           
           {/* Body copy */}
@@ -349,15 +365,17 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
         >
           {/* Title with highlight */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#1a5336] mb-6 leading-tight font-semi">
-            15 years{' '}
+          <span className="block whitespace-nowrap">
+              15 years{' '}
             <AnimatedHighlight 
               delay={0.5} 
               duration={1.2}
               backgroundColor="#95F77E"
             >
-              and continuing
+              Solid foundation
             </AnimatedHighlight>
-            {' '}to educate
+          </span>
+            {' '}for Academic Excellence
           </h2>
           
           {/* Body copy - 3 paragraphs */}
@@ -404,96 +422,92 @@ function CoreStrengthsSection({ showModal, setShowModal }: CoreStrengthsSectionP
 
   const pillars = [
     {
-      title: 'ACADEMIC EXCELLENCE',
-      description: 'We provide a rigorous, engaging curriculum that challenges students to think deeply, ask questions, and develop a genuine passion for learning across all disciplines.',
+      title: 'LIFELONG LEARNING',
+      description: 'We cultivate a passion for continuous learning, encouraging students to embrace curiosity, seek knowledge, and develop critical thinking skills that will serve them throughout their lives.',
       points: [
-        'International curriculum standards',
-        'Personalized learning approaches',
+        'Research and inquiry-based learning',
         'Critical thinking development',
-        'Research-based methodologies'
-      ],
-      icon: (
-        <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
-          <path d="M32 8 L52 18 L52 38 L32 48 L12 38 L12 18 Z" strokeLinejoin="round" />
-          <path d="M32 28 L32 48" />
-          <path d="M22 23 L32 28 L42 23" />
-        </svg>
-      ),
-      image: 'https://images.unsplash.com/photo-1758270704191-5d7255cc02dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGFjYWRlbWljJTIwZXhjZWxsZW5jZXxlbnwxfHx8fDE3NjMxMDc3NzB8MA&ixlib=rb-4.1.0&q=80&w=400'
-    },
-    {
-      title: 'TRULY BILINGUAL',
-      description: 'Our bilingual program seamlessly integrates Vietnamese and English, enabling students to think, communicate, and excel in both languages naturally.',
-      points: [
-        'Balanced Vietnamese-English instruction',
-        'Native-speaking teachers',
-        'Cultural integration',
-        'Language immersion approach'
-      ],
-      icon: (
-        <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
-          <circle cx="24" cy="24" r="16" />
-          <circle cx="40" cy="40" r="16" />
-          <path d="M24 16 L24 32" />
-          <path d="M40 32 L40 48" />
-        </svg>
-      ),
-      image: 'https://images.unsplash.com/photo-1690192435015-319c1d5065b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWxpbmd1YWwlMjBjbGFzc3Jvb20lMjBsZWFybmluZ3xlbnwxfHx8fDE3NjMxMDc3NzF8MA&ixlib=rb-4.1.0&q=80&w=400'
-    },
-    {
-      title: 'INTELLECTUAL CURIOSITY',
-      description: 'We foster a spirit of inquiry and exploration, encouraging students to discover, question, and understand the world around them.',
-      points: [
-        'Project-based learning',
-        'Global perspectives',
-        'Scientific exploration',
-        'Creative problem-solving'
-      ],
-      icon: (
-        <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
-          <circle cx="32" cy="28" r="14" />
-          <path d="M32 42 L32 54" />
-          <path d="M26 54 L38 54" />
-          <path d="M28 48 L36 48" />
-        </svg>
-      ),
-      image: 'https://images.unsplash.com/photo-1758685734030-a31d96462eec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGN1cmlvc2l0eSUyMHNjaWVuY2V8ZW58MXx8fHwxNzYzMTA3NzcxfDA&ixlib=rb-4.1.0&q=80&w=400'
-    },
-    {
-      title: 'GLOBAL MINDSET',
-      description: 'Students develop cultural awareness, international perspectives, and the skills to thrive in an interconnected world.',
-      points: [
-        'Cross-cultural competence',
-        'International partnerships',
-        'Study abroad opportunities',
-        'Global citizenship values'
+        'Self-directed learning skills',
+        'Growth mindset cultivation'
       ],
       icon: (
         <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
           <circle cx="32" cy="32" r="20" />
-          <ellipse cx="32" cy="32" rx="12" ry="20" />
-          <path d="M12 32 L52 32" />
-          <path d="M20 20 L44 20" />
-          <path d="M20 44 L44 44" />
+          <path d="M32 12 L32 52" />
+          <path d="M22 22 L42 22" />
+          <path d="M22 32 L42 32" />
+          <path d="M22 42 L42 42" />
         </svg>
       ),
-      image: 'https://images.unsplash.com/photo-1660182922635-713da2867c82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBzdHVkZW50cyUyMGRpdmVyc2l0eXxlbnwxfHx8fDE3NjMxMDc3NzJ8MA&ixlib=rb-4.1.0&q=80&w=400'
+      image: 'https://lhbs.edu.vn/wp-content/uploads/2025/10/1-1.jpg'
     },
     {
-      title: 'ENGAGED CITIZENSHIP',
-      description: 'We cultivate responsible, compassionate citizens who contribute positively to their communities and society.',
+      title: 'INTEGRITY',
+      description: 'We instill strong moral principles and ethical values, teaching students to act with honesty, authenticity, and respect for themselves and others in all aspects of life.',
       points: [
-        'Community service programs',
-        'Leadership development',
-        'Social responsibility',
-        'Environmental stewardship'
+        'Character education programs',
+        'Ethical decision-making skills',
+        'Personal accountability',
+        'Respect and honesty principles'
       ],
       icon: (
         <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
-          <path d="M32 12 L36 28 L52 28 L40 38 L44 54 L32 44 L20 54 L24 38 L12 28 L28 28 Z" strokeLinejoin="round" />
+          <path d="M32 12 L52 22 L52 42 C52 48 42 54 32 54 C22 54 12 48 12 42 L12 22 Z" strokeLinejoin="round" />
+          <path d="M22 32 L28 38 L42 24" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       ),
-      image: 'https://images.unsplash.com/photo-1758582171503-ce7b5c28bb4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGNvbW11bml0eSUyMHNlcnZpY2V8ZW58MXx8fHwxNzYzMTA3NzcyfDA&ixlib=rb-4.1.0&q=80&w=400'
+      image: core2
+    },
+    {
+      title: 'CREATIVITY',
+      description: 'We foster innovative thinking and creative expression, providing students with opportunities to explore, experiment, and develop their unique talents and artistic abilities.',
+      points: [
+        'Arts and creative expression',
+        'Innovation and design thinking',
+        'Problem-solving creativity',
+        'Artistic skill development'
+      ],
+      icon: (
+        <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
+          <path d="M22 32 L32 12 L42 32 L52 22 L42 42 L32 52 L22 42 L12 22 Z" strokeLinejoin="round" />
+          <circle cx="32" cy="32" r="4" fill="#1a5336" />
+        </svg>
+      ),
+      image: 'https://lhbs.edu.vn/wp-content/uploads/2025/10/572331153_803654888963320_928581099648076096_n.jpg'
+    },
+    {
+      title: 'COMPASSION',
+      description: 'We nurture empathy and kindness, teaching students to understand and care for others, build meaningful relationships, and contribute positively to their community.',
+      points: [
+        'Empathy and emotional intelligence',
+        'Community service programs',
+        'Peer support systems',
+        'Social awareness development'
+      ],
+      icon: (
+        <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
+          <path d="M32 52 C32 52 12 36 12 24 C12 18 16 14 22 14 C26 14 30 16 32 20 C34 16 38 14 42 14 C48 14 52 18 52 24 C52 36 32 52 32 52 Z" strokeLinejoin="round" />
+        </svg>
+      ),
+      image: 'https://lhbs.edu.vn/wp-content/uploads/2025/01/333A8447.jpg'
+    },
+    {
+      title: 'RESPONSIBILITY',
+      description: 'We develop accountable and reliable leaders who understand their role in society, take ownership of their actions, and work towards creating a better world for all.',
+      points: [
+        'Leadership development programs',
+        'Environmental stewardship',
+        'Social responsibility awareness',
+        'Personal accountability skills'
+      ],
+      icon: (
+        <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
+          <circle cx="32" cy="32" r="20" />
+          <path d="M32 12 L32 32 L42 42" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="32" cy="32" r="2" fill="#1a5336" />
+        </svg>
+      ),
+      image: 'https://lhbs.edu.vn/wp-content/uploads/2019/10/MG_4900-450x450.jpg'
     }
   ];
 
@@ -515,54 +529,37 @@ function CoreStrengthsSection({ showModal, setShowModal }: CoreStrengthsSectionP
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
     >
-      {/* Top Text Block with Highlights */}
-     <motion.div 
-  className="text-center mb-16 max-w-full mx-auto"
-  initial={{ opacity: 0, y: 20 }}
-  animate={isInView ? { opacity: 1, y: 0 } : {}}
-  transition={{ duration: 0.8, delay: 0.2 }}
->
-      
-  {/* Line 1 */}
-  <h2 className="whitespace-nowrap font-['SVN-Gotham'] text-2xl md:text-3xl lg:text-4xl text-[#1a5336]">
-    We&nbsp;
-    <AnimatedHighlight delay={0.4} duration={0.6} className="px-0">educate</AnimatedHighlight>
-    &nbsp;not just for success, but&nbsp;
-    <AnimatedHighlight delay={0.8} duration={0.6} className="px-0">for significance.</AnimatedHighlight>
-  </h2>
-
-  {/* Line 2 */}
-  <h2 className="whitespace-nowrap font-['SVN-Gotham'] text-2xl md:text-3xl lg:text-4xl text-[#1a5336] mt-4">
-    We&nbsp;
-    <AnimatedHighlight delay={1.0} duration={0.6} className="px-0">nurture</AnimatedHighlight>
-    &nbsp;not just bright minds, but&nbsp;
-    <AnimatedHighlight delay={1.4} duration={0.6} className="px-0">bright futures.</AnimatedHighlight>
-  </h2>
-
-</motion.div>
-
-
-  <div className="text-center mb-16 relative z-10">
+      <div className="text-center mb-16 relative z-10">
         <motion.h2
-          className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1a5336]"
+          className="font-['SVN-Gotham'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336] mb-4"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          LHBS UNIQUE Education Pillars
+          Solid foundation for growth.
         </motion.h2>
+        
+        <motion.p
+          className="text-xl md:text-2xl text-[#1a5336] mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          Our Students are{' '}
+          <AnimatedHighlight delay={0.6} duration={0.8} backgroundColor="#95F77E">
+            Prepared and confident
+          </AnimatedHighlight>
+        </motion.p>
+        
+        <motion.p
+          className="text-base md:text-lg text-[#212121]/80 max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          Our Holistic educational programs equip our students with the essential life values necessary for personal growth and success.
+        </motion.p>
       </div>
-
- {/* <div className="text-center mb-16 relative z-10">
-        <motion.h2
-          className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336]"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          Academic & Bilingual Identity
-        </motion.h2>
-      </div> */}
 
       {/* 5 Vertical Pillar Cards */}
       <div className="py-16 px-8">
@@ -580,7 +577,7 @@ function CoreStrengthsSection({ showModal, setShowModal }: CoreStrengthsSectionP
             >
               {/* Title at top-left */}
               <div className="p-6 pb-4">
-                <h3 className="font-['SVN-Gotham'] text-base md:text-2xl tracking-wider text-[#1a5336] font-semibold">
+                <h3 className="text-center font-['SVN-Gotham'] text-base md:text-2xl tracking-wider text-[#1a5336] font-semibold">
                   {pillar.title}
                 </h3>
               </div>
@@ -777,3 +774,4 @@ function EducationPillarModal({ image, alt, title, subtitle, onClose }: Educatio
     </motion.div>
   );
 }
+

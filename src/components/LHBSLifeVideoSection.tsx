@@ -10,9 +10,8 @@ export function LHBSLifeVideoSection() {
 
   const lifeTitle = "LHBS Life";
   const lifeBody = "Experience the vibrant daily moments that define our community—from collaborative learning and creative expression to friendship and discovery. See how our students thrive in a nurturing, bilingual environment.";
-  const videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ"; // Placeholder - replace with actual video
+  const videoUrl = "https://www.youtube.com/embed/O7iVtgnbww4?si=1va8KPa_buOZUXJV"; // Updated with correct YouTube embed URL
   const playAriaLabel = "Play LHBS Life video";
-
   return (
     <>
       <motion.section
@@ -152,7 +151,9 @@ function VideoModal({ videoUrl, onClose }: VideoModalProps) {
             className="absolute inset-0 w-full h-full"
             src={videoUrl}
             title="LHBS Life Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           />
         </div>
