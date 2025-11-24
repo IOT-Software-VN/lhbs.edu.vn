@@ -60,17 +60,49 @@ We nurture not just bright minds, but bright futures.`;
           <h2 className="text-2xl md:text-3xl lg:text-4xl text-[#fffae9] mb-4 leading-relaxed spacing-y-2">
             <span className="block whitespace-nowrap mb-2">
               We&nbsp;
-              <AnimatedHighlight delay={0.4} duration={0.6} backgroundColor="#FABA1E" className="px-0 text-[#1a5336]">educate</AnimatedHighlight>
+              <span className="inline-block relative">
+                <AnimatedHighlight delay={0.4} duration={0.6} backgroundColor="#FABA1E" className="px-0">
+                  <span className="transition-colors duration-500 text-[#fffae9] hover:text-[#1a5336]" style={{
+                    animation: 'colorChange 0.6s ease-out ' + (0.4 + 0.3) + 's forwards'
+                  }}>educate</span>
+                </AnimatedHighlight>
+              </span>
               &nbsp;not just for success, but&nbsp;
-              <AnimatedHighlight delay={0.8} duration={0.6} backgroundColor="#FABA1E" className="px-0 text-[#1a5336]">for significance.</AnimatedHighlight>
+              <span className="inline-block relative">
+                <AnimatedHighlight delay={0.8} duration={0.6} backgroundColor="#FABA1E" className="px-0">
+                  <span className="transition-colors duration-500 text-[#fffae9]" style={{
+                    animation: 'colorChange 0.6s ease-out ' + (0.8 + 0.3) + 's forwards'
+                  }}>for significance.</span>
+                </AnimatedHighlight>
+              </span>
             </span>
             <span className="block whitespace-nowrap mt-4 mb-4">
               We&nbsp;
-              <AnimatedHighlight delay={1.0} duration={0.6} backgroundColor="#FABA1E" className="px-0 text-[#1a5336]">nurture</AnimatedHighlight>
+              <span className="inline-block relative">
+                <AnimatedHighlight delay={1.0} duration={0.6} backgroundColor="#FABA1E" className="px-0">
+                  <span className="transition-colors duration-500 text-[#fffae9]" style={{
+                    animation: 'colorChange 0.6s ease-out ' + (1.0 + 0.3) + 's forwards'
+                  }}>nurture</span>
+                </AnimatedHighlight>
+              </span>
               &nbsp;not just bright minds, but&nbsp;
-              <AnimatedHighlight delay={1.4} duration={0.6} backgroundColor="#FABA1E" className="px-0 text-[#1a5336]">bright futures.</AnimatedHighlight>
+              <span className="inline-block relative">
+                <AnimatedHighlight delay={1.4} duration={0.6} backgroundColor="#FABA1E" className="px-0">
+                  <span className="transition-colors duration-500 text-[#fffae9]" style={{
+                    animation: 'colorChange 0.6s ease-out ' + (1.4 + 0.3) + 's forwards'
+                  }}>bright futures.</span>
+                </AnimatedHighlight>
+              </span>
             </span>
           </h2>
+          
+          {/* CSS Animation for color change */}
+          <style jsx>{`
+            @keyframes colorChange {
+              0% { color: #fffae9; }
+              100% { color: #1a5336; }
+            }
+          `}</style>
           
           {/* Subcopy */}
           {/* <p className=" text-base md:text-lg text-[#fffae9]/90 mb-8 leading-relaxed">
