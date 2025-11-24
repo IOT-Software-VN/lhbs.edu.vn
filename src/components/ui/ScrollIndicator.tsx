@@ -12,10 +12,36 @@ export function ScrollIndicator({ targetSectionId = 'solid-education-section' }:
   const handleScrollClick = () => {
     const targetElement = document.getElementById(targetSectionId);
     if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      // Get the current scroll position
+      const currentScrollY = window.scrollY;
+      const targetScrollY = targetElement.offsetTop;
+      const distance = Math.abs(targetScrollY - currentScrollY);
+      
+      // Calculate duration based on distance for smoother animation
+      const duration = Math.min(Math.max(distance / 3, 800), 1500);
+      
+      // Smooth scroll with custom easing
+      const startTime = performance.now();
+      const startScrollY = currentScrollY;
+      
+      const animateScroll = (currentTime: number) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Easing function for smooth animation (easeInOutCubic)
+        const easeProgress = progress < 0.5 
+          ? 4 * progress * progress * progress 
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+        
+        const currentPosition = startScrollY + (targetScrollY - startScrollY) * easeProgress;
+        window.scrollTo(0, currentPosition);
+        
+        if (progress < 1) {
+          requestAnimationFrame(animateScroll);
+        }
+      };
+      
+      requestAnimationFrame(animateScroll);
     }
   };
 
