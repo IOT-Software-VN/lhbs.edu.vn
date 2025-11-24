@@ -423,7 +423,7 @@ function CoreStrengthsSection({ showModal, setShowModal }: CoreStrengthsSectionP
   const pillars = [
     {
       title: 'LIFELONG LEARNING',
-      description: 'We cultivate a passion for continuous learning, encouraging students to embrace curiosity, seek knowledge, and develop critical thinking skills that will serve them throughout their lives.',
+      description: 'We cultivate curiosity and a lifelong passion for learning and self-growth.',
       points: [
         'Research and inquiry-based learning',
         'Critical thinking development',
@@ -443,7 +443,7 @@ function CoreStrengthsSection({ showModal, setShowModal }: CoreStrengthsSectionP
     },
     {
       title: 'INTEGRITY',
-      description: 'We instill strong moral principles and ethical values, teaching students to act with honesty, authenticity, and respect for themselves and others in all aspects of life.',
+      description: 'We act with honesty, ethics, and consistency in thought, word, and deed.',
       points: [
         'Character education programs',
         'Ethical decision-making skills',
@@ -460,7 +460,7 @@ function CoreStrengthsSection({ showModal, setShowModal }: CoreStrengthsSectionP
     },
     {
       title: 'CREATIVITY',
-      description: 'We foster innovative thinking and creative expression, providing students with opportunities to explore, experiment, and develop their unique talents and artistic abilities.',
+      description: 'We think independently and flexibly, daring to innovate and make positive change.',
       points: [
         'Arts and creative expression',
         'Innovation and design thinking',
@@ -477,7 +477,7 @@ function CoreStrengthsSection({ showModal, setShowModal }: CoreStrengthsSectionP
     },
     {
       title: 'COMPASSION',
-      description: 'We nurture empathy and kindness, teaching students to understand and care for others, build meaningful relationships, and contribute positively to their community.',
+      description: 'We live with empathy, kindness, and respect for diversity, caring for others and our community.',
       points: [
         'Empathy and emotional intelligence',
         'Community service programs',
@@ -493,7 +493,7 @@ function CoreStrengthsSection({ showModal, setShowModal }: CoreStrengthsSectionP
     },
     {
       title: 'RESPONSIBILITY',
-      description: 'We develop accountable and reliable leaders who understand their role in society, take ownership of their actions, and work towards creating a better world for all.',
+      description: 'We take initiative and accountability for ourselves, our society, and our planet, acting for sustainable development.',
       points: [
         'Leadership development programs',
         'Environmental stewardship',
