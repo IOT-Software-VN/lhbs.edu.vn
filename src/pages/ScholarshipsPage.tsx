@@ -151,7 +151,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
             
             <button
               onClick={() => onNavigate('/admissions/apply-now')}
-              className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover: hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="px-12 h-12 bg-transparent text-[#fffae9] font-bold shadow-lg hover:shadow-xl hover:bg-[#fffae9] hover:text-[#1a5336] transition-all focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               aria-label="Start scholarship application"
             >
               APPLY NOW
@@ -206,7 +206,7 @@ function SummaryCardsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white p-6 hover:shadow-lg transition-shadow rounded-lg border-none"
+                className="bg-white p-6 shadow-lg hover:shadow-xl transition-all rounded-lg"
               >
                 <Icon className="w-10 h-10 text-[#FABA1E] mb-4" />
                 <h3 className=" text-xl text-[#1a5336] mb-2">
@@ -258,7 +258,8 @@ function WhoShouldApplySection() {
           </div>
           
           {/* Reassurance Note */}
-          <div className="bg-white border-l-4 border-[#FABA1E] p-6 rounded-r">
+          <div className="bg-white relative p-6 shadow-lg hover:shadow-xl transition-all rounded-lg">
+            <div className="absolute left-0 top-0 w-1 h-full bg-[#FABA1E] rounded-l-lg"></div>
             <div className="flex gap-3">
               <AlertCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
               <p className=" text-sm text-[#1a5336]/80 leading-relaxed">
@@ -336,7 +337,7 @@ function CriteriaMatrixSection() {
           <h3 className=" text-2xl text-[#1a5336] mb-4">
             Evaluation Weighting
           </h3>
-          <div className="flex h-16 border-2 border-[#1a5336] rounded-lg overflow-hidden">
+          <div className="flex h-16 shadow-lg rounded-lg overflow-hidden">
             {weights.map((weight, idx) => (
               <div
                 key={idx}
@@ -362,42 +363,42 @@ function CriteriaMatrixSection() {
         
         {/* Matrix Table */}
         <div className="overflow-x-auto">
-          <table className="w-full border-2 border-[#1a5336] bg-white rounded-lg overflow-hidden">
+          <table className="w-full bg-white shadow-lg rounded-lg overflow-hidden">
             <thead>
               <tr className="bg-[#1a5336] text-[#fffae9]">
-                <th className="p-4 text-left  text-xl border-r-2 border-[#fffae9]/20">
+                <th className="p-4 text-left text-xl">
                   Scholarship Type
                 </th>
-                <th className="p-4 text-left  text-xl border-r-2 border-[#fffae9]/20">
+                <th className="p-4 text-left text-xl">
                   Key Criteria
                 </th>
-                <th className="p-4 text-left  text-xl border-r-2 border-[#fffae9]/20">
+                <th className="p-4 text-left text-xl">
                   Max Value
                 </th>
-                <th className="p-4 text-left  text-xl border-r-2 border-[#fffae9]/20">
+                <th className="p-4 text-left text-xl">
                   Seats
                 </th>
-                <th className="p-4 text-left  text-xl">
+                <th className="p-4 text-left text-xl">
                   Renewal
                 </th>
               </tr>
             </thead>
             <tbody>
               {scholarshipTypes.map((scholarship, idx) => (
-                <tr key={idx} className="border-t-2 border-[#1a5336] hover:/50">
-                  <td className="p-4  font-bold text-[#1a5336] border-r border-[#1a5336]/20">
+                <tr key={idx} className="hover:bg-gray-50 transition-colors">
+                  <td className="p-4 font-bold text-[#1a5336]">
                     {scholarship.type}
                   </td>
-                  <td className="p-4  text-sm text-[#1a5336]/80 border-r border-[#1a5336]/20">
+                  <td className="p-4 text-sm text-[#1a5336]/80">
                     {scholarship.criteria}
                   </td>
-                  <td className="p-4  text-[#1a5336] border-r border-[#1a5336]/20">
+                  <td className="p-4 text-[#1a5336]">
                     {scholarship.maxValue}
                   </td>
-                  <td className="p-4  text-[#1a5336] border-r border-[#1a5336]/20">
+                  <td className="p-4 text-[#1a5336]">
                     {scholarship.seats}
                   </td>
-                  <td className="p-4  text-sm text-[#1a5336]/80">
+                  <td className="p-4 text-sm text-[#1a5336]/80">
                     {scholarship.renewal}
                   </td>
                 </tr>
@@ -406,7 +407,8 @@ function CriteriaMatrixSection() {
           </table>
         </div>
         
-        <div className="mt-6 bg-white border-l-4 border-[#FABA1E] p-6 rounded-r">
+        <div className="mt-6 bg-white relative p-6 shadow-lg rounded-lg">
+          <div className="absolute left-0 top-0 w-1 h-full bg-[#FABA1E] rounded-l-lg"></div>
           <p className=" text-sm text-[#1a5336]/80 leading-relaxed">
             <strong>Note:</strong> All scholarship recipients must maintain good academic standing and conduct. Specific renewal criteria may vary by scholarship type. Awards are reviewed annually and are not automatically guaranteed for subsequent years.
           </p>
@@ -476,7 +478,7 @@ function ProcessTimelineSection() {
               {steps.map((step, idx) => (
                 <div key={idx} className="relative">
                   {/* Step Number Circle */}
-                  <div className="relative z-10 w-24 h-24 mx-auto mb-6 bg-[#1a5336] border-4 border-[#FABA1E] rounded-lg flex items-center justify-center">
+                  <div className="relative z-10 w-24 h-24 mx-auto mb-6 bg-[#1a5336] shadow-lg hover:shadow-xl transition-all rounded-lg flex items-center justify-center ring-4 ring-[#FABA1E]">
                     <span className=" text-3xl text-[#fffae9]">{idx + 1}</span>
                   </div>
                   
@@ -510,7 +512,7 @@ function ProcessTimelineSection() {
           {steps.map((step, idx) => (
             <div key={idx} className="flex gap-4">
               {/* Step Number Circle */}
-              <div className="flex-shrink-0 w-16 h-16 bg-[#1a5336] border-4 border-[#FABA1E] rounded-lg flex items-center justify-center">
+              <div className="flex-shrink-0 w-16 h-16 bg-[#1a5336] shadow-lg rounded-lg flex items-center justify-center ring-4 ring-[#FABA1E]">
                 <span className=" text-2xl text-[#fffae9]">{idx + 1}</span>
               </div>
               
@@ -573,9 +575,9 @@ function DocumentChecklistSection() {
         
         <div className="grid md:grid-cols-2 gap-8 max-w-[1000px] mx-auto">
           {/* Required Documents */}
-          <div className="bg-white border-2 border-[#1a5336] p-8 rounded-lg">
+          <div className="bg-white shadow-lg hover:shadow-xl transition-all p-8 rounded-lg">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#1a5336] rounded-lg flex items-center justify-center">
                 <CheckCircle className="w-6 h-6 text-[#FABA1E]" />
               </div>
               <h3 className=" text-2xl text-[#1a5336]">
@@ -594,9 +596,9 @@ function DocumentChecklistSection() {
           </div>
           
           {/* Optional Documents */}
-          <div className="bg-white border-2 border-[#FABA1E] p-8 rounded-lg">
+          <div className="bg-white shadow-lg hover:shadow-xl transition-all p-8 rounded-lg ring-2 ring-[#FABA1E]/20">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-[#FABA1E] flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#FABA1E] rounded-lg flex items-center justify-center">
                 <Star className="w-6 h-6 text-[#1a5336]" />
               </div>
               <h3 className=" text-2xl text-[#1a5336]">
@@ -616,7 +618,8 @@ function DocumentChecklistSection() {
         </div>
         
         {/* Document Note */}
-        <div className="mt-8 max-w-[1000px] mx-auto bg-white border-l-4 border-[#1a5336] p-6 rounded-r">
+        <div className="mt-8 max-w-[1000px] mx-auto bg-white relative p-6 shadow-lg rounded-lg">
+          <div className="absolute left-0 top-0 w-1 h-full bg-[#1a5336] rounded-l-lg"></div>
           <h4 className=" text-xl text-[#1a5336] mb-3">
             Document Guidelines
           </h4>
@@ -707,7 +710,7 @@ function KeyDatesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white border-2 border-[#1a5336] p-6 relative rounded-lg"
+              className="bg-white shadow-lg hover:shadow-xl transition-all p-6 relative rounded-lg"
             >
               {/* Badge */}
               <div className={`absolute top-0 right-0 px-3 py-1 ${round.badgeColor} rounded-bl`}>
@@ -756,7 +759,7 @@ function AwardRenewalSection() {
         
         <div className="grid md:grid-cols-2 gap-8 max-w-[1100px] mx-auto">
           {/* How Awards Are Applied */}
-          <div className="bg-white border-2 border-[#1a5336] p-8 rounded-lg">
+          <div className="bg-white shadow-lg hover:shadow-xl transition-all p-8 rounded-lg">
             <h3 className=" text-2xl text-[#1a5336] mb-6">
               How Awards Are Applied
             </h3>
@@ -781,7 +784,7 @@ function AwardRenewalSection() {
           </div>
           
           {/* Renewal Rules */}
-          <div className="bg-white border-2 border-[#1a5336] p-8 rounded-lg">
+          <div className="bg-white shadow-lg hover:shadow-xl transition-all p-8 rounded-lg">
             <h3 className=" text-2xl text-[#1a5336] mb-6">
               Annual Renewal Requirements
             </h3>
@@ -807,7 +810,7 @@ function AwardRenewalSection() {
         </div>
         
         {/* Performance Requirements Table */}
-        <div className="mt-8 max-w-[1100px] mx-auto bg-white border-2 border-[#1a5336] rounded-lg overflow-hidden">
+        <div className="mt-8 max-w-[1100px] mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="bg-[#1a5336] p-4">
             <h3 className=" text-2xl text-[#fffae9]">
               Minimum Performance Standards
@@ -840,7 +843,8 @@ function AwardRenewalSection() {
         </div>
         
         {/* Mentoring Note */}
-        <div className="mt-8 max-w-[1100px] mx-auto bg-white border-l-4 border-[#FABA1E] p-6 rounded-r">
+        <div className="mt-8 max-w-[1100px] mx-auto bg-white relative p-6 shadow-lg rounded-lg">
+          <div className="absolute left-0 top-0 w-1 h-full bg-[#FABA1E] rounded-l-lg"></div>
           <h4 className=" text-xl text-[#1a5336] mb-3">
             Scholarship Mentoring Program
           </h4>
@@ -864,7 +868,7 @@ function StackingPaymentSection() {
         
         <div className="grid md:grid-cols-2 gap-8 max-w-[1100px] mx-auto">
           {/* Stacking Rules */}
-          <div className=" border-2 border-[#1a5336] p-8 rounded-lg">
+          <div className="bg-white shadow-lg hover:shadow-xl transition-all p-8 rounded-lg">
             <h3 className=" text-2xl text-[#1a5336] mb-6">
               Combining Multiple Scholarships
             </h3>
@@ -916,7 +920,7 @@ function StackingPaymentSection() {
           </div>
           
           {/* Payment & Refund */}
-          <div className=" border-2 border-[#1a5336] p-8 rounded-lg">
+          <div className="bg-white shadow-lg hover:shadow-xl transition-all p-8 rounded-lg">
             <h3 className=" text-2xl text-[#1a5336] mb-6">
               How Discounts Apply
             </h3>
@@ -983,7 +987,7 @@ function NeedBasedAidSection() {
     <section id="aid" className="relative py-16 md:py-24 ">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20">
         <div className="max-w-[900px] mx-auto">
-          <div className="bg-white border-2 border-[#1a5336] p-8 md:p-12 rounded-lg">
+          <div className="bg-white shadow-lg hover:shadow-xl transition-all p-8 md:p-12 rounded-lg">
             <div className="flex items-start gap-4 mb-6">
               <div className="w-16 h-16 bg-[#FABA1E] rounded-lg flex items-center justify-center flex-shrink-0">
                 <HelpCircle className="w-8 h-8 text-[#1a5336]" />
@@ -1047,7 +1051,7 @@ function NeedBasedAidSection() {
               </div>
               
               {/* Confidentiality Highlight */}
-              <div className="bg-white border-2 border-[#FABA1E] p-6 rounded-lg">
+              <div className="bg-white shadow-lg p-6 rounded-lg ring-2 ring-[#FABA1E]/20">
                 <div className="flex items-start gap-3">
                   <AlertCircle className="w-6 h-6 text-[#FABA1E] flex-shrink-0 mt-1" />
                   <div>
@@ -1135,7 +1139,7 @@ function FAQSection() {
             return (
               <div
                 key={idx}
-                className="border-2 border-[#1a5336] rounded-lg overflow-hidden"
+                className="bg-white shadow-lg hover:shadow-xl transition-all rounded-lg overflow-hidden"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
@@ -1232,7 +1236,7 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
                   key={idx}
                   href={`/downloads/${doc.file}`}
                   download
-                  className="bg-white border-2 border-[#1a5336] p-6 hover:border-[#FABA1E] hover:shadow-lg transition-all group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg"
+                  className="bg-white shadow-lg hover:shadow-xl p-6 transition-all group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg hover:ring-2 hover:ring-[#FABA1E]/20"
                 >
                   <div className="flex items-start gap-4">
                     <FileText className="w-8 h-8 text-[#1a5336] group-hover:text-[#FABA1E] transition-colors flex-shrink-0" />
@@ -1257,7 +1261,7 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
           </div>
           
           {/* Right: Contact Card */}
-          <div className="bg-white border-2 border-[#1a5336] p-8 rounded-lg h-fit lg:sticky lg:top-24">
+          <div className="bg-white shadow-lg hover:shadow-xl transition-all p-8 rounded-lg h-fit lg:sticky lg:top-24">
             <h3 className=" text-2xl text-[#1a5336] mb-6">
               Need Help?
             </h3>
@@ -1308,7 +1312,7 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
                       href="https://zalo.me/lhbsscholarships"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 h-10 border-2 border-[#1a5336] text-[#1a5336] hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors"
+                      className="flex-1 flex items-center justify-center gap-2 h-10 bg-gray-50 text-[#1a5336] hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors shadow hover:shadow-lg rounded-lg"
                     >
                       <MessageCircle className="w-4 h-4" />
                       <span className=" text-xs font-bold">Zalo</span>
@@ -1318,7 +1322,7 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
                       href="https://wa.me/842838989898"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 h-10 border-2 border-[#1a5336] text-[#1a5336] hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors"
+                      className="flex-1 flex items-center justify-center gap-2 h-10 bg-gray-50 text-[#1a5336] hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors shadow hover:shadow-lg rounded-lg"
                     >
                       <MessageCircle className="w-4 h-4" />
                       <span className=" text-xs font-bold">WhatsApp</span>
@@ -1338,7 +1342,7 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
                 
                 <a
                   href="/contact/book-tour"
-                  className="block text-center px-6 h-10 border-2 border-[#1a5336] text-[#1a5336]  font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center"
+                  className="block text-center px-6 h-10 bg-gray-50 text-[#1a5336] font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center shadow hover:shadow-lg rounded-lg"
                 >
                   BOOK 15-MIN CONSULTATION
                 </a>
@@ -1365,7 +1369,7 @@ function DownloadsContactSection({ onNavigate }: { onNavigate: (path: string) =>
 function StickyHelper() {
   return (
     <div className="hidden xl:block fixed bottom-8 right-8 z-40">
-      <div className="bg-[#1a5336] border-4 border-[#FABA1E] p-6 w-[280px] shadow-2xl rounded-lg">
+      <div className="bg-[#1a5336] ring-4 ring-[#FABA1E] p-6 w-[280px] shadow-2xl rounded-lg">
         <h3 className=" text-xl text-[#fffae9] mb-4">
           Quick Help
         </h3>

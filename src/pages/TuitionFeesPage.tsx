@@ -150,7 +150,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
             <a
               href="/downloads/tuition-fees-policy-2025.pdf"
               download
-              className="px-12 h-12 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover: hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center gap-2"
+              className="px-12 h-12 bg-transparent text-[#fffae9] font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#FABA1E] flex items-center justify-center gap-2 shadow-lg hover:shadow-xl rounded-lg"
             >
               <Download className="w-4 h-4" />
               DOWNLOAD POLICY (PDF)
@@ -213,7 +213,7 @@ function SummaryCardsSection() {
         {summaryCards.map((card, index) => (
           <motion.div
             key={index}
-            className="bg-white border-none p-6 transition-shadow rounded-lg"
+            className="bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -313,10 +313,10 @@ function TuitionTablesSection() {
           <button
             key={tab.key}
             onClick={() => setSelectedTab(tab.key)}
-            className={`px-8 h-10  transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] ${
+            className={`px-8 h-10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg ${
               selectedTab === tab.key
-                ? 'bg-[#1a5336] text-[#fffae9]'
-                : ' text-[#1a5336] border-2 border-[#1a5336] hover:bg-[#1a5336]/10'
+                ? 'bg-[#1a5336] text-[#fffae9] shadow-lg'
+                : 'text-[#1a5336] bg-gray-50 hover:bg-[#1a5336]/10 shadow-md hover:shadow-lg'
             }`}
           >
             {tab.label}
@@ -334,21 +334,21 @@ function TuitionTablesSection() {
           <table className="w-full bg-white rounded-lg overflow-hidden shadow-md">
             <thead>
               <tr className="bg-[#1a5336] text-[#fffae9]">
-                <th className=" text-lg text-left p-4 border-r border-[#fffae9]/20">Grade Level</th>
-                <th className=" text-lg text-right p-4 border-r border-[#fffae9]/20">Annual (Full Year)</th>
-                <th className=" text-lg text-right p-4 border-r border-[#fffae9]/20">Per Term (3 terms)</th>
-                <th className=" text-lg text-right p-4 border-r border-[#fffae9]/20">Monthly (10 months)</th>
-                <th className=" text-lg text-left p-4">Included</th>
+                <th className="text-lg text-left p-4">Grade Level</th>
+                <th className="text-lg text-right p-4">Annual (Full Year)</th>
+                <th className="text-lg text-right p-4">Per Term (3 terms)</th>
+                <th className="text-lg text-right p-4">Monthly (10 months)</th>
+                <th className="text-lg text-left p-4">Included</th>
               </tr>
             </thead>
             <tbody>
               {tuitionData[selectedTab as keyof typeof tuitionData].rows.map((row, index) => (
-                <tr key={index} className="border-b border-[#1a5336]/20 last:border-0">
-                  <td className=" text-sm p-4 border-r border-[#1a5336]/20">{row.grade}</td>
-                  <td className=" font-bold text-[#1a5336] text-right p-4 border-r border-[#1a5336]/20">{row.annual}</td>
-                  <td className=" font-bold text-[#1a5336] text-right p-4 border-r border-[#1a5336]/20">{row.term}</td>
-                  <td className=" font-bold text-[#1a5336] text-right p-4 border-r border-[#1a5336]/20">{row.monthly}</td>
-                  <td className=" text-xs text-[#212121] p-4">{row.included}</td>
+                <tr key={index} className="hover:bg-gray-50/50 transition-colors duration-200">
+                  <td className="text-sm p-4">{row.grade}</td>
+                  <td className="font-bold text-[#1a5336] text-right p-4">{row.annual}</td>
+                  <td className="font-bold text-[#1a5336] text-right p-4">{row.term}</td>
+                  <td className="font-bold text-[#1a5336] text-right p-4">{row.monthly}</td>
+                  <td className="text-xs text-[#212121] p-4">{row.included}</td>
                 </tr>
               ))}
             </tbody>
@@ -409,7 +409,7 @@ function IncludedExcludedSection() {
               downloadsSection.scrollIntoView({ behavior: 'smooth' });
             }
           }}
-          className="inline-flex items-center gap-2 px-8 h-12 border-2 border-[#FABA1E] text-[#FABA1E] font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] rounded-lg"
+          className="inline-flex items-center gap-2 px-8 h-12 bg-gray-50 text-[#1a5336] font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#1a5336] rounded-lg shadow-md hover:shadow-lg"
         >
           <FileText className="w-4 h-4" />
           View Complete Fee Breakdown
@@ -543,14 +543,15 @@ function OptionalServicesSection() {
             
             <div className="space-y-3 mb-6">
               {service.priceRows.map((row, i) => (
-                <div key={i} className="flex justify-between items-center pb-3 border-b border-[#1a5336]/20 last:border-0">
-                  <span className=" text-sm text-[#212121]">{row.label}</span>
-                  <span className=" font-bold text-[#1a5336]">{row.price}</span>
+                <div key={i} className="flex justify-between items-center py-2 hover:bg-gray-50/50 transition-colors duration-200 rounded px-2">
+                  <span className="text-sm text-[#212121]">{row.label}</span>
+                  <span className="font-bold text-[#1a5336]">{row.price}</span>
                 </div>
               ))}
             </div>
             
-            <div className="bg-[#FABA1E]/10 border-l-4 border-[#FABA1E] p-3 rounded-r">
+            <div className="bg-[#FABA1E]/15 p-4 rounded-lg relative">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#FABA1E] rounded-l-lg"></div>
               <p className=" text-xs text-[#212121]">
                 {service.note}
               </p>
@@ -916,7 +917,7 @@ function RefundPolicySection() {
 
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         {policies.map((policy, index) => (
-          <div key={index} className="border-2 border-[#1a5336] p-6 bg-white rounded-lg">
+          <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className=" text-xl text-[#1a5336] mb-4">
               {policy.title}
             </h3>
@@ -981,7 +982,7 @@ function CalculatorCTASection({ onShowCalculator }: { onShowCalculator: () => vo
   return (
     <section id="calculator" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white">
       <div className="max-w-[900px] mx-auto">
-        <div className="bg-white border-2 border-[#1a5336] p-8 rounded-lg">
+        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-[#1a5336] mb-4">
               <Calculator className="w-8 h-8 text-[#FABA1E]" />
@@ -1005,7 +1006,7 @@ function CalculatorCTASection({ onShowCalculator }: { onShowCalculator: () => vo
               <select
                 value={division}
                 onChange={(e) => setDivision(e.target.value)}
-                className="w-full h-10 px-4 border-2 border-[#1a5336]  text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="w-full h-10 px-4 bg-gray-50 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:bg-white transition-all duration-200"
               >
                 <option value="kg">Galaxy KG</option>
                 <option value="primary">Primary School</option>
@@ -1021,7 +1022,7 @@ function CalculatorCTASection({ onShowCalculator }: { onShowCalculator: () => vo
               <select
                 value={plan}
                 onChange={(e) => setPlan(e.target.value)}
-                className="w-full h-10 px-4 border-2 border-[#1a5336]  text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="w-full h-10 px-4 bg-gray-50 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:bg-white transition-all duration-200"
               >
                 <option value="annual">Full Year (Save 5%)</option>
                 <option value="term">Per Term</option>
@@ -1035,7 +1036,7 @@ function CalculatorCTASection({ onShowCalculator }: { onShowCalculator: () => vo
                   type="checkbox"
                   checked={bus}
                   onChange={(e) => setBus(e.target.checked)}
-                  className="w-5 h-5 border-2 border-[#1a5336] focus:ring-2 focus:ring-[#FABA1E]"
+                  className="w-5 h-5 bg-gray-50 rounded focus:ring-2 focus:ring-[#FABA1E] checked:bg-[#1a5336] checked:text-white transition-all duration-200"
                 />
                 <span className=" text-sm text-[#212121]">
                   School Bus Service (+8,000,000 VND)
@@ -1047,7 +1048,7 @@ function CalculatorCTASection({ onShowCalculator }: { onShowCalculator: () => vo
                   type="checkbox"
                   checked={lunch}
                   onChange={(e) => setLunch(e.target.checked)}
-                  className="w-5 h-5 border-2 border-[#1a5336] focus:ring-2 focus:ring-[#FABA1E]"
+                  className="w-5 h-5 bg-gray-50 rounded focus:ring-2 focus:ring-[#FABA1E] checked:bg-[#1a5336] checked:text-white transition-all duration-200"
                 />
                 <span className=" text-sm text-[#212121]">
                   Lunch Program (+15,000,000 VND)
@@ -1149,7 +1150,7 @@ function FAQSection() {
 
       <div className="max-w-[900px] mx-auto space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="border-2 border-[#1a5336] bg-white rounded-lg">
+          <div key={index} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <button
               onClick={() => setOpenFaq(openFaq === index ? null : index)}
               className="w-full p-6 flex items-start justify-between text-left hover: transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg"
@@ -1169,7 +1170,7 @@ function FAQSection() {
             </button>
             
             {openFaq === index && (
-              <div className="px-6 pb-6 border-t border-[#1a5336]/20">
+              <div className="px-6 pb-6 bg-gray-50/30">
                 <div className="pl-9">
                   <p className=" text-sm text-[#212121] leading-relaxed">
                     {faq.answer}
@@ -1212,7 +1213,7 @@ function DownloadsContactsSection({ onNavigate }: { onNavigate: (path: string) =
                 key={index}
                 href={doc.url}
                 download
-                className="flex items-center justify-between p-4 border-2 border-[#1a5336] hover: transition-colors group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg"
+                className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-colors group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg shadow-md hover:shadow-lg"
               >
                 <div className="flex items-center gap-4 flex-1">
                   <FileText className="w-6 h-6 text-[#1a5336] flex-shrink-0" />
@@ -1290,7 +1291,7 @@ function DownloadsContactsSection({ onNavigate }: { onNavigate: (path: string) =
               
               <button
                 onClick={() => onNavigate('/admissions/apply-now')}
-                className="w-full px-6 h-10 border-2 border-[#fffae9] text-[#fffae9]  font-bold hover: hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="w-full px-6 h-10 bg-transparent text-[#fffae9] font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg shadow-md hover:shadow-lg"
               >
                 Start Application
               </button>
