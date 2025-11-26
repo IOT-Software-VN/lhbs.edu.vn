@@ -21,7 +21,7 @@ import items03 from '../assets/items-03.png';
 import anniversaryImage from '../assets/anyver.png';
 import bgAcademicBilingual from '../assets/bg-Academic&Bilingual.png'
 import { ImQuotesRight } from "react-icons/im";
-
+import { VideoHero } from '../components/VideoHero'
 export function HomePage({ onNavigate }: { onNavigate: (path: string) => void }) {
   const [showEducationModal, setShowEducationModal] = useState<{ image: string; alt: string; title?: string; subtitle?: string } | null>(null);
   const [showCoreStrengthModal, setShowCoreStrengthModal] = useState<{ title: string; description: string; points: string[]; image: string; alt: string } | null>(null);
@@ -29,7 +29,8 @@ export function HomePage({ onNavigate }: { onNavigate: (path: string) => void })
   return (
     <div className="relative bg-white">
       {/* Hero Section - Full-width BVIS style */}
-      <BVISHero onNavigate={onNavigate} />
+      {/* <BVISHero onNavigate={onNavigate} /> */}
+      <VideoHero onNavigate={onNavigate} />
       
       {/* Section 1: Solid Education Foundation */}
       <SolidEducationSection onNavigate={onNavigate} />
