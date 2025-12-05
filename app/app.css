@@ -86,6 +86,7 @@
 
 html,
 body {
+  overflow-x: hidden;
   @apply bg-white dark:bg-gray-950;
 
   @media (prefers-color-scheme: dark) {
