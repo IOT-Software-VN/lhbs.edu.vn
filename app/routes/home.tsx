@@ -28,7 +28,7 @@ export default function Home({onNavigate}: {onNavigate: (path: string) => void})
         />
       )}
       <CollegeAcceptancesSection onNavigate={onNavigate} /> */}
-      <EducationLevel/>
+      <EducationLevel />
       <TheNumbers/>
       {/* Section xxx: Founding Message */}
       <FoundingMessageSection onNavigate={onNavigate} />

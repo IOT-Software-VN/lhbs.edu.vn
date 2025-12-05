@@ -49,11 +49,6 @@ const universityLogos = [
     id: 5,
     name: "LHBS",
     image: lhbslogo
-  },
-  {
-    id: 6,
-    name: "University Logo 6",
-    image: "https://lhbs.edu.vn/wp-content/uploads/2021/05/logo-6.png"
   }
 ];
 
