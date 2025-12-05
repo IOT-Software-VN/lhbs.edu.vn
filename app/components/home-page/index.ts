@@ -7,6 +7,7 @@ import NewsEventsSection from './section/news-events'
 import TestimonialsSection from './section/testimonial'
 import TestimonialQuoteSection from './section/testimonial-quote'
 import { CollegeAcceptancesSection } from './section/college-acceptances'
+import TheNumbers from './section/the-numbers'
 export { 
   VideoHero, 
   HeroCarousel, 
@@ -18,5 +19,6 @@ export {
   CollegeAcceptancesSection,
   EducationPillarModal,
   EducationPillarsSection,
-  TestimonialQuoteSection
+  TestimonialQuoteSection,
+  TheNumbers
 }

@@ -88,7 +88,7 @@ export default function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuO
          <img 
               src={logoImage} 
               alt="LHBS - Lac Hong Bilingual School" 
-              className="h-18 w-auto rounded-none"
+              className="h-24 w-auto rounded-none"
             />
         </motion.div>
         

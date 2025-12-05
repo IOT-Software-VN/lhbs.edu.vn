@@ -82,6 +82,16 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
       {/* Dark Overlay focused on bottom-left content area */}
       <div className="absolute inset-0 z-10 bg-gradient-to-tr from-black/80 via-black/30 to-transparent" />
 
+      {/* Additional dark overlay for top-left corner (logo area) */}
+      <div className="absolute inset-0 z-11 bg-gradient-to-bl from-black/60 via-transparent to-transparent" 
+           style={{
+             background: `radial-gradient(ellipse at 14% 0%, 
+               rgba(0, 0, 0, 0.7) 5%, 
+               rgba(0, 0, 0, 0.25) 15%, 
+               rgba(0, 0, 0, 0.1) 25%, 
+               transparent 70%)`
+           }} />
+
       {/* <div 
         className="absolute inset-0 z-10" 
         style={{
