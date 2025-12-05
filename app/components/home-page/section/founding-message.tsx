@@ -33,7 +33,7 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
       <div className="grid md:grid-cols-2 gap-16 items-stretch relative z-20">
         {/* Left: Portrait Image - 6 columns */}
         <motion.div
-          className="relative h-[500px] md:h-auto overflow-hidden order-2 md:order-1"
+          className="relative h-[500px] md:h-auto overflow-hidden order-2 md:order-1 flex items-center justify-center"
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -41,7 +41,8 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
           <img
             src={founderImage}
             alt="The late People's Teacher, Dr. Do Huu Tai - Founder of LHBS"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center max-w-full max-h-full"
+            loading="lazy"
           />
         </motion.div>
         
