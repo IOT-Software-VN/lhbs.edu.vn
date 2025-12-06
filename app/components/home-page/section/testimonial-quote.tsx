@@ -59,7 +59,7 @@ export function TestimonialQuoteSection({ onNavigate }: TestimonialQuoteSectionP
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index}>
-                  <div className="flex items-start gap-2 md:gap-4 lg:gap-8 p-6 px-32">
+                  <div className="flex items-start md:gap-2 lg:gap-4 p-6">
                     
                     {/* Quote Icon */}
                     <motion.div

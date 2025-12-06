@@ -15,7 +15,7 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
     <motion.section
       ref={ref}
       data-section="founding-message"
-      className="h-screen mx-auto bg-[#00602F] flex align-center justify-center relative"
+      className="h-auto mx-auto bg-[#00602F] flex align-center justify-center relative"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
     >
@@ -33,7 +33,7 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
       <div className="grid md:grid-cols-2 gap-16 items-stretch relative z-20">
         {/* Left: Portrait Image - 6 columns */}
         <motion.div
-          className="relative h-[500px] md:h-auto overflow-hidden order-2 md:order-1 flex items-center justify-center"
+          className="relative  overflow-hidden order-2 md:order-1 flex items-center justify-center"
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -60,7 +60,7 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
           
           {/* Title */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#fffae9] mb-6">
-            <span className="block whitespace-nowrap">
+            <span className="block">   
 Founder's Philosophy
             </span>
           </h2>

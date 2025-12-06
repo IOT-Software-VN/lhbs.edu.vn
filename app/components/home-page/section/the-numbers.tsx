@@ -28,27 +28,42 @@ const universityLogos = [
   {
     id: 1,
     name: "University Logo 1",
-    image: "https://cdn.haitrieu.com/wp-content/uploads/2022/12/Logo-Truong-Dai-hoc-Greenwich-Viet-Nam.png"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/RMIT_University_Logo.svg/1200px-RMIT_University_Logo.svg.png"
   },
   {
     id: 2,
-    name: "Harvard University",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/25/Harvard_University_shield.png"
+    name: "Van Lang University",
+    image: "https://cdn.haitrieu.com/wp-content/uploads/2022/12/Logo-Dai-Hoc-Van-Lang-H.png"
   },
   {
     id: 3,
-    name: "Pomona College",
-    image: "https://1000logos.net/wp-content/uploads/2018/02/Stanford-University-Logo.png"
+    name: "FPTU",
+    image: "https://upload.wikimedia.org/wikipedia/vi/thumb/2/2d/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_FPT.svg/1200px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_FPT.svg.png"
   },
   {
     id: 4,
-    name: "Dartmouth College",
-    image: "https://1000logos.net/wp-content/uploads/2022/10/Dartmouth-College-Logo.png"
+    name: "VG University",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/96/VGU-Logo.png"
   },
   {
     id: 5,
     name: "LHBS",
     image: lhbslogo
+  },
+    {
+    id: 6,
+    name: "CSU",
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/CSU_San_Marcos_seal.svg/1200px-CSU_San_Marcos_seal.svg.png"
+  },
+  {
+    id: 7,
+    name: "NYU",
+    image: "https://logos-world.net/wp-content/uploads/2021/09/NYU-Logo.png"
+  },
+  {
+    id: 8,
+    name: "Nevada University",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/33/University-of-nevada-vertical-blue.svg"
   }
 ];
 
