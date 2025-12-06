@@ -15,7 +15,7 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
     <motion.section
       ref={ref}
       data-section="founding-message"
-      className="h-screen mx-auto bg-[#1a5336] flex align-center justify-center relative"
+      className="h-screen mx-auto bg-[#00602F] flex align-center justify-center relative"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
     >
