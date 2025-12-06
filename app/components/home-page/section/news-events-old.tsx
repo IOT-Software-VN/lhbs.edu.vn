@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'motion/react';
 import { ChevronRight, Calendar } from 'lucide-react';
+import backgroundImage from '@/images/home-page/section-news/Layer_5.png';
 
 interface NewsEvent {
   image: string;
@@ -49,11 +50,22 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
   return (
     <motion.section
       ref={ref}
-      className="py-24 max-w-[1640px] mx-auto"
+      className="py-24 max-w-[1200px] mx-auto relative"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
     >
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          top: '0%',
+        }}
+      />
+      
+      {/* Content with relative z-index */}
+      <div className="relative z-10">
       {/* Header Row */}
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16">
         {/* Left: Title & Subtitle */}
@@ -109,6 +121,8 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
           </motion.div>
         ))}
       </div>
+      
+      </div> {/* Close content wrapper */}
     </motion.section>
   );
 }

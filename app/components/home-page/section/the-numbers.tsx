@@ -83,7 +83,7 @@ export default function TheNumbers() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-[64px] font-bold mb-4 leading-tight bg-gradient-to-b from-[#FF9500] to-[#FFD267] bg-clip-text text-transparent"
+            className="text-4xl md:text-5xl lg:text-[60px] font-bold mb-4 leading-tight bg-gradient-to-b from-[#FF9500] to-[#FFD267] bg-clip-text text-transparent"
             style={{
               backgroundImage: "linear-gradient(180deg, #FF9500 0%, #FFD267 100%)",
               WebkitBackgroundClip: "text",
