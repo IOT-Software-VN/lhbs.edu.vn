@@ -5,6 +5,7 @@ export interface SchoolLevel {
   descriptions: string[];
   image: string;
   slug: string;
+  learnMoreUrl?: string;
 }
 
 export const SCHOOL_LEVELS: SchoolLevel[] = [
@@ -18,7 +19,7 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
       "Activities designed to stimulate creativity and motor skills.",
       "Daily routines that build confidence and independence."
     ],
-    image: "/images/home-page/section-education/program-01.png",
+    image: "/images/home-page/section-education/program-03.png",
     slug: "/campus/galaxy-kc"
   },
 
@@ -33,7 +34,8 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
       "Engaging classroom activities that build confidence and curiosity."
     ],
     image: "/images/home-page/section-education/program-02.png",
-    slug: "/campus/elementary"
+    slug: "/campus/elementary",
+    learnMoreUrl: "https://school-lhbs-iotsoftvn-com.vercel.app/"
   },
 
   {
@@ -46,8 +48,9 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
       "Projects and activities encouraging teamwork and innovation.",
       "Supportive teachers helping students navigate adolescence effectively."
     ],
-    image: "/images/home-page/section-education/program-02.png",
-    slug: "/campus/middle-school"
+    image: "/images/home-page/section-education/program.jpg",
+    slug: "/campus/middle-school",
+    learnMoreUrl: "https://school-lhbs-iotsoftvn-com.vercel.app/"
   },
 
   {
@@ -60,7 +63,8 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
       "Opportunities for leadership, research, and extracurricular excellence.",
       "Personalized support for students to excel academically and socially."
     ],
-    image: "/images/home-page/section-education/program-03.png",
-    slug: "/campus/high-school"
+    image: "/images/home-page/section-education/program-01.png",
+    slug: "/campus/high-school",
+    learnMoreUrl: "https://school-lhbs-iotsoftvn-com.vercel.app/"
   }
 ];

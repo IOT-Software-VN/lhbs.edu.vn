@@ -161,13 +161,37 @@ export default function EducationLevel() {
                 <div className="flex-1 flex flex-col justify-center">
                   <h3 className="text-4xl md:text-5xl font-bold mb-16">{item.title}</h3>
                   
-                  <ul className="space-y-3 font-medium text-base md:text-lg px-4">
+                  <ul className="space-y-3 font-medium text-base md:text-lg px-4 mb-8">
                     {item.descriptions.map((line, i) => (
                       <li key={i} className="leading-relaxed">
                         • {line}
                       </li>
                     ))}
                   </ul>
+
+                  {/* Learn More Button */}
+                  <div className="px-4">
+                    <a
+                      href={item.learnMoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                        inline-block
+                        px-6 py-3
+                        rounded-lg!
+                        font-semibold
+                        text-sm md:text-base
+                        bg-[#FFAE00]
+                        text-[#1E5338]
+                        transition-all
+                        hover:bg-[#ffbf33]
+                        hover:scale-105
+                        whitespace-nowrap
+                      "
+                    >
+                      Learn More
+                    </a>
+                  </div>
                 </div>
 
                 {/* Subtitle at bottom for other columns when expanded */}
