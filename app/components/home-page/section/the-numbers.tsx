@@ -8,7 +8,6 @@ import {
   CarouselPrevious,
   type CarouselApi
 } from '@/components/ui/carousel'
-import lhbslogo from '@/images/base/logo.png'
 const statsData = [
   {
     number: '11',
@@ -28,46 +27,23 @@ const statsData = [
 const universityLogos = [
   {
     id: 1,
-    name: 'University Logo 1',
-    image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/RMIT_University_Logo.svg/1200px-RMIT_University_Logo.svg.png'
+    name: 'English Central',
+    image: 'https://www.englishcentral.com/dist/all/20251203121549/assets/ec-logo.53e56416598b3d50cbe5.png'
   },
   {
     id: 2,
-    name: 'Van Lang University',
-    image: 'https://cdn.haitrieu.com/wp-content/uploads/2022/12/Logo-Dai-Hoc-Van-Lang-H.png'
+    name: 'STEM',
+    image: 'https://www.elearnafrica.com/uploads/logo/57c7cfba65403.png'
   },
   {
     id: 3,
-    name: 'FPTU',
-    image:
-      'https://upload.wikimedia.org/wikipedia/vi/thumb/2/2d/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_FPT.svg/1200px-Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_FPT.svg.png'
+    name: 'ASI',
+    image: 'https://advantagesschool.com/wp-content/uploads/2022/10/asi-logo.png'
   },
   {
     id: 4,
-    name: 'VG University',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/9/96/VGU-Logo.png'
-  },
-  {
-    id: 5,
-    name: 'BKHCM',
-    image: 'https://media.loveitopcdn.com/3807/logo-bach-khoa-dongphucsongphu2.png'
-  },
-  {
-    id: 6,
-    name: 'CSU',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/thumb/1/12/CSU_San_Marcos_seal.svg/1200px-CSU_San_Marcos_seal.svg.png'
-  },
-  {
-    id: 7,
-    name: 'NYU',
-    image: 'https://logos-world.net/wp-content/uploads/2021/09/NYU-Logo.png'
-  },
-  {
-    id: 8,
-    name: 'Nevada University',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/33/University-of-nevada-vertical-blue.svg'
+    name: 'Cambridge',
+    image: 'https://www.cambridgeassessment.org.uk/Images/Simon-brand-blog-newest-logo.png'
   }
 ]
 
@@ -118,26 +94,31 @@ export default function TheNumbers() {
     if (!api) return
 
     const interval = setInterval(() => {
-      // scrollNext() combined with loop: true creates the seamless infinite effect
-      api.scrollNext()
+      // Check if we can scroll next to avoid errors/jumps if content fits perfectly
+      if (api.canScrollNext()) {
+        api.scrollNext()
+      } else {
+        api.scrollNext()
+      }
     }, 3000)
 
     return () => clearInterval(interval)
   }, [api])
 
   return (
-    <section className='relative w-full bg-white py-20 md:py-32 overflow-hidden font-sans'>
-      <div className='w-full px-4 md:px-12 lg:px-16 max-w-[1920px] mx-auto'>
-        {/* Header - Left Aligned to match Education Level style */}
-        <div className='flex flex-col items-start mb-20'>
+    <section className='relative w-full h-dvh bg-white overflow-hidden font-sans flex flex-col'>
+      {/* Scrollable Container */}
+      <div className='grow w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-16 overflow-y-auto no-scrollbar py-8 md:py-16 flex flex-col justify-center'>
+        {/* Header - Left Aligned */}
+        <div className='flex flex-col items-start mb-8 md:mb-12'>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className='bg-[#FABA1E] w-20 h-1.5 mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
-            <h2 className='text-xl md:text-2xl font-bold text-[#FABA1E] uppercase tracking-[0.2em] leading-none drop-shadow-md mb-4'>
+            <div className='bg-[#FABA1E] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
+            <h2 className='text-xs md:text-sm lg:text-base font-bold text-[#FABA1E] uppercase tracking-[0.2em] leading-none drop-shadow-md mb-2'>
               Our Achievements
             </h2>
           </motion.div>
@@ -147,9 +128,9 @@ export default function TheNumbers() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className='text-5xl md:text-6xl lg:text-7xl font-black text-[#1E5338] uppercase tracking-tight drop-shadow-2xl'
+            className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#1E5338] uppercase tracking-tight drop-shadow-2xl'
           >
-            By the numbers
+            Distinctions
           </motion.h2>
         </div>
 
@@ -159,7 +140,7 @@ export default function TheNumbers() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className='grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 mb-32 border-y border-gray-200 py-16'
+          className='grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 mb-12 md:mb-20 border-y border-gray-200 py-8 md:py-12'
         >
           {statsData.map((stat, index) => (
             <div
@@ -174,11 +155,11 @@ export default function TheNumbers() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                className='mb-4'
+                className='mb-2 md:mb-4'
               >
                 <RollingNumber
                   value={stat.number}
-                  className='block text-6xl md:text-7xl lg:text-8xl font-black leading-none text-[#FABA1E] drop-shadow-[0_4px_10px_rgba(250,186,30,0.3)]'
+                  className='block text-5xl md:text-6xl lg:text-7xl font-black leading-none text-[#FABA1E] drop-shadow-[0_4px_10px_rgba(250,186,30,0.3)]'
                 />
               </motion.div>
 
@@ -189,7 +170,7 @@ export default function TheNumbers() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
               >
-                <p className='text-lg md:text-2xl font-medium text-[#1E5338]/90 uppercase tracking-wider'>
+                <p className='text-sm md:text-lg lg:text-xl font-medium text-[#1E5338]/90 uppercase tracking-wider'>
                   {stat.description}
                 </p>
               </motion.div>
@@ -206,16 +187,16 @@ export default function TheNumbers() {
           className='relative w-full'
         >
           {/* Section Header */}
-          <div className='flex flex-col items-center mb-12'>
-            <div className='bg-[#FABA1E] w-20 h-1.5 mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
-            <h3 className='text-3xl md:text-4xl font-black text-[#1E5338] uppercase tracking-wide drop-shadow-sm text-center'>
-              College Acceptance
+          <div className='flex flex-col items-center mb-6 md:mb-10'>
+            <div className='bg-[#FABA1E] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
+            <h3 className='text-xl md:text-3xl font-black text-[#1E5338] uppercase tracking-wide drop-shadow-sm text-center'>
+              Partnership Program
             </h3>
           </div>
 
           <Carousel
             setApi={setApi}
-            className='w-full px-4 md:px-10'
+            className='w-full px-2 md:px-10'
             opts={{
               align: 'start',
               loop: true,
@@ -224,12 +205,12 @@ export default function TheNumbers() {
             }}
           >
             <CarouselContent className='-ml-4'>
-              {universityLogos.map((logo) => (
-                <CarouselItem key={logo.id} className='pl-4 basis-1/2 md:basis-1/3 lg:basis-1/5'>
+              {[...universityLogos, ...universityLogos, ...universityLogos].map((logo, index) => (
+                <CarouselItem key={`${logo.id}-${index}`} className='pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4'>
                   <div className='h-full p-2'>
                     <motion.div
-                      whileHover={{ y: -5 }}
-                      className='flex items-center justify-center h-32 bg-gray-50/30 border border-gray-200 rounded-sm p-6 transition-all duration-300 cursor-pointer group hover:border-[#FABA1E] hover:bg-white hover:shadow-lg'
+                      whileHover={{ y: -4 }}
+                      className='flex items-center justify-center h-24 md:h-28 bg-gray-50/30 border border-gray-200 rounded-sm p-4 transition-all duration-300 cursor-pointer group hover:border-[#FABA1E] hover:bg-white hover:shadow-lg'
                     >
                       <img
                         src={logo.image}
@@ -249,8 +230,8 @@ export default function TheNumbers() {
 
             {/* Custom Navigation - Minimal Arrows */}
             <div className='hidden md:block'>
-              <CarouselPrevious className='h-auto w-auto border-none bg-transparent text-[#FABA1E] hover:bg-transparent hover:text-[#d49e19] -left-12 [&_svg]:size-20 transition-transform hover:scale-110' />
-              <CarouselNext className='h-auto w-auto border-none bg-transparent text-[#FABA1E] hover:bg-transparent hover:text-[#d49e19] -right-12 [&_svg]:size-20 transition-transform hover:scale-110' />
+              <CarouselPrevious className='h-auto w-auto border-none bg-transparent text-[#FABA1E] hover:bg-transparent hover:text-[#d49e19] -left-8 [&_svg]:size-12 md:[&_svg]:size-16 transition-transform hover:scale-110' />
+              <CarouselNext className='h-auto w-auto border-none bg-transparent text-[#FABA1E] hover:bg-transparent hover:text-[#d49e19] -right-8 [&_svg]:size-12 md:[&_svg]:size-16 transition-transform hover:scale-110' />
             </div>
           </Carousel>
         </motion.div>
