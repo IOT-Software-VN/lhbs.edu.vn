@@ -1,15 +1,15 @@
-import { motion } from 'motion/react';
-import { useState, useEffect } from 'react';
-import { AnimatedHighlight } from '~/components/animated-highlight';
-import { ScrollIndicator } from '~/components/ScrollIndicator';
+import { motion } from 'motion/react'
+import { useState, useEffect } from 'react'
+import { AnimatedHighlight } from '~/components/animated-highlight'
+import { ScrollIndicator } from '~/components/ScrollIndicator'
 import Herobg from '@/images/home-page/Hero-bg.png'
 interface HeroProps {
-  onNavigate: (path: string) => void;
+  onNavigate: (path: string) => void
 }
 
 export default function HeroCarousel({ onNavigate }: HeroProps) {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 
   // Only background images array - content stays the same
   const backgroundImages = [
@@ -18,61 +18,60 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
     // "https://lhbs.edu.vn/wp-content/uploads/2025/02/IMG_8910.jpg",
     // "https://lhbs.edu.vn/wp-content/uploads/2025/04/487416882_640655751929902_4676467757656853160_n.jpg",
     // "https://lhbs.edu.vn/wp-content/uploads/2021/05/MG_5074.jpg",
-
-  ];
+  ]
 
   // Auto-play functionality
   useEffect(() => {
-    if (!isAutoPlaying) return;
+    if (!isAutoPlaying) return
 
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % backgroundImages.length);
-    }, 5000);
+      setCurrentSlide((prev) => (prev + 1) % backgroundImages.length)
+    }, 5000)
 
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, backgroundImages.length]);
+    return () => clearInterval(interval)
+  }, [isAutoPlaying, backgroundImages.length])
 
   const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    setIsAutoPlaying(false);
+    setCurrentSlide(index)
+    setIsAutoPlaying(false)
     // Resume auto-play after 10 seconds
-    setTimeout(() => setIsAutoPlaying(true), 10000);
-  };
+    setTimeout(() => setIsAutoPlaying(true), 10000)
+  }
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % backgroundImages.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
-  };
+    setCurrentSlide((prev) => (prev + 1) % backgroundImages.length)
+    setIsAutoPlaying(false)
+    setTimeout(() => setIsAutoPlaying(true), 10000)
+  }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + backgroundImages.length) % backgroundImages.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
-  };
+    setCurrentSlide((prev) => (prev - 1 + backgroundImages.length) % backgroundImages.length)
+    setIsAutoPlaying(false)
+    setTimeout(() => setIsAutoPlaying(true), 10000)
+  }
 
   return (
-    <section className="relative w-full h-screen min-h-[600px] flex items-end overflow-hidden">
+    <section className='relative w-full h-screen min-h-[600px] flex items-end overflow-hidden'>
       {/* Background Image with smooth transition */}
-      <div className="absolute inset-0 z-0">
+      <div className='absolute inset-0 z-0'>
         {backgroundImages.map((image, index) => (
           <motion.div
             key={index}
-            className="absolute inset-0"
+            className='absolute inset-0'
             initial={{ opacity: 0 }}
-            animate={{ 
+            animate={{
               opacity: index === currentSlide ? 1 : 0,
               scale: index === currentSlide ? 1 : 1.1
             }}
-            transition={{ 
-              opacity: { duration: 1, ease: 'easeInOut' },
+            transition={{
+              opacity: { duration: 1, ease: 'easeInOut' }
               // scale: { duration: 10, ease: 'linear' }
             }}
           >
             <img
               src={image}
-              alt="LHBS campus with students"
-              className="w-full h-full object-cover"
+              alt='LHBS campus with students'
+              className='w-full h-full object-cover'
               style={{ filter: 'brightness(1)' }}
             />
           </motion.div>
@@ -80,17 +79,19 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
       </div>
 
       {/* Dark Overlay focused on bottom-left content area */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-tr from-black/80 via-black/30 to-transparent" />
+      <div className='absolute inset-0 z-10 bg-gradient-to-tr from-black/80 via-black/30 to-transparent' />
 
       {/* Additional dark overlay for top-left corner (logo area) */}
-      <div className="absolute inset-0 z-11 bg-gradient-to-bl from-black/60 via-transparent to-transparent" 
-           style={{
-             background: `radial-gradient(ellipse at 14% 0%, 
+      <div
+        className='absolute inset-0 z-11 bg-gradient-to-bl from-black/60 via-transparent to-transparent'
+        style={{
+          background: `radial-gradient(ellipse at 14% 0%, 
                rgba(0, 0, 0, 0.7) 5%, 
                rgba(0, 0, 0, 0.25) 15%, 
                rgba(0, 0, 0, 0.1) 25%, 
                transparent 70%)`
-           }} />
+        }}
+      />
 
       {/* <div 
         className="absolute inset-0 z-10" 
@@ -104,14 +105,12 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
         }}
       /> */}
 
-
-
       {/* Content Container */}
-      <div className="relative z-20 w-full max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div className='relative z-20 w-full px-4 md:px-10'>
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-8'>
           {/* Left Content Column - Positioned at bottom left */}
-          <motion.div 
-            className="lg:col-span-6 flex flex-col justify-end py-12 lg:py-0 lg:pb-16"
+          <motion.div
+            className='lg:col-span-6 flex flex-col justify-end py-12 lg:py-0 lg:pb-16'
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -121,11 +120,11 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="mb-8"
+              className='mb-8'
             >
-              <h1 className="text-white text-4xl md:text-5xl lg:text-6xl leading-tight font-semibold drop-shadow-lg">
-                <span className="block">Văn hóa Việt Nam</span>
-                <span className="block">Tầm nhìn quốc tế</span>
+              <h1 className='text-white text-4xl md:text-5xl lg:text-6xl leading-tight font-semibold drop-shadow-lg'>
+                <span className='block'>Văn hóa Việt Nam</span>
+                <span className='block'>Tầm nhìn quốc tế</span>
               </h1>
             </motion.div>
 
@@ -134,13 +133,13 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="mb-8"
+              className='mb-8'
             >
               <button
                 onClick={() => onNavigate('/admissions')}
-                className="px-8 md:px-10 h-12 bg-[#FABA1E] text-black font-bold uppercase text-sm md:text-base tracking-wider 
+                className='px-8 md:px-10 h-12 bg-[#FABA1E] text-black font-bold uppercase text-sm md:text-base tracking-wider 
                           hover:bg-[#e5a812] transition-all focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 
-                          focus:ring-offset-transparent shadow-xl drop-shadow-lg !rounded-none"
+                          focus:ring-offset-transparent shadow-xl drop-shadow-lg !rounded-none'
                 style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))' }}
               >
                 Discover More →
@@ -152,25 +151,30 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="flex items-center gap-4"
+              className='flex items-center gap-4'
             >
               {/* Arrow down icon */}
               <motion.div
                 animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="text-white"
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                className='text-white'
               >
-                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 4V20M12 20L6 14M12 20L18 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg width='50' height='50' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                  <path
+                    d='M12 4V20M12 20L6 14M12 20L18 14'
+                    stroke='currentColor'
+                    strokeWidth='2'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                  />
                 </svg>
               </motion.div>
-              
+
               {/* Tagline */}
-              <p className="text-white text-lg md:text-xl font-medium drop-shadow-lg">
+              <p className='text-white text-lg md:text-xl font-medium drop-shadow-lg'>
                 #Bước đệm vững chắc để trở thành công dân toàn cầu
               </p>
             </motion.div>
-
           </motion.div>
         </div>
       </div>
@@ -208,7 +212,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
       </div> */}
 
       {/* Scroll Indicator */}
-      <ScrollIndicator targetSectionId="solid-education-level" />
+      <ScrollIndicator targetSectionId='solid-education-level' />
     </section>
-  );
+  )
 }

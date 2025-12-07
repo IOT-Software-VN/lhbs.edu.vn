@@ -57,7 +57,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
         <>
           {/* Overlay */}
           <motion.div
-            className='fixed inset-0 z-[60] bg-black/50'
+            className='fixed inset-0 z-60 bg-black/50'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -67,7 +67,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
           {/* Desktop Layout */}
           {!isMobile ? (
             <motion.div
-              className='fixed left-0 right-0 z-[70] bg-[#1a5336] overflow-hidden'
+              className='fixed left-0 right-0 z-70 bg-[#1a5336] overflow-hidden'
               style={{
                 top: 'calc(72px + 2rem)',
                 maxHeight: 'calc(100vh - 72px - 4rem)', // Dynamic height based on viewport
@@ -79,7 +79,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
               transition={{ duration: 0.4, ease: 'easeInOut' }}
             >
               {/* Wrapper có thể cuộn toàn phần nếu cần */}
-              <div className='max-w-[1440px] mx-auto px-12 py-8 pb-16 flex gap-12 overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent'>
+              <div className='w-full px-4 md:px-10 py-8 pb-16 flex gap-12 overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent'>
                 {/* Column 1 - Primary Navigation */}
                 <div className='w-[40%] border-r border-white/20 pr-10 overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent'>
                   <nav className='space-y-6' aria-label='Main sections'>
@@ -87,7 +87,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                       <button
                         key={parent.id}
                         onClick={() => handleParentClick(parent)}
-                        className={`block w-full text-left text-[32px] md:text-[36px] uppercase tracking-wide transition-all group whitespace-normal break-words leading-snug ${
+                        className={`block w-full text-left text-[32px] md:text-[36px] uppercase tracking-wide transition-all group whitespace-normal wrap-break-word leading-snug ${
                           activeParent?.id === parent.id ? 'text-white' : 'text-white/50 hover:text-white/80'
                         }`}
                       >
@@ -184,7 +184,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
           ) : (
             /* Mobile Layout - Single Column Accordion */
             <motion.div
-              className='fixed left-0 right-0 bottom-0 z-[70] bg-[#1a5336] overflow-y-auto'
+              className='fixed left-0 right-0 bottom-0 z-70 bg-[#1a5336] overflow-y-auto'
               style={{ top: 'calc(72px + 0.5rem)' }} // Account for header height + padding
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
