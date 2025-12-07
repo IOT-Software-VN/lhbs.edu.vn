@@ -1,6 +1,13 @@
-import { motion } from 'motion/react'
-import { useState, useRef } from 'react'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
+import { motion, useInView, animate } from 'motion/react'
+import { useState, useRef, useEffect } from 'react'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi
+} from '@/components/ui/carousel'
 import lhbslogo from '@/images/base/logo.png'
 const statsData = [
   {
@@ -64,64 +71,115 @@ const universityLogos = [
   }
 ]
 
-export default function TheNumbers() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+function RollingNumber({ value, className }: { value: string; className?: string }) {
+  const ref = useRef<HTMLSpanElement>(null)
+  const isInView = useInView(ref, { once: false, margin: '-50px' })
+
+  // Parse value logic
+  const numericValue = parseInt(value.replace(/[^0-9]/g, '')) || 0
+  const isPercentage = value.includes('%')
+  const hasComma = value.includes(',')
+
+  useEffect(() => {
+    const node = ref.current
+    if (!node) return
+
+    if (isInView) {
+      // Animate from 0 to the target number
+      const controls = animate(0, numericValue, {
+        duration: 2.5,
+        ease: 'circOut',
+        onUpdate(val) {
+          const rounded = Math.round(val)
+          const formatted = hasComma ? rounded.toLocaleString('en-US') : rounded.toString()
+          node.textContent = isPercentage ? `${formatted}%` : formatted
+        }
+      })
+      return () => controls.stop()
+    } else {
+      // Reset to 0 when out of view
+      node.textContent = isPercentage ? '0%' : '0'
+    }
+  }, [isInView, numericValue, isPercentage, hasComma])
 
   return (
-    <section className='relative w-full bg-white py-16 md:py-24'>
-      <div className='w-full px-4 md:px-10'>
-        {/* Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className='text-center mb-16'
-        >
-          <h2
-            className='text-4xl md:text-5xl lg:text-[60px] font-bold mb-4 leading-tight bg-linear-to-b from-[#FF9500] to-[#FFD267] bg-clip-text text-transparent'
-            style={{
-              backgroundImage: 'linear-gradient(180deg, #FF9500 0%, #FFD267 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}
+    <span ref={ref} className={className}>
+      {isPercentage ? '0%' : '0'}
+    </span>
+  )
+}
+
+export default function TheNumbers() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [api, setApi] = useState<CarouselApi>()
+
+  // Infinite Autoplay effect
+  useEffect(() => {
+    if (!api) return
+
+    const interval = setInterval(() => {
+      // scrollNext() combined with loop: true creates the seamless infinite effect
+      api.scrollNext()
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [api])
+
+  return (
+    <section className='relative w-full bg-white py-20 md:py-32 overflow-hidden font-sans'>
+      <div className='w-full px-4 md:px-12 lg:px-16 max-w-[1920px] mx-auto'>
+        {/* Header - Left Aligned to match Education Level style */}
+        <div className='flex flex-col items-start mb-20'>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className='bg-[#FABA1E] w-20 h-1.5 mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
+            <h2 className='text-xl md:text-2xl font-bold text-[#FABA1E] uppercase tracking-[0.2em] leading-none drop-shadow-md mb-4'>
+              Our Achievements
+            </h2>
+          </motion.div>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className='text-5xl md:text-6xl lg:text-7xl font-black text-[#1E5338] uppercase tracking-tight drop-shadow-2xl'
           >
             By the numbers
-          </h2>
-        </motion.div>
+          </motion.h2>
+        </div>
 
         {/* Statistics Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className='grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 mb-20'
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 mb-32 border-y border-gray-200 py-16'
         >
           {statsData.map((stat, index) => (
             <div
               key={index}
-              className={`relative flex flex-col items-center text-center ${index < 2 ? 'md:border-r md:border-gray-400' : ''}`}
+              className={`relative flex flex-col items-center text-center ${
+                index < statsData.length - 1 ? 'md:border-r border-gray-200' : ''
+              }`}
             >
               {/* Number */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                 className='mb-4'
               >
-                <span
-                  className='block text-7xl lg:text-8xl font-black leading-none'
-                  style={{
-                    color: '#00602F',
-                    fontSize: '72px',
-                    fontWeight: '900'
-                  }}
-                >
-                  {stat.number}
-                </span>
+                <RollingNumber
+                  value={stat.number}
+                  className='block text-6xl md:text-7xl lg:text-8xl font-black leading-none text-[#FABA1E] drop-shadow-[0_4px_10px_rgba(250,186,30,0.3)]'
+                />
               </motion.div>
 
               {/* Description */}
@@ -129,15 +187,9 @@ export default function TheNumbers() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
               >
-                <p
-                  className='text-lg md:text-[28px] font-light max-w-xs'
-                  style={{
-                    color: '#212121',
-                    fontWeight: '350'
-                  }}
-                >
+                <p className='text-lg md:text-2xl font-medium text-[#1E5338]/90 uppercase tracking-wider'>
                   {stat.description}
                 </p>
               </motion.div>
@@ -150,31 +202,39 @@ export default function TheNumbers() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className='relative'
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className='relative w-full'
         >
+          {/* Section Header */}
+          <div className='flex flex-col items-center mb-12'>
+            <div className='bg-[#FABA1E] w-20 h-1.5 mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
+            <h3 className='text-3xl md:text-4xl font-black text-[#1E5338] uppercase tracking-wide drop-shadow-sm text-center'>
+              Trusted Partners
+            </h3>
+          </div>
+
           <Carousel
-            className='w-full px-20 mx-auto'
+            setApi={setApi}
+            className='w-full px-4 md:px-10'
             opts={{
-              align: 'center',
+              align: 'start',
               loop: true,
               skipSnaps: false,
               dragFree: true
             }}
           >
-            <CarouselContent className='-ml-2 md:-ml-4'>
+            <CarouselContent className='-ml-4'>
               {universityLogos.map((logo) => (
-                <CarouselItem key={logo.id} className='pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5'>
-                  <div className='p-4'>
+                <CarouselItem key={logo.id} className='pl-4 basis-1/2 md:basis-1/3 lg:basis-1/5'>
+                  <div className='h-full p-2'>
                     <motion.div
-                      whileHover={{ scale: 1.05, y: -5 }}
-                      transition={{ duration: 0.2 }}
-                      className='flex items-center justify-center h-24 md:h-28 lg:h-32 transition-all duration-200'
+                      whileHover={{ y: -5 }}
+                      className='flex items-center justify-center h-32 bg-gray-50/30 border border-gray-200 rounded-sm p-6 transition-all duration-300 cursor-pointer group hover:border-[#FABA1E] hover:bg-white hover:shadow-lg'
                     >
                       <img
                         src={logo.image}
                         alt={logo.name}
-                        className='max-h-full max-w-full object-contain p-2'
+                        className='max-h-full max-w-full object-contain transition-all duration-500'
                         loading='lazy'
                         onError={(e) => {
                           const target = e.target as HTMLImageElement
@@ -187,9 +247,27 @@ export default function TheNumbers() {
               ))}
             </CarouselContent>
 
-            {/* Navigation Buttons */}
-            <CarouselPrevious className='w-12 h-12 absolute left-4 top-1/2 -translate-y-1/2 border-0' />
-            <CarouselNext className='w-12 h-12  absolute right-4 top-1/2 -translate-y-1/2 border-0' />
+            {/* Custom Navigation - Minimal Arrows */}
+            <div className='hidden md:block'>
+              <CarouselPrevious
+                className='
+      h-auto w-auto border-none bg-transparent text-[#FABA1E] 
+      hover:bg-transparent hover:text-[#d49e19] 
+      -left-16 md:-left-20 
+      [&_svg]:size-32 md:[&_svg]:size-40 
+      transition-transform hover:scale-110
+    '
+              />
+              <CarouselNext
+                className='
+      h-auto w-auto border-none bg-transparent text-[#FABA1E] 
+      hover:bg-transparent hover:text-[#d49e19] 
+      -right-16 md:-right-20 
+      [&_svg]:size-32 md:[&_svg]:size-40 
+      transition-transform hover:scale-110
+    '
+              />
+            </div>
           </Carousel>
         </motion.div>
       </div>
