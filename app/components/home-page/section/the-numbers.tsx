@@ -33,7 +33,8 @@ const universityLogos = [
   {
     id: 2,
     name: 'STEM',
-    image: 'https://www.elearnafrica.com/uploads/logo/57c7cfba65403.png'
+    image:
+      'https://images.ctfassets.net/pc40tpn1u6ef/53uHpRwHaK9sso1qyHHEac/ff0836356ad19c1610be81b5ae6f06d4/STEM-Logo-220801.svg'
   },
   {
     id: 3,

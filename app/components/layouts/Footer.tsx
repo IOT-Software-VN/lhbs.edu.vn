@@ -142,7 +142,7 @@ export default function Footer({ onNavigate }: { onNavigate: (path: string) => v
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8'>
           {/* Left Column: Logo & Contact Info */}
           <div className='lg:col-span-5 flex flex-col items-start'>
-            <img src={logoImage} alt='LHBS Logo' className='h-24 md:h-32 w-auto mb-6' />
+            <img src={logoImage} alt='LHBS Logo' className='h-20 md:h-26 w-auto mb-6' />
 
             <div className='space-y-4 text-sm md:text-base font-light tracking-wide text-white/90'>
               <h3 className='font-bold text-lg uppercase mb-2 text-[#FABA1E]'>Lac Hong Bilingual School</h3>
@@ -196,17 +196,22 @@ export default function Footer({ onNavigate }: { onNavigate: (path: string) => v
               ))}
             </div>
 
-            {/* Accreditations Row */}
-            <div className='flex flex-wrap items-center justify-end gap-4 opacity-80 mb-8'>
-              <div className='h-10 px-4 flex items-center bg-white/10 rounded-sm border border-white/20 text-[10px] font-bold uppercase tracking-widest text-white/80'>
-                CIS Member
-              </div>
-              <div className='h-10 px-4 flex items-center bg-white/10 rounded-sm border border-white/20 text-[10px] font-bold uppercase tracking-widest text-white/80'>
-                WASC Accredited
-              </div>
-              <div className='h-10 px-4 flex items-center bg-white/10 rounded-sm border border-white/20 text-[10px] font-bold uppercase tracking-widest text-white/80'>
-                IB World School
-              </div>
+            <div className='flex flex-wrap items-center justify-end gap-6 mb-8'>
+              <img
+                src='https://resources.finalsite.net/images/f_auto,q_auto/v1704855019/saigon/xhdrp8lgsl6lzsyp1dwg/CIS_Member_icon-3_RGB.png'
+                alt='CIS Member'
+                className='h-12 w-auto object-contain hover:scale-105 transition-transform duration-300'
+              />
+              <img
+                src='https://resources.finalsite.net/images/f_auto,q_auto/v1704855019/saigon/ixplefnt9uellcffrmj3/AMISMemberLogoWHITE.png'
+                alt='AMIS Member'
+                className='h-12 w-auto object-contain hover:scale-105 transition-transform duration-300'
+              />
+              <img
+                src='https://acswasc.org/wp-content/uploads/2020/01/acs-logo-1.png'
+                alt='WASC Accredited'
+                className='h-12 w-auto object-contain hover:scale-105 transition-transform duration-300'
+              />
             </div>
 
             {/* Copyright */}
