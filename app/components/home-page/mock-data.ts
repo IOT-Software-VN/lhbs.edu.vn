@@ -14,10 +14,9 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
     title: 'KINDERGARTEN',
     subtitle: '18 months - 3 years',
     descriptions: [
-      'A modern early childhood program built on advanced international teaching methods.',
-      'Integrated curriculum combining Vietnam’s MOET standards with global best practices.',
-      'Focus on nurturing physical growth, knowledge, character, and essential social skills.',
-      'Enhanced language development through engaging, age-appropriate learning experiences.'
+      'Modern early childhood program with international methods.',
+      'Integrated curriculum combining MOET and global standards.',
+      'Focus on physical growth, character, and social skills.'
     ],
     image: '/images/home-page/section-education/program-03.png',
     slug: '/campus/galaxy-kc'
@@ -28,10 +27,9 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
     title: 'PRIMARY SCHOOL',
     subtitle: 'Grade 1 - Grade 5',
     descriptions: [
-      'Comprehensive bilingual curriculum with strong academic foundation.',
-      'Holistic development emphasizing creativity and problem-solving.',
-      'Experienced teachers guiding students through essential learning stages.',
-      'Engaging classroom activities that build confidence and curiosity.'
+      'Comprehensive bilingual curriculum with strong foundations.',
+      'Holistic development emphasizing creativity and logic.',
+      'Engaging activities building confidence and curiosity.'
     ],
     image: '/images/home-page/section-education/program-02.png',
     slug: '/campus/elementary',
@@ -43,10 +41,9 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
     title: 'SECONDARY SCHOOL',
     subtitle: 'Grade 6 - Grade 9',
     descriptions: [
-      'Curriculum focusing on critical thinking and independent learning.',
-      'Preparation for higher academic challenges and future pathways.',
-      'Projects and activities encouraging teamwork and innovation.',
-      'Supportive teachers helping students navigate adolescence effectively.'
+      'Academic curriculum focusing on critical thinking skills.',
+      'Project-based learning encouraging teamwork and innovation.',
+      'Preparation for higher academic challenges and pathways.'
     ],
     image: '/images/home-page/section-education/program.jpg',
     slug: '/campus/middle-school',
@@ -59,9 +56,8 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
     subtitle: 'Grade 10 - Grade 12',
     descriptions: [
       'Advanced academic programs aligned with global standards.',
-      'Guidance counseling for university preparation and career pathways.',
-      'Opportunities for leadership, research, and extracurricular excellence.',
-      'Personalized support for students to excel academically and socially.'
+      'Specialized guidance for university and career pathways.',
+      'Opportunities for leadership and extracurricular excellence.'
     ],
     image: '/images/home-page/section-education/program-01.png',
     slug: '/campus/high-school',

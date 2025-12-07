@@ -22,7 +22,22 @@ export default function EducationLevel() {
   }, [])
 
   return (
-    <section id='solid-education-level' className='w-full h-dvh flex overflow-hidden relative bg-[#050505] snap-start'>
+    <section
+      id='solid-education-level'
+      className='w-full h-dvh flex overflow-hidden relative bg-[#050505] snap-start isolate'
+    >
+      <style>{`
+        @keyframes ken-burns {
+          0% { transform: scale(1); }
+          100% { transform: scale(1.15); }
+        }
+        .animate-ken-burns {
+          animation: ken-burns 20s linear infinite alternate;
+          will-change: transform;
+          backface-visibility: hidden;
+          transform: translateZ(0);
+        }
+      `}</style>
       {SCHOOL_LEVELS.map((item, index) => {
         const isActive = index === activeIndex
         // Calculation for width
@@ -35,8 +50,8 @@ export default function EducationLevel() {
             // Thêm will-change-auto hoặc will-change-[flex-basis] để tối ưu GPU
             className={`
               relative h-full transition-[flex-basis] duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]
-              flex flex-col justify-end overflow-hidden group cursor-pointer grow
-              border-l first:border-l-0 border-white/10 will-change-[flex-basis]
+              flex flex-col justify-end overflow-hidden group cursor-pointer shrink-0
+              border-l first:border-l-0 border-white/10 transform-gpu
             `}
             style={{ flexBasis: widthPercentage }}
           >
@@ -47,22 +62,19 @@ export default function EducationLevel() {
               {/* Wrapper handles Grayscale/Filter transition purely via CSS */}
               <div
                 className={`
-                   absolute inset-0 w-full h-full transition-all duration-700 ease-in-out
-                   ${isActive ? 'grayscale-0' : 'grayscale-50 group-hover:grayscale-0'}
-                 `}
+                  absolute inset-0 w-full h-full
+                  transition-[filter] duration-700 ease-in-out
+                  ${isActive ? 'grayscale-0' : 'grayscale-50 group-hover:grayscale-0'}
+                `}
               >
-                {/* Inner Motion Div handles ONLY the Scale/Ken Burns animation */}
-                <motion.div
-                  className='absolute inset-0 bg-cover bg-center will-change-transform'
-                  style={{ backgroundImage: `url(${item.image})` }}
-                  // Chỉ chạy animation scale, tách biệt hoàn toàn khỏi state re-render
-                  animate={{ scale: [1, 1.15] }}
-                  transition={{
-                    duration: 20,
-                    ease: 'linear',
-                    repeat: Infinity,
-                    repeatType: 'reverse'
-                  }}
+                {/* Inner Image handles ONLY the Scale/Ken Burns animation via CSS */}
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  loading='eager'
+                  decoding='sync'
+                  draggable={false}
+                  className='absolute inset-0 w-full h-full object-cover select-none animate-ken-burns'
                 />
               </div>
 
@@ -99,19 +111,22 @@ export default function EducationLevel() {
                 >
                   <div className='flex flex-col items-center'>
                     {/* Decorative Line (Vertical) */}
-                    <div className='bg-[#FABA1E] w-1.5 h-20 mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
+                    <div className='bg-[#FABA1E] w-2 h-20 mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
 
                     {/* Subtitle (Vertical) */}
-                    <h2
-                      className='text-xl md:text-2xl lg:text-3xl font-bold text-white uppercase tracking-widest whitespace-nowrap drop-shadow-xl'
-                      style={{
-                        writingMode: 'vertical-rl',
-                        rotate: '180deg',
-                        textShadow: '0 4px 20px rgba(0,0,0,0.5)'
-                      }}
-                    >
-                      {item.subtitle || 'Level'}
-                    </h2>
+                    {/* Subtitle (Vertical) */}
+                    <div className='h-[400px] flex flex-col justify-end items-center'>
+                      <h2
+                        className='text-xl md:text-2xl lg:text-3xl font-bold text-white uppercase tracking-widest whitespace-nowrap drop-shadow-xl'
+                        style={{
+                          writingMode: 'vertical-rl',
+                          rotate: '180deg',
+                          textShadow: '0 4px 20px rgba(0,0,0,0.5)'
+                        }}
+                      >
+                        {item.subtitle || 'Level'}
+                      </h2>
+                    </div>
                   </div>
                 </motion.div>
               )}
@@ -128,8 +143,8 @@ export default function EducationLevel() {
                   className='absolute inset-0 z-10 px-8 md:px-12 lg:px-16 py-12 md:py-16 flex flex-col justify-end w-full pointer-events-none'
                 >
                   <motion.div
-                    key={`content-${item.id}`} // Key quan trọng cho AnimatePresence
-                    className='w-full max-w-[90%] md:max-w-4xl pointer-events-auto flex flex-col items-start'
+                    key={`content-${item.id}`}
+                    className='w-[80vw] md:w-[60vw] md:max-w-4xl pointer-events-auto flex flex-col items-start'
                   >
                     {/* HORIZONTAL SUBTITLE (Former Vertical Text)
                         Falls/Rotates in from -90deg.
@@ -142,7 +157,7 @@ export default function EducationLevel() {
                       transition={{ duration: 0.6, ease: 'backOut' }}
                     >
                       {/* Decorative Line (Horizontal) */}
-                      <div className='bg-[#FABA1E] w-20 h-1.5 mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
+                      <div className='bg-[#FABA1E] w-20 h-2 mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
 
                       {/* Subtitle (Horizontal) */}
                       <h2 className='text-xl md:text-2xl font-bold text-[#FABA1E] uppercase tracking-widest leading-none whitespace-nowrap drop-shadow-md'>
@@ -190,7 +205,7 @@ export default function EducationLevel() {
                             href='https://bh-galaxykg-lhbs-iotsoftvn-com.vercel.app/'
                             target='_blank'
                             rel='noreferrer'
-                            className='group relative px-10 py-5 bg-[#FABA1E] text-[#1E5338] font-bold rounded-sm hover:bg-white transition-all duration-300 uppercase tracking-widest text-sm md:text-base shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] block md:inline-block text-center w-full md:w-auto'
+                            className='group relative w-full md:w-[200px] px-6 py-4 bg-[#FABA1E] text-[#1E5338] font-bold rounded-sm hover:bg-white transition-all duration-300 uppercase tracking-widest text-sm shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex items-center justify-center'
                           >
                             <span className='relative z-10'>Bien Hoa</span>
                           </a>
@@ -198,7 +213,7 @@ export default function EducationLevel() {
                             href='https://lk-galaxykg-lhbs-iotsoftvn-com.vercel.app/'
                             target='_blank'
                             rel='noreferrer'
-                            className='group relative px-10 py-5 bg-[#FABA1E] text-[#1E5338] font-bold rounded-sm hover:bg-white transition-all duration-300 uppercase tracking-widest text-sm md:text-base shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] block md:inline-block text-center w-full md:w-auto'
+                            className='group relative w-full md:w-[200px] px-6 py-4 bg-[#FABA1E] text-[#1E5338] font-bold rounded-sm hover:bg-white transition-all duration-300 uppercase tracking-widest text-sm shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex items-center justify-center'
                           >
                             <span className='relative z-10'>Long Khanh</span>
                           </a>
@@ -208,7 +223,7 @@ export default function EducationLevel() {
                           href={item.learnMoreUrl}
                           target='_blank'
                           rel='noreferrer'
-                          className='group relative px-10 py-5 border-2 border-[#FABA1E] text-[#FABA1E] font-bold rounded-sm hover:bg-[#FABA1E] hover:text-[#1E5338] transition-all duration-300 uppercase tracking-widest text-sm md:text-base shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] block md:inline-block text-center w-full md:w-auto'
+                          className='group relative w-full md:w-[200px] px-6 py-4 bg-[#FABA1E] text-[#1E5338] font-bold rounded-sm hover:bg-white transition-all duration-300 uppercase tracking-widest text-sm shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex items-center justify-center'
                         >
                           <span className='relative z-10'>Discover More</span>
                         </a>
