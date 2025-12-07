@@ -22,10 +22,7 @@ export default function EducationLevel() {
   }, [])
 
   return (
-    <section
-      id='solid-education-level'
-      className='w-full h-screen flex overflow-hidden relative bg-[#050505] snap-start'
-    >
+    <section id='solid-education-level' className='w-full h-dvh flex overflow-hidden relative bg-[#050505] snap-start'>
       {SCHOOL_LEVELS.map((item, index) => {
         const isActive = index === activeIndex
         // Calculation for width
@@ -106,7 +103,7 @@ export default function EducationLevel() {
 
                     {/* Subtitle (Vertical) */}
                     <h2
-                      className='text-3xl md:text-4xl font-bold text-white uppercase tracking-widest whitespace-nowrap drop-shadow-xl'
+                      className='text-xl md:text-2xl lg:text-3xl font-bold text-white uppercase tracking-widest whitespace-nowrap drop-shadow-xl'
                       style={{
                         writingMode: 'vertical-rl',
                         rotate: '180deg',
@@ -158,7 +155,7 @@ export default function EducationLevel() {
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.2 }}
-                      className='text-4xl md:text-6xl lg:text-8xl font-black text-white mb-6 leading-[0.9] drop-shadow-2xl uppercase tracking-tight'
+                      className='text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black text-white mb-6 leading-[0.9] drop-shadow-2xl uppercase tracking-tight'
                     >
                       {item.title}
                     </motion.h3>
