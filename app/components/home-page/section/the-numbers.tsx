@@ -209,7 +209,7 @@ export default function TheNumbers() {
           <div className='flex flex-col items-center mb-12'>
             <div className='bg-[#FABA1E] w-20 h-1.5 mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
             <h3 className='text-3xl md:text-4xl font-black text-[#1E5338] uppercase tracking-wide drop-shadow-sm text-center'>
-              Trusted Partners
+              College Acceptance
             </h3>
           </div>
 
@@ -249,24 +249,8 @@ export default function TheNumbers() {
 
             {/* Custom Navigation - Minimal Arrows */}
             <div className='hidden md:block'>
-              <CarouselPrevious
-                className='
-      h-auto w-auto border-none bg-transparent text-[#FABA1E] 
-      hover:bg-transparent hover:text-[#d49e19] 
-      -left-16 md:-left-20 
-      [&_svg]:size-32 md:[&_svg]:size-40 
-      transition-transform hover:scale-110
-    '
-              />
-              <CarouselNext
-                className='
-      h-auto w-auto border-none bg-transparent text-[#FABA1E] 
-      hover:bg-transparent hover:text-[#d49e19] 
-      -right-16 md:-right-20 
-      [&_svg]:size-32 md:[&_svg]:size-40 
-      transition-transform hover:scale-110
-    '
-              />
+              <CarouselPrevious className='h-auto w-auto border-none bg-transparent text-[#FABA1E] hover:bg-transparent hover:text-[#d49e19] -left-12 [&_svg]:size-20 transition-transform hover:scale-110' />
+              <CarouselNext className='h-auto w-auto border-none bg-transparent text-[#FABA1E] hover:bg-transparent hover:text-[#d49e19] -right-12 [&_svg]:size-20 transition-transform hover:scale-110' />
             </div>
           </Carousel>
         </motion.div>
