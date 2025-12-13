@@ -1,6 +1,6 @@
 {
   "name": "school.lhbs.edu.vn",
-  "sourceRoot": "apps/school.lhbs.edu.vn/src",
+  "sourceRoot": "apps/school.lhbs.edu.vn/app",
   "projectType": "application",
   "targets": {
     "serve": {

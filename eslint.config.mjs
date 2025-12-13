@@ -17,6 +17,8 @@ export default [
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     rules: {
+    indent: 'off',
+    '@typescript-eslint/indent': 'off',
       '@nx/enforce-module-boundaries': [
         'error',
         {

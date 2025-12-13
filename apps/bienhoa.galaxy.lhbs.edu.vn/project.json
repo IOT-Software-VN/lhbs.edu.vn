@@ -1,0 +1,20 @@
+{
+  "name": "bienhoa.galaxy.lhbs.edu.vn",
+  "sourceRoot": "apps/bienhoa.galaxy.lhbs.edu.vn/app",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "options": {
+        "buildTarget": "bienhoa.galaxy.lhbs.edu.vn:build"
+      }
+    },
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/bienhoa.galaxy.lhbs.edu.vn"
+      }
+    }
+  }
+}
