@@ -195,6 +195,47 @@ export default defineConfig({
 });
 ```
 
+### D. Configure Nx Targets
+
+**File: `apps/[app-name]/project.json`**
+
+File này được tạo tự động khi chạy `nx g @nx/react:app`, nhưng cần verify các targets để chạy dev và build.
+
+```json
+{
+  "name": "lhbs.edu.vn",
+  "sourceRoot": "apps/lhbs.edu.vn/app",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "options": {
+        "buildTarget": "lhbs.edu.vn:build"
+      }
+    },
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/lhbs.edu.vn"
+      }
+    }
+  }
+}
+```
+
+**Giải thích:**
+
+| Target | Executor | Mô Tả |
+|--------|----------|-------|
+| `serve` | `@nx/vite:dev-server` | Chạy dev server (dùng `nx dev`) |
+| `build` | `@nx/vite:build` | Build production bundle |
+
+**Lưu ý:**
+- Target `serve` được alias thành `dev` trong Nx
+- `buildTarget` trong `serve` chỉ đến target `build` để build trước khi serve
+- `outputPath` xác định thư mục output khi build
+
 ### ⚠️ Lưu Ý Quan Trọng  
 
 > **❌ KHÔNG import assets từ thư mục `public/`**
@@ -561,9 +602,10 @@ nx run-many --target=typecheck --all
 - [ ] Setup import alias trong `tsconfig.app.json`
 - [ ] Install TailwindCSS v4
 - [ ] Configure dev server port
+- [ ] Verify `project.json` có targets `serve` và `build`
 - [ ] Tạo folder `assets/` cho images
-- [ ] Test dev server chạy OK
-- [ ] Test build production
+- [ ] Test dev server chạy OK (`nx dev [app-name]`)
+- [ ] Test build production (`nx build [app-name]`)
 - [ ] Commit changes
 
 ---

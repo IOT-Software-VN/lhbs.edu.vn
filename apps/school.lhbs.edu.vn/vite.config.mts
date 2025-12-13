@@ -1,6 +1,8 @@
 /// <reference types='vitest' />
 import { defineConfig } from 'vite';
 import { reactRouter } from '@react-router/dev/vite';
+import path from 'node:path'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
@@ -13,7 +15,14 @@ export default defineConfig(() => ({
     port: 4201,
     host: 'localhost',
   },
-  plugins: [!process.env.VITEST && reactRouter()],
+  plugins: [!process.env.VITEST && reactRouter(), tailwindcss()],
+    resolve: {
+    alias: {
+      '@': path.resolve(import.meta.dirname, 'app'),
+      '~': path.resolve(import.meta.dirname, 'app/components/ui'),
+      '@assets': path.resolve(import.meta.dirname, 'assets'),
+    },
+  },
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [],
