@@ -360,6 +360,6 @@ npm install
 
 ---
 
-**Người Tạo:** Frontend Developer  
+**Người Tạo:** ERICSS Developer - Nguyen Phat 
 **Version:** 1.0  
 **Last Updated:** 13/12/2025
