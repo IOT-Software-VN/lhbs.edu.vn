@@ -21,7 +21,7 @@
     "**/.server/**/*.tsx",
     "**/.client/**/*.ts",
     "**/.client/**/*.tsx"
-  ],
+, "../../libs/src/shared-ui/components/testimonial-quote-section/testimonial-quote.tsx", "../../libs/src/shared-ui/components/life-video.tsx"  ],
   "exclude": [
     "out-tsc",
     "dist",

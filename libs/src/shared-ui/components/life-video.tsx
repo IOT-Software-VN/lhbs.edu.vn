@@ -60,31 +60,6 @@ const lifeBody =
               {lifeBody}
             </p>
 
-
-            {/* <motion.button
-              onClick={() => setShowVideoModal(true)}
-              className="group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-black/50"
-              aria-label={playAriaLabel}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <svg
-                width="96"
-                height="96"
-                viewBox="0 0 96 96"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="drop-shadow-lg transition-all duration-300 group-hover:drop-shadow-2xl"
-              >
-                <circle cx="48" cy="48" r="48" fill="#fffae9" />
-                <path
-                  d="M38 32L38 64L66 48L38 32Z"
-                  fill="#1a5336"
-                />
-              </svg>
-              <span className="sr-only">{playAriaLabel}</span>
-            </motion.button> */}
-
             <motion.a
               href="https://360.lhu.edu.vn/"
               target="_blank"

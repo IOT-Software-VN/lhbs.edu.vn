@@ -3,7 +3,7 @@ import { motion, useInView } from 'motion/react'
 import { ArrowRight } from 'lucide-react'
 import backgroundImage from '@assets/images/home-page/section-news/Layer_5.png'
 
-export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: string) => void }) {
+export function NewsEventsSection({ onNavigate }: { onNavigate: (path: string) => void }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 

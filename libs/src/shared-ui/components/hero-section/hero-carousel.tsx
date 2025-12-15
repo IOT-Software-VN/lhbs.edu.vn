@@ -3,27 +3,63 @@ import { useState, useEffect } from 'react'
 import { ScrollIndicator } from '@sites/index'
 import Herobg from '@assets/images/home-page/Hero-bg.png'
 
-interface HeroProps {
-  onNavigate: (path: string) => void
+export interface HeroContent {
+  subtitle?: string
+  decorativeLineColor?: string
+  title: string | { line1: string; line2: string }
+  tagline?: string
+  ctaButton?: {
+    text: string
+    url: string
+  }
 }
 
-export function HeroCarousel({ onNavigate }: HeroProps) {
+interface HeroCarouselProps {
+  backgroundImages?: string[]
+  content?: HeroContent
+  onNavigate: (path: string) => void
+  autoPlayInterval?: number
+  scrollTargetId?: string
+}
+
+// Default configuration
+const DEFAULT_BACKGROUND_IMAGES = [
+  Herobg,
+  'https://employer.jobsgo.vn/uploads/media/img/202406/pictures_library_20240621113715_5880z55593989341263ddcf07a3101ef4463d4a46971e2f326jpg.jpg'
+]
+
+const DEFAULT_CONTENT: HeroContent = {
+  subtitle: 'Welcome to LHBS',
+  decorativeLineColor: '#FABA1E',
+  title: {
+    line1: 'Vietnamese Culture',
+    line2: 'International Vision'
+  },
+  tagline: '#A solid stepping stone to becoming a global citizen',
+  ctaButton: {
+    text: 'Enquire Now',
+    url: '/admissions'
+  }
+}
+
+export function HeroCarousel({
+  backgroundImages = DEFAULT_BACKGROUND_IMAGES,
+  content = DEFAULT_CONTENT,
+  onNavigate,
+  autoPlayInterval = 5000,
+  scrollTargetId = 'solid-education-level'
+}: HeroCarouselProps) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const [isContentVisible, setIsContentVisible] = useState(true)
-
-  const backgroundImages = [
-    Herobg,
-    'https://employer.jobsgo.vn/uploads/media/img/202406/pictures_library_20240621113715_5880z55593989341263ddcf07a3101ef4463d4a46971e2f326jpg.jpg'
-  ]
 
   useEffect(() => {
     if (!isAutoPlaying) return
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % backgroundImages.length)
-    }, 5000)
+    }, autoPlayInterval)
     return () => clearInterval(interval)
-  }, [isAutoPlaying, backgroundImages.length])
+  }, [isAutoPlaying, backgroundImages.length, autoPlayInterval])
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index)
@@ -32,6 +68,8 @@ export function HeroCarousel({ onNavigate }: HeroProps) {
   }
 
   const toggleVisibility = () => setIsContentVisible(!isContentVisible)
+
+  const titleText = typeof content.title === 'string' ? content.title : content.title
 
   return (
     <section
@@ -93,17 +131,25 @@ export function HeroCarousel({ onNavigate }: HeroProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {/* Decorative Line & Subtitle */}
-              <motion.div
-                className='flex flex-col items-start mb-2 md:mb-4'
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                <div className='bg-[#FABA1E] w-8 h-1 md:w-12 md:h-1.5 mb-2 md:mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
-                <h2 className='text-xs md:text-sm lg:text-base font-bold text-[#FABA1E] uppercase tracking-[0.2em] leading-none drop-shadow-md'>
-                  Welcome to LHBS
-                </h2>
-              </motion.div>
+              {content.subtitle && (
+                <motion.div
+                  className='flex flex-col items-start mb-2 md:mb-4'
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                  <div
+                    className='w-8 h-1 md:w-12 md:h-1.5 mb-2 md:mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]'
+                    style={{ backgroundColor: content.decorativeLineColor || '#FABA1E' }}
+                  />
+                  <h2
+                    className='text-xs md:text-sm lg:text-base font-bold uppercase tracking-[0.2em] leading-none drop-shadow-md'
+                    style={{ color: content.decorativeLineColor || '#FABA1E' }}
+                  >
+                    {content.subtitle}
+                  </h2>
+                </motion.div>
+              )}
 
               {/* Main Title */}
               <motion.div
@@ -113,40 +159,49 @@ export function HeroCarousel({ onNavigate }: HeroProps) {
                 className='mb-2 md:mb-4 lg:mb-6'
               >
                 <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl min-[1800px]:text-7xl font-black text-white leading-[1.1] drop-shadow-2xl uppercase tracking-tight'>
-                  <span className='block mb-1 md:mb-2'>Vietnamese Culture</span>
-                  <span className='block text-white/90'>International Vision</span>
+                  {typeof titleText === 'string' ? (
+                    <span className='block'>{titleText}</span>
+                  ) : (
+                    <>
+                      <span className='block mb-1 md:mb-2'>{titleText.line1}</span>
+                      <span className='block text-white/90'>{titleText.line2}</span>
+                    </>
+                  )}
                 </h1>
               </motion.div>
 
               {/* Tagline */}
-              <motion.p
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-                className='text-white/90 text-sm md:text-base lg:text-lg font-medium mb-4 md:mb-6 lg:mb-8 max-w-xl lg:max-w-2xl leading-relaxed drop-shadow-lg'
-              >
-                #A solid stepping stone to becoming a global citizen
-              </motion.p>
+              {content.tagline && (
+                <motion.p
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                  className='text-white/90 text-sm md:text-base lg:text-lg font-medium mb-4 md:mb-6 lg:mb-8 max-w-xl lg:max-w-2xl leading-relaxed drop-shadow-lg'
+                >
+                  {content.tagline}
+                </motion.p>
+              )}
 
               {/* CTA Button */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.0 }}
-                // Avoid cutting off shadow in scroll container by adding margin bottom
-                className='mb-2'
-              >
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    onNavigate('/admissions')
-                  }}
-                  className='group relative px-5 py-2.5 md:px-7 md:py-3 lg:px-8 lg:py-3.5 bg-[#FABA1E] text-[#1E5338] font-bold text-[10px] md:text-xs lg:text-sm uppercase tracking-widest rounded-sm md:rounded
-                           hover:bg-white transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]'
+              {content.ctaButton && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1.0 }}
+                  className='mb-2'
                 >
-                  <span className='relative z-10'>Enquire Now</span>
-                </button>
-              </motion.div>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      onNavigate(content.ctaButton!.url)
+                    }}
+                    className='group relative px-5 py-2.5 md:px-7 md:py-3 lg:px-8 lg:py-3.5 bg-[#FABA1E] text-[#1E5338] font-bold text-[10px] md:text-xs lg:text-sm uppercase tracking-widest rounded-sm md:rounded
+                           hover:bg-white transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]'
+                  >
+                    <span className='relative z-10'>{content.ctaButton.text}</span>
+                  </button>
+                </motion.div>
+              )}
             </motion.div>
           </div>
         </div>
@@ -176,7 +231,7 @@ export function HeroCarousel({ onNavigate }: HeroProps) {
       </motion.div>
 
       <motion.div animate={{ opacity: isContentVisible ? 1 : 0 }} transition={{ duration: 0.5 }}>
-        <ScrollIndicator targetSectionId='solid-education-level' />
+        <ScrollIndicator targetSectionId={scrollTargetId} />
       </motion.div>
     </section>
   )
