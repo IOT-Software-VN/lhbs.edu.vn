@@ -2,7 +2,7 @@
 
 > **Tài liệu dành cho:** Frontend Developer  
 > **Dự án:** LHBS - Trường Song Ngữ Lạc Hồng (Since 2011)  
-> **Thực hiện bởi:** ERICSS Developer @ IOT Software  
+> **Thực hiện bởi:** IOT Software  
 > **Tech Stack:** Nx + React Router + Vite + TailwindCSS v4 + Vitest
 
 <div align="center">
@@ -18,9 +18,11 @@
 2. [Yêu Cầu Hệ Thống](#2-yêu-cầu-hệ-thống)
 3. [Khởi Tạo Workspace](#3-khởi-tạo-workspace)
 4. [Cấu Trúc Workspace](#4-cấu-trúc-workspace)
-5. [Quản Lý Dependencies](#5-quản-lý-dependencies)
-6. [Nx Commands](#6-nx-commands)
-7. [Best Practices](#7-best-practices)
+5. [Shared Libraries (libs)](#5-shared-libraries-libs)
+6. [Quản Lý Dependencies](#6-quản-lý-dependencies)
+7. [Nx Commands](#7-nx-commands)
+8. [Best Practices](#8-best-practices)
+9. [TailwindCSS Configuration](#9-tailwindcss-configuration)
 
 ---
 
@@ -36,7 +38,6 @@ LHBS Monorepo là workspace quản lý tập trung 4 applications của Trườn
 |-----------|----------|
 | **Khách hàng** | LHBS - Trường Song Ngữ Lạc Hồng |
 | **Thành lập** | 2011 |
-| **Developer** | ERICSS Developer |
 | **Công ty** | IOT Software |
 | **Monorepo Tool** | Nx 22.x |
 
@@ -70,7 +71,18 @@ LHBS-demo/
 │   ├── school.lhbs.edu.vn/
 │   ├── bienhoa.galaxy.lhbs.edu.vn/
 │   └── longkhanh.galaxy.lhbs.edu.vn/
-├── libs/                    # Shared libraries (future)
+├── libs/                    # Shared libraries
+│   ├── src/
+│   │   ├── components/      # Shared UI components (Radix UI)
+│   │   ├── shared-ui/       # Custom shared components & layouts
+│   │   ├── hooks/           # React hooks
+│   │   ├── lib/             # Utilities & helpers
+│   │   ├── types/           # TypeScript types
+│   │   └── index.ts         # Library exports
+│   ├── assets/              # Shared assets (images, icons)
+│   ├── package.json
+│   ├── vite.config.mts      # Vite bundler config
+│   └── tsconfig.lib.json
 ├── documents/               # Documentation
 ├── node_modules/
 ├── package.json             # Root dependencies
@@ -198,10 +210,25 @@ LHBS-demo/
 │   ├── bienhoa.galaxy.lhbs.edu.vn/
 │   └── longkhanh.galaxy.lhbs.edu.vn/
 │
-├── libs/                          # Shared libraries (future)
-│   ├── shared-ui/                # Shared UI components
-│   ├── shared-utils/             # Utilities
-│   └── shared-types/             # TypeScript types
+├── libs/                          # Shared Library
+│   ├── src/
+│   │   ├── components/           # Shared UI components (Radix UI)
+│   │   │   └── ui/               # Button, Card, Accordion, Carousel
+│   │   ├── shared-ui/            # Custom shared components
+│   │   │   ├── components/       # Hero, News, Testimonials, etc.
+│   │   │   └── layouts/          # Footer, Header, Menu
+│   │   ├── hooks/                # Custom React hooks
+│   │   ├── lib/                  # Utilities & helpers
+│   │   ├── types/                # TypeScript types & interfaces
+│   │   ├── app.css              # TailwindCSS imports
+│   │   └── index.ts             # Library exports
+│   ├── assets/                   # Shared static assets
+│   │   ├── base/                # Logos, icons
+│   │   └── home-page/           # Homepage images
+│   ├── package.json
+│   ├── vite.config.mts          # Vite bundler configuration
+│   ├── tsconfig.lib.json        # TypeScript library config
+│   └── README.md
 │
 ├── documents/                     # Documentation
 │   ├── monorepo-overview.md
@@ -228,12 +255,161 @@ LHBS-demo/
 |------|-------|
 | `nx.json` | Nx workspace configuration, plugins, caching |
 | `package.json` | Root dependencies, workspaces config |
-| `tsconfig.base.json` | Shared TypeScript configuration |
+| `tsconfig.base.json` | Shared TypeScript configuration, path aliases |
 | `vitest.workspace.ts` | Vitest projects configuration |
+| `libs/vite.config.mts` | Vite bundler config for libs |
 
 ---
 
-## 5. Quản Lý Dependencies
+## 5. Shared Libraries (libs)
+
+### 📚 Tổng Quan
+
+Folder `libs/` chứa tất cả shared code được sử dụng chung cho các applications trong monorepo.
+
+### 🎯 Tạo Libs Project
+
+```bash
+# Generate libs project với Nx
+npx nx g @nx/js:lib libs
+
+# Interactive prompts:
+? Which bundler would you like to use?
+❯ vite
+
+? Which unit test runner would you like to use?
+❯ none
+
+? Which linter would you like to use?
+❯ none
+```
+
+### 📋 Cấu Hình Libs
+
+| Option | Value |
+|--------|-------|
+| **Name** | `libs` |
+| **Bundler** | `vite` |
+| **Test Runner** | `none` |
+| **Linter** | `none` |
+
+### 🗂️ Libs Structure
+
+```
+libs/
+├── src/
+│   ├── components/ui/           # Radix UI components
+│   │   ├── accordion.tsx
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   ├── carousel.tsx
+│   │   └── index.ts
+│   │
+│   ├── shared-ui/               # Custom shared components
+│   │   ├── components/
+│   │   │   ├── hero-section/
+│   │   │   │   ├── hero-carousel.tsx
+│   │   │   │   ├── hero-video.tsx
+│   │   │   │   └── README.md
+│   │   │   ├── news-section/
+│   │   │   ├── testimonial-quote-section/
+│   │   │   ├── animated-highlight.tsx
+│   │   │   ├── ImageWithFallback.tsx
+│   │   │   ├── ScrollIndicator.tsx
+│   │   │   └── ScrollToTop.tsx
+│   │   ├── layouts/
+│   │   │   ├── Footer.tsx
+│   │   │   ├── FullScreenMenu.tsx
+│   │   │   └── StickyHeader.tsx
+│   │   └── index.ts
+│   │
+│   ├── hooks/
+│   │   └── index.ts
+│   │
+│   ├── lib/
+│   │   ├── libs.ts
+│   │   └── utils.ts           # cn() helper, etc.
+│   │
+│   ├── types/
+│   │   └── navigation.ts
+│   │
+│   ├── app.css                # TailwindCSS imports
+│   └── index.ts               # Main export entry
+│
+├── assets/                     # Shared assets
+│   ├── base/
+│   │   ├── logo-head.png
+│   │   └── Footer.jpg
+│   └── home-page/
+│       ├── Hero-bg.png
+│       ├── section-education/
+│       └── section-news/
+│
+├── package.json
+├── vite.config.mts
+├── tsconfig.lib.json
+└── README.md
+```
+
+### 📦 Libs Exports
+
+**File:** `libs/src/index.ts`
+
+```typescript
+// Utils
+export * from './lib/libs.js'
+export { cn } from './lib/utils'
+
+// UI Components (Radix UI)
+export * from './components/ui'
+
+// Shared UI Components
+export * from './shared-ui'
+
+// Types
+export * from './types/navigation'
+```
+
+### 🔗 Import Trong Apps
+
+**Path Alias:** `@sites` hoặc `@sites/*`
+
+```typescript
+// Import từ libs
+import { HeroCarousel, Footer, StickyHeader } from '@sites/index'
+import { Button, Card } from '@sites/components/ui'
+import type { NavigationData } from '@sites/types/navigation'
+```
+
+### ⚙️ TypeScript Configuration
+
+**File:** `tsconfig.base.json`
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "@sites": ["./libs/src"],
+      "@sites/*": ["./libs/src/*"],
+      "@assets/*": ["./assets/*"]
+    }
+  }
+}
+```
+
+### 🎨 Shared Assets
+
+Assets trong `libs/assets/` được share cho tất cả apps:
+
+```typescript
+// Import asset từ libs
+import logoImage from '@assets/images/base/logo-head.png'
+import heroImage from '@assets/images/home-page/Hero-bg.png'
+```
+
+---
+
+## 6. Quản Lý Dependencies
 
 ### Root vs App Dependencies
 
@@ -273,7 +449,7 @@ npm outdated
 
 ---
 
-## 6. Nx Commands
+## 7. Nx Commands
 
 ### Workspace Commands
 
@@ -307,6 +483,19 @@ nx run-many --target=<target> --all
 nx affected --target=<target>
 ```
 
+### Libs Commands
+
+```bash
+# Build libs
+nx build libs
+
+# Watch mode for development
+nx build libs --watch
+
+# Type check libs
+nx typecheck libs
+```
+
 ### Cache Commands
 
 ```bash
@@ -319,32 +508,48 @@ nx show project lhbs.edu.vn --web
 
 ---
 
-## 7. Best Practices
+## 8. Best Practices
 
 ### Monorepo Organization
 
 ✅ **DO:**
 - Đặt shared code trong `libs/`
-- Sử dụng workspace dependencies
+- Sử dụng path aliases (`@sites/*`)
 - Tận dụng Nx caching
 - Run affected commands trong CI/CD
+- Export components từ `libs/src/index.ts`
 
 ❌ **DON'T:**
 - Duplicate code giữa các apps
 - Install dependencies riêng cho từng app
 - Ignore Nx cache
 - Run tất cả tests mọi lúc
+- Import trực tiếp từ file path thay vì alias
+
+### Libs Development
+
+✅ **DO:**
+- Export tất cả shared components qua `index.ts`
+- Sử dụng TypeScript interfaces cho props
+- Document components với README
+- Keep components reusable và generic
+
+❌ **DON'T:**
+- Hard-code app-specific logic trong libs
+- Export internal implementation details
+- Create circular dependencies
 
 ### Dependency Management
 
 ✅ **DO:**
 - Maintain consistent versions
-- Use workspace protocol (`workspace:*`)
+- Install shared deps tại root level
 - Regular dependency updates
 
 ❌ **DON'T:**
 - Mix different versions
 - Install same package multiple times
+- Add app-specific deps vào libs
 
 ### Git Workflow
 
@@ -361,11 +566,85 @@ nx affected --target=build
 
 ---
 
+## 9. TailwindCSS Configuration
+
+### ⚠️ QUAN TRỌNG: Libs + TailwindCSS Setup
+
+Khi sử dụng components từ `libs/` trong apps, **BẮT BUỘC** phải config Tailwind để scan libs folder.
+
+### 📝 Configuration Trong Apps
+
+**File:** `apps/<app-name>/app/app.css`
+
+```css
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ⚠️ QUAN TRỌNG: Cấu hình scan libs folder */
+@source "../../../libs/src/**/*.{ts,tsx,js,jsx}";
+@source "./**/*.{ts,tsx,js,jsx}";
+
+@custom-variant dark (&:is(.dark *));
+```
+
+### 🔍 Giải Thích
+
+| Directive | Mô Tả |
+|-----------|-------|
+| `@source "../../../libs/src/**/*.{ts,tsx,js,jsx}"` | Scan tất cả files trong libs để generate Tailwind classes |
+| `@source "./**/*.{ts,tsx,js,jsx}"` | Scan files trong app hiện tại |
+
+### ⚡ Tại Sao Cần Thiết?
+
+1. **Libs không bundle CSS**: Library chỉ export raw JSX với className strings
+2. **Apps generate CSS**: Mỗi app phải scan libs để generate Tailwind classes
+3. **Path phải chính xác**: `../../../libs/src/` từ `apps/<name>/app/app.css`
+
+### 🚫 Lỗi Thường Gặp
+
+```css
+/* ❌ SAI - Path không đúng */
+@source "../../libs/**/*.{ts,tsx,js,jsx}";
+
+/* ❌ SAI - Thiếu /src */
+@source "../../../libs/**/*.{ts,tsx,js,jsx}";
+
+/* ✅ ĐÚNG */
+@source "../../../libs/src/**/*.{ts,tsx,js,jsx}";
+```
+
+### 🔧 Troubleshooting
+
+**Vấn đề:** Components từ libs bị mất styles
+
+**Giải pháp:**
+1. Kiểm tra `@source` directive trong `app.css`
+2. Đảm bảo path trỏ đúng `libs/src/`
+3. Restart dev server sau khi thay đổi CSS config
+
+```bash
+# Stop server (Ctrl+C)
+# Then restart
+nx dev <app-name>
+```
+
+### 📋 Checklist Setup TailwindCSS
+
+- [ ] Thêm `@source` directive vào mỗi app's `app.css`
+- [ ] Path: `../../../libs/src/**/*.{ts,tsx,js,jsx}`
+- [ ] Restart dev server
+- [ ] Verify styles render correctly
+
+---
+
 ## 📚 Tài Liệu Liên Quan
 
 - [Apps Overview](./apps-overview.md) - Chi tiết về applications
+- [Libs README](../libs/README.md) - Chi tiết về shared library
+- [Hero Carousel Component](../libs/src/shared-ui/components/hero-section/README.md)
 - [Nx Documentation](https://nx.dev)
 - [React Router v7](https://reactrouter.com)
+- [TailwindCSS v4](https://tailwindcss.com)
 
 ---
 
@@ -377,6 +656,8 @@ nx affected --target=build
 - [ ] Setup shared TypeScript config
 - [ ] Install shared dependencies
 - [ ] Create first application
+- [ ] **Generate libs project**
+- [ ] **Configure TailwindCSS @source trong apps**
 - [ ] Setup CI/CD pipeline
 - [ ] Document workspace structure
 
@@ -385,5 +666,5 @@ nx affected --target=build
 **Thực hiện bởi:** ERICSS Developer  
 **Công ty:** IOT Software  
 **Khách hàng:** LHBS - Trường Song Ngữ Lạc Hồng  
-**Version:** 1.0  
-**Last Updated:** 13/12/2025
+**Version:** 1.1  
+**Last Updated:** 16/12/2025
