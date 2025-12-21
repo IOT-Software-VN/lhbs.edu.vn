@@ -20,16 +20,6 @@ export default function CatchAllPage() {
           </div>
         </div>
 
-        {/* School-themed illustration */}
-        {/* <div className="mb-12">
-          <div className="w-32 h-32 mx-auto bg-[#1a5336]/10 rounded-full flex items-center justify-center mb-6">
-            <Search className="w-16 h-16 text-[#1a5336]/60" />
-          </div>
-          <p className="text-gray-500 text-sm">
-            Don't worry, even the best students sometimes take a wrong turn!
-          </p>
-        </div> */}
-
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
