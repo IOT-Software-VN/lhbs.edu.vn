@@ -8,17 +8,17 @@ export default function Footer({ onNavigate }: { onNavigate: (path: string) => v
   const email = 'tuyensinh@lhbs.vn'
 
   const linksGroup1 = [
-    { label: 'About Us', url: '/our-school/about-us' },
-    { label: 'Academics', url: '/academics' },
-    { label: 'Admissions', url: '/admissions' },
-    { label: 'News & Events', url: '/news-events' }
+    { label: 'Về chúng tôi', url: '/our-school/about-us' },
+    { label: 'Chương trình học', url: '/academics' },
+    { label: 'Tuyển sinh', url: '/admissions' },
+    { label: 'Tin tức & Sự kiện', url: '/news-events' }
   ]
 
   const linksGroup2 = [
-    { label: 'Careers', url: '/contact/careers' },
-    { label: 'Contact', url: '/contact' },
-    { label: 'Privacy Policy', url: '/legal/privacy-policy' },
-    { label: 'Terms of Use', url: '/legal/terms-of-use' }
+    { label: 'Tuyển dụng', url: '/contact/careers' },
+    { label: 'Liên hệ', url: '/contact' },
+    { label: 'Chính sách bảo mật', url: '/legal/privacy-policy' },
+    { label: 'Điều khoản sử dụng', url: '/legal/terms-of-use' }
   ]
 
   const socialLinks = [
@@ -73,7 +73,7 @@ export default function Footer({ onNavigate }: { onNavigate: (path: string) => v
         <div className='flex justify-center items-center gap-6 md:gap-12'>
           {/* Inquire */}
           <CircleActionButton
-            label='Inquire'
+            label='Tư vấn'
             onClick={() => onNavigate('/contact/inquire')}
             icon={
               <svg
@@ -95,7 +95,7 @@ export default function Footer({ onNavigate }: { onNavigate: (path: string) => v
           />
           {/* Apply */}
           <CircleActionButton
-            label='Apply'
+            label='Đăng ký'
             onClick={() => onNavigate('/admissions/apply')}
             icon={
               <svg
@@ -116,7 +116,7 @@ export default function Footer({ onNavigate }: { onNavigate: (path: string) => v
           />
           {/* Visit */}
           <CircleActionButton
-            label='Visit'
+            label='Tham quan'
             onClick={() => onNavigate('/visit')}
             icon={
               <svg

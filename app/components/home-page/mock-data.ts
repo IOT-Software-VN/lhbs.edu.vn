@@ -11,12 +11,12 @@ export interface SchoolLevel {
 export const SCHOOL_LEVELS: SchoolLevel[] = [
   {
     id: 'galaxy-kc',
-    title: 'KINDERGARTEN',
-    subtitle: '18 months - 3 years',
+    title: 'MẦM NON',
+    subtitle: '18 tháng - 3 tuổi',
     descriptions: [
-      'Modern early childhood program with international methods.',
-      'Integrated curriculum combining MOET and global standards.',
-      'Focus on physical growth, character, and social skills.'
+      'Chương trình mầm non hiện đại với phương pháp quốc tế.',
+      'Chương trình tích hợp kết hợp Bộ GD&ĐT và chuẩn toàn cầu.',
+      'Tập trung phát triển thể chất, nhân cách và kỹ năng xã hội.'
     ],
     image: '/images/home-page/section-education/program-03.png',
     slug: '/campus/galaxy-kc'
@@ -24,12 +24,12 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
 
   {
     id: 'elementary',
-    title: 'PRIMARY SCHOOL',
-    subtitle: 'Grade 1 - Grade 5',
+    title: 'TIỂU HỌC',
+    subtitle: 'Lớp 1 - Lớp 5',
     descriptions: [
-      'Comprehensive bilingual curriculum with strong foundations.',
-      'Holistic development emphasizing creativity and logic.',
-      'Engaging activities building confidence and curiosity.'
+      'Chương trình song ngữ toàn diện với nền tảng vững chắc.',
+      'Phát triển toàn diện nhấn mạnh sáng tạo và tư duy logic.',
+      'Hoạt động hấp dẫn xây dựng sự tự tin và khám phá.'
     ],
     image: '/images/home-page/section-education/program-02.png',
     slug: '/campus/elementary',
@@ -38,12 +38,12 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
 
   {
     id: 'middle',
-    title: 'SECONDARY SCHOOL',
-    subtitle: 'Grade 6 - Grade 9',
+    title: 'TRUNG HỌC CƠ SỞ',
+    subtitle: 'Lớp 6 - Lớp 9',
     descriptions: [
-      'Academic curriculum focusing on critical thinking skills.',
-      'Project-based learning encouraging teamwork and innovation.',
-      'Preparation for higher academic challenges and pathways.'
+      'Chương trình học thuật tập trung kỹ năng tư duy phản biện.',
+      'Học tập dựa trên dự án khuyến khích làm việc nhóm và đổi mới.',
+      'Chuẩn bị cho những thách thức học thuật cao hơn.'
     ],
     image: '/images/home-page/section-education/program.jpg',
     slug: '/campus/middle-school',
@@ -52,12 +52,12 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
 
   {
     id: 'highschool',
-    title: 'HIGH SCHOOL',
-    subtitle: 'Grade 10 - Grade 12',
+    title: 'TRUNG HỌC PHỔ THÔNG',
+    subtitle: 'Lớp 10 - Lớp 12',
     descriptions: [
-      'Advanced academic programs aligned with global standards.',
-      'Specialized guidance for university and career pathways.',
-      'Opportunities for leadership and extracurricular excellence.'
+      'Chương trình học thuật nâng cao phù hợp chuẩn quốc tế.',
+      'Định hướng chuyên biệt cho con đường đại học và nghề nghiệp.',
+      'Cơ hội lãnh đạo và xuất sắc trong hoạt động ngoại khóa.'
     ],
     image: '/images/home-page/section-education/program-01.png',
     slug: '/campus/high-school',

@@ -165,15 +165,16 @@ export default function EducationLevel() {
                       </h2>
                     </motion.div>
 
-                    {/* Main Title (h3) */}
-                    <motion.h3
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.2 }}
-                      className='text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black text-white mb-6 leading-[0.9] drop-shadow-2xl uppercase tracking-tight'
-                    >
-                      {item.title}
-                    </motion.h3>
+                      {/* Main Title (h3) */}
+                      <motion.h3
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        // Đã sửa leading-[0.9] thành leading-[1.1]
+                        className='text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black text-white mb-6 leading-[1.1] drop-shadow-2xl uppercase tracking-tight'
+                      >
+                        {item.title}
+                      </motion.h3>
 
                     <div className='space-y-5 mb-12 max-w-2xl'>
                       {item.descriptions.map((line, i) => (
@@ -225,7 +226,7 @@ export default function EducationLevel() {
                           rel='noreferrer'
                           className='group relative w-full md:w-[200px] px-6 py-4 bg-[#FABA1E] text-[#1E5338] font-bold rounded-sm hover:bg-white transition-all duration-300 uppercase tracking-widest text-sm shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex items-center justify-center'
                         >
-                          <span className='relative z-10'>Discover More</span>
+                          <span className='relative z-10'>Khám phá thêm</span>
                         </a>
                       )}
                     </motion.div>

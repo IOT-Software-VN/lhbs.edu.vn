@@ -8,18 +8,25 @@ import {
   CarouselPrevious,
   type CarouselApi
 } from '@/components/ui/carousel'
-const statsData = [
+import { TrendingUp, HeartHandshake, MonitorSmartphone, type LucideIcon } from 'lucide-react'
+const whyChooseData = [
   {
-    number: '15',
-    description: 'Năm tận tâm'
+    icon: TrendingUp,
+    title: 'Lộ trình học tập cá nhân hóa',
+    description:
+      'Mỗi học sinh được thiết kế chương trình học phù hợp với năng lực và mục tiêu phát triển riêng.'
   },
   {
-    number: '250',
-    description: 'Giáo viên giàu kinh nghiệm'
+    icon: HeartHandshake,
+    title: 'Lấy học sinh làm trung tâm',
+    description:
+      'Phương pháp giảng dạy chủ động, khuyến khích tư duy sáng tạo độc lập và phát triển kỹ năng.'
   },
   {
-    number: '2600',
-    description: 'Học sinh các cấp'
+    icon: MonitorSmartphone,
+    title: 'Tiên phong ứng dụng công nghệ',
+    description:
+      'Tích hợp công nghệ hiện đại vào mọi hoạt động giảng dạy, tạo môi trường học tập tương tác.'
   }
 ]
 
@@ -48,46 +55,74 @@ const universityLogos = [
   }
 ]
 
-function RollingNumber({ value, className }: { value: string; className?: string }) {
-  const ref = useRef<HTMLSpanElement>(null)
-  const isInView = useInView(ref, { once: false, margin: '-50px' })
-
-  // Parse value logic
-  const numericValue = parseInt(value.replace(/[^0-9]/g, '')) || 0
-  const isPercentage = value.includes('%')
-  const hasComma = value.includes(',')
-
-  useEffect(() => {
-    const node = ref.current
-    if (!node) return
-
-    if (isInView) {
-      // Animate from 0 to the target number
-      const controls = animate(0, numericValue, {
-        duration: 2.5,
-        ease: 'circOut',
-        onUpdate(val) {
-          const rounded = Math.round(val)
-          const formatted = hasComma ? rounded.toLocaleString('en-US') : rounded.toString()
-          node.textContent = isPercentage ? `${formatted}%` : formatted
-        }
-      })
-      return () => controls.stop()
-    } else {
-      // Reset to 0 when out of view
-      node.textContent = isPercentage ? '0%' : '0'
-    }
-  }, [isInView, numericValue, isPercentage, hasComma])
+// InfoCard Component with modern premium design and floating icons
+function InfoCard({
+  icon: Icon,
+  title,
+  description,
+  index
+}: {
+  icon: LucideIcon
+  title: string
+  description: string
+  index: number
+}) {
+  const cardRef = useRef<HTMLDivElement>(null)
+  const isInView = useInView(cardRef, { once: true, margin: '-50px' })
 
   return (
-    <span ref={ref} className={className}>
-      {isPercentage ? '0%' : '0'}
-    </span>
+    <motion.div
+      ref={cardRef}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.6, delay: 0.3 + index * 0.15, ease: 'easeOut' }}
+      className='group relative h-full'
+    >
+      {/* Main Card Container */}
+      <div className='relative h-full flex flex-col items-center bg-white rounded-2xl p-8 md:p-10 shadow-md transition-all duration-500 hover:shadow-2xl hover:-translate-y-2'>
+        {/* Floating Icon Container */}
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={isInView ? { scale: 1 } : { scale: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 + index * 0.15, type: 'spring', stiffness: 200 }}
+          className='relative -mt-16 mb-6'
+        >
+          {/* Icon Circle with Glow Effect */}
+          <div className='relative w-24 h-24 md:w-28 md:h-28'>
+            {/* Outer Glow Ring */}
+            <div className='absolute inset-0 rounded-full bg-gradient-to-br from-[#FDB913]/20 to-[#FDB913]/5 blur-xl group-hover:from-[#FDB913]/40 group-hover:to-[#FDB913]/10 transition-all duration-500' />
+            
+            {/* Main Icon Circle */}
+            <div className='relative w-full h-full rounded-full bg-gradient-to-br from-[#FDB913] to-[#f5a700] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500'>
+              <Icon className='w-12 h-12 md:w-14 md:h-14 text-white stroke-[2.5]' />
+            </div>
+            
+            {/* Decorative Ring */}
+            <div className='absolute -inset-2 rounded-full border-2 border-[#FDB913]/20 group-hover:border-[#FDB913]/40 transition-colors duration-500' />
+          </div>
+        </motion.div>
+
+        {/* Content Area - Center Aligned */}
+        <div className='flex flex-col items-center text-center space-y-4 flex-1'>
+          {/* Title */}
+          <h3 className='text-lg md:text-xl lg:text-2xl font-black text-[#005C42] uppercase tracking-wide leading-tight transition-colors duration-300 group-hover:text-[#FDB913]'>
+            {title}
+          </h3>
+
+          {/* Description */}
+          <p className='text-sm md:text-base text-gray-600 leading-relaxed max-w-sm'>
+            {description}
+          </p>
+        </div>
+
+        {/* Subtle Bottom Accent */}
+        <div className='absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-transparent via-[#FDB913]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
+      </div>
+    </motion.div>
   )
 }
 
 export default function TheNumbers() {
-  const [currentSlide, setCurrentSlide] = useState(0)
   const [api, setApi] = useState<CarouselApi>()
 
   // Infinite Autoplay effect
@@ -118,9 +153,9 @@ export default function TheNumbers() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className='bg-[#FABA1E] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
-            <h2 className='text-xs md:text-sm lg:text-base font-bold text-[#FABA1E] uppercase tracking-[0.2em] leading-none drop-shadow-md mb-2'>
-              Thành tựu của chúng tôi
+            <div className='bg-[#FDB913] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(253,185,19,0.4)]' />
+            <h2 className='text-xs md:text-sm lg:text-base font-bold text-[#FDB913] uppercase tracking-[0.2em] leading-none drop-shadow-md mb-2'>
+              Giá trị cốt lõi
             </h2>
           </motion.div>
 
@@ -129,55 +164,24 @@ export default function TheNumbers() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#1E5338] uppercase tracking-tight drop-shadow-2xl'
+            className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#005C42] uppercase tracking-tight drop-shadow-2xl'
           >
-            Sự khác biệt của LHBS
+            Tại sao chọn LHBS
           </motion.h2>
         </div>
 
-        {/* Statistics Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className='grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 mb-12 md:mb-20 border-y border-gray-200 py-8 md:py-12'
-        >
-          {statsData.map((stat, index) => (
-            <div
+        {/* Info Cards Grid - Extra top padding for floating icons */}
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-20 pt-16'>
+          {whyChooseData.map((item, index) => (
+            <InfoCard
               key={index}
-              className={`relative flex flex-col items-center text-center ${
-                index < statsData.length - 1 ? 'md:border-r border-gray-200' : ''
-              }`}
-            >
-              {/* Number */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                className='mb-2 md:mb-4'
-              >
-                <RollingNumber
-                  value={stat.number}
-                  className='block text-5xl md:text-6xl lg:text-7xl font-black leading-none text-[#FABA1E] drop-shadow-[0_4px_10px_rgba(250,186,30,0.3)]'
-                />
-              </motion.div>
-
-              {/* Description */}
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-              >
-                <p className='text-sm md:text-lg lg:text-xl font-medium text-[#1E5338]/90 uppercase tracking-wider'>
-                  {stat.description}
-                </p>
-              </motion.div>
-            </div>
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+              index={index}
+            />
           ))}
-        </motion.div>
+        </div>
 
         {/* University Logos Carousel */}
         <motion.div
@@ -189,8 +193,8 @@ export default function TheNumbers() {
         >
           {/* Section Header */}
           <div className='flex flex-col items-center mb-6 md:mb-10'>
-            <div className='bg-[#FABA1E] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
-            <h3 className='text-xl md:text-3xl font-black text-[#1E5338] uppercase tracking-wide drop-shadow-sm text-center'>
+            <div className='bg-[#FDB913] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(253,185,19,0.4)]' />
+            <h3 className='text-xl md:text-2xl lg:text-3xl font-black text-[#005C42] uppercase tracking-wide drop-shadow-sm text-center'>
               Chương trình hợp tác
             </h3>
           </div>
@@ -211,7 +215,7 @@ export default function TheNumbers() {
                   <div className='h-full p-2'>
                     <motion.div
                       whileHover={{ y: -4 }}
-                      className='flex items-center justify-center h-24 md:h-28 bg-gray-50/30 border border-gray-200 rounded-sm p-4 transition-all duration-300 cursor-pointer group hover:border-[#FABA1E] hover:bg-white hover:shadow-lg'
+                      className='flex items-center justify-center h-24 md:h-28 bg-gray-50/30 border border-gray-200 rounded-sm p-4 transition-all duration-300 cursor-pointer group hover:border-[#FDB913] hover:bg-white hover:shadow-lg'
                     >
                       <img
                         src={logo.image}
@@ -231,8 +235,8 @@ export default function TheNumbers() {
 
             {/* Custom Navigation - Minimal Arrows */}
             <div className='hidden md:block'>
-              <CarouselPrevious className='h-auto w-auto border-none bg-transparent text-[#FABA1E] hover:bg-transparent hover:text-[#d49e19] -left-8 [&_svg]:size-12 md:[&_svg]:size-16 transition-transform hover:scale-110' />
-              <CarouselNext className='h-auto w-auto border-none bg-transparent text-[#FABA1E] hover:bg-transparent hover:text-[#d49e19] -right-8 [&_svg]:size-12 md:[&_svg]:size-16 transition-transform hover:scale-110' />
+              <CarouselPrevious className='h-auto w-auto border-none bg-transparent text-[#FDB913] hover:bg-transparent hover:text-[#d49e19] -left-8 [&_svg]:size-12 md:[&_svg]:size-16 transition-transform hover:scale-110' />
+              <CarouselNext className='h-auto w-auto border-none bg-transparent text-[#FDB913] hover:bg-transparent hover:text-[#d49e19] -right-8 [&_svg]:size-12 md:[&_svg]:size-16 transition-transform hover:scale-110' />
             </div>
           </Carousel>
         </motion.div>

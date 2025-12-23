@@ -14,7 +14,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
 
   const backgroundImages = [
     Herobg,
-    'https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/543157713_759809520014524_6243659489729173596_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFpZW4UkWopXLqUwnApPxzx6Sldju96q1rpKV2O73qrWlVgT_N9-qqIf8pv8uUhxEi4rgsx8AI2JKqSn1pil16h&_nc_ohc=yu4yLYaebQ0Q7kNvwGtodRu&_nc_oc=Adn7HVWs-KKiiFver-Sdn3LQEDs0TbEms4LZ0qLqJi4sZwIVys-IZlz3_97J6i3XmTk&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=aax7A0hj7hhJKvywZYorng&oh=00_AflCXcNX4DQf4t8pNoI3cZ6kDATevPjhSufI1C85MDCGrg&oe=693B8DE4'
+    'https://employer.jobsgo.vn/uploads/media/img/202406/pictures_library_20240621113715_5880z55593989341263ddcf07a3101ef4463d4a46971e2f326jpg.jpg'
   ]
 
   useEffect(() => {
@@ -101,7 +101,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
               >
                 <div className='bg-[#FABA1E] w-8 h-1 md:w-12 md:h-1.5 mb-2 md:mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
                 <h2 className='text-xs md:text-sm lg:text-base font-bold text-[#FABA1E] uppercase tracking-[0.2em] leading-none drop-shadow-md'>
-                  Welcome to LHBS
+                  Chào mừng đến LHBS
                 </h2>
               </motion.div>
 
@@ -113,8 +113,8 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
                 className='mb-2 md:mb-4 lg:mb-6'
               >
                 <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl min-[1800px]:text-7xl font-black text-white leading-[1.1] drop-shadow-2xl uppercase tracking-tight'>
-                  <span className='block mb-1 md:mb-2'>Vietnamese Culture</span>
-                  <span className='block text-white/90'>International Vision</span>
+                  <span className='block mb-1 md:mb-2'>Văn hóa Việt Nam</span>
+                  <span className='block text-white/90'>Tầm nhìn quốc tế</span>
                 </h1>
               </motion.div>
 
@@ -125,7 +125,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className='text-white/90 text-sm md:text-base lg:text-lg font-medium mb-4 md:mb-6 lg:mb-8 max-w-xl lg:max-w-2xl leading-relaxed drop-shadow-lg'
               >
-                #A solid stepping stone to becoming a global citizen
+                #Bước đệm vững chắc trở thành công dân toàn cầu
               </motion.p>
 
               {/* CTA Button */}
@@ -144,7 +144,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
                   className='group relative px-5 py-2.5 md:px-7 md:py-3 lg:px-8 lg:py-3.5 bg-[#FABA1E] text-[#1E5338] font-bold text-[10px] md:text-xs lg:text-sm uppercase tracking-widest rounded-sm md:rounded 
                            hover:bg-white transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]'
                 >
-                  <span className='relative z-10'>Enquire Now</span>
+                  <span className='relative z-10'>Tư vấn ngay</span>
                 </button>
               </motion.div>
             </motion.div>

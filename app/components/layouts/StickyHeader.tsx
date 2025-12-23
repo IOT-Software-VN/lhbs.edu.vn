@@ -124,7 +124,7 @@ export default function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuO
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            Apply Now
+            ĐĂNG KÝ NGAY
           </motion.button>
 
           {/* Menu Icon */}

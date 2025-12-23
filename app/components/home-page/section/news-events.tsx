@@ -12,17 +12,17 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
     {
       image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/578369959_810928768235932_2189832322315432240_n.jpg',
       date: '06/09/2025',
-      title: 'A Letter to LHBS Students on the Opening Day of the New School Year',
+      title: 'Thư gửi học sinh LHBS nhân dịp khai giảng năm học mới',
       link: '/news/1'
     },
     {
       date: '04/09/2025',
-      title: 'LHBS Launches Professional Educational Expert Network',
+      title: 'LHBS khởi động mạng lưới chuyên gia giáo dục chuyên nghiệp',
       link: '/news/2'
     },
     {
       date: '29/05/2025',
-      title: 'What is Bilingual Education? Benefits of Bilingual Schools',
+      title: 'Giáo dục song ngữ là gì? Lợi ích của trường song ngữ',
       link: '/news/3'
     }
   ]
@@ -32,17 +32,17 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
     {
       image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/2.jpg',
       date: '22/04/2025',
-      title: 'How Long Does the Terrible Twos Last? Parenting Tips',
+      title: 'Giai đoạn "Terrible Twos" kéo dài bao lâu? Mẹo nuôi con',
       link: '/events/1'
     },
     {
       image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/576931936_808502421811900_4863998363654667053_n.jpg',
-      title: '10 Effective Study Methods for Students',
+      title: '10 phương pháp học tập hiệu quả cho học sinh',
       link: '/events/2'
     },
     {
       image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/578369959_810928768235932_2189832322315432240_n.jpg',
-      title: 'What is Holistic Education? Key Elements',
+      title: 'Giáo dục toàn diện là gì? Các yếu tố chính',
       link: '/events/3'
     }
   ]
@@ -50,7 +50,7 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
   // Column 3: HÌNH ẢNH (Gallery) - 1 large image
   const galleryItem = {
     image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/578369959_810928768235932_2189832322315432240_n.jpg',
-    title: 'LHBS Students Engaging in Holistic Educational Activities',
+    title: 'Học sinh LHBS tham gia các hoạt động giáo dục toàn diện',
     link: '/gallery/1'
   }
 
@@ -76,10 +76,10 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
           >
             <div className='bg-[#FABA1E] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)] mx-auto' />
             <h3 className='text-xs md:text-sm lg:text-base font-bold text-[#FABA1E] uppercase tracking-[0.2em] mb-2 text-center'>
-              Latest Updates
+              Cập nhật mới nhất
             </h3>
-            <h2 className='text-3xl md:text-4xl lg:text-5xl font-black text-[#1E5338] uppercase tracking-tight text-center drop-shadow-sm'>
-              News & Events
+            <h2 className='text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-black text-[#1E5338] uppercase tracking-tight text-center drop-shadow-sm leading-tight'>
+              Tin tức & Sự kiện
             </h2>
           </motion.div>
         </div>
@@ -95,7 +95,7 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
           >
             <div className='absolute -left-[4px] top-0 w-[4px] h-12 bg-[#FABA1E] group-hover/col:h-full transition-all duration-500 ease-in-out'></div>
             <h3 className='text-xl md:text-2xl font-black text-[#1E5338] mb-4 md:mb-6 uppercase tracking-wide shrink-0'>
-              News
+              Tin tức
             </h3>
 
             {/* Main Image Item - Fixed Aspect Ratio */}
@@ -154,7 +154,7 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
                 onClick={() => onNavigate('/news')}
                 className='flex items-center gap-3 px-6 py-2.5 bg-[#1E5338] text-white font-bold uppercase tracking-wide text-xs rounded-full hover:bg-[#FABA1E] hover:text-[#1E5338] transition-all shadow-lg group/btn'
               >
-                <span>View More</span>
+                <span>Xem thêm</span>
                 <ArrowRight className='w-3.5 h-3.5' />
               </button>
             </div>
@@ -169,7 +169,7 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
           >
             <div className='absolute -left-[4px] top-0 w-[4px] h-12 bg-[#FABA1E] group-hover/col:h-full transition-all duration-500 ease-in-out'></div>
             <h3 className='text-xl md:text-2xl font-black text-[#1E5338] mb-4 md:mb-6 uppercase tracking-wide shrink-0'>
-              Events
+              Sự kiện
             </h3>
 
             {/* Main Image Item - Fixed Aspect Ratio */}
@@ -229,7 +229,7 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
                 onClick={() => onNavigate('/events')}
                 className='flex items-center gap-3 px-6 py-2.5 bg-[#1E5338] text-white font-bold uppercase tracking-wide text-xs rounded-full hover:bg-[#FABA1E] hover:text-[#1E5338] transition-all shadow-lg group/btn'
               >
-                <span>View More</span>
+                <span>Xem thêm</span>
                 <ArrowRight className='w-3.5 h-3.5' />
               </button>
             </div>
@@ -244,7 +244,7 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
           >
             <div className='absolute -left-[4px] top-0 w-[4px] h-12 bg-[#FABA1E] group-hover/col:h-full transition-all duration-500 ease-in-out'></div>
             <h3 className='text-xl md:text-2xl font-black text-[#1E5338] mb-4 md:mb-6 uppercase tracking-wide shrink-0'>
-              Gallery
+              Hình ảnh
             </h3>
 
             {/* Large Image - Takes remaining height */}
@@ -291,7 +291,7 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
                 onClick={() => onNavigate('/gallery')}
                 className='flex items-center gap-3 px-6 py-2.5 bg-[#1E5338] text-white font-bold uppercase tracking-wide text-xs rounded-full hover:bg-[#FABA1E] hover:text-[#1E5338] transition-all shadow-lg group/btn'
               >
-                <span>View More</span>
+                <span>Xem thêm</span>
                 <ArrowRight className='w-3.5 h-3.5' />
               </button>
             </div>
