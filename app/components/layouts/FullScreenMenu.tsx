@@ -102,20 +102,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                   {activeParent && (
                     <div>
                       <nav className='space-y-3 mb-6' aria-label={`${activeParent.label} pages`}>
-                        {/* Link to main parent page */}
-                        <button
-                          onClick={() => handleNavClick(activeParent.path)}
-                          className={`block w-full text-left text-[18px] transition-colors group font-semibold ${
-                            currentPath === activeParent.path ? 'text-[#FABA1E]' : 'text-white hover:text-[#FABA1E]'
-                          }`}
-                        >
-                          <div className='flex items-center justify-between'>
-                            <span className='truncate'>{activeParent.label}</span>
-                            <ChevronRight className='w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity' />
-                          </div>
-                        </button>
-
-                        {/* Child pages */}
+                        {/* Child pages only */}
                         {activeParent.children.map((child) => (
                           <button
                             key={child.id}
@@ -135,29 +122,10 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                   )}
                 </div>
 
-                {/* Column 3 - Discover More & School Websites */}
+                {/* Column 3 - School Websites Only */}
                 <div className='w-[30%] overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent'>
-                  {/* Discover More Section */}
-                  <div className='mb-8'>
-                    <h3 className='text-white/60 text-[14px] uppercase tracking-wider mb-6'>Khám Phá Thêm</h3>
-                    <nav className='space-y-3' aria-label='Additional pages'>
-                      {moreLinks.map((link, index) => (
-                        <button
-                          key={index}
-                          onClick={() => handleNavClick(link.path)}
-                          className='block w-full text-left text-[15px] text-white hover:text-[#FABA1E] transition-colors group'
-                        >
-                          <div className='flex items-center justify-between'>
-                            <span className='truncate'>{link.label}</span>
-                            <ChevronRight className='w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity' />
-                          </div>
-                        </button>
-                      ))}
-                    </nav>
-                  </div>
-
                   {/* School Websites Section */}
-                  <div className='pt-6 border-t border-white/20'>
+                  <div>
                     <h3 className='text-white/60 text-[14px] uppercase tracking-wider mb-6'>Website Các Cấp Học</h3>
                     <nav className='space-y-3' aria-label='School websites'>
                       {schoolWebsites.map((site, index) => (
@@ -250,24 +218,8 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                   ))}
                 </nav>
 
-                {/* Discover More - Mobile */}
-                <div className='mt-8 pt-8 border-t border-white/20'>
-                  <h3 className='text-white/60 text-sm uppercase tracking-wider mb-4'>Khám Phá Thêm</h3>
-                  <div className='space-y-2'>
-                    {moreLinks.map((link, index) => (
-                      <button
-                        key={index}
-                        onClick={() => handleNavClick(link.path)}
-                        className='block w-full text-left py-2 text-[15px] text-white/80 hover:text-white'
-                      >
-                        {link.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
                 {/* School Websites - Mobile */}
-                <div className='mt-6 pt-6 border-t border-white/20'>
+                <div className='mt-8 pt-8 border-t border-white/20'>
                   <h3 className='text-white/60 text-sm uppercase tracking-wider mb-4'>Website Các Cấp Học</h3>
                   <div className='space-y-2'>
                     {schoolWebsites.map((site, index) => (
