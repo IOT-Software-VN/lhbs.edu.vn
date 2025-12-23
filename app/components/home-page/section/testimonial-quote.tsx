@@ -21,27 +21,27 @@ export function TestimonialQuoteSection({ onNavigate }: TestimonialQuoteSectionP
   const testimonials: Testimonial[] = [
     {
       quote:
-        'SSIS is not-for-profit. That says so much. All decisions are based on what is best for students and not how much it will cost.',
-      parentName: 'STEFAN',
-      parentWork: 'SSIS Parent'
+        'Nơi giúp con phát triển toàn diện cả về học thuật lẫn kỹ năng sống. Các thầy cô luôn tận tâm và quan tâm đến từng em học sinh.',
+      parentName: 'CHỊ NGUYỄN THỊ LAN',
+      parentWork: 'Phụ huynh học sinh lớp 5'
     },
     {
       quote:
-        'The holistic approach at LHBS develops students for life, building confidence and critical thinking skills.',
-      parentName: 'MR. LE VAN DUC',
-      parentWork: 'Software Engineer'
+        'Chương trình song ngữ tại LHBS giúp con tự tin giao tiếp tiếng Anh trong khi vẫn giữ được bản sắc văn hóa Việt Nam.',
+      parentName: 'ANH LÊ VĂN MINH',
+      parentWork: 'Phụ huynh học sinh lớp 8'
     },
     {
-      quote: 'LHBS combines international curriculum with Vietnamese values, giving children the best of both worlds.',
-      parentName: 'MRS. TRAN THI LAN',
-      parentWork: 'Doctor'
+      quote: 'Môi trường học tập hiện đại, an toàn và đội ngũ giáo viên chuyên nghiệp. Con em luôn hào hứng đến trường mỗi ngày.',
+      parentName: 'CHỊ TRẦN THỊ HƯƠNG',
+      parentWork: 'Phụ huynh học sinh mẫu giáo'
     }
   ]
 
   return (
     <motion.section
       ref={ref}
-      className='w-full h-[35vh] min-h-[300px] md:h-[40vh] bg-[#f2f2f28d] overflow-hidden relative'
+      className='w-full min-h-[400px] md:min-h-[500px] bg-[#f2f2f28d] overflow-hidden relative py-8 md:py-12'
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
@@ -65,15 +65,29 @@ export function TestimonialQuoteSection({ onNavigate }: TestimonialQuoteSectionP
         </div>
       </div>
 
-      <div className='w-full h-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 items-center relative z-20'>
-        {/* --- LEFT COLUMN: CONTENT (Carousel) --- */}
+      <div className='w-full h-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-16 relative z-20'>
+        {/* Title Section */}
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className='lg:col-span-8 xl:col-span-9 h-full flex items-center'
+          initial={{ opacity: 0, y: -20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className='mb-8 md:mb-12'
         >
-          <div className='w-full'>
+          <div className='bg-[#FABA1E] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
+          <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#1E5338] uppercase tracking-tight drop-shadow-2xl'>
+            LHBS trong tôi là
+          </h2>
+        </motion.div>
+
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 items-center'>
+          {/* --- LEFT COLUMN: CONTENT (Carousel) --- */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='lg:col-span-8 xl:col-span-9 flex items-center'
+          >
+            <div className='w-full'>
             <Carousel className='w-full flex items-center relative' opts={{ loop: true }}>
               {/* Custom Navigation */}
               <CarouselPrevious className='absolute left-0 -ml-2 md:-ml-8 h-auto w-auto border-none bg-transparent text-[#FABA1E] hover:bg-transparent hover:text-[#d49e19] [&_svg]:size-8 md:[&_svg]:size-12 transition-transform hover:scale-110 z-30' />
@@ -120,8 +134,9 @@ export function TestimonialQuoteSection({ onNavigate }: TestimonialQuoteSectionP
           </div>
         </motion.div>
 
-        {/* --- RIGHT COLUMN: SPACER (Reserves space for the absolute image) --- */}
-        <div className='hidden lg:block lg:col-span-4 xl:col-span-3 h-full pointer-events-none'></div>
+          {/* --- RIGHT COLUMN: SPACER (Reserves space for the absolute image) --- */}
+          <div className='hidden lg:block lg:col-span-4 xl:col-span-3 h-full pointer-events-none'></div>
+        </div>
       </div>
     </motion.section>
   )

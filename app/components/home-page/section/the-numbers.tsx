@@ -10,16 +10,16 @@ import {
 } from '@/components/ui/carousel'
 const statsData = [
   {
-    number: '11',
-    description: 'Years of excellence'
+    number: '15',
+    description: 'Năm tận tâm'
   },
   {
     number: '250',
-    description: 'Experienced Teachers'
+    description: 'Giáo viên giàu kinh nghiệm'
   },
   {
-    number: '2,600',
-    description: 'Students of all grades'
+    number: '2600',
+    description: 'Học sinh các cấp'
   }
 ]
 
@@ -120,7 +120,7 @@ export default function TheNumbers() {
           >
             <div className='bg-[#FABA1E] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
             <h2 className='text-xs md:text-sm lg:text-base font-bold text-[#FABA1E] uppercase tracking-[0.2em] leading-none drop-shadow-md mb-2'>
-              Our Achievements
+              Thành tựu của chúng tôi
             </h2>
           </motion.div>
 
@@ -131,7 +131,7 @@ export default function TheNumbers() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#1E5338] uppercase tracking-tight drop-shadow-2xl'
           >
-            Distinctions
+            Sự khác biệt của LHBS
           </motion.h2>
         </div>
 
@@ -191,7 +191,7 @@ export default function TheNumbers() {
           <div className='flex flex-col items-center mb-6 md:mb-10'>
             <div className='bg-[#FABA1E] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
             <h3 className='text-xl md:text-3xl font-black text-[#1E5338] uppercase tracking-wide drop-shadow-sm text-center'>
-              Partnership Program
+              Chương trình hợp tác
             </h3>
           </div>
 
