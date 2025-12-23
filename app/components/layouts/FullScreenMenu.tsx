@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Link } from 'react-router'
-import { siteNavigation, moreLinks } from '@/types/navigation'
+import { siteNavigation, moreLinks, schoolWebsites } from '@/types/navigation'
 import type { NavParent } from '@/types/navigation'
-import { ChevronRight, ArrowRight } from 'lucide-react'
+import { ChevronRight, ArrowRight, ExternalLink } from 'lucide-react'
 
 interface FullScreenMenuProps {
   isOpen: boolean
@@ -101,9 +101,6 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                 <div className='w-[30%] border-r border-white/20 pr-12 overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent'>
                   {activeParent && (
                     <div>
-                      {/* <h3 className="text-white text-[18px] uppercase tracking-wider mb-6">
-            {activeParent.label}
-          </h3> */}
                       <nav className='space-y-3 mb-6' aria-label={`${activeParent.label} pages`}>
                         {/* Link to main parent page */}
                         <button
@@ -134,35 +131,51 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                           </button>
                         ))}
                       </nav>
-                      {activeParent.cta && (
-                        <button
-                          onClick={() => handleNavClick(activeParent.cta!.path)}
-                          className='w-full px-6 py-3 bg-[#FABA1E] text-[#1a5336] font-bold text-sm hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]'
-                        >
-                          {activeParent.cta.text}
-                        </button>
-                      )}
                     </div>
                   )}
                 </div>
 
-                {/* Column 3 - Discover More */}
+                {/* Column 3 - Discover More & School Websites */}
                 <div className='w-[30%] overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent'>
-                  <h3 className='text-white/60 text-[14px] uppercase tracking-wider mb-6'>Discover More</h3>
-                  <nav className='space-y-3' aria-label='Additional pages'>
-                    {moreLinks.map((link, index) => (
-                      <button
-                        key={index}
-                        onClick={() => handleNavClick(link.path)}
-                        className='block w-full text-left text-[15px] text-white hover:text-[#FABA1E] transition-colors group'
-                      >
-                        <div className='flex items-center justify-between'>
-                          <span className='truncate'>{link.label}</span>
-                          <ChevronRight className='w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity' />
-                        </div>
-                      </button>
-                    ))}
-                  </nav>
+                  {/* Discover More Section */}
+                  <div className='mb-8'>
+                    <h3 className='text-white/60 text-[14px] uppercase tracking-wider mb-6'>Khám Phá Thêm</h3>
+                    <nav className='space-y-3' aria-label='Additional pages'>
+                      {moreLinks.map((link, index) => (
+                        <button
+                          key={index}
+                          onClick={() => handleNavClick(link.path)}
+                          className='block w-full text-left text-[15px] text-white hover:text-[#FABA1E] transition-colors group'
+                        >
+                          <div className='flex items-center justify-between'>
+                            <span className='truncate'>{link.label}</span>
+                            <ChevronRight className='w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity' />
+                          </div>
+                        </button>
+                      ))}
+                    </nav>
+                  </div>
+
+                  {/* School Websites Section */}
+                  <div className='pt-6 border-t border-white/20'>
+                    <h3 className='text-white/60 text-[14px] uppercase tracking-wider mb-6'>Website Các Cấp Học</h3>
+                    <nav className='space-y-3' aria-label='School websites'>
+                      {schoolWebsites.map((site, index) => (
+                        <a
+                          key={index}
+                          href={site.url}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                          className='block text-[15px] text-white hover:text-[#FABA1E] transition-colors group'
+                        >
+                          <div className='flex items-center justify-between'>
+                            <span className='truncate'>{site.label}</span>
+                            <ExternalLink className='w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity' />
+                          </div>
+                        </a>
+                      ))}
+                    </nav>
+                  </div>
                 </div>
               </div>
 
@@ -239,16 +252,35 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
 
                 {/* Discover More - Mobile */}
                 <div className='mt-8 pt-8 border-t border-white/20'>
-                  <h3 className=' text-white/60 text-sm uppercase tracking-wider mb-4'>Discover More</h3>
+                  <h3 className='text-white/60 text-sm uppercase tracking-wider mb-4'>Khám Phá Thêm</h3>
                   <div className='space-y-2'>
                     {moreLinks.map((link, index) => (
                       <button
                         key={index}
                         onClick={() => handleNavClick(link.path)}
-                        className='block w-full text-left py-2  text-[15px] text-white/80 hover:text-white'
+                        className='block w-full text-left py-2 text-[15px] text-white/80 hover:text-white'
                       >
                         {link.label}
                       </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* School Websites - Mobile */}
+                <div className='mt-6 pt-6 border-t border-white/20'>
+                  <h3 className='text-white/60 text-sm uppercase tracking-wider mb-4'>Website Các Cấp Học</h3>
+                  <div className='space-y-2'>
+                    {schoolWebsites.map((site, index) => (
+                      <a
+                        key={index}
+                        href={site.url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='flex items-center justify-between py-2 text-[15px] text-white/80 hover:text-white'
+                      >
+                        <span>{site.label}</span>
+                        <ExternalLink className='w-4 h-4' />
+                      </a>
                     ))}
                   </div>
                 </div>
