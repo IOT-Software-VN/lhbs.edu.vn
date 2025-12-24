@@ -1,87 +1,3 @@
-// Flat Navigation Item (no parent-child hierarchy)
-export interface NavItem {
-  id: string
-  label: string
-  path: string
-  description?: string
-}
-
-// External School Websites with News
-export interface SchoolWebsite {
-  label: string
-  url: string
-  description?: string
-  hasNews?: boolean // Indicates if this site has news section
-}
-
-export const schoolWebsites: SchoolWebsite[] = [
-  { 
-    label: 'Khối Phổ thông (Cấp 1-2-3)', 
-    url: 'https://school.lhbs.edu.vn',
-    description: 'Tiểu học, Trung học, Phổ thông',
-    hasNews: true
-  },
-  { 
-    label: 'Mầm non Galaxy (Trấn Biên)', 
-    url: 'https://bienhoa.galaxy.lhbs.edu.vn',
-    description: 'Cơ sở Trấn Biên',
-    hasNews: true
-  },
-  { 
-    label: 'Mầm non Galaxy (Long Khánh)', 
-    url: 'https://longkhanh.galaxy.lhbs.edu.vn',
-    description: 'Cơ sở Long Khánh',
-    hasNews: true
-  }
-]
-
-// Flat navigation structure - single level
-export const siteNavigation: NavItem[] = [
-  {
-    id: 'vision-mission',
-    label: 'Tầm nhìn - Sứ mệnh - Giá trị cốt lõi',
-    path: '/about-us/vision-mission-values',
-    description: 'Tầm nhìn, sứ mệnh và giá trị cốt lõi của LHBS'
-  },
-  {
-    id: 'history',
-    label: 'Lịch sử hình thành',
-    path: '/about-us/history',
-    description: 'Hành trình phát triển của LHBS'
-  },
-  {
-    id: 'milestones',
-    label: 'Các cột mốc đáng nhớ',
-    path: '/about-us/milestones',
-    description: 'Những thành tựu nổi bật'
-  },
-  {
-    id: 'leadership',
-    label: 'Ban lãnh đạo & Ban giám hiệu',
-    path: '/about-us/leadership',
-    description: 'Đội ngũ lãnh đạo và quản lý'
-  },
-  {
-    id: 'public-info',
-    label: 'Công khai thông tin',
-    path: '/about-us/public-information',
-    description: 'Thông tin công khai và báo cáo'
-  },
-  {
-    id: 'curriculum-framework',
-    label: 'Lộ trình học tập toàn hệ thống',
-    path: '/system-training/curriculum-framework',
-    description: 'Chương trình giáo dục liên cấp'
-  },
-  {
-    id: 'campus-intro',
-    label: 'Giới thiệu hệ thống cơ sở',
-    path: '/system-training/campus-introduction',
-    description: 'Các cơ sở giáo dục trong hệ thống'
-  }
-]
-
-// Legacy exports for backward compatibility
 export interface NavChild {
   id: string
   label: string
@@ -101,9 +17,98 @@ export interface NavParent {
   }
 }
 
+// More/Additional Links (right column in mega menu)
 export interface MoreLink {
   label: string
   path: string
+  isExternal?: boolean
 }
 
-export const moreLinks: MoreLink[] = []
+export const moreLinks: MoreLink[] = [
+  { label: 'Tin tức & Sự kiện', path: '/news-events' },
+  { label: 'Tuyển dụng', path: '/careers' },
+  { label: 'Liên hệ', path: '/contact' }
+]
+
+// External School Links (with external domains)
+export interface SchoolLink {
+  label: string
+  url: string
+  isExternal: true
+}
+
+export const schoolLinks: SchoolLink[] = [
+  { label: 'Khối phổ thông (Cấp 1-2-3)', url: 'https://school.lhbs.edu.vn', isExternal: true },
+  { label: 'Mầm non Galaxy - Trấn Biên', url: 'https://bienhoa.galaxy.edu.vn', isExternal: true },
+  { label: 'Mầm non Galaxy - Long Khánh', url: 'https://longkhanh.galaxy.edu.vn', isExternal: true }
+]
+
+// New sitemap based on concept slide
+export const siteNavigation: NavParent[] = [
+  {
+    id: 'about-lhbs',
+    label: 'Giới thiệu chung',
+    path: '/about',
+    description: 'Tìm hiểu về LHBS',
+    children: [
+      {
+        id: 'about-vision',
+        label: 'Tầm nhìn & Sứ mệnh',
+        path: '/about/vision-mission',
+        description: 'Định hướng và cam kết của LHBS'
+      },
+      {
+        id: 'about-history',
+        label: 'Lịch sử hình thành',
+        path: '/about/history',
+        description: 'Hành trình phát triển của LHBS'
+      },
+      {
+        id: 'about-milestones',
+        label: 'Các cột mốc đáng nhớ',
+        path: '/about/milestones',
+        description: 'Những thành tựu nổi bật'
+      },
+      {
+        id: 'about-leadership',
+        label: 'Ban lãnh đạo và giám hiệu',
+        path: '/about/leadership',
+        description: 'Đội ngũ lãnh đạo LHBS'
+      },
+      {
+        id: 'about-transparency',
+        label: 'Công khai thông tin',
+        path: '/about/transparency',
+        description: 'Thông tin công khai theo quy định'
+      }
+    ]
+  },
+  {
+    id: 'education-program',
+    label: 'Chương trình đào tạo',
+    path: '/education',
+    description: 'Chương trình học toàn diện',
+    children: [
+      {
+        id: 'education-pathway',
+        label: 'Lộ trình học tập',
+        path: '/education/learning-pathway',
+        description: 'Lộ trình phát triển liên tục từ mẫu giáo đến phổ thông'
+      }
+    ]
+  },
+  {
+    id: 'campuses',
+    label: 'Hệ thống cơ sở',
+    path: '/campuses',
+    description: 'Các cơ sở giáo dục',
+    children: [
+      {
+        id: 'campuses-info',
+        label: 'Thông tin các cơ sở giáo dục',
+        path: '/campuses/information',
+        description: 'Hệ thống cơ sở giáo dục của LHBS'
+      }
+    ]
+  }
+]

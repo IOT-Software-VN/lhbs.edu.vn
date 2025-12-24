@@ -74,7 +74,7 @@ export function TestimonialQuoteSection({ onNavigate }: TestimonialQuoteSectionP
           className='mb-8 md:mb-12'
         >
           <div className='bg-[#FABA1E] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
-          <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#1E5338] uppercase tracking-tight drop-shadow-2xl'>
+          <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#1E5338] uppercase tracking-tight drop-shadow-2xl'>
             LHBS trong tôi là
           </h2>
         </motion.div>

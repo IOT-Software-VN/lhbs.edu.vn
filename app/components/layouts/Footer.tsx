@@ -145,7 +145,7 @@ export default function Footer({ onNavigate }: { onNavigate: (path: string) => v
             <img src={logoImage} alt='LHBS Logo' className='h-20 md:h-26 w-auto mb-6' />
 
             <div className='space-y-4 text-sm md:text-base font-light tracking-wide text-white/90'>
-              <h3 className='font-bold text-lg uppercase mb-2 text-[#FABA1E]'>Lac Hong Bilingual School</h3>
+              <h3 className='font-bold text-lg uppercase mb-2 text-[#FABA1E]'>Trường Song Ngữ Lạc Hồng</h3>
               <div className='flex items-start gap-3'>
                 <MapPin className='w-5 h-5 text-[#FABA1E] shrink-0 mt-0.5' />
                 <span className='leading-relaxed'>{addressLine}</span>

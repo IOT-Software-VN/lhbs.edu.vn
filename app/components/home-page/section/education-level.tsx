@@ -170,8 +170,7 @@ export default function EducationLevel() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        // Đã sửa leading-[0.9] thành leading-[1.1]
-                        className='text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black text-white mb-6 leading-[1.1] drop-shadow-2xl uppercase tracking-tight'
+                        className='text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black text-white mb-6 leading-[1.1] drop-shadow-2xl uppercase'
                       >
                         {item.title}
                       </motion.h3>

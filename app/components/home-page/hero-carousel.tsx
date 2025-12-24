@@ -112,7 +112,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className='mb-2 md:mb-4 lg:mb-6'
               >
-                <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl min-[1800px]:text-7xl font-black text-white leading-[1.1] drop-shadow-2xl uppercase tracking-tight'>
+                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl min-[1800px]:text-7xl font-black text-white leading-[1.1] drop-shadow-2xl uppercase tracking-tight'>
                   <span className='block mb-1 md:mb-2'>Văn hóa Việt Nam</span>
                   <span className='block text-white/90'>Tầm nhìn quốc tế</span>
                 </h1>

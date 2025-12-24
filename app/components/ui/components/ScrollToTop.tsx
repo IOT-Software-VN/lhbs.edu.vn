@@ -70,106 +70,114 @@ export default function CTABottomFixed({
   // BUTTON CONFIGURATIONS
   // ========================================
 
-  const buttons: CTAButton[] = [
-    // Scroll to Top (conditional)
-    ...(showScrollTop && isScrollVisible
-      ? [
-          {
-            id: 'scroll-top',
-            label: 'Scroll to top',
-            icon: <ChevronUp className="w-5 h-5" />,
-            onClick: scrollToTop,
-            className: 'bg-[#FABA1E] hover:bg-[#005C42] text-[#005C42] hover:text-white shadow-lg hover:shadow-xl',
-            ariaLabel: 'Scroll to top',
-            isExternal: false
-          }
-        ]
-      : []),
-
-    // Zalo
+  // Top buttons - Zalo & Messenger (square, edge-aligned)
+  const topButtons: CTAButton[] = [
     {
       id: 'zalo',
       label: 'Chat Zalo',
       icon: <Phone className="w-5 h-5" />,
       href: zaloUrl,
-      className: 'bg-[#FABA1E] hover:bg-[#005C42] text-[#005C42] hover:text-white shadow-lg hover:shadow-xl',
+      className: 'bg-[#FABA1E] text-[#005C42] shadow-lg hover:shadow-xl',
       ariaLabel: 'Chat on Zalo',
       isExternal: true
     },
-
-    // Messenger
     {
       id: 'messenger',
       label: 'Chat Messenger',
       icon: <MessageCircle className="w-5 h-5" />,
       href: messengerUrl,
-      className: 'bg-[#FABA1E] hover:bg-[#005C42] text-[#005C42] hover:text-white shadow-lg hover:shadow-xl',
+      className: 'bg-[#FABA1E] text-[#005C42] shadow-lg hover:shadow-xl',
       ariaLabel: 'Chat on Messenger',
       isExternal: true
     }
   ]
+
+  // Bottom button - Scroll to Top (rounded)
+  const scrollButton: CTAButton | null = showScrollTop && isScrollVisible
+    ? {
+        id: 'scroll-top',
+        label: 'Scroll to top',
+        icon: <ChevronUp className="w-5 h-5" />,
+        onClick: scrollToTop,
+        className: 'bg-[#FABA1E] text-[#005C42] shadow-lg hover:shadow-2xl',
+        ariaLabel: 'Scroll to top',
+        isExternal: false
+      }
+    : null
 
   // ========================================
   // RENDER
   // ========================================
 
   return (
-    <div className="fixed bottom-4 right-3 z-[9999] flex flex-col gap-2.5 pointer-events-auto">
-      {buttons.map((button, index) => {
-        const commonClasses = `
-          w-12 h-12 rounded-full transition-all duration-300 
-          flex items-center justify-center 
-          focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FABA1E]
-          ${button.className}
-        `
+    <>
+      {/* Top Fixed Buttons - Zalo & Messenger (Square, Edge-aligned) */}
+      <div className="fixed top-1/4 -translate-y-1/2 right-0 z-70 flex flex-col gap-1 pointer-events-auto">
+        {topButtons.map((button, index) => (
+          <motion.a
+            key={button.id}
+            href={button.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`
+              group rounded-none! relative w-10 h-10 transition-all duration-300 
+              flex items-center justify-center overflow-visible
+              ${button.className}
+            `}
+            aria-label={button.ariaLabel}
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ 
+              duration: 0.4, 
+              ease: 'easeOut',
+              delay: index * 0.1
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {button.icon}
+            
+            {/* Tooltip - Same yellow color as button */}
+            <span className="
+              absolute right-full mr-0 px-3 py-2 h-10 text-xs font-semibold whitespace-nowrap
+              opacity-0 group-hover:opacity-100 pointer-events-none shadow-xl transition-all duration-200
+              flex items-center
+              bg-[#FABA1E] text-[#005C42]
+            ">
+              {button.label}
+            </span>
+          </motion.a>
+        ))}
+      </div>
 
-        const motionProps = {
-          initial: { opacity: 0, scale: 0, x: 20 },
-          animate: { opacity: 1, scale: 1, x: 0 },
-          exit: { opacity: 0, scale: 0, x: 20 },
-          transition: { 
-            duration: 0.3, 
-            ease: 'easeInOut',
-            delay: index * 0.1
-          },
-          whileTap: { scale: 0.95 }
-        }
-
-        // Render as link for external URLs
-        if (button.isExternal && button.href) {
-          return (
-            <AnimatePresence key={button.id}>
-              <motion.a
-                href={button.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={commonClasses}
-                aria-label={button.ariaLabel}
-                title={button.label}
-                {...motionProps}
-              >
-                {button.icon}
-              </motion.a>
-            </AnimatePresence>
-          )
-        }
-
-        // Render as button for internal actions
-        return (
-          <AnimatePresence key={button.id}>
+      {/* Bottom Fixed Button - Scroll to Top (Rounded) */}
+      {scrollButton && (
+        <AnimatePresence>
+          <motion.div
+            className="fixed bottom-4 right-3 z-70 pointer-events-auto"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+          >
             <motion.button
-              onClick={button.onClick}
-              className={commonClasses}
-              aria-label={button.ariaLabel}
-              title={button.label}
-              {...motionProps}
+              onClick={scrollButton.onClick}
+              className={`
+                w-12 h-12 rounded-full transition-all duration-300 
+                flex items-center justify-center 
+                focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FABA1E]
+                ${scrollButton.className}
+              `}
+              aria-label={scrollButton.ariaLabel}
+              title={scrollButton.label}
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.1 }}
             >
-              {button.icon}
+              {scrollButton.icon}
             </motion.button>
-          </AnimatePresence>
-        )
-      })}
-    </div>
+          </motion.div>
+        </AnimatePresence>
+      )}
+    </>
   )
 }
 
