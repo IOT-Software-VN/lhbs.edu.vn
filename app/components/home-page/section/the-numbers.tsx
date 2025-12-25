@@ -1,13 +1,5 @@
-import { motion, useInView, animate, AnimatePresence } from 'motion/react'
+import { motion, useInView, AnimatePresence } from 'motion/react'
 import { useState, useRef, useEffect } from 'react'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  type CarouselApi
-} from '@/components/ui/carousel'
 import { TrendingUp, HeartHandshake, MonitorSmartphone, type LucideIcon } from 'lucide-react'
 
 // Interface for modal props
@@ -83,31 +75,6 @@ const whyChooseData: WhyChooseItem[] = [
   }
 ]
 
-// University/College logos for the carousel
-const universityLogos = [
-  {
-    id: 1,
-    name: 'English Central',
-    image: 'https://www.englishcentral.com/dist/all/20251203121549/assets/ec-logo.53e56416598b3d50cbe5.png'
-  },
-  {
-    id: 2,
-    name: 'STEM',
-    image:
-      'https://images.ctfassets.net/pc40tpn1u6ef/53uHpRwHaK9sso1qyHHEac/ff0836356ad19c1610be81b5ae6f06d4/STEM-Logo-220801.svg'
-  },
-  {
-    id: 3,
-    name: 'ASI',
-    image: 'https://advantagesschool.com/wp-content/uploads/2022/10/asi-logo.png'
-  },
-  {
-    id: 4,
-    name: 'Cambridge',
-    image: 'https://www.cambridgeassessment.org.uk/Images/Simon-brand-blog-newest-logo.png'
-  }
-]
-
 // InfoCard Component with modern premium design and floating icons
 function InfoCard({
   icon: Icon,
@@ -179,24 +146,7 @@ function InfoCard({
 }
 
 export default function TheNumbers() {
-  const [api, setApi] = useState<CarouselApi>()
   const [selectedStrength, setSelectedStrength] = useState<WhyChooseItem | null>(null)
-
-  // Infinite Autoplay effect
-  useEffect(() => {
-    if (!api) return
-
-    const interval = setInterval(() => {
-      // Check if we can scroll next to avoid errors/jumps if content fits perfectly
-      if (api.canScrollNext()) {
-        api.scrollNext()
-      } else {
-        api.scrollNext()
-      }
-    }, 3000)
-
-    return () => clearInterval(interval)
-  }, [api])
 
   return (
     <section className='relative w-full h-full bg-white overflow-hidden font-sans flex flex-col'>
@@ -237,56 +187,6 @@ export default function TheNumbers() {
             />
           ))}
         </div>
-      </div>
-
-      {/* Partnership Programs Section - Two Column Layout */}
-      <div className='w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-16 pb-8 md:pb-16'>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className='relative w-full flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-8 items-center'
-        >
-          {/* Left Column - Content */}
-          <div className='w-full flex flex-col items-start space-y-5 lg:pr-4'>
-            <div className='bg-[#FDB913] w-12 h-1 md:w-16 md:h-1.5 rounded-full shadow-[0_0_12px_rgba(253,185,19,0.4)]' />
-            
-            <h3 className='text-xl sm:text-2xl md:text-3xl lg:text-[35px] font-black text-[#005C42] uppercase tracking-tight leading-tight drop-shadow-2xl'>
-              Chương trình hợp tác
-            </h3>
-
-            <p className='text-base md:text-md lg:text-lg text-gray-700 leading-relaxed'>
-              LHBS tự hào hợp tác cùng các <span className='font-bold text-[#005C42]'>chương trình giáo dục hàng đầu thế giới</span> để mang đến cho học sinh những trải nghiệm học tập đẳng cấp quốc tế, phát triển toàn diện cả kiến thức và kỹ năng.
-            </p>
-          </div>
-
-          {/* Right Column - Logo Grid 2x3 */}
-          <div className='w-full grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6'>
-            {universityLogos.concat(universityLogos.slice(0, 2)).map((logo, index) => (
-              <motion.div
-                key={`${logo.id}-${index}`}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.9 + index * 0.1 }}
-                whileHover={{ y: -4 }}
-                className='flex items-center justify-center h-32 md:h-36 lg:h-40 bg-gray-50/50 border border-gray-200 rounded-sm p-5 md:p-6 transition-all duration-300 cursor-pointer hover:border-[#FDB913] hover:bg-white hover:shadow-md'
-              >
-                <img
-                  src={logo.image}
-                  alt={logo.name}
-                  className='max-h-full max-w-full object-contain transition-all duration-500'
-                  loading='lazy'
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement
-                    target.style.display = 'none'
-                  }}
-                />
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
 
       {/* Modal */}
