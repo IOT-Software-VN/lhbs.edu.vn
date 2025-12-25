@@ -9,7 +9,7 @@ import {
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: 'Tầm nhìn & Sứ mệnh - LHBS' },
+    { title: 'Tầm nhìn & Sứ mạng - LHBS' },
     { name: 'description', content: 'Tìm hiểu về tầm nhìn, sứ mệnh và giá trị cốt lõi của Trường Song ngữ Lạc Hồng - LHBS' }
   ]
 }
@@ -23,8 +23,8 @@ export default function VisionMissionPage() {
     <>
       <VisionMissionHero onNavigate={handleNavigate} />
       <FoundingMessageSection onNavigate={handleNavigate} />
-      <MissionSection />
       <VisionSection />
+      <MissionSection />
       <CoreValuesSection />
     </>
   )
