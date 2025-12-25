@@ -1,5 +1,4 @@
 import HeroCarousel from './hero-carousel'
-import FoundingMessageSection from './section/founding-message'
 import NewsEventsSection from './section/news-events'
 import TestimonialQuoteSection from './section/testimonial-quote'
 import TheNumbers from './section/the-numbers'

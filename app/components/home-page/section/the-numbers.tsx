@@ -211,9 +211,6 @@ export default function TheNumbers() {
             transition={{ duration: 0.6 }}
           >
             <div className='bg-[#FDB913] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(253,185,19,0.4)]' />
-            <h2 className='text-xs md:text-sm lg:text-base font-bold text-[#FDB913] uppercase tracking-[0.2em] leading-none drop-shadow-md mb-2'>
-              Giá trị cốt lõi
-            </h2>
           </motion.div>
 
           <motion.h2
