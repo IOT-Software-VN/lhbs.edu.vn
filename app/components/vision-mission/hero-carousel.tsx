@@ -33,9 +33,14 @@ export default function VisionMissionHero({ onNavigate }: HeroProps) {
           className='flex flex-col items-start'
         >
           {/* Breadcrumbs */}
-          <div className='mb-6 opacity-90 hover:opacity-100 transition-opacity'>
-            <Breadcrumb items={breadcrumbItems} />
-          </div>
+          {/* <div className='mb-6 opacity-90 hover:opacity-100 transition-opacity'>
+            <Breadcrumb
+              items={breadcrumbItems}
+              textClassName="text-white/70 hover:text-white"
+              activeTextClassName="text-white font-medium"
+              separatorClassName="text-white/50"
+            />
+          </div> */}
 
           {/* Decorative Line */}
           <div className='bg-[#FDB913] w-12 h-1 md:w-20 md:h-1.5 mb-6 rounded-full shadow-[0_0_15px_rgba(253,185,19,0.4)]' />

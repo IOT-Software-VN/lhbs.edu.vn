@@ -71,9 +71,8 @@ export default function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuO
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-70 transition-all duration-300 mb-2${
-        isTransparent ? 'py-2' : 'py-1'
-      } ${menuOpen ? 'shadow-none' : ''}`}
+      className={`fixed top-0 left-0 right-0 z-70 transition-all duration-300 mb-2${isTransparent ? 'py-2' : 'py-1'
+        } ${menuOpen ? 'shadow-none' : ''}`}
       style={{ minHeight: '66px' }}
       initial={{ y: 0 }}
       animate={{
@@ -95,13 +94,12 @@ export default function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuO
         {/* Logo - Left */}
         <motion.div
           onClick={handleLogoClick}
-          className={`shrink-0 cursor-pointer ${
-            isTransparent
+          className={`shrink-0 cursor-pointer ${isTransparent
               ? 'focus:ring-offset-[#1a5336]'
               : menuOpen
                 ? 'focus:ring-offset-[#1a5336]'
                 : 'focus:ring-offset-white'
-          }`}
+            }`}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           aria-label='Go to homepage'
@@ -114,13 +112,12 @@ export default function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuO
           {/* Primary CTA Button - Apply Now */}
           <motion.button
             onClick={handleEnquireClick}
-            className={`rounded-full flex items-center justify-center px-6 h-12 bg-[#FABA1E] text-[#1a5336] font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 ${
-              isTransparent
+            className={`rounded-full flex items-center justify-center px-6 h-12 bg-[#FABA1E] text-[#1a5336] font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 ${isTransparent
                 ? 'focus:ring-offset-[#1a5336]'
                 : menuOpen
                   ? 'focus:ring-offset-[#1a5336]'
                   : 'focus:ring-offset-white'
-            }`}
+              }`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -130,13 +127,12 @@ export default function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuO
           {/* Menu Icon */}
           <motion.button
             onClick={menuOpen ? onMenuClose : onMenuClick}
-            className={`p-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 ${
-              isTransparent
+            className={`p-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 ${isTransparent
                 ? 'text-white hover:text-[#FABA1E] focus:ring-offset-[#1a5336]'
                 : menuOpen
                   ? 'text-white hover:text-[#FABA1E] focus:ring-offset-[#1a5336]'
                   : 'text-[#1a5336] hover:text-[#FABA1E] focus:ring-offset-white'
-            }`}
+              }`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}

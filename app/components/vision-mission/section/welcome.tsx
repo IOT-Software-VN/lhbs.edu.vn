@@ -1,9 +1,28 @@
 import { motion } from 'motion/react'
+import { Breadcrumb, type BreadcrumbItem } from '~/Breadcrumb'
 
-export default function WelcomeSection() {
+interface WelcomeSectionProps {
+    onNavigate: (path: string) => void
+}
+
+export default function WelcomeSection({ onNavigate }: WelcomeSectionProps) {
+    const breadcrumbItems: BreadcrumbItem[] = [
+        { label: 'Trang chủ', path: '/' },
+        { label: 'Tầm nhìn & Sứ mạng' }
+    ]
     return (
-        <section className='w-full h-screen snap-start bg-white flex items-center'>
-            <div className='container mx-auto px-4 md:px-8 lg:px-12'>
+        <section className='w-full h-screen snap-start bg-white flex items-center relative'>
+
+            {/* Breadcrumb Container - Aligned with page container */}
+            <div className='absolute top-24 left-0 w-full z-10'>
+                <div className='container mx-auto px-4 md:px-8 lg:px-12'>
+                    <div className='opacity-90 hover:opacity-100 transition-opacity'>
+                        <Breadcrumb items={breadcrumbItems} />
+                    </div>
+                </div>
+            </div>
+
+            <div className='container mx-auto px-4 md:px-8 lg:px-12 relative'>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
