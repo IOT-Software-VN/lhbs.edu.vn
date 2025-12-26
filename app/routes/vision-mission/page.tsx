@@ -1,6 +1,7 @@
 import type { Route } from './+types/page'
 import {
   VisionMissionHero,
+  WelcomeSection,
   FoundingMessageSection,
   MissionSection,
   VisionSection,
@@ -22,6 +23,7 @@ export default function VisionMissionPage() {
   return (
     <>
       <VisionMissionHero onNavigate={handleNavigate} />
+      <WelcomeSection />
       <FoundingMessageSection onNavigate={handleNavigate} />
       <VisionSection />
       <MissionSection />
