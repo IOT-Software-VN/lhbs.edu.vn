@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import { Breadcrumb, type BreadcrumbItem } from '~/Breadcrumb'
+import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/components/Breadcrumb'
 
 interface HeroProps {
   onNavigate: (path: string) => void

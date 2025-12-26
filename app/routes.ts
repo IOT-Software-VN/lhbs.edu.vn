@@ -7,6 +7,7 @@ export default [
     
     // About - Vision & Mission
     route('tam-nhin-su-menh', 'routes/vision-mission/page.tsx'),
+    route('ban-lanh-dao', 'routes/directors/page.tsx'),
     
     // Catch-all route for 404 pages (must be last)
     route('*', 'routes/404.tsx'),
