@@ -22,11 +22,6 @@ export default function VisionMissionPage() {
     window.location.href = path
   }
 
-  const breadcrumbItems = [
-    { label: 'Trang chủ', path: '/' },
-    { label: 'Tầm nhìn & Sứ mệnh' }
-  ]
-
   return (
     <>
       <SubPageHero

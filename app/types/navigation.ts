@@ -108,7 +108,7 @@ export const siteNavigation: NavParent[] = [
       {
         id: 'campuses-info',
         label: 'Thông tin các cơ sở giáo dục',
-        path: '/thong-tin-co-so',
+        path: '/he-thong-co-so',
         description: 'Hệ thống cơ sở giáo dục của LHBS'
       },
       {
