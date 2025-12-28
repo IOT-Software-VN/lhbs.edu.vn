@@ -25,7 +25,7 @@ export const annualReports: AnnualReport[] = [
     title: 'Báo cáo thường niên năm học 2024 - 2025',
     year: '2024-2025',
     description: 'Báo cáo toàn diện về hoạt động giáo dục, chất lượng đào tạo và các thành tích nổi bật của hệ thống trường Song ngữ Lạc Hồng trong năm học 2024-2025',
-    pdfUrl: 'https://lhbs.edu.vn/wp-content/uploads/2025/02/BAO-CAO-THUONG-NIEN-NAM-HOC-2024-2025.pdf',
+    pdfUrl: '/documents/Anual-Report-LHBS.pdf',
     publishDate: '01/02/2025',
     fileSize: '15.2 MB',
     featured: true

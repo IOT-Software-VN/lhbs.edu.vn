@@ -3,6 +3,7 @@ import { Download, FileText, Clock } from 'lucide-react'
 import { useState } from 'react'
 import { formDocuments, formCategories } from '../mock-data'
 import { cn } from '@/lib/utils'
+import PdfSimpleViewer from '../../shared-ui/pdf-viewer/PdfSimpleViewer'
 
 export default function FormsSection() {
   const [activeCategory, setActiveCategory] = useState<string>('admission')
@@ -87,10 +88,10 @@ export default function FormsSection() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
             >
               <div className='bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_50px_rgba(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-2 h-full flex flex-col'>
-                
+
                 {/* Header */}
-                <div className='bg-gradient-to-r from-[#1e5338] to-[#00602f] p-5 md:p-6 relative overflow-hidden'>
-                  <div className='absolute top-0 right-0 w-32 h-32 bg-[#faba1e] opacity-10 rounded-full -mr-16 -mt-16' />
+                <div className='bg-gradient-to-r from-lhbs-green to-lhbs-green-dark p-5 md:p-6 relative overflow-hidden'>
+                  <div className='absolute top-0 right-0 w-32 h-32 bg-lhbs-yellow opacity-10 rounded-full -mr-16 -mt-16' />
                   <div className='relative z-10 flex items-start gap-4'>
                     <div className='flex-shrink-0 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center'>
                       <FileText className='w-6 h-6 text-white' />
@@ -109,6 +110,12 @@ export default function FormsSection() {
 
                 {/* Content */}
                 <div className='p-5 md:p-6 flex-1 flex flex-col'>
+
+                  {/* PDF Preview */}
+                  <div className="mb-4 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
+                    <PdfSimpleViewer file={form.pdfUrl} height={200} />
+                  </div>
+
                   <p className='text-sm md:text-base text-gray-600 leading-relaxed mb-4 flex-1'>
                     {form.description}
                   </p>
@@ -123,10 +130,10 @@ export default function FormsSection() {
                   <div className='flex gap-3'>
                     <button
                       onClick={() => handleDownload(form.pdfUrl)}
-                      className='flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-[#faba1e] hover:bg-[#e5a812] text-[#1e5338] font-bold text-sm md:text-base rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg'
+                      className='flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-lhbs-yellow hover:bg-[#e5a812] text-lhbs-green font-bold text-sm md:text-base rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg'
                     >
                       <Download className='w-4 h-4' />
-                      <span>Tải xuống</span>
+                      <span>Tải xuống PDF</span>
                     </button>
                   </div>
                 </div>
