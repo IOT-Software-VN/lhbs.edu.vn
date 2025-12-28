@@ -9,6 +9,7 @@ export default [
     route('tam-nhin-su-menh', 'routes/vision-mission/page.tsx'),
     route('ban-lanh-dao', 'routes/directors/page.tsx'),
     route('he-thong-co-so', 'routes/our-campus/page.tsx'),
+    route('cong-khai-thong-tin', 'routes/public-information/page.tsx'),
     
     // Catch-all route for 404 pages (must be last)
     route('*', 'routes/404.tsx'),
