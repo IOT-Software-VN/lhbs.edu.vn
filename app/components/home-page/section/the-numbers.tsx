@@ -27,7 +27,7 @@ interface WhyChooseItem {
 const whyChooseData: WhyChooseItem[] = [
   {
     icon: TrendingUp,
-    title: 'Lộ trình học tập cá nhân hóa',
+    title: 'Lộ trình học\u00A0tập cá\u00A0nhân\u00A0hóa',
     description:
       'Mỗi học sinh được thiết kế chương trình học phù hợp với năng lực và mục tiêu phát triển riêng.',
     fullDescription:
@@ -43,7 +43,7 @@ const whyChooseData: WhyChooseItem[] = [
   },
   {
     icon: HeartHandshake,
-    title: 'Lấy học sinh làm trung tâm',
+    title: 'Lấy\u00A0học\u00A0sinh\u00A0làm trung\u00A0tâm',
     description:
       'Phương pháp giảng dạy chủ động, khuyến khích tư duy sáng tạo độc lập và phát triển kỹ năng.',
     fullDescription:
@@ -59,7 +59,7 @@ const whyChooseData: WhyChooseItem[] = [
   },
   {
     icon: MonitorSmartphone,
-    title: 'Tiên phong ứng dụng công nghệ',
+    title: 'Tiên phong ứng\u00A0dụng công\u00A0nghệ',
     description:
       'Tích hợp công nghệ hiện đại vào mọi hoạt động giảng dạy, tạo môi trường học tập tương tác.',
     fullDescription:
@@ -114,12 +114,12 @@ function InfoCard({
           <div className='relative w-24 h-24 md:w-28 md:h-28'>
             {/* Outer Glow Ring */}
             <div className='absolute inset-0 rounded-full bg-gradient-to-br from-[#FDB913]/20 to-[#FDB913]/5 blur-xl group-hover:from-[#FDB913]/40 group-hover:to-[#FDB913]/10 transition-all duration-500' />
-            
+
             {/* Main Icon Circle */}
             <div className='relative w-full h-full rounded-full bg-gradient-to-br from-[#FDB913] to-[#f5a700] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500'>
               <Icon className='w-12 h-12 md:w-14 md:h-14 text-white stroke-[2.5]' />
             </div>
-            
+
             {/* Decorative Ring */}
             <div className='absolute -inset-2 rounded-full border-2 border-[#FDB913]/20 group-hover:border-[#FDB913]/40 transition-colors duration-500' />
           </div>
@@ -216,7 +216,7 @@ function CoreStrengthModal({ title, description, fullDescription, points, image,
         onClose();
       }
     };
-    
+
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape);
   }, [onClose]);
@@ -266,7 +266,7 @@ function CoreStrengthModal({ title, description, fullDescription, points, image,
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#005C42] mb-3 md:mb-4 uppercase tracking-wide">
               {title}
             </h2>
-            
+
             <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-5 md:mb-6">
               {fullDescription}
             </p>
