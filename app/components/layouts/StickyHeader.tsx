@@ -90,33 +90,33 @@ export default function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuO
         backdropFilter: { duration: 0.3 }
       }}
     >
-      <div className='h-full w-full px-4 md:px-10 flex items-center justify-between gap-8  py-4'>
-        {/* Logo - Left */}
+      <div className='h-full w-full px-4 md:px-10 flex flex-col-reverse md:flex-row items-center justify-between gap-2 md:gap-8 py-2 md:py-4'>
+        {/* Logo - Left (Desktop) / Bottom Center (Mobile) */}
         <motion.div
           onClick={handleLogoClick}
-          className={`shrink-0 cursor-pointer ${isTransparent
+          className={`shrink-0 cursor-pointer w-full flex justify-center md:w-auto md:block ${isTransparent
+            ? 'focus:ring-offset-[#1a5336]'
+            : menuOpen
               ? 'focus:ring-offset-[#1a5336]'
-              : menuOpen
-                ? 'focus:ring-offset-[#1a5336]'
-                : 'focus:ring-offset-white'
+              : 'focus:ring-offset-white'
             }`}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           aria-label='Go to homepage'
         >
-          <img src={logoImage} alt='LHBS - Lac Hong Bilingual School' className='h-24 w-auto rounded-none' />
+          <img src={logoImage} alt='LHBS - Lac Hong Bilingual School' className='h-16 md:h-24 w-auto rounded-none' />
         </motion.div>
 
-        {/* Right - Actions */}
-        <div className='flex items-center gap-3'>
+        {/* Right - Actions (Desktop) / Top Right (Mobile) */}
+        <div className='w-full flex justify-end md:w-auto items-center gap-3'>
           {/* Primary CTA Button - Apply Now */}
           <motion.button
             onClick={handleEnquireClick}
-            className={`rounded-full flex items-center justify-center px-6 h-12 bg-[#FABA1E] text-[#1a5336] font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 ${isTransparent
+            className={`rounded-full flex items-center justify-center px-4 md:px-6 h-10 md:h-12 bg-[#FABA1E] text-[#1a5336] font-bold uppercase text-xs md:text-sm tracking-wider hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 ${isTransparent
+              ? 'focus:ring-offset-[#1a5336]'
+              : menuOpen
                 ? 'focus:ring-offset-[#1a5336]'
-                : menuOpen
-                  ? 'focus:ring-offset-[#1a5336]'
-                  : 'focus:ring-offset-white'
+                : 'focus:ring-offset-white'
               }`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -128,10 +128,10 @@ export default function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuO
           <motion.button
             onClick={menuOpen ? onMenuClose : onMenuClick}
             className={`p-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 ${isTransparent
+              ? 'text-white hover:text-[#FABA1E] focus:ring-offset-[#1a5336]'
+              : menuOpen
                 ? 'text-white hover:text-[#FABA1E] focus:ring-offset-[#1a5336]'
-                : menuOpen
-                  ? 'text-white hover:text-[#FABA1E] focus:ring-offset-[#1a5336]'
-                  : 'text-[#1a5336] hover:text-[#FABA1E] focus:ring-offset-white'
+                : 'text-[#1a5336] hover:text-[#FABA1E] focus:ring-offset-white'
               }`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}

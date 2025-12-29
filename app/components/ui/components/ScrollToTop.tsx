@@ -95,14 +95,14 @@ export default function CTABottomFixed({
   // Bottom button - Scroll to Top (rounded)
   const scrollButton: CTAButton | null = showScrollTop && isScrollVisible
     ? {
-        id: 'scroll-top',
-        label: 'Scroll to top',
-        icon: <ChevronUp className="w-5 h-5" />,
-        onClick: scrollToTop,
-        className: 'bg-[#FABA1E] text-[#005C42] shadow-lg hover:shadow-2xl',
-        ariaLabel: 'Scroll to top',
-        isExternal: false
-      }
+      id: 'scroll-top',
+      label: 'Scroll to top',
+      icon: <ChevronUp className="w-5 h-5" />,
+      onClick: scrollToTop,
+      className: 'bg-[#FABA1E] text-[#005C42] shadow-lg hover:shadow-2xl',
+      ariaLabel: 'Scroll to top',
+      isExternal: false
+    }
     : null
 
   // ========================================
@@ -112,7 +112,7 @@ export default function CTABottomFixed({
   return (
     <>
       {/* Top Fixed Buttons - Zalo & Messenger (Square, Edge-aligned) */}
-      <div className="fixed top-1/4 -translate-y-1/2 right-0 z-70 flex flex-col gap-1 pointer-events-auto">
+      <div className="fixed z-69 top-1/4 -translate-y-1/2 right-0 flex flex-col gap-1 pointer-events-auto">
         {topButtons.map((button, index) => (
           <motion.a
             key={button.id}
@@ -127,15 +127,15 @@ export default function CTABottomFixed({
             aria-label={button.ariaLabel}
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ 
-              duration: 0.4, 
+            transition={{
+              duration: 0.4,
               ease: 'easeOut',
               delay: index * 0.1
             }}
             whileTap={{ scale: 0.95 }}
           >
             {button.icon}
-            
+
             {/* Tooltip - Same yellow color as button */}
             <span className="
               absolute right-full mr-0 px-3 py-2 h-10 text-xs font-semibold whitespace-nowrap
@@ -153,7 +153,7 @@ export default function CTABottomFixed({
       {scrollButton && (
         <AnimatePresence>
           <motion.div
-            className="fixed bottom-4 right-3 z-70 pointer-events-auto"
+            className="fixed bottom-4 right-3 z-69 pointer-events-auto"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}

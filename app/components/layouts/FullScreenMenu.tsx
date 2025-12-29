@@ -87,9 +87,8 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                       <button
                         key={parent.id}
                         onClick={() => handleParentClick(parent)}
-                        className={`block w-full text-left text-[32px] md:text-[36px] uppercase tracking-wide transition-all group whitespace-normal break-words leading-snug ${
-                          activeParent?.id === parent.id ? 'text-white' : 'text-white/50 hover:text-white/80'
-                        }`}
+                        className={`block w-full text-left text-[32px] md:text-[36px] uppercase tracking-wide transition-all group whitespace-normal break-words leading-snug ${activeParent?.id === parent.id ? 'text-white' : 'text-white/50 hover:text-white/80'
+                          }`}
                       >
                         {parent.id === 'education-program' ? (
                           <>
@@ -109,11 +108,11 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                 <div className='w-[30%] border-r border-white/20 pr-12 overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent'>
                   {activeParent && (
                     <div>
-                    {/* Title without link - just display text */}
-                    <h3 className="text-white text-[18px] mb-3 font-semibold capitalize">
-                      {activeParent.label}
-                    </h3>
-                      
+                      {/* Title without link - just display text */}
+                      <h3 className="text-white text-[18px] mb-3 font-semibold capitalize">
+                        {activeParent.label}
+                      </h3>
+
                       <nav className='space-y-3 mb-6' aria-label={`${activeParent.label} pages`}>
                         {/* Child pages */}
                         {activeParent.children.map((child) => (
@@ -134,9 +133,8 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                             <button
                               key={child.id}
                               onClick={() => handleNavClick(child.path!)}
-                              className={`block w-full text-left text-[15px] transition-colors group ${
-                                currentPath === child.path ? 'text-[#FABA1E]' : 'text-white hover:text-[#FABA1E]'
-                              }`}
+                              className={`block w-full text-left text-[15px] transition-colors group ${currentPath === child.path ? 'text-[#FABA1E]' : 'text-white hover:text-[#FABA1E]'
+                                }`}
                             >
                               <div className='flex items-center justify-between'>
                                 <span className='truncate'>{child.label}</span>
@@ -171,26 +169,26 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
               </div>
 
               {/* Bottom Cyan Strip */}
-             <div className='w-full h-[52px] bg-[#3a8f66] flex items-center justify-center mt-4'>
-              <div className='flex items-center gap-3'>
-                <span className='text-white text-sm'>
-                  {/* Cập nhật tiếng Việt ở đây */}
-                  <a href=''>Trực thuộc Hệ thống Giáo dục Song ngữ LHBS</a>
-                </span>
-                <button
-                  className='w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors focus:outline-none focus:ring-2 focus:ring-white'
-                  aria-label='Tìm hiểu thêm' // Nhớ sửa luôn aria-label cho chuẩn SEO/Accessibility
-                >
-                  <ArrowRight className='w-4 h-4 text-white' />
-                </button>
+              <div className='w-full h-[52px] bg-[#3a8f66] flex items-center justify-center mt-4'>
+                <div className='flex items-center gap-3'>
+                  <span className='text-white text-sm'>
+                    {/* Cập nhật tiếng Việt ở đây */}
+                    <a href=''>Trực thuộc Hệ thống Giáo dục Song ngữ LHBS</a>
+                  </span>
+                  <button
+                    className='w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors focus:outline-none focus:ring-2 focus:ring-white'
+                    aria-label='Tìm hiểu thêm' // Nhớ sửa luôn aria-label cho chuẩn SEO/Accessibility
+                  >
+                    <ArrowRight className='w-4 h-4 text-white' />
+                  </button>
+                </div>
               </div>
-            </div>
             </motion.div>
           ) : (
             /* Mobile Layout - Single Column Accordion */
             <motion.div
               className='fixed left-0 right-0 bottom-0 z-[70] bg-[#1a5336] overflow-y-auto'
-              style={{ top: 'calc(72px + 0.5rem)' }} // Account for header height + padding
+              style={{ top: 'calc(72px + 2.5rem)' }} // Account for header height + padding
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
@@ -200,7 +198,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                 {/* Main Sections */}
                 <nav className='space-y-2'>
                   {siteNavigation.map((parent) => (
-                    <div key={parent.id} className='border-b border-white/10'>
+                    <div key={parent.id} className=''>
                       <button
                         onClick={() => setExpandedMobile(expandedMobile === parent.id ? null : parent.id)}
                         className='w-full text-left py-4  text-[24px] text-white flex items-center justify-between'
@@ -208,7 +206,6 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                         {parent.id === 'education-program' ? (
                           <span>
                             Chương trình
-                            <br />
                             Đào tạo
                           </span>
                         ) : (
@@ -247,9 +244,8 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                                   <button
                                     key={child.id}
                                     onClick={() => handleNavClick(child.path!)}
-                                    className={`block w-full text-left py-2  text-[15px] ${
-                                      currentPath === child.path ? 'text-[#FABA1E]' : 'text-white/80 hover:text-white'
-                                    }`}
+                                    className={`block w-full text-left py-2  text-[15px] ${currentPath === child.path ? 'text-[#FABA1E]' : 'text-white/80 hover:text-white'
+                                      }`}
                                   >
                                     {child.label}
                                   </button>
