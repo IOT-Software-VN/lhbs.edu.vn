@@ -1,15 +1,10 @@
 import { motion } from 'motion/react'
-import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/components/Breadcrumb'
 
 interface WelcomeSectionProps {
     onNavigate: (path: string) => void
 }
 
 export default function WelcomeSection({ onNavigate }: WelcomeSectionProps) {
-    const breadcrumbItems: BreadcrumbItem[] = [
-        { label: 'Trang chủ', path: '/' },
-        { label: 'Tầm nhìn & Sứ mệnh' }
-    ]
     return (
         <section className='w-full min-h-screen snap-start bg-white flex flex-col relative overflow-hidden'>
 
@@ -20,15 +15,6 @@ export default function WelcomeSection({ onNavigate }: WelcomeSectionProps) {
                     alt=""
                     className='w-[90%] md:w-[60%] lg:w-[60%] h-auto object-contain opacity-10'
                 />
-            </div>
-
-            {/* Breadcrumb Container - In Flow */}
-            <div className='w-full pt-24 pb-4 md:pb-6 relative z-10'>
-                <div className='container mx-auto px-4 md:px-8 lg:px-12'>
-                    <div className='opacity-90 hover:opacity-100 transition-opacity'>
-                        <Breadcrumb items={breadcrumbItems} />
-                    </div>
-                </div>
             </div>
 
             {/* Main Content - Takes remaining space and centers */}

@@ -22,7 +22,7 @@ export default function DirectorsCarousel() {
   const items = getData()
 
   return (
-    <section className='relative py-20 pb-32 overflow-hidden bg-[#00602f] transition-colors duration-500'>
+    <section className='relative min-h-dvh h-auto snap-start py-20 pb-32 overflow-hidden bg-[#00602f] transition-colors duration-500'>
       {/* Background Pattern */}
       <div className='absolute inset-0 opacity-5'>
         <div className='absolute inset-0' style={{
@@ -79,6 +79,9 @@ export default function DirectorsCarousel() {
 
       {/* CAROUSEL */}
       <div className='relative w-full z-10 my-4'>
+        {/* Horizontal Strip Background */}
+        <div className='absolute top-1/2 left-0 w-full h-[280px] md:h-[320px] -translate-y-1/2 bg-[#004d26] shadow-inner border-y border-[#faba1e]/20 z-0' />
+
         <Carousel
           opts={{
             align: 'start',
@@ -87,58 +90,60 @@ export default function DirectorsCarousel() {
           className='w-full z-10'
         >
           <CarouselContent className='-ml-3 sm:-ml-4 md:-ml-6 lg:-ml-8 py-10 justify-center'>
-              {items.map((item, index) => (
-                <CarouselItem
-                  key={`${activeCategory}-${item.id}-${index}`}
-                  className='pl-3 sm:pl-4 md:pl-6 lg:pl-8 basis-[280px] xs:basis-[300px] sm:basis-[340px] md:basis-[360px] lg:basis-[400px] xl:basis-[420px]'
-                >
-                  <div className='h-full w-full'>
-                    {/* CARD UI */}
-                    <div className={cn(
-                      'bg-white rounded-2xl overflow-hidden w-full h-full flex flex-col transition-all duration-500 hover:-translate-y-2 hover:z-10',
-                      'shadow-[0_20px_50px_rgba(0,92,66,0.3)] hover:shadow-[0_30px_60px_rgba(0,92,66,0.5)]'
-                    )}>
+            {items.map((item, index) => (
+              <CarouselItem
+                key={`${activeCategory}-${item.id}-${index}`}
+                className='pl-3 sm:pl-4 md:pl-6 lg:pl-8 basis-[280px] xs:basis-[300px] sm:basis-[340px] md:basis-[360px] lg:basis-[400px] xl:basis-[420px]'
+              >
+                <div className='h-full w-full'>
+                  {/* CARD UI */}
+                  <div className={cn(
+                    'bg-white rounded-2xl overflow-hidden w-full h-full flex flex-col transition-all duration-500 hover:-translate-y-2 hover:z-10',
+                    'border border-[#faba1e]',
+                    'shadow-[0_0_20px_rgba(250,186,30,0.3)] shadow-[0_0_40px_rgba(250,186,30,0.6)]'
+                  )}>
 
-                      {/* IMAGE */}
-                      <div className='relative w-full aspect-[4/5] overflow-hidden flex-shrink-0'>
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          className='w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110'
-                        />
-                        {/* Inner Glow Effect */}
-                        <div className='absolute inset-0 shadow-[inset_0_0_40px_rgba(0,92,66,0.2)] pointer-events-none' />
-                      </div>
-
-                      {/* CONTENT */}
-                      <div className='p-4 sm:p-5 md:p-6 flex-1 flex flex-col items-center justify-center text-center'>
-                        <h3 className='text-base sm:text-lg md:text-xl font-bold text-[#1e5338] mb-2 md:mb-3 uppercase leading-tight'>
-                          {item.name}
-                        </h3>
-
-                        <div className='w-10 sm:w-12 h-0.5 bg-[#faba1e] mb-2 md:mb-3 opacity-50' />
-
-                        <p className='text-xs sm:text-sm md:text-base text-[#555] font-semibold mb-1 leading-snug'>
-                          {item.role1}
-                        </p>
-
-                        {item.role2 && (
-                          <p className='text-xs sm:text-sm md:text-base text-[#777] leading-snug'>
-                            {item.role2}
-                          </p>
-                        )}
-                      </div>
-
+                    {/* IMAGE */}
+                    <div className='relative w-full aspect-[1/1] overflow-hidden flex-shrink-0'>
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className='w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-110'
+                      />
+                      {/* Inner Glow Effect */}
+                      <div className='absolute inset-0 shadow-[inset_0_0_40px_rgba(0,92,66,0.2)] pointer-events-none' />
                     </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
 
-            <CarouselPrevious className="left-0 md:-left-4 bg-white/20 hover:bg-white text-white hover:text-[#1e5338] border-none" />
-            <CarouselNext className="right-0 md:-right-4 bg-white/20 hover:bg-white text-white hover:text-[#1e5338] border-none" />
-          </Carousel>
-        </div>
+
+                    {/* CONTENT */}
+                    <div className='p-4 sm:p-5 md:p-6 flex-1 flex flex-col items-center justify-center text-center'>
+                      <h3 className='text-base sm:text-lg md:text-xl font-bold text-[#1e5338] mb-2 md:mb-3 uppercase leading-tight'>
+                        {item.name}
+                      </h3>
+
+                      <div className='w-10 sm:w-12 h-0.5 bg-[#faba1e] mb-2 md:mb-3 opacity-50' />
+
+                      <p className='text-xs sm:text-sm md:text-base text-[#555] font-semibold mb-1 leading-snug'>
+                        {item.role1}
+                      </p>
+
+                      {item.role2 && (
+                        <p className='text-xs sm:text-sm md:text-base text-[#777] leading-snug'>
+                          {item.role2}
+                        </p>
+                      )}
+                    </div>
+
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          {/* <CarouselPrevious className="left-0 md:-left-4 bg-white/20 hover:bg-white text-white hover:text-[#1e5338] border-none" />
+          <CarouselNext className="right-0 md:-right-4 bg-white/20 hover:bg-white text-white hover:text-[#1e5338] border-none" /> */}
+        </Carousel>
+      </div>
     </section>
   )
 }

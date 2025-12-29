@@ -1,26 +1,13 @@
 import { motion } from 'motion/react'
-import { Breadcrumb, type BreadcrumbItem } from '~/components/Breadcrumb'
 
 interface WelcomeSectionProps {
     onNavigate?: (path: string) => void
 }
 
 export default function WelcomeSection({ onNavigate }: WelcomeSectionProps) {
-    const breadcrumbItems: BreadcrumbItem[] = [
-        { label: 'Trang chủ', path: '/' },
-        { label: 'Ban lãnh đạo', }
-    ]
 
     return (
         <section className='relative w-full py-16 md:py-24 bg-white overflow-hidden'>
-            {/* Breadcrumb Container - In Flow */}
-            <div className='w-full pb-4 md:pb-6 relative z-10'>
-                <div className='container mx-auto px-4 md:px-8 lg:px-12'>
-                    <div className='opacity-90 hover:opacity-100 transition-opacity'>
-                        <Breadcrumb items={breadcrumbItems} />
-                    </div>
-                </div>
-            </div>
             <div className='container mx-auto px-4 md:px-8 lg:px-12'>
                 <div className='flex flex-col lg:flex-row gap-12 lg:gap-20 items-center'>
 
