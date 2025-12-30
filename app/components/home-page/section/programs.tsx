@@ -79,7 +79,7 @@ export default function ProgramsSection() {
                   <div className='h-full p-2'>
                     <motion.div
                       whileHover={{ y: -4 }}
-                      className='flex items-center justify-center h-20 md:h-24 bg-gray-50/30 border border-gray-200 rounded-sm p-4 transition-all duration-300 cursor-pointer group hover:border-[#FDB913] hover:bg-white hover:shadow-lg'
+                      className='flex items-center justify-center h-16 md:h-20 bg-gray-50/30 border border-gray-200 rounded-sm p-4 transition-all duration-300 cursor-pointer group hover:border-[#FDB913] hover:bg-white hover:shadow-lg'
                     >
                       <img
                         src={logo.image}
@@ -96,12 +96,6 @@ export default function ProgramsSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-
-            {/* Custom Navigation - Minimal Arrows */}
-            <div className='hidden md:block'>
-              <CarouselPrevious className='h-auto w-auto border-none bg-transparent text-[#FDB913] hover:bg-transparent hover:text-[#d49e19] -left-8 [&_svg]:size-12 md:[&_svg]:size-16 transition-transform hover:scale-110' />
-              <CarouselNext className='h-auto w-auto border-none bg-transparent text-[#FDB913] hover:bg-transparent hover:text-[#d49e19] -right-8 [&_svg]:size-12 md:[&_svg]:size-16 transition-transform hover:scale-110' />
-            </div>
           </Carousel>
         </motion.div>
       </div>
