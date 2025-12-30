@@ -66,7 +66,7 @@ export const formDocuments: FormDocument[] = [
     name: 'Đơn đăng ký nhập học mới',
     category: 'admission',
     description: 'Mẫu đơn dành cho phụ huynh đăng ký nhập học cho học sinh mới',
-    pdfUrl: 'https://lhbs.edu.vn/forms/don-dang-ky-nhap-hoc.pdf',
+    pdfUrl: '',
     fileSize: '250 KB',
     lastUpdate: '15/01/2025'
   },
@@ -75,7 +75,7 @@ export const formDocuments: FormDocument[] = [
     name: 'Hồ sơ nhập học',
     category: 'admission',
     description: 'Danh sách hồ sơ cần nộp khi nhập học',
-    pdfUrl: 'https://lhbs.edu.vn/forms/ho-so-nhap-hoc.pdf',
+    pdfUrl: '',
     fileSize: '180 KB',
     lastUpdate: '15/01/2025'
   },
@@ -86,18 +86,18 @@ export const formDocuments: FormDocument[] = [
     name: 'Đơn xin nghỉ học có lý do',
     category: 'leave',
     description: 'Mẫu đơn xin phép nghỉ học cho học sinh',
-    pdfUrl: 'https://lhbs.edu.vn/forms/don-xin-nghi-hoc.pdf',
+    pdfUrl: '',
     fileSize: '120 KB',
     lastUpdate: '10/01/2025'
   },
   {
     id: 'form-leave-02',
-    name: 'Đơn xin bảo lưu học tập',
+    name: 'Đơn rút hồ sơ',
     category: 'leave',
-    description: 'Mẫu đơn xin bảo lưu kết quả học tập',
-    pdfUrl: 'https://lhbs.edu.vn/forms/don-bao-luu.pdf',
-    fileSize: '140 KB',
-    lastUpdate: '10/01/2025'
+    description: 'Mẫu đơn rút hồ sơ học sinh',
+    pdfUrl: 'https://drive.google.com/file/d/1I1QBFJaFAYp1g8CYWYJojzIRsj-g5bTg/preview',
+    fileSize: '200 KB',
+    lastUpdate: '30/12/2024'
   },
   
   // Health forms
@@ -106,7 +106,7 @@ export const formDocuments: FormDocument[] = [
     name: 'Phiếu khám sức khỏe định kỳ',
     category: 'health',
     description: 'Mẫu phiếu khám sức khỏe cho học sinh',
-    pdfUrl: 'https://lhbs.edu.vn/forms/phieu-kham-suc-khoe.pdf',
+    pdfUrl: '',
     fileSize: '200 KB',
     lastUpdate: '05/01/2025'
   },
@@ -115,7 +115,7 @@ export const formDocuments: FormDocument[] = [
     name: 'Đơn xin miễn giảm hoạt động thể chất',
     category: 'health',
     description: 'Mẫu đơn xin miễn giảm hoạt động thể dục thể thao',
-    pdfUrl: 'https://lhbs.edu.vn/forms/mien-giam-the-duc.pdf',
+    pdfUrl: '',
     fileSize: '130 KB',
     lastUpdate: '05/01/2025'
   },
@@ -126,7 +126,7 @@ export const formDocuments: FormDocument[] = [
     name: 'Đơn góp ý/khiếu nại',
     category: 'complaint',
     description: 'Mẫu đơn gửi góp ý hoặc khiếu nại tới nhà trường',
-    pdfUrl: 'https://lhbs.edu.vn/forms/don-gop-y.pdf',
+    pdfUrl: '',
     fileSize: '150 KB',
     lastUpdate: '20/12/2024'
   },
@@ -134,28 +134,46 @@ export const formDocuments: FormDocument[] = [
   // Other forms
   {
     id: 'form-other-01',
-    name: 'Đơn xin cấp giấy chứng nhận',
+    name: 'Đơn đề nghị cấp giấy xác nhận học sinh',
     category: 'other',
-    description: 'Mẫu đơn xin cấp các loại giấy chứng nhận học sinh',
-    pdfUrl: 'https://lhbs.edu.vn/forms/cap-giay-chung-nhan.pdf',
-    fileSize: '110 KB',
-    lastUpdate: '18/12/2024'
+    description: 'Mẫu đơn đề nghị cấp giấy xác nhận học sinh',
+    pdfUrl: 'https://drive.google.com/file/d/1knZSDJ5fnT0rIbBEUPecPte0tVX2Fq8I/preview',
+    fileSize: '250 KB',
+    lastUpdate: '30/12/2024'
   },
   {
     id: 'form-other-02',
-    name: 'Đơn xin xác nhận thông tin học sinh',
+    name: 'Đơn xin photo hồ sơ',
     category: 'other',
-    description: 'Mẫu đơn xin xác nhận các thông tin liên quan đến học sinh',
-    pdfUrl: 'https://lhbs.edu.vn/forms/xac-nhan-thong-tin.pdf',
-    fileSize: '95 KB',
-    lastUpdate: '18/12/2024'
+    description: 'Mẫu đơn xin photo hồ sơ học sinh',
+    pdfUrl: 'https://drive.google.com/file/d/197qKBa2x7OYLtI-FJXnQ9ojwzr6lOxp8/preview',
+    fileSize: '180 KB',
+    lastUpdate: '30/12/2024'
+  },
+  {
+    id: 'form-other-03',
+    name: 'Đơn thay đổi SĐT',
+    category: 'other',
+    description: 'Mẫu đơn đề nghị thay đổi số điện thoại liên hệ',
+    pdfUrl: 'https://drive.google.com/file/d/1QglJuLUtdhk53ZqwbWU8wmDUbz7jCnFq/preview',
+    fileSize: '200 KB',
+    lastUpdate: '30/12/2024'
+  },
+  {
+    id: 'form-other-04',
+    name: 'Đơn đăng ký/ Hủy đăng ký dịch vụ',
+    category: 'other',
+    description: 'Mẫu đơn đăng ký hoặc hủy đăng ký các dịch vụ của nhà trường',
+    pdfUrl: 'https://drive.google.com/file/d/1QdkVPTZtNIFjcLJRdL7srYDP52QZDgKI/preview',
+    fileSize: '220 KB',
+    lastUpdate: '30/12/2024'
   }
 ]
 
 export const formCategories = [
-  { id: 'admission', label: 'Tuyển sinh', icon: '📝' },
-  { id: 'leave', label: 'Nghỉ học', icon: '📅' },
-  { id: 'health', label: 'Sức khỏe', icon: '🏥' },
-  { id: 'complaint', label: 'Góp ý', icon: '💬' },
-  { id: 'other', label: 'Khác', icon: '📋' }
+  { id: 'admission', label: 'Tuyển sinh' },
+  { id: 'leave', label: 'Nghỉ học' },
+  { id: 'health', label: 'Sức khỏe' },
+  { id: 'complaint', label: 'Góp ý' },
+  { id: 'other', label: 'Khác' }
 ] as const

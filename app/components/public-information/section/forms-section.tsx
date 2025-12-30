@@ -3,13 +3,17 @@ import { Download, FileText, Clock } from 'lucide-react'
 import { useState } from 'react'
 import { formDocuments, formCategories } from '../mock-data'
 import { cn } from '@/lib/utils'
-import PdfSimpleViewer from '../../shared-ui/pdf-viewer/PdfSimpleViewer'
 
 export default function FormsSection() {
   const [activeCategory, setActiveCategory] = useState<string>('admission')
+  const [failedIframes, setFailedIframes] = useState<Set<string>>(new Set())
 
   const handleDownload = (pdfUrl: string) => {
     window.open(pdfUrl, '_blank')
+  }
+
+  const handleIframeError = (formId: string) => {
+    setFailedIframes(prev => new Set(prev).add(formId))
   }
 
   const filteredForms = formDocuments.filter(form => form.category === activeCategory)
@@ -59,13 +63,12 @@ export default function FormsSection() {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={cn(
-                  'flex items-center gap-2 px-4 md:px-6 py-2.5 md:py-3 rounded-full text-xs md:text-sm font-bold tracking-wider transition-all duration-300',
+                  'px-4 md:px-6 py-2.5 md:py-3 rounded-full text-xs md:text-sm font-bold tracking-wider transition-all duration-300',
                   activeCategory === category.id
                     ? 'bg-[#1e5338] text-white shadow-lg scale-105'
                     : 'bg-transparent text-[#1e5338] hover:bg-gray-50'
                 )}
               >
-                <span className='text-lg'>{category.icon}</span>
                 <span>{category.label}</span>
               </button>
             ))}
@@ -78,7 +81,7 @@ export default function FormsSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto'
+          className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5'
         >
           {filteredForms.map((form, index) => (
             <motion.div
@@ -87,53 +90,69 @@ export default function FormsSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
             >
-              <div className='bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_50px_rgba(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-2 h-full flex flex-col'>
+              <div className='bg-white rounded-xl overflow-hidden border border-gray-200 shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 h-full flex flex-col'>
 
                 {/* Header */}
-                <div className='bg-gradient-to-r from-lhbs-green to-lhbs-green-dark p-5 md:p-6 relative overflow-hidden'>
-                  <div className='absolute top-0 right-0 w-32 h-32 bg-lhbs-yellow opacity-10 rounded-full -mr-16 -mt-16' />
-                  <div className='relative z-10 flex items-start gap-4'>
-                    <div className='flex-shrink-0 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center'>
-                      <FileText className='w-6 h-6 text-white' />
+                <div className='bg-gradient-to-r from-lhbs-green to-lhbs-green-dark p-3 md:p-4 relative overflow-hidden'>
+                  <div className='absolute top-0 right-0 w-24 h-24 bg-lhbs-yellow opacity-10 rounded-full -mr-12 -mt-12' />
+                  <div className='relative z-10 flex items-start gap-3'>
+                    <div className='flex-shrink-0 w-9 h-9 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center'>
+                      <FileText className='w-5 h-5 text-white' />
                     </div>
-                    <div className='flex-1'>
-                      <h3 className='text-lg md:text-xl font-bold text-white leading-tight mb-1'>
+                    <div className='flex-1 min-w-0'>
+                      <h3 className='text-sm md:text-base font-bold text-white leading-snug mb-1 line-clamp-2 min-h-[2.5rem]'>
                         {form.name}
                       </h3>
-                      <div className='flex items-center gap-2 text-xs text-white/80'>
-                        <Clock className='w-3 h-3' />
-                        <span>Cập nhật: {form.lastUpdate}</span>
+                      <div className='flex items-center gap-1.5 text-[10px] text-white/80'>
+                        <Clock className='w-3 h-3 flex-shrink-0' />
+                        <span className='truncate'>{form.lastUpdate}</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className='p-5 md:p-6 flex-1 flex flex-col'>
+                <div className='flex-1 flex flex-col'>
 
                   {/* PDF Preview */}
-                  <div className="mb-4 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
-                    <PdfSimpleViewer file={form.pdfUrl} height={200} />
+                  <div className="overflow-hidden bg-gray-50">
+                    {failedIframes.has(form.id || '') ? (
+                      <div className="w-full h-[300px] flex items-center justify-center">
+                        <img
+                          src="/images/base/placeholder.png"
+                          alt="Placeholder"
+                          className="max-w-full max-h-full object-contain opacity-60"
+                        />
+                      </div>
+                    ) : (
+                      <iframe
+                        src={form.pdfUrl}
+                        className="w-full h-[300px] border-0"
+                        title={form.name}
+                        loading="lazy"
+                        onError={() => handleIframeError(form.id || '')}
+                      />
+                    )}
                   </div>
 
-                  <p className='text-sm md:text-base text-gray-600 leading-relaxed mb-4 flex-1'>
+                  <p className='text-xs text-gray-600 leading-relaxed mb-3 flex-1 line-clamp-2 px-3 md:px-4 pt-3'>
                     {form.description}
                   </p>
 
-                  <div className='flex items-center justify-between mb-4 pt-4 border-t border-gray-100'>
-                    <span className='text-sm text-gray-500 font-medium'>
-                      Kích thước: {form.fileSize}
+                  <div className='flex items-center justify-between mb-3 pt-2 border-t border-gray-100 px-3 md:px-4'>
+                    <span className='text-[10px] text-gray-500 font-medium truncate'>
+                      {form.fileSize}
                     </span>
                   </div>
 
                   {/* Action Buttons */}
-                  <div className='flex gap-3'>
+                  <div className='flex gap-2 px-3 md:px-4 pb-3 md:pb-4'>
                     <button
                       onClick={() => handleDownload(form.pdfUrl)}
-                      className='flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-lhbs-yellow hover:bg-[#e5a812] text-lhbs-green font-bold text-sm md:text-base rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg'
+                      className='flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-lhbs-yellow hover:bg-[#e5a812] text-lhbs-green font-bold text-xs rounded-full transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md'
                     >
-                      <Download className='w-4 h-4' />
-                      <span>Tải xuống PDF</span>
+                      <Download className='w-3.5 h-3.5' />
+                      <span>Tải xuống</span>
                     </button>
                   </div>
                 </div>

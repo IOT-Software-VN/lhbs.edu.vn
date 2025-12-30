@@ -174,7 +174,7 @@ export default function PdfDocumentViewer({
                 {/* Navigation Arrows */}
                 <button
                     onClick={scrollPrev}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white text-white shadow-lg rounded-full flex items-center justify-center backdrop-blur-md border border-white/20 opacity-0 group-hover:opacity-100 transition-all duration-300 disabled:opacity-0 z-20"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white text-[#1E5338] shadow-lg rounded-full flex items-center justify-center backdrop-blur-md border border-white/20 opacity-0 group-hover:opacity-100 transition-all duration-300 disabled:opacity-0 z-20"
                     disabled={currentSnap === 0}
                 >
                     <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
@@ -182,7 +182,7 @@ export default function PdfDocumentViewer({
 
                 <button
                     onClick={scrollNext}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white text-white shadow-lg rounded-full flex items-center justify-center backdrop-blur-md border border-white/20 opacity-0 group-hover:opacity-100 transition-all duration-300 disabled:opacity-0 z-20"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white text-[#1E5338] shadow-lg rounded-full flex items-center justify-center backdrop-blur-md border border-white/20 opacity-0 group-hover:opacity-100 transition-all duration-300 disabled:opacity-0 z-20"
                     disabled={currentSnap === numPages - 1}
                 >
                     <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />

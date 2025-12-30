@@ -18,14 +18,14 @@ import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/components/Brea
 export default function PublicInformationPage() {
   const breadcrumbItems: BreadcrumbItem[] = [
     { label: 'Trang chủ', path: '/' },
-    { label: 'Cổng thông tin' }
+    { label: 'Công khai thông tin' }
   ]
 
   return (
     <>
       <SubPageHero
-        title='CỔNG THÔNG TIN & TÀI LIỆU SỐ'
-        subtitle='Hệ thống văn bản, báo cáo thường niên và quy chế hoạt động chính thức của Trường Song ngữ Lạc Hồng'
+        title='CÔNG KHAI THÔNG TIN'
+        subtitle='Báo cáo thường niên và quy chế hoạt động chính thức của Trường Song ngữ Lạc Hồng'
         backgroundImage='https://lhbs.edu.vn/wp-content/uploads/2025/02/IMG_8910.jpg'
       />
 
