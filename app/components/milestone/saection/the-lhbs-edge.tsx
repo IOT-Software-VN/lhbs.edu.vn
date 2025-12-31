@@ -28,6 +28,10 @@ import {
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
+interface TheLHBSEdgeProps {
+  onNavigate?: (path: string) => void
+}
+
 interface EdgeSection {
   id: string
   icon: React.ReactNode
@@ -484,3 +488,4 @@ export default function TheLHBSEdge() {
     </section>
   )
 }
+

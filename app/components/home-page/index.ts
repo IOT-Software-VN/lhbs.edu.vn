@@ -3,16 +3,13 @@ import NewsEventsSection from './section/news-events'
 import TestimonialQuoteSection from './section/testimonial-quote'
 import TheNumbers from './section/the-numbers'
 import EducationLevel from './section/education-level'
-import TheLHBSEdge from './section/the-lhbs-edge'
 import ProgramsSection from './section/programs'
 
 export { 
   HeroCarousel, 
-  FoundingMessageSection, 
   NewsEventsSection,
   TestimonialQuoteSection,
   TheNumbers,
   EducationLevel,
-  TheLHBSEdge,
   ProgramsSection
 }

@@ -10,6 +10,7 @@ export default [
     route('ban-lanh-dao', 'routes/directors/page.tsx'),
     route('he-thong-co-so', 'routes/our-campus/page.tsx'),
     route('cong-khai-thong-tin', 'routes/public-information/page.tsx'),
+    route('cot-moc-dang-nho', 'routes/milestone/page.tsx'),
     
     // Catch-all route for 404 pages (must be last)
     route('*', 'routes/404.tsx'),
