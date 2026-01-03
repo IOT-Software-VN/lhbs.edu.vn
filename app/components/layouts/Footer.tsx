@@ -176,9 +176,9 @@ export default function Footer({ onNavigate }: { onNavigate: (path: string) => v
               ))}
             </div>
 
-            <div className='flex flex-wrap items-center justify-end gap-6 mb-8'>
+            <div className='flex flex-wrap items-center justify-end gap-3 mb-8'>
               {partnerLogos.map((logo) => (
-                <div key={logo.id} className='bg-white rounded-lg p-3 shadow-sm min-w-[200px] h-16 flex items-center justify-center'>
+                <div key={logo.id} className='rounded-lg p-3 h-16 flex items-center justify-center'>
                   <img
                     src={logo.image}
                     alt={logo.name}

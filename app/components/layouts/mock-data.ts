@@ -53,7 +53,7 @@ export const partnerLogos: PartnerLogo[] = [
   {
     id: 1,
     name: 'English Central',
-    image: 'https://www.englishcentral.com/dist/all/20251203121549/assets/ec-logo.53e56416598b3d50cbe5.png'
+    image: 'https://blog.englishcentral.com/wp-content/uploads/2022/05/cropped-ec.png'
   },
   {
     id: 2,
@@ -69,6 +69,6 @@ export const partnerLogos: PartnerLogo[] = [
   {
     id: 4,
     name: 'Cambridge',
-    image: 'https://www.cambridgeassessment.org.uk/Images/Simon-brand-blog-newest-logo.png'
+    image: 'https://vectorseek.com/wp-content/uploads/2023/08/Cambridge-English-Language-Assessment-Logo-Vector.svg-.png'
   }
 ]
