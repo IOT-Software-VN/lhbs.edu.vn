@@ -18,7 +18,7 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
       'Chương trình tích hợp kết hợp Bộ GD&ĐT và chuẩn toàn cầu.',
       'Tập trung phát triển thể chất, nhân cách và kỹ năng xã hội.'
     ],
-    image: '/images/home-page/section-education/program-03.png',
+    image: '/images/home-page/cac-cap-hoc-section/program-03.png',
     slug: '/campus/galaxy-kc'
   },
 
@@ -31,7 +31,7 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
       'Phát triển toàn diện nhấn mạnh sáng tạo và tư duy logic.',
       'Hoạt động hấp dẫn xây dựng sự tự tin và khám phá.'
     ],
-    image: '/images/home-page/section-education/program-02.png',
+    image: '/images/home-page/cac-cap-hoc-section/program-02.png',
     slug: '/campus/elementary',
     learnMoreUrl: 'https://school-lhbs-iotsoftvn-com.vercel.app/primary-school'
   },
@@ -45,7 +45,7 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
       'Học tập dựa trên dự án khuyến khích làm việc nhóm và đổi mới.',
       'Chuẩn bị cho những thách thức học thuật cao hơn.'
     ],
-    image: '/images/home-page/section-education/program.jpg',
+    image: '/images/home-page/cac-cap-hoc-section/program.jpg',
     slug: '/campus/middle-school',
     learnMoreUrl: 'https://school-lhbs-iotsoftvn-com.vercel.app/secondary-school'
   },
@@ -59,7 +59,7 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
       'Định hướng chuyên biệt cho con đường đại học và nghề nghiệp.',
       'Cơ hội lãnh đạo và xuất sắc trong hoạt động ngoại khóa.'
     ],
-    image: '/images/home-page/section-education/program-01.png',
+    image: '/images/home-page/cac-cap-hoc-section/program-01.png',
     slug: '/campus/high-school',
     learnMoreUrl: 'https://school-lhbs-iotsoftvn-com.vercel.app/high-school'
   }

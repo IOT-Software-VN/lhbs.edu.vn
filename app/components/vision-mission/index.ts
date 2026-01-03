@@ -1,7 +1,7 @@
 import FoundingMessageSection from './section/founding-message'
 import MissionSection from './section/mission'
 import VisionSection from './section/vision'
-import CoreValuesSection from './section/CoreValuesSection'
+import CoreValuesSection from './section/core-values'
 import TestimonialQuoteSection from './section/testimonial-quote'
 import WelcomeSection from './section/welcome'
 

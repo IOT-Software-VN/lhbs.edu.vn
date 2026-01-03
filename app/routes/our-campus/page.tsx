@@ -3,7 +3,7 @@ import {
   WelcomeSection,
   CampusInfoSection
 } from "@/components/our-campus/index"
-import SubPageHero from '@/components/shared-ui/hero-carousel'
+import SubPageHero from '@/components/shared-ui/Hero-Carousel-SubPage'
 
 
 

@@ -1,6 +1,6 @@
 import type { Route } from './+types/page'
 import { OverviewSection } from '@/components/learning-path'
-import SubPageHero from '@/components/shared-ui/hero-carousel'
+import SubPageHero from '@/components/shared-ui/Hero-Carousel-SubPage'
 import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/components/Breadcrumb'
 
 export function meta({ }: Route.MetaArgs) {

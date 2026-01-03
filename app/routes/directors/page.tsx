@@ -1,5 +1,5 @@
 import type { Route } from './+types/page'
-import SubPageHero from '@/components/shared-ui/hero-carousel'
+import SubPageHero from '@/components/shared-ui/Hero-Carousel-SubPage'
 import { WelcomeSection, DirectorsCarousel } from '@/components/directors'
 
 export function meta({ }: Route.MetaArgs) {

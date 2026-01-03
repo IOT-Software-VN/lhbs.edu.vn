@@ -1,8 +1,8 @@
 import { motion, useInView } from 'motion/react'
 import { useRef } from 'react'
 import { ImQuotesRight } from 'react-icons/im'
-import bgAcademicBilingual from '@/images/home-page/section-03-bg.png'
-import founderImage from '@/images/home-page/section-03.png'
+import bgAcademicBilingual from '@/images/tam-nhin-su-menh-page/triet-ly-bg.png'
+import founderImage from '@/images/tam-nhin-su-menh-page/thay-tai.png'
 
 // ==================== SECTION 2: Founding Message ====================
 export default function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => void }) {

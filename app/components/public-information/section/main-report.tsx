@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { Download, FileText, Calendar, FileCheck, ExternalLink } from 'lucide-react'
 import { annualReports } from '../mock-data'
-import PdfVSlider from '../../shared-ui/pdf-viewer/PdfVSlider'
+import PdfVSlider from '../../shared-ui/pdf-viewer/slider-viewer/PdfVSlider-Index'
 
 export default function MainReportSection() {
   const featuredReport = annualReports.find(report => report.featured) || annualReports[0]

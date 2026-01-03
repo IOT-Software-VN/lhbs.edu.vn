@@ -1,6 +1,6 @@
 import type { Route } from './+types/page'
 import { TheLHBSEdge, TestimonialQuoteSection } from '@/components/milestone'
-import SubPageHero from '@/components/shared-ui/hero-carousel'
+import SubPageHero from '@/components/shared-ui/Hero-Carousel-SubPage'
 
 export function meta({ }: Route.MetaArgs) {
   return [

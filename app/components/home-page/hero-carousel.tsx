@@ -1,7 +1,9 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { ScrollIndicator } from '~/components/ScrollIndicator' // Giả sử đường dẫn đúng
-import Herobg from '@/images/home-page/Hero-bg.png'
+import Herobg from '@/images/home-page/hero-section/hero-bg.png'
+import Herobg1 from '@/images/home-page/hero-section/hero-bg-1.jpg'
+
 
 interface HeroProps {
   onNavigate: (path: string) => void
@@ -14,7 +16,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
 
   const backgroundImages = [
     Herobg,
-    'https://employer.jobsgo.vn/uploads/media/img/202406/pictures_library_20240621113715_5880z55593989341263ddcf07a3101ef4463d4a46971e2f326jpg.jpg'
+    Herobg1
   ]
 
   useEffect(() => {
@@ -165,11 +167,10 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
               e.stopPropagation()
               goToSlide(index)
             }}
-            className={`h-1 md:h-1.5 rounded-full transition-all duration-500 ease-out ${
-              index === currentSlide
-                ? 'w-8 md:w-12 bg-[#FABA1E] shadow-[0_0_10px_rgba(250,186,30,0.6)]'
-                : 'w-1 md:w-1.5 bg-white/40 hover:bg-white hover:w-2 md:hover:w-3'
-            }`}
+            className={`h-1 md:h-1.5 rounded-full transition-all duration-500 ease-out ${index === currentSlide
+              ? 'w-8 md:w-12 bg-[#FABA1E] shadow-[0_0_10px_rgba(250,186,30,0.6)]'
+              : 'w-1 md:w-1.5 bg-white/40 hover:bg-white hover:w-2 md:hover:w-3'
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
