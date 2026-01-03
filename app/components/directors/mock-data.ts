@@ -1,4 +1,4 @@
-import founderImage from '@/images/home-page/section-03.png'
+import founderImage from '@/images/base/thay-tai.png'
 
 export interface Director {
   id: string | number
