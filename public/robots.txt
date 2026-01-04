@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://lhbs.edu.vn/sitemap.xml
