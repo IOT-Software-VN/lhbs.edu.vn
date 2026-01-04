@@ -15,33 +15,15 @@ import {
   Rocket,
   PenTool
 } from 'lucide-react'
+import { SchoolLevel, SchoolLevelData } from './types'
 
-export type SchoolLevel = 'preschool' | 'primary' | 'secondary' | 'high'
-
-export interface Certificate {
-  name: string
-  icon: any
-  description?: string
-}
-
-export const schoolData: Record<
-  SchoolLevel,
-  {
-    title: string
-    grade: string
-    description: string
-    link: string
-    competencies: string[]
-    certificates: Certificate[]
-    icon: any
-  }
-> = {
+export const schoolData: Record<SchoolLevel, SchoolLevelData> = {
   preschool: {
     title: 'Mầm non Galaxy',
     grade: '(18 tháng - 5 tuổi)',
     description:
       'Giai đoạn "Cửa sổ vàng" để khơi dậy tiềm năng thông qua phương pháp "Học qua chơi", phát triển đa giác quan và làm quen Tiếng Anh tự nhiên với giáo viên nước ngoài.',
-    link: 'https://bienhoa.galaxy.edu.vn', // Defaulting to Bien Hoa for main button, maybe handle split later if requested strictly
+    link: 'https://bienhoa.galaxy.edu.vn',
     competencies: [
       'Phát triển Thể chất & Vận động thô/tinh',
       'Nhận thức & Toán học sơ đẳng',
@@ -51,7 +33,7 @@ export const schoolData: Record<
     certificates: [
       { name: 'Bộ GD&ĐT', icon: BookOpen },
       { name: 'Tiếng Anh GVNN', icon: Globe },
-      { name: 'Montessori Inspired', icon: Palette }, // Symbolic
+      { name: 'Montessori Inspired', icon: Palette },
       { name: 'Kỹ năng sống', icon: Heart }
     ],
     icon: Baby
@@ -110,7 +92,7 @@ export const schoolData: Record<
     ],
     certificates: [
       { name: 'IELTS Preparation', icon: Globe },
-      { name: 'ASI Dual Diploma', icon: Award }, // American School International
+      { name: 'ASI Dual Diploma', icon: Award },
       { name: 'Career Orient', icon: Rocket },
       { name: 'Research Skills', icon: PenTool }
     ],

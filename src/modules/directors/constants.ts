@@ -1,14 +1,7 @@
 import type { BreadcrumbItem } from '@/components/ui/breadcrumb'
+import type { Director, StudentAchievement } from './types'
 
 const founderImage = '/images/base/thay-tai.png'
-
-export interface Director {
-  id: string | number
-  image: string
-  name: string
-  role1: string
-  role2?: string
-}
 
 export const leadershipData: Director[] = [
   {
@@ -101,4 +94,42 @@ export const highSchoolData: Director[] = [
 export const DIRECTORS_BREADCRUMB_ITEMS: BreadcrumbItem[] = [
   { label: 'Trang chủ', path: '/' },
   { label: 'Ban lãnh đạo' }
+]
+
+export const studentAchievementsData: StudentAchievement[] = [
+  {
+    id: 1,
+    image:
+      'https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-6/543461130_759818933346916_1979257807565480094_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fIsdA_fAiGgQ7kNvwF40L5i&_nc_oc=AdmCcQ2qqNMRIz1SbqnLsE6pcQPUNUPEHJ8pnaenAI_DrXrG_ZL-vepQZr2g7MOupT0SNTGD-4yup6XwmFZykqF8&_nc_zt=23&_nc_ht=scontent.fsgn2-7.fna&_nc_gid=w7lOX9_ajBDpMQB_g66r2Q&oh=00_AfldLeyLfXGM8YNuGu7FRdeVtDPb_9fM_TeoN5GikB2STg&oe=693B925A',
+    name: 'VAN PHÚ',
+    achievement: 'ĐẠI HỌC BÁCH KHOA'
+  },
+  {
+    id: 2,
+    image:
+      'https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-6/543402169_759821123346697_2032243040218498585_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=bWb6x784cHoQ7kNvwFHZAZF&_nc_oc=AdnuuyRm-m4XPKQYSN2PMFuyXTumNM0_Y-6kEkUfiye4LYWI6_oTf1vYUTq-jtUynOMCjkT3a2-asR9vJnuhGRI1&_nc_zt=23&_nc_ht=scontent.fsgn2-11.fna&_nc_gid=h2xIaMXQGo8ie9uQQPHh3Q&oh=00_Afm7d3tr_-5WyL2e57y2kpKGo9Xr6IMcOgvomXac2lGPtQ&oe=693B93DA',
+    name: 'ĐẶNG DOANH',
+    achievement: 'ÚC - DU HỌC'
+  },
+  {
+    id: 3,
+    image:
+      'https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-6/543343603_759821950013281_4292234303308542164_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vQLNqYRr0TwQ7kNvwECSCGV&_nc_oc=AdkOFVZfr0-rKazJlV24LMPRF1fFOE03tLbgQmLfN-ymAnfBWqQIWHx50FNZMnS2t9OgOy09rnC7G29OKqREgpbD&_nc_zt=23&_nc_ht=scontent.fsgn2-7.fna&_nc_gid=-wKI18So16LijMHOdfE2Ug&oh=00_AflNpfleoUlpMS4l43v1P7jeYjV8SeWt_QviB6J_me1pkA&oe=693B8D04',
+    name: 'KHÁNH HƯNG',
+    achievement: 'ĐẠI HỌC RMIT VIỆT NAM'
+  },
+  {
+    id: 4,
+    image:
+      'https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-6/543420378_759821533346656_1832669033012096925_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kQRDjZ5qcQEQ7kNvwE9yb4A&_nc_oc=AdlWF7ooWuOD7V4C0mgH5Q5ad_PnReF_P4vybrONvUhh8qKFXmY4gKuU4f7SVdeFVO7cUhjwScIp1B-yVUaVcyoH&_nc_zt=23&_nc_ht=scontent.fsgn2-11.fna&_nc_gid=yapSSk4toEDkuTXglCltPA&oh=00_AfkpMpnx9TcOcAAlIbeCJxWWsDL_Pfz27NS0h6pbQsAQgg&oe=693B8F4D',
+    name: 'TIỂU ĐÔNG',
+    achievement: 'ĐẠI HỌC VĂN LANG'
+  },
+  {
+    id: 5,
+    image:
+      'https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/543397657_759821726679970_4407237426915228198_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wOBaT_aebjQQ7kNvwGYW8Pe&_nc_oc=Adm6oDmLbAdsOx6Ig8YHN-pWxEy-YFiVOnhQk9_RljC0LU7TfrOxSP54O2id8EGVLJMxtjyjKtdgcl5YmqohZTCh&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=ZnNc56cKA7yXXr4Lmu13hA&oh=00_AfloIG7MYb91k5wGMGxLeG2bc6BcKIeZfUKd3k4wRlhHyA&oe=693BB30D',
+    name: 'GIA HƯNG',
+    achievement: 'HOA KỲ - DU HỌC'
+  }
 ]

@@ -1,1 +1,2 @@
-export * from './views/learning-path-page'
+export * from './types'
+export * from './learning-path-page'

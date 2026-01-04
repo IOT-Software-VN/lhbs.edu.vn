@@ -1,1 +1,2 @@
-export * from './views/directors-page'
+export * from './types'
+export * from './directors-page'

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { ScrollIndicator } from '@/components/ui/scroll-indicator' // Giả sử đường dẫn đúng
+import { ScrollIndicator } from '@/components/ui/scroll-indicator'
 
 const HERO_BACKGROUND_IMAGE_1 = '/images/home-page/hero-section/hero-bg.png'
 const HERO_BACKGROUND_IMAGE_2 = '/images/home-page/hero-section/hero-bg-1.jpg'
@@ -55,12 +55,12 @@ export function HeroCarousel() {
             }}
           >
             <Image
-              src={image} // Changed to 'image' to correctly iterate through backgroundImages
+              src={image}
               alt='Hero Background'
               fill
-              priority={index === 0} // Only set priority for the first image
+              priority={index === 0}
               quality={90}
-              className='object-cover object-center' // Combined classNames
+              className='object-cover object-center'
               sizes='100vw'
               style={{ filter: 'brightness(0.9)' }}
               draggable={false}
@@ -137,7 +137,6 @@ export function HeroCarousel() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.0 }}
-                // Avoid cutting off shadow in scroll container by adding margin bottom
                 className='mb-2'
               >
                 <Link

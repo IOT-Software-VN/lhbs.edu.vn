@@ -1,1 +1,2 @@
-export * from './views/milestone-page'
+export * from './types'
+export * from './milestone-page'

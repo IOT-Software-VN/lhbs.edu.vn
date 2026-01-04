@@ -1,1 +1,2 @@
-export * from './views/campus-page'
+export * from './types'
+export * from './campus-page'

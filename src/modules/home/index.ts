@@ -1,1 +1,2 @@
-export * from './views/home-page'
+export * from './types'
+export * from './home-page'

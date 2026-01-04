@@ -1,3 +1,4 @@
-export * from './section/main-report'
-export * from './section/archive-reports'
-export * from './section/forms'
+export * from './form-card'
+export * from './main-report'
+export * from './archive-reports'
+export * from './forms'

@@ -1,17 +1,5 @@
 import type { BreadcrumbItem } from '@/components/ui/breadcrumb'
-
-export interface CampusInfo {
-  id: string
-  name: string
-  shortName: string
-  address: string
-  email: string
-  phone: string
-  website: string
-  facebook: string
-  mapEmbedUrl: string
-  description?: string
-}
+import type { CampusInfo } from './types'
 
 export const campusData: CampusInfo[] = [
   {
@@ -23,7 +11,8 @@ export const campusData: CampusInfo[] = [
     phone: '02513 952 953',
     website: 'https://lhbs.edu.vn',
     facebook: 'https://www.facebook.com/SongnguLacHong/',
-    mapEmbedUrl: 'https://maps.google.com/maps?width=600&height=400&hl=en&q=song%20ng%E1%BB%AF%20l%E1%BA%A1c%20h%E1%BB%93ng&t=&z=14&ie=UTF8&iwloc=B&output=embed',
+    mapEmbedUrl:
+      'https://maps.google.com/maps?width=600&height=400&hl=en&q=song%20ng%E1%BB%AF%20l%E1%BA%A1c%20h%E1%BB%93ng&t=&z=14&ie=UTF8&iwloc=B&output=embed',
     description: 'Trường phổ thông với chương trình song ngữ từ Tiểu học đến THPT'
   },
   {
@@ -35,7 +24,8 @@ export const campusData: CampusInfo[] = [
     phone: '02518 616 716',
     website: 'https://lhbs.edu.vn',
     facebook: 'https://www.facebook.com/MamnonSongnguLacHong/',
-    mapEmbedUrl: 'https://maps.google.com/maps?width=600&height=400&hl=en&q=song%20ng%E1%BB%AF%20l%E1%BA%A1c%20h%E1%BB%93ng&t=&z=14&ie=UTF8&iwloc=B&output=embed',
+    mapEmbedUrl:
+      'https://maps.google.com/maps?width=600&height=400&hl=en&q=song%20ng%E1%BB%AF%20l%E1%BA%A1c%20h%E1%BB%93ng&t=&z=14&ie=UTF8&iwloc=B&output=embed',
     description: 'Cơ sở 1 - Mầm non Song ngữ Lạc Hồng tại Biên Hòa'
   },
   {
@@ -47,7 +37,8 @@ export const campusData: CampusInfo[] = [
     phone: '02513 952 179',
     website: 'https://lhbs.edu.vn',
     facebook: 'https://www.facebook.com/MamnonSongnguLacHong/',
-    mapEmbedUrl: 'https://maps.google.com/maps?width=600&height=400&hl=en&q=song%20ng%E1%BB%AF%20l%E1%BA%A1c%20h%E1%BB%93ng&t=&z=14&ie=UTF8&iwloc=B&output=embed',
+    mapEmbedUrl:
+      'https://maps.google.com/maps?width=600&height=400&hl=en&q=song%20ng%E1%BB%AF%20l%E1%BA%A1c%20h%E1%BB%93ng&t=&z=14&ie=UTF8&iwloc=B&output=embed',
     description: 'Cơ sở 2 - Mầm non Song ngữ Lạc Hồng tại Biên Hòa'
   },
   {
@@ -59,7 +50,8 @@ export const campusData: CampusInfo[] = [
     phone: '02513 877 789',
     website: 'https://lhbs.edu.vn',
     facebook: 'https://www.facebook.com/mamnonsongngulachonglongkhanh/',
-    mapEmbedUrl: 'https://maps.google.com/maps?width=600&height=400&hl=en&q=m%E1%BA%A7m%20non%20l%E1%BA%A1c%20h%E1%BB%93ng%20long%20kh%C3%A1nh&t=&z=14&ie=UTF8&iwloc=B&output=embed',
+    mapEmbedUrl:
+      'https://maps.google.com/maps?width=600&height=400&hl=en&q=m%E1%BA%A7m%20non%20l%E1%BA%A1c%20h%E1%BB%93ng%20long%20kh%C3%A1nh&t=&z=14&ie=UTF8&iwloc=B&output=embed',
     description: 'Mầm non Song ngữ Lạc Hồng tại Long Khánh với chương trình chất lượng cao'
   }
 ]

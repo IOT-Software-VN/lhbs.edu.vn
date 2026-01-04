@@ -1,3 +1,4 @@
-export * from './section/welcome'
-export * from './section/directors-carousel'
-export * from './section/student-achievements'
+export * from './achievement-card'
+export * from './welcome'
+export * from './directors-carousel'
+export * from './student-achievements'

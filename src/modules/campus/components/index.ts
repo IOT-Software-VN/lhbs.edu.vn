@@ -1,1 +1,2 @@
-export * from './section/campus-info'
+export * from './campus-card'
+export * from './campus-info'
