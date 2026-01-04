@@ -2,13 +2,8 @@
 
 import { OverviewSection } from '../components'
 import { SubPageHero } from '@/components/common/sub-page-hero'
-import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/breadcrumb'
-
-const breadcrumbItems: BreadcrumbItem[] = [
-  { label: 'Trang chủ', path: '/' },
-  { label: 'Chương trình đào tạo' },
-  { label: 'Lộ trình học tập' }
-]
+import { Breadcrumb } from '@/components/ui/breadcrumb'
+import { LEARNING_PATH_BREADCRUMB_ITEMS } from '../constants'
 
 export function LearningPathPage() {
   const handleNavigate = (path: string) => {
@@ -27,7 +22,7 @@ export function LearningPathPage() {
       {/* Breadcrumb Section */}
       <div className='w-full bg-white pt-12 pb-4 md:pt-20 md:pb-6 relative z-10'>
         <div className='container mx-auto px-4 md:px-8 lg:px-12'>
-          <Breadcrumb items={breadcrumbItems} />
+          <Breadcrumb items={LEARNING_PATH_BREADCRUMB_ITEMS} />
         </div>
       </div>
 

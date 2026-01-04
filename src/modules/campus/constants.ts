@@ -1,3 +1,5 @@
+import type { BreadcrumbItem } from '@/components/ui/breadcrumb'
+
 export interface CampusInfo {
   id: string
   name: string
@@ -60,4 +62,9 @@ export const campusData: CampusInfo[] = [
     mapEmbedUrl: 'https://maps.google.com/maps?width=600&height=400&hl=en&q=m%E1%BA%A7m%20non%20l%E1%BA%A1c%20h%E1%BB%93ng%20long%20kh%C3%A1nh&t=&z=14&ie=UTF8&iwloc=B&output=embed',
     description: 'Mầm non Song ngữ Lạc Hồng tại Long Khánh với chương trình chất lượng cao'
   }
+]
+
+export const CAMPUS_BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { label: 'Trang chủ', path: '/' },
+  { label: 'Hệ thống cơ sở giáo dục' }
 ]

@@ -1,6 +1,8 @@
+'use client'
+
 import { motion } from 'motion/react'
 import { Download, FileText, Calendar } from 'lucide-react'
-import { annualReports } from '../../mock-data'
+import { annualReports } from '../../constants'
 
 export function ArchiveReportsSection() {
   const archiveReports = annualReports.filter((report) => !report.featured)

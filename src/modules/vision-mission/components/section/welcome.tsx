@@ -1,7 +1,9 @@
+'use client'
+
 import Image from 'next/image'
 import { motion } from 'motion/react'
 
-export function WelcomeSection() {
+export function VisionMissionWelcomeSection() {
   return (
     <section className='w-full min-h-screen snap-start bg-white flex flex-col relative overflow-hidden'>
       {/* Background Decoration */}

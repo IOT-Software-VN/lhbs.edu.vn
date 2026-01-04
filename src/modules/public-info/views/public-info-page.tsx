@@ -1,8 +1,7 @@
 import { MainReportSection, ArchiveReportsSection, FormsSection } from '../components'
 import { SubPageHero } from '@/components/common/sub-page-hero'
-import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/breadcrumb'
-
-const breadcrumbItems: BreadcrumbItem[] = [{ label: 'Trang chủ', path: '/' }, { label: 'Công khai thông tin' }]
+import { Breadcrumb } from '@/components/ui/breadcrumb'
+import { PUBLIC_INFO_BREADCRUMB_ITEMS } from '../constants'
 
 export function PublicInfoPage() {
   return (
@@ -16,7 +15,7 @@ export function PublicInfoPage() {
       {/* Breadcrumb Section */}
       <div className='w-full bg-white pt-12 pb-4 md:pt-20 md:pb-6 relative z-10'>
         <div className='container mx-auto px-4 md:px-8 lg:px-12'>
-          <Breadcrumb items={breadcrumbItems} />
+          <Breadcrumb items={PUBLIC_INFO_BREADCRUMB_ITEMS} />
         </div>
       </div>
 

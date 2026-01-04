@@ -1,11 +1,9 @@
+'use client'
+
 import Image from 'next/image'
 import { motion } from 'motion/react'
 
-interface WelcomeSectionProps {
-  onNavigate?: (path: string) => void
-}
-
-export function WelcomeSection({}: WelcomeSectionProps) {
+export function DirectorsWelcomeSection() {
   return (
     <section className='relative w-full py-16 md:py-24 bg-white overflow-hidden'>
       <div className='container mx-auto px-4 md:px-8 lg:px-12'>

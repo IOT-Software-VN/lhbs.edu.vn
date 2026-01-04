@@ -1,3 +1,5 @@
+'use client'
+
 import { useRef, useState, useMemo, useEffect, type ReactNode } from 'react'
 import { motion, useScroll, useSpring, useTransform, useMotionValueEvent, useInView } from 'motion/react'
 import {

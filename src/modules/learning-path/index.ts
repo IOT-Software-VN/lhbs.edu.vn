@@ -1,1 +1,1 @@
-export * from './views/learning-path-view'
+export * from './views/learning-path-page'

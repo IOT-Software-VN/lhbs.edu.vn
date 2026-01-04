@@ -1,8 +1,9 @@
-import { TheLHBSEdge, TestimonialQuoteSection } from '../components'
+import { TheLHBSEdge } from '../components'
 import { SubPageHero } from '@/components/common/sub-page-hero'
-import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/breadcrumb'
-
-const breadcrumbItems: BreadcrumbItem[] = [{ label: 'Trang chủ', path: '/' }, { label: 'Cột mốc đáng nhớ' }]
+import { Breadcrumb } from '@/components/ui/breadcrumb'
+import { TestimonialQuoteSection } from '@/components/common/testimonial-quote-section'
+import { TESTIMONIALS } from '@/components/common/testimonials-data'
+import { MILESTONE_BREADCRUMB_ITEMS } from '../constants'
 
 export function MilestonePage() {
   return (
@@ -20,13 +21,13 @@ export function MilestonePage() {
             textClassName='text-white '
             activeTextClassName='text-white font-medium'
             separatorClassName='text-white'
-            items={breadcrumbItems}
+            items={MILESTONE_BREADCRUMB_ITEMS}
           />
         </div>
       </div>
 
       <TheLHBSEdge />
-      <TestimonialQuoteSection />
+      <TestimonialQuoteSection testimonials={TESTIMONIALS} />
     </>
   )
 }

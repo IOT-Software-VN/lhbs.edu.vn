@@ -1,3 +1,5 @@
+'use client'
+
 import { motion, useInView } from 'motion/react'
 import Image from 'next/image'
 import { useRef, useEffect, useState, useCallback } from 'react'

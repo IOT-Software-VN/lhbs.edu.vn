@@ -6,15 +6,16 @@ import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ScrollIndicator } from '@/components/ui/scroll-indicator' // Giả sử đường dẫn đúng
-const Herobg = '/images/home-page/hero-section/hero-bg.png'
-const Herobg1 = '/images/home-page/hero-section/hero-bg-1.jpg'
+
+const HERO_BACKGROUND_IMAGE_1 = '/images/home-page/hero-section/hero-bg.png'
+const HERO_BACKGROUND_IMAGE_2 = '/images/home-page/hero-section/hero-bg-1.jpg'
 
 export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const [isContentVisible, setIsContentVisible] = useState(true)
 
-  const backgroundImages = [Herobg, Herobg1]
+  const backgroundImages = [HERO_BACKGROUND_IMAGE_1, HERO_BACKGROUND_IMAGE_2]
 
   useEffect(() => {
     if (!isAutoPlaying) return

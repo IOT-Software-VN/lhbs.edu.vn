@@ -3,7 +3,7 @@
 import { motion } from 'motion/react'
 import { Download, FileText, Clock } from 'lucide-react'
 import { useState } from 'react'
-import { formDocuments, formCategories } from '../../mock-data'
+import { formDocuments, formCategories } from '../../constants'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 

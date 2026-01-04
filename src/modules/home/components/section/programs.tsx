@@ -11,31 +11,7 @@ import {
   CarouselPrevious,
   type CarouselApi
 } from '@/components/ui/carousel'
-
-// University/College logos for the carousel
-const universityLogos = [
-  {
-    id: 1,
-    name: 'English Central',
-    image: 'https://www.englishcentral.com/dist/all/20251203121549/assets/ec-logo.53e56416598b3d50cbe5.png'
-  },
-  {
-    id: 2,
-    name: 'STEM',
-    image:
-      'https://images.ctfassets.net/pc40tpn1u6ef/53uHpRwHaK9sso1qyHHEac/ff0836356ad19c1610be81b5ae6f06d4/STEM-Logo-220801.svg'
-  },
-  {
-    id: 3,
-    name: 'ASI',
-    image: 'https://advantagesschool.com/wp-content/uploads/2022/10/asi-logo.png'
-  },
-  {
-    id: 4,
-    name: 'Cambridge',
-    image: 'https://www.cambridgeassessment.org.uk/Images/Simon-brand-blog-newest-logo.png'
-  }
-]
+import { UNIVERSITY_LOGOS } from '../../constants'
 
 export function ProgramsSection() {
   const [api, setApi] = useState<CarouselApi>()
@@ -77,7 +53,7 @@ export function ProgramsSection() {
             }}
           >
             <CarouselContent className='-ml-4'>
-              {[...universityLogos, ...universityLogos, ...universityLogos].map((logo, index) => (
+              {[...UNIVERSITY_LOGOS, ...UNIVERSITY_LOGOS, ...UNIVERSITY_LOGOS].map((logo, index) => (
                 <CarouselItem key={`${logo.id}-${index}`} className='pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4'>
                   <div className='h-full p-2'>
                     <motion.div

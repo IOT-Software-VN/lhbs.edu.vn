@@ -1,3 +1,5 @@
+import type { BreadcrumbItem } from '@/components/ui/breadcrumb'
+
 export interface AnnualReport {
   id: string
   title: string
@@ -24,7 +26,8 @@ export const annualReports: AnnualReport[] = [
     id: 'report-2024-2025',
     title: 'Báo cáo thường niên năm học 2024 - 2025',
     year: '2024-2025',
-    description: 'Báo cáo toàn diện về hoạt động giáo dục, chất lượng đào tạo và các thành tích nổi bật của hệ thống trường Song ngữ Lạc Hồng trong năm học 2024-2025',
+    description:
+      'Báo cáo toàn diện về hoạt động giáo dục, chất lượng đào tạo và các thành tích nổi bật của hệ thống trường Song ngữ Lạc Hồng trong năm học 2024-2025',
     pdfUrl: '/documents/Anual-Report-LHBS.pdf',
     publishDate: '01/02/2025',
     fileSize: '15.2 MB',
@@ -79,7 +82,7 @@ export const formDocuments: FormDocument[] = [
     fileSize: '180 KB',
     lastUpdate: '15/01/2025'
   },
-  
+
   // Leave forms
   {
     id: 'form-leave-01',
@@ -99,7 +102,7 @@ export const formDocuments: FormDocument[] = [
     fileSize: '200 KB',
     lastUpdate: '30/12/2024'
   },
-  
+
   // Health forms
   {
     id: 'form-health-01',
@@ -119,7 +122,7 @@ export const formDocuments: FormDocument[] = [
     fileSize: '130 KB',
     lastUpdate: '05/01/2025'
   },
-  
+
   // Complaint forms
   {
     id: 'form-complaint-01',
@@ -130,7 +133,7 @@ export const formDocuments: FormDocument[] = [
     fileSize: '150 KB',
     lastUpdate: '20/12/2024'
   },
-  
+
   // Other forms
   {
     id: 'form-other-01',
@@ -177,3 +180,8 @@ export const formCategories = [
   { id: 'complaint', label: 'Góp ý' },
   { id: 'other', label: 'Khác' }
 ] as const
+
+export const PUBLIC_INFO_BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { label: 'Trang chủ', path: '/' },
+  { label: 'Công khai thông tin' }
+]

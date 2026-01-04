@@ -1,3 +1,5 @@
+import type { BreadcrumbItem } from '@/components/ui/breadcrumb'
+
 const founderImage = '/images/base/thay-tai.png'
 
 export interface Director {
@@ -94,4 +96,9 @@ export const highSchoolData: Director[] = [
     role1: 'Phó Hiệu trưởng',
     role2: 'Trường TH-THCS-THPT Song ngữ Lạc Hồng'
   }
+]
+
+export const DIRECTORS_BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { label: 'Trang chủ', path: '/' },
+  { label: 'Ban lãnh đạo' }
 ]

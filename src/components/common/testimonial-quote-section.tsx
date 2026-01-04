@@ -1,44 +1,36 @@
+'use client'
+
 import { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useInView } from 'motion/react'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
-const tour360Bird = '/images/base/360.png'
 
-interface Testimonial {
+export interface Testimonial {
   quote: string
   parentName: string
   parentWork: string
 }
 
-export function TestimonialQuoteSection() {
+interface TestimonialQuoteSectionProps {
+  testimonials: Testimonial[]
+  imagePath?: string
+  backgroundColor?: string
+  imageOptimized?: boolean
+}
+
+export function TestimonialQuoteSection({
+  testimonials,
+  imagePath = '/images/base/360.png',
+  backgroundColor = 'bg-white',
+  imageOptimized = true
+}: TestimonialQuoteSectionProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
-
-  const testimonials: Testimonial[] = [
-    {
-      quote:
-        'Nơi giúp con phát triển toàn diện cả về học thuật lẫn kỹ năng sống. Các thầy cô luôn tận tâm và quan tâm đến từng em học sinh.',
-      parentName: 'CHỊ NGUYỄN THỊ LAN',
-      parentWork: 'Phụ huynh học sinh lớp 5'
-    },
-    {
-      quote:
-        'Chương trình song ngữ tại LHBS giúp con tự tin giao tiếp tiếng Anh trong khi vẫn giữ được bản sắc văn hóa Việt Nam.',
-      parentName: 'ANH LÊ VĂN MINH',
-      parentWork: 'Phụ huynh học sinh lớp 8'
-    },
-    {
-      quote:
-        'Môi trường học tập hiện đại, an toàn và đội ngũ giáo viên chuyên nghiệp. Con em luôn hào hứng đến trường mỗi ngày.',
-      parentName: 'CHỊ TRẦN THỊ HƯƠNG',
-      parentWork: 'Phụ huynh học sinh mẫu giáo'
-    }
-  ]
 
   return (
     <motion.section
       ref={ref}
-      className='w-full min-h-[400px] md:min-h-[500px] bg-white overflow-hidden relative py-8 md:py-12'
+      className={`w-full min-h-[400px] md:min-h-[500px] ${backgroundColor} overflow-hidden relative py-8 md:py-12`}
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
@@ -52,13 +44,16 @@ export function TestimonialQuoteSection() {
             rel='noopener noreferrer'
             className='block w-full h-full relative group outline-none'
           >
-            <Image
-              src={tour360Bird}
-              alt='360 Tour Bird'
-              fill
-              className='object-contain object-bottom-right block drop-shadow-xl brightness-[0.875] contrast-[1.1]'
-              style={{ display: 'block' }}
-            />
+            <div className='w-full h-full relative'>
+              <Image
+                src={imagePath}
+                alt='360 Tour Bird'
+                fill
+                className='object-contain object-bottom-right drop-shadow-xl brightness-[0.875] contrast-[1.1]'
+                sizes='(max-width: 768px) 50vw, 30vw'
+                {...(imageOptimized ? { quality: 90 } : { unoptimized: true })}
+              />
+            </div>
           </a>
         </div>
       </div>
@@ -139,3 +134,4 @@ export function TestimonialQuoteSection() {
     </motion.section>
   )
 }
+

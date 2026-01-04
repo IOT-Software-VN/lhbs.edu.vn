@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { MapPin, Phone, Mail, Globe, Facebook } from 'lucide-react'
 import { useState } from 'react'
-import { campusData, type CampusInfo } from '../../mock-data'
+import { campusData, type CampusInfo } from '../../constants'
 import { cn } from '@/lib/utils'
 
 interface CampusInfoSectionProps {

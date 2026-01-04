@@ -1,1 +1,1 @@
-export * from './views/milestone-view'
+export * from './views/milestone-page'

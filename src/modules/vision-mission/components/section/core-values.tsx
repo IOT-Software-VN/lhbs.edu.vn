@@ -1,3 +1,5 @@
+'use client'
+
 import { useState, type ElementType } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'motion/react'

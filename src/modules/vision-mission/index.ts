@@ -1,1 +1,1 @@
-export * from './views/vision-mission-view'
+export * from './views/vision-mission-page'

@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react'
 import { Download, FileText, Calendar, FileCheck, ExternalLink } from 'lucide-react'
-import { annualReports } from '../../mock-data'
+import { annualReports } from '../../constants'
 import dynamic from 'next/dynamic'
 
 const PdfVSlider = dynamic(

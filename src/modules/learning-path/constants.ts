@@ -1,4 +1,20 @@
-import { Baby, Star, BookOpen, GraduationCap, Zap, Globe, Award, Palette, Brain, Heart, Coins, Mic, Rocket, PenTool } from 'lucide-react'
+import type { BreadcrumbItem } from '@/components/ui/breadcrumb'
+import {
+  Baby,
+  Star,
+  BookOpen,
+  GraduationCap,
+  Zap,
+  Globe,
+  Award,
+  Palette,
+  Brain,
+  Heart,
+  Coins,
+  Mic,
+  Rocket,
+  PenTool
+} from 'lucide-react'
 
 export type SchoolLevel = 'preschool' | 'primary' | 'secondary' | 'high'
 
@@ -8,19 +24,23 @@ export interface Certificate {
   description?: string
 }
 
-export const schoolData: Record<SchoolLevel, {
-  title: string
-  grade: string
-  description: string
-  link: string
-  competencies: string[]
-  certificates: Certificate[]
-  icon: any
-}> = {
+export const schoolData: Record<
+  SchoolLevel,
+  {
+    title: string
+    grade: string
+    description: string
+    link: string
+    competencies: string[]
+    certificates: Certificate[]
+    icon: any
+  }
+> = {
   preschool: {
     title: 'Mầm non Galaxy',
     grade: '(18 tháng - 5 tuổi)',
-    description: 'Giai đoạn "Cửa sổ vàng" để khơi dậy tiềm năng thông qua phương pháp "Học qua chơi", phát triển đa giác quan và làm quen Tiếng Anh tự nhiên với giáo viên nước ngoài.',
+    description:
+      'Giai đoạn "Cửa sổ vàng" để khơi dậy tiềm năng thông qua phương pháp "Học qua chơi", phát triển đa giác quan và làm quen Tiếng Anh tự nhiên với giáo viên nước ngoài.',
     link: 'https://bienhoa.galaxy.edu.vn', // Defaulting to Bien Hoa for main button, maybe handle split later if requested strictly
     competencies: [
       'Phát triển Thể chất & Vận động thô/tinh',
@@ -31,7 +51,7 @@ export const schoolData: Record<SchoolLevel, {
     certificates: [
       { name: 'Bộ GD&ĐT', icon: BookOpen },
       { name: 'Tiếng Anh GVNN', icon: Globe },
-      { name: 'Montessori Inspired', icon:  Palette }, // Symbolic
+      { name: 'Montessori Inspired', icon: Palette }, // Symbolic
       { name: 'Kỹ năng sống', icon: Heart }
     ],
     icon: Baby
@@ -39,7 +59,8 @@ export const schoolData: Record<SchoolLevel, {
   primary: {
     title: 'Tiểu học',
     grade: '(Lớp 1 - 5)',
-    description: 'Xây dựng nền tảng kiến thức vững chắc với chương trình Song ngữ (Bộ GD&ĐT + Cambridge). Chú trọng phát triển tư duy khoa học (STEM), tài chính (JA) và văn hóa đọc.',
+    description:
+      'Xây dựng nền tảng kiến thức vững chắc với chương trình Song ngữ (Bộ GD&ĐT + Cambridge). Chú trọng phát triển tư duy khoa học (STEM), tài chính (JA) và văn hóa đọc.',
     link: 'https://school.lhbs.edu.vn/tieu-hoc',
     competencies: [
       'Tiếng Anh Cambridge (Starters/Movers/Flyers)',
@@ -58,7 +79,8 @@ export const schoolData: Record<SchoolLevel, {
   secondary: {
     title: 'Trung học Cơ sở',
     grade: '(Lớp 6 - 9)',
-    description: 'Giai đoạn tăng tốc và định hình tư duy phản biện. Chương trình Song ngữ nâng cao, học qua dự án (PBL) và các hoạt động công dân toàn cầu giúp học sinh khám phá bản sắc.',
+    description:
+      'Giai đoạn tăng tốc và định hình tư duy phản biện. Chương trình Song ngữ nâng cao, học qua dự án (PBL) và các hoạt động công dân toàn cầu giúp học sinh khám phá bản sắc.',
     link: 'https://school.lhbs.edu.vn/trung-hoc-co-so',
     competencies: [
       'Tiếng Anh Cambridge (KET/PET)',
@@ -77,7 +99,8 @@ export const schoolData: Record<SchoolLevel, {
   high: {
     title: 'Trung học Phổ thông',
     grade: '(Lớp 10 - 12)',
-    description: 'Giai đoạn về đích, tập trung tối đa cho kỳ thi Tốt nghiệp THPT và chuẩn bị hồ sơ Đại học/Du học. Cơ hội nhận bằng Tú tài Mỹ (Dual Diploma) và chứng chỉ IELTS.',
+    description:
+      'Giai đoạn về đích, tập trung tối đa cho kỳ thi Tốt nghiệp THPT và chuẩn bị hồ sơ Đại học/Du học. Cơ hội nhận bằng Tú tài Mỹ (Dual Diploma) và chứng chỉ IELTS.',
     link: 'https://school.lhbs.edu.vn/trung-hoc-pho-thong',
     competencies: [
       'Chứng chỉ IELTS 4.0 - 6.0+',
@@ -94,3 +117,9 @@ export const schoolData: Record<SchoolLevel, {
     icon: GraduationCap
   }
 }
+
+export const LEARNING_PATH_BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { label: 'Trang chủ', path: '/' },
+  { label: 'Chương trình đào tạo' },
+  { label: 'Lộ trình học tập' }
+]

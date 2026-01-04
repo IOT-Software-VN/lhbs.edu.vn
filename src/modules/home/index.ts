@@ -1,1 +1,1 @@
-export * from './views/home-view'
+export * from './views/home-page'

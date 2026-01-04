@@ -3,10 +3,10 @@
 import Image from 'next/image'
 
 import { useState, useRef, useCallback } from 'react'
-import { SCHOOL_LEVELS } from '../../mock-data'
+import { SCHOOL_LEVELS } from '../../constants'
 import { motion, AnimatePresence } from 'motion/react'
 
-export function EducationLevel() {
+export function EducationLevelSection() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   // Ref để lưu trữ timeout ID cho việc debounce

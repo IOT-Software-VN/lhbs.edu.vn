@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'motion/react'
 import { CheckCircle2, ChevronRight, Star } from 'lucide-react'
-import { schoolData, type SchoolLevel } from '../../mock-data'
+import { schoolData, type SchoolLevel } from '../../constants'
 const cardlhbs = '/images/base/card-lhbs.png'
 
 interface OverviewSectionProps {

@@ -1,1 +1,1 @@
-export * from './views/public-info-view'
+export * from './views/public-info-page'

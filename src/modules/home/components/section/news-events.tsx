@@ -4,54 +4,9 @@ import { motion, useInView } from 'motion/react'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { NEWS_ITEMS, EVENT_ITEMS, GALLERY_ITEM } from '../../constants'
+
 const backgroundImage = '/images/base/lhbs-hac-bg.png'
-
-// Column 1: TIN TỨC (News) - 1 main image + 2 text items
-const newsItems = [
-  {
-    image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/578369959_810928768235932_2189832322315432240_n.jpg',
-    date: '06/09/2025',
-    title: 'Thư gửi học sinh LHBS nhân dịp khai giảng năm học mới',
-    link: '/news/1'
-  },
-  {
-    date: '04/09/2025',
-    title: 'LHBS khởi động mạng lưới chuyên gia giáo dục chuyên nghiệp',
-    link: '/news/2'
-  },
-  {
-    date: '29/05/2025',
-    title: 'Giáo dục song ngữ là gì? Lợi ích của trường song ngữ',
-    link: '/news/3'
-  }
-]
-
-// Column 2: SỰ KIỆN (Events) - 1 main image + 2 small images with titles
-const eventItems = [
-  {
-    image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/2.jpg',
-    date: '22/04/2025',
-    title: 'Giai đoạn "Terrible Twos" kéo dài bao lâu? Mẹo nuôi con',
-    link: '/events/1'
-  },
-  {
-    image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/576931936_808502421811900_4863998363654667053_n.jpg',
-    title: '10 phương pháp học tập hiệu quả cho học sinh',
-    link: '/events/2'
-  },
-  {
-    image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/578369959_810928768235932_2189832322315432240_n.jpg',
-    title: 'Giáo dục toàn diện là gì? Các yếu tố chính',
-    link: '/events/3'
-  }
-]
-
-// Column 3: HÌNH ẢNH (Gallery) - 1 large image
-const galleryItem = {
-  image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/578369959_810928768235932_2189832322315432240_n.jpg',
-  title: 'Học sinh LHBS tham gia các hoạt động giáo dục toàn diện',
-  link: '/gallery/1'
-}
 
 export function NewsEventsSection() {
   const ref = useRef(null)
@@ -103,12 +58,12 @@ export function NewsEventsSection() {
 
             {/* Main Image Item - Fixed Aspect Ratio */}
             <div className='mb-6 group shrink-0'>
-              <Link href={newsItems[0].link} className='block'>
+              <Link href={NEWS_ITEMS[0].link} className='block'>
                 <div className='relative overflow-hidden rounded-sm shadow-md'>
                   <div className='aspect-video w-full overflow-hidden'>
                     <Image
-                      src={newsItems[0].image || backgroundImage}
-                      alt={newsItems[0].title}
+                      src={NEWS_ITEMS[0].image || backgroundImage}
+                      alt={NEWS_ITEMS[0].title}
                       fill
                       unoptimized
                       className='object-cover transition-transform duration-700 group-hover:scale-110'
@@ -119,13 +74,13 @@ export function NewsEventsSection() {
                   <div className='absolute left-4 bottom-4 right-4 text-white pointer-events-none'>
                     <div className='flex items-end gap-3'>
                       <div className='text-white/90 font-black text-4xl leading-none'>
-                        {newsItems[0].date.split('/')[0]}
+                        {NEWS_ITEMS[0].date.split('/')[0]}
                         <span className='block text-[10px] font-bold uppercase tracking-widest opacity-80 mt-1'>
-                          {newsItems[0].date.split('/').slice(1).join('-')}
+                          {NEWS_ITEMS[0].date.split('/').slice(1).join('-')}
                         </span>
                       </div>
                       <h4 className='text-sm md:text-base font-bold leading-tight line-clamp-2 drop-shadow-md group-hover:text-brand-gold transition-colors mb-1'>
-                        {newsItems[0].title}
+                        {NEWS_ITEMS[0].title}
                       </h4>
                     </div>
                   </div>
@@ -135,7 +90,7 @@ export function NewsEventsSection() {
 
             {/* List Items - Flexible Height */}
             <div className='flex flex-col gap-4 mb-6 grow'>
-              {newsItems.slice(1).map((item, index) => (
+              {NEWS_ITEMS.slice(1).map((item, index) => (
                 <Link
                   key={index}
                   href={item.link}
@@ -182,12 +137,12 @@ export function NewsEventsSection() {
 
             {/* Main Image Item - Fixed Aspect Ratio */}
             <div className='mb-6 group shrink-0'>
-              <Link href={eventItems[0].link} className='block'>
+              <Link href={EVENT_ITEMS[0].link} className='block'>
                 <div className='relative overflow-hidden rounded-sm shadow-md'>
                   <div className='aspect-video w-full overflow-hidden'>
                     <Image
-                      src={eventItems[0].image || backgroundImage}
-                      alt={eventItems[0].title}
+                      src={EVENT_ITEMS[0].image || backgroundImage}
+                      alt={EVENT_ITEMS[0].title}
                       fill
                       unoptimized
                       className='object-cover transition-transform duration-700 group-hover:scale-110'
@@ -198,13 +153,13 @@ export function NewsEventsSection() {
                   <div className='absolute left-4 bottom-4 right-4 text-white pointer-events-none'>
                     <div className='flex items-end gap-3'>
                       <div className='text-white/90 font-black text-4xl leading-none'>
-                        {(eventItems[0].date || '01/01').split('/')[0]}
+                        {(EVENT_ITEMS[0].date || '01/01').split('/')[0]}
                         <span className='block text-[10px] font-bold uppercase tracking-widest opacity-80 mt-1'>
-                          {(eventItems[0].date || '01/01/2025').split('/').slice(1).join('-')}
+                          {(EVENT_ITEMS[0].date || '01/01/2025').split('/').slice(1).join('-')}
                         </span>
                       </div>
                       <h4 className='text-sm md:text-base font-bold leading-tight line-clamp-2 drop-shadow-md group-hover:text-brand-gold transition-colors mb-1'>
-                        {eventItems[0].title}
+                        {EVENT_ITEMS[0].title}
                       </h4>
                     </div>
                   </div>
@@ -214,11 +169,11 @@ export function NewsEventsSection() {
 
             {/* List Items (Small Images) - Flexible Height */}
             <div className='grid grid-cols-2 gap-4 mb-6 grow content-start'>
-              {eventItems.slice(1).map((item, index) => (
+              {EVENT_ITEMS.slice(1).map((item, index) => (
                 <Link key={index} href={item.link} className='block cursor-pointer group/item flex-col h-full'>
                   <div className='relative overflow-hidden w-full aspect-video rounded-sm mb-3 shadow-sm'>
                     <Image
-                      src={item.image}
+                      src={item.image || backgroundImage}
                       alt={item.title}
                       fill
                       unoptimized
@@ -261,11 +216,11 @@ export function NewsEventsSection() {
 
             {/* Large Image - Takes remaining height */}
             <div className='group grow flex flex-col mb-4 relative'>
-              <Link href={galleryItem.link} className='block w-full grow'>
+              <Link href={GALLERY_ITEM.link} className='block w-full grow'>
                 <div className='relative overflow-hidden rounded-sm shadow-md w-full h-full'>
                   <Image
-                    src={galleryItem.image}
-                    alt={galleryItem.title}
+                    src={GALLERY_ITEM.image}
+                    alt={GALLERY_ITEM.title}
                     fill
                     unoptimized
                     className='object-cover transition-transform duration-700 group-hover:scale-110'
@@ -291,9 +246,9 @@ export function NewsEventsSection() {
             </div>
 
             {/* Title Below Image */}
-            <Link href={galleryItem.link}>
+            <Link href={GALLERY_ITEM.link}>
               <h4 className='text-base font-bold text-brand-green leading-tight drop-shadow-sm group-hover:text-brand-gold transition-colors mb-6 cursor-pointer'>
-                {galleryItem.title}
+                {GALLERY_ITEM.title}
               </h4>
             </Link>
 

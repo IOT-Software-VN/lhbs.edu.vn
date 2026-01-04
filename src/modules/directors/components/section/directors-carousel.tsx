@@ -1,16 +1,18 @@
+'use client'
+
 import { motion } from 'motion/react'
 import Image from 'next/image'
 import { useState } from 'react'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { cn } from '@/lib/utils'
-import { leadershipData, preschoolData, highSchoolData } from '../../mock-data'
+import { leadershipData, preschoolData, highSchoolData } from '../../constants'
 
 type Category = 'leadership' | 'preschool' | 'highschool'
 
 export function DirectorsCarousel() {
   const [activeCategory, setActiveCategory] = useState<Category>('leadership')
 
-  const getData = () => {
+  const getDirectorsByCategory = () => {
     switch (activeCategory) {
       case 'leadership':
         return leadershipData
@@ -23,7 +25,7 @@ export function DirectorsCarousel() {
     }
   }
 
-  const items = getData()
+  const items = getDirectorsByCategory()
 
   return (
     <section className='relative py-20 pb-32 overflow-hidden bg-lhbs-green-dark transition-colors duration-500'>
