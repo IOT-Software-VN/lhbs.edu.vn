@@ -1,26 +1,74 @@
+'use client'
 import Link from 'next/link'
+import { Home, ArrowLeft } from 'lucide-react' // Sử dụng thư viện lucide-react (phổ biến với Next.js)
 
 export default function NotFound() {
   return (
-    <div className='flex min-h-screen flex-col items-center justify-center bg-white px-4'>
-      <div className='text-center'>
-        {/* 404 Number */}
-        <h1 className='text-9xl font-bold text-brand-green'>404</h1>
+    <div className='min-h-[80vh] flex items-center justify-center px-4 py-16'>
+      <div className='max-w-2xl mx-auto text-center'>
+        {/* Large 404 Number */}
+        <div className='mb-8'>
+          <h1 className='text-[120px] md:text-[180px] font-bold text-[#1a5336]/10 leading-none'>404</h1>
+          <div className='relative -mt-16 md:-mt-24'>
+            <h2 className='text-3xl md:text-4xl font-bold text-[#1a5336] mb-4'>Không tìm thấy trang</h2>
+            <p className='text-lg text-gray-600 mb-8'>
+              Chúng tôi không tìm thấy trang bạn đang tìm kiếm. Trang có thể đã bị di chuyển, xóa hoặc bạn đã nhập sai
+              địa chỉ URL.
+            </p>
+          </div>
+        </div>
 
-        {/* Message */}
-        <h2 className='mb-2 mt-4 text-2xl font-bold text-gray-900'>Không tìm thấy trang</h2>
-        <p className='mb-8 text-gray-600'>Xin lỗi, trang bạn đang tìm kiếm không tồn tại hoặc đã bị di chuyển.</p>
+        {/* Action Buttons */}
+        <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+          {/* SỬA: 'to' thành 'href' */}
+          <Link
+            href='/'
+            className='group inline-flex items-center gap-3 bg-[#FABA1E] text-[#1a5336] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#e5a812] transition-all duration-300 hover:scale-105'
+          >
+            <Home className='w-5 h-5' />
+            Về trang chủ
+          </Link>
 
-        {/* Back to Home Button */}
-        <Link
-          href='/'
-          className='inline-flex items-center rounded-lg bg-brand-green px-6 py-3 font-medium text-white transition-colors hover:bg-brand-green/90'
-        >
-          <svg className='mr-2 h-5 w-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 19l-7-7m0 0l7-7m-7 7h18' />
-          </svg>
-          Về trang chủ
-        </Link>
+          <button
+            onClick={() => typeof window !== 'undefined' && window.history.back()}
+            className='group inline-flex items-center gap-3 bg-gray-200 text-gray-700 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-300 transition-all duration-300'
+          >
+            <ArrowLeft className='w-5 h-5' />
+            Quay lại
+          </button>
+        </div>
+
+        {/* Quick Links */}
+        <div className='mt-16 pt-8 border-t border-gray-200'>
+          <p className='text-gray-500 text-sm mb-6'>Hoặc khám phá các trang phổ biến:</p>
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-3'>
+            {/* SỬA: Tất cả 'to' thành 'href' */}
+            <Link
+              href='/admissions'
+              className='text-gray-600 hover:text-[#1a5336] text-sm py-2 px-4 rounded-lg hover:bg-gray-100 transition-all duration-200'
+            >
+              Tuyển sinh
+            </Link>
+            <Link
+              href='/high-school'
+              className='text-gray-600 hover:text-[#1a5336] text-sm py-2 px-4 rounded-lg hover:bg-gray-100 transition-all duration-200'
+            >
+              Phổ thông
+            </Link>
+            <Link
+              href='/primary-school'
+              className='text-gray-600 hover:text-[#1a5336] text-sm py-2 px-4 rounded-lg hover:bg-gray-100 transition-all duration-200'
+            >
+              Tiểu học
+            </Link>
+            <Link
+              href='/our-school'
+              className='text-gray-600 hover:text-[#1a5336] text-sm py-2 px-4 rounded-lg hover:bg-gray-100 transition-all duration-200'
+            >
+              Về chúng tôi
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   )

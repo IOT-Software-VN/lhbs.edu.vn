@@ -54,7 +54,7 @@ export function NewsColumn({ newsItems, backgroundImage }: NewsColumnProps) {
           <Link
             key={index}
             href={item.link}
-            className='p-3 block cursor-pointer bg-gray-50 border border-gray-100 hover:border-brand-green/20 hover:bg-brand-gold/10 transition-all rounded-sm group/item grow items-center'
+            className='p-3 block cursor-pointer bg-gray-50 border border-gray-100 hover:border-brand-green/20 hover:bg-brand-gold/10 transition-all rounded-sm! group/item grow items-center'
           >
             <div className='flex items-center gap-4 w-full'>
               <div className='flex flex-col items-center shrink-0 text-brand-green/80 w-14'>

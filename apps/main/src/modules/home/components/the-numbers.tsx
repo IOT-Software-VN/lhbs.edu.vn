@@ -22,7 +22,7 @@ export function TheNumbersSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className='bg-brand-yellow w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(253,185,19,0.4)]' />
+            <div className='bg-[#FDB913] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(253,185,19,0.4)]' />
           </motion.div>
 
           <motion.h2

@@ -118,8 +118,8 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8'>
           {/* Left Column: Logo & Contact Info */}
           <div className='lg:col-span-5 flex flex-col items-start'>
-            <div className='relative h-20 md:h-26 w-60 mb-6'>
-              <Image src={logoImage} alt='LHBS Logo' fill className='object-contain object-left' sizes='240px' />
+            <div className='relative h-20 md:h-26 w-full mb-6'>
+              <Image src={logoImage} alt='LHBS Logo' fill className='object-contain object-left' sizes='260px' />
             </div>
             <div className='space-y-4 text-sm md:text-base font-light tracking-wide text-white/90'>
               <h3 className='font-bold text-lg uppercase mb-2 text-brand-gold'>{footerData.schoolName}</h3>
