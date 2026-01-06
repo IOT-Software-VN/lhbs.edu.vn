@@ -1,5 +1,3 @@
-export * from './core-value-tab'
-export * from './core-value-display'
 export * from './core-values'
 export * from './founding-message'
 export * from './mission'

@@ -13,7 +13,7 @@ export function DirectorsPage() {
       <BreadcrumbSection items={DIRECTORS_BREADCRUMB_ITEMS} />
       <DirectorsWelcomeSection />
       <DirectorsCarousel />
-      <StudentAchievementsSection />
+      {/* <StudentAchievementsSection /> */}
     </>
   )
 }

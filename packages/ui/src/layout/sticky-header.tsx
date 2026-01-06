@@ -103,13 +103,13 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuOpen }: S
           whileTap={{ scale: 0.98 }}
           aria-label='Go to homepage'
         >
-          <div className='relative h-16 md:h-24 w-auto aspect-3/1'>
+          <div className='relative h-20 md:h-28 w-auto aspect-[3/1]'>
             <Image
               src={logoImage}
               alt='LHBS - Lac Hong Bilingual School'
               fill
               className='object-contain object-left'
-              sizes='(max-width: 768px) 150px, 200px'
+              sizes='(max-width: 768px) 250px, 400px'
               priority
             />
           </div>
