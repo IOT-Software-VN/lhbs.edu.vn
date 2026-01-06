@@ -1,13 +1,12 @@
 import { motion, useInView, AnimatePresence } from 'motion/react'
 import { useState, useRef, useEffect } from 'react'
-import { TrendingUp, HeartHandshake, MonitorSmartphone, type LucideIcon } from 'lucide-react'
+import { BookOpen, Globe, MonitorSmartphone, UtensilsCrossed, type LucideIcon } from 'lucide-react'
 
 // Interface for modal props
 interface CoreStrengthModalProps {
   title: string
   description: string
   fullDescription: string
-  points: string[]
   image: string
   alt: string
   onClose: () => void
@@ -21,57 +20,48 @@ interface WhyChooseItem {
   fullDescription: string
   image: string
   alt: string
-  points: string[]
 }
 
 const whyChooseData: WhyChooseItem[] = [
   {
-    icon: TrendingUp,
-    title: 'Lộ trình học\u00A0tập cá\u00A0nhân\u00A0hóa',
+    icon: BookOpen,
+    title: 'Cá nhân hóa lộ\u00A0trình học\u00A0tập',
     description:
-      'Mỗi học sinh được thiết kế chương trình học phù hợp với năng lực và mục tiêu phát triển riêng.',
+      'Chương trình học, phương pháp giảng dạy phù hợp với năng lực của từng học sinh',
     fullDescription:
-      'LHBS cam kết mang đến cho mỗi học sinh một lộ trình học tập được thiết kế riêng, phù hợp với năng lực, sở thích và mục tiêu phát triển cá nhân. Chúng tôi tin rằng mỗi em đều có tiềm năng riêng biệt cần được phát huy.',
+      'Tại LHBS, chúng tôi hiểu rằng mỗi học sinh là một cá nhân độc đáo với năng lực, sở thích và tốc độ học tập riêng biệt. Vì vậy, chúng tôi xây dựng lộ trình học tập cá nhân hóa, điều chỉnh chương trình và phương pháp giảng dạy để phù hợp với từng em, giúp các em phát triển tối đa tiềm năng của bản thân.',
     image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/578369959_810928768235932_2189832322315432240_n.jpg',
-    alt: 'Lộ trình học tập cá nhân hóa tại LHBS',
-    points: [
-      'Đánh giá năng lực và sở thích cá nhân',
-      'Thiết kế chương trình học phù hợp',
-      'Theo dõi tiến độ và điều chỉnh linh hoạt',
-      'Hỗ trợ phát triển toàn diện',
-    ]
+    alt: 'Cá nhân hóa lộ trình học tập tại LHBS'
   },
   {
-    icon: HeartHandshake,
-    title: 'Lấy\u00A0học\u00A0sinh\u00A0làm trung\u00A0tâm',
+    icon: Globe,
+    title: 'Môi trường song\u00A0ngữ thực\u00A0chất',
     description:
-      'Phương pháp giảng dạy chủ động, khuyến khích tư duy sáng tạo độc lập và phát triển kỹ năng.',
+      'Chương trình tiếng Anh Me - Us - Our world giúp học sinh tự tin sử dụng tiếng Anh, sẵn sàng hội nhập',
     fullDescription:
-      'Triết lý giáo dục của LHBS đặt học sinh vào trung tâm của mọi hoạt động. Chúng tôi khuyến khích học sinh chủ động trong học tập, phát triển tư duy phản biện và kỹ năng giải quyết vấn đề thực tế.',
+      'LHBS tự hào mang đến môi trường song ngữ thực chất với chương trình tiếng Anh Me - Us - Our world, giúp học sinh không chỉ học tiếng Anh mà còn sử dụng thành thạo trong giao tiếp hàng ngày. Chúng tôi tạo điều kiện để các em tự tin hội nhập với cộng đồng quốc tế, sẵn sàng cho tương lai toàn cầu.',
     image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/576931936_808502421811900_4863998363654667053_n.jpg',
-    alt: 'Lấy học sinh làm trung tâm tại LHBS',
-    points: [
-      'Phương pháp học tập tích cực',
-      'Khuyến khích tư duy sáng tạo',
-      'Phát triển kỹ năng mềm',
-      'Học qua trải nghiệm thực tế',
-    ]
+    alt: 'Môi trường song ngữ thực chất tại LHBS'
   },
   {
     icon: MonitorSmartphone,
     title: 'Tiên phong ứng\u00A0dụng công\u00A0nghệ',
     description:
-      'Tích hợp công nghệ hiện đại vào mọi hoạt động giảng dạy, tạo môi trường học tập tương tác.',
+      'Tích hợp công nghệ hiện đại vào các hoạt động giảng dạy, học tập và quản lý',
     fullDescription:
-      'LHBS là đơn vị tiên phong trong việc ứng dụng công nghệ giáo dục tiên tiến. Chúng tôi tích hợp các công cụ công nghệ hiện đại vào giảng dạy để tạo ra môi trường học tập tương tác, hấp dẫn và hiệu quả cao.',
+      'LHBS là đơn vị tiên phong trong việc ứng dụng công nghệ giáo dục tiên tiến. Chúng tôi tích hợp công nghệ hiện đại vào mọi hoạt động giảng dạy, học tập và quản lý, tạo ra môi trường học tập thông minh, tương tác và hiệu quả cao. Công nghệ không chỉ là công cụ hỗ trợ mà còn là nền tảng để phát triển tư duy sáng tạo và kỹ năng số cho học sinh.',
     image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/2.jpg',
-    alt: 'Tiên phong ứng dụng công nghệ tại LHBS',
-    points: [
-      'Lớp học thông minh với công nghệ hiện đại',
-      'Nền tảng học trực tuyến tương tác',
-      'Ứng dụng AI hỗ trợ cá nhân hóa',
-      'Thư viện số đa dạng và phong phú',
-    ]
+    alt: 'Tiên phong ứng dụng công nghệ tại LHBS'
+  },
+  {
+    icon: UtensilsCrossed,
+    title: 'Dinh dưỡng cân\u00A0bằng',
+    description:
+      'Thực đơn phong phú và rõ ràng về hàm lượng',
+    fullDescription:
+      'LHBS quan tâm đến sức khỏe và sự phát triển toàn diện của học sinh thông qua chế độ dinh dưỡng khoa học. Thực đơn được thiết kế phong phú, đa dạng với các món ăn bổ dưỡng, đảm bảo đầy đủ dưỡng chất cần thiết. Mỗi bữa ăn đều được công bố rõ ràng về hàm lượng dinh dưỡng, giúp phụ huynh yên tâm về sức khỏe của con em mình.',
+    image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/578369959_810928768235932_2189832322315432240_n.jpg',
+    alt: 'Dinh dưỡng cân bằng tại LHBS'
   }
 ]
 
@@ -175,7 +165,7 @@ export default function TheNumbers() {
         </div>
 
         {/* Info Cards Grid - Extra top padding for floating icons */}
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-20 pt-16'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-20 pt-16'>
           {whyChooseData.map((item, index) => (
             <InfoCard
               key={index}
@@ -196,7 +186,6 @@ export default function TheNumbers() {
             title={selectedStrength.title}
             description={selectedStrength.description}
             fullDescription={selectedStrength.fullDescription}
-            points={selectedStrength.points}
             image={selectedStrength.image}
             alt={selectedStrength.alt}
             onClose={() => setSelectedStrength(null)}
@@ -208,7 +197,7 @@ export default function TheNumbers() {
 }
 
 
-function CoreStrengthModal({ title, description, fullDescription, points, image, alt, onClose }: CoreStrengthModalProps) {
+function CoreStrengthModal({ title, description, fullDescription, image, alt, onClose }: CoreStrengthModalProps) {
   // Handle Escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -267,19 +256,9 @@ function CoreStrengthModal({ title, description, fullDescription, points, image,
               {title}
             </h2>
 
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-5 md:mb-6">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
               {fullDescription}
             </p>
-
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#005C42] mb-3 md:mb-4 uppercase">Điểm nổi bật:</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3 md:gap-4">
-              {points.map((point, index) => (
-                <div key={index} className="flex items-start gap-2 md:gap-3">
-                  <span className="text-[#FDB913] text-lg md:text-xl font-bold flex-shrink-0">✓</span>
-                  <span className="text-gray-700 text-sm md:text-base leading-relaxed">{point}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </motion.div>
