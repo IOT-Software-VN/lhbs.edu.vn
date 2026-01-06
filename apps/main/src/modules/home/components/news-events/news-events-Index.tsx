@@ -1,7 +1,7 @@
 'use client'
 import { useRef } from 'react'
 import { motion, useInView } from 'motion/react'
-import { NEWS_ITEMS, EVENT_ITEMS, GALLERY_ITEM } from '../constants'
+import { NEWS_ITEMS, EVENT_ITEMS, GALLERY_ITEM } from '../../constants'
 import { NewsColumn } from './news-column'
 import { EventsColumn } from './events-column'
 import { GalleryColumn } from './gallery-column'

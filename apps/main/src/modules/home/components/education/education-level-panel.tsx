@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'motion/react'
-import type { SchoolLevel } from '../types'
+import type { SchoolLevel } from '../../types'
 
 interface EducationLevelPanelProps {
   item: SchoolLevel

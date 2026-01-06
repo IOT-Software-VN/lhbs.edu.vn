@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useCallback } from 'react'
-import { SCHOOL_LEVELS } from '../constants'
+import { SCHOOL_LEVELS } from '../../constants'
 import { EducationLevelPanel } from './education-level-panel'
 
 export function EducationLevelSection() {

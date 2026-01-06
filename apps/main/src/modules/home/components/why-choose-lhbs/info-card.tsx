@@ -37,10 +37,10 @@ export function InfoCard({ icon: Icon, title, description, index, onClick }: Inf
           {/* Icon Circle with Glow Effect */}
           <div className='relative w-24 h-24 md:w-28 md:h-28'>
             {/* Outer Glow Ring */}
-            <div className='absolute inset-0 rounded-full bg-linear-to-br from-brand-yellow/20 to-brand-yellow/5 blur-xl group-hover:from-brand-yellow/40 group-hover:to-brand-yellow/10 transition-all duration-500' />
+            <div className='absolute inset-0 rounded-full  bg-gradient-to-br from-[#FDB913]/20 to-[#FDB913]/5 blur-xl group-hover:from-[#FDB913]/40 group-hover:to-[#FDB913]/10 transition-all duration-500' />
 
             {/* Main Icon Circle */}
-            <div className='relative w-full h-full rounded-full bg-linear-to-br from-brand-yellow to-[#f5a700] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500'>
+            <div className='relative w-full h-full rounded-full bg-gradient-to-br from-[#FDB913] to-[#f5a700] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500'>
               <Icon className='w-12 h-12 md:w-14 md:h-14 text-white stroke-[2.5]' />
             </div>
 

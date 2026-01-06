@@ -2,8 +2,8 @@
 
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
-import { WHY_CHOOSE_DATA } from '../constants'
-import { type WhyChooseItem } from '../types'
+import { WHY_CHOOSE_DATA } from '../../constants'
+import { type WhyChooseItem } from '../../types'
 import { InfoCard } from './info-card'
 import { CoreStrengthModal } from './core-strength-modal'
 

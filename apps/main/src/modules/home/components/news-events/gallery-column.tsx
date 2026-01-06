@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
-import type { GalleryItem } from '../types'
+import type { GalleryItem } from '../../types'
 
 interface GalleryColumnProps {
   galleryItem: GalleryItem
