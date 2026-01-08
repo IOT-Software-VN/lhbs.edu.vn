@@ -173,16 +173,19 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
               ))}
             </div>
 
-            <div className='flex flex-wrap items-center justify-end gap-3 mb-8'>
+            <div className='flex flex-wrap items-center justify-end gap-4 md:gap-6 mb-8'>
               {partnerLogos.map((logo) => (
-                <div key={logo.id} className='rounded-lg p-3 h-16 flex items-center justify-center'>
+                <div
+                  key={logo.id}
+                  className='shrink-0 rounded-lg p-3 md:p-4 h-16 md:h-20 w-32 md:w-40 flex items-center justify-center bg-white/10 hover:bg-white/20 transition-all duration-300'
+                >
                   <div className='relative w-full h-full'>
                     <Image
                       src={logo.image}
                       alt={logo.name}
                       fill
                       className='object-contain hover:scale-105 transition-transform duration-300'
-                      sizes='100px'
+                      sizes='(max-width: 768px) 128px, 160px'
                     />
                   </div>
                 </div>

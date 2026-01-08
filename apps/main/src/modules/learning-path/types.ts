@@ -4,6 +4,7 @@ export interface Certificate {
   name: string
   icon: any
   description?: string
+  logo?: string | null
 }
 
 export interface SchoolLevelData {
