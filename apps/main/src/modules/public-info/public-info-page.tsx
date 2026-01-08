@@ -1,19 +1,38 @@
-import { MainReportSection, ArchiveReportsSection, FormsSection } from './components'
+import {
+  TrustStatsSection,
+  FeaturedReportSection,
+  AccreditationSection,
+  DocumentsSection,
+  ContactCtaSection
+} from './components'
 import { SubPageHero, BreadcrumbSection } from '@lhbs/ui'
-import { PUBLIC_INFO_BREADCRUMB_ITEMS } from './constants'
+import { PUBLIC_INFO_BREADCRUMB_ITEMS, HERO_BACKGROUND_IMAGE } from './constants'
 
 export function PublicInfoPage() {
   return (
-    <>
+    <main className='bg-white overflow-hidden'>
       <SubPageHero
         title='CÔNG KHAI THÔNG TIN'
-        subtitle='Báo cáo thường niên và quy chế hoạt động chính thức của Trường Song ngữ Lạc Hồng'
-        backgroundImage='https://lhbs.edu.vn/wp-content/uploads/2025/02/IMG_8910.jpg'
+        subtitle='Minh bạch - Uy tín - Chất lượng giáo dục quốc tế'
+        backgroundImage={HERO_BACKGROUND_IMAGE}
       />
-      <BreadcrumbSection items={PUBLIC_INFO_BREADCRUMB_ITEMS} />
-      <MainReportSection />
-      <FormsSection />
-      <ArchiveReportsSection />
-    </>
+
+      <BreadcrumbSection items={PUBLIC_INFO_BREADCRUMB_ITEMS} variant='dark' />
+
+      {/* Trust Statistics - Key numbers */}
+      <TrustStatsSection />
+
+      {/* Featured Annual Report - Showcase latest */}
+      <FeaturedReportSection />
+
+      {/* Accreditation Logos */}
+      <AccreditationSection />
+
+      {/* Documents Library - Tabs for Reports/Policies/Forms */}
+      <DocumentsSection />
+
+      {/* Contact CTA */}
+      <ContactCtaSection />
+    </main>
   )
 }

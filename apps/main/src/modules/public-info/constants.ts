@@ -1,7 +1,78 @@
 import type { BreadcrumbItem } from '@lhbs/ui'
-import { type AnnualReport, type FormDocument } from './types'
+import type { AnnualReport, FormDocument, TrustStatistic, Accreditation } from './types'
 
-export const annualReports: AnnualReport[] = [
+// =============================================================================
+// HERO & BREADCRUMB
+// =============================================================================
+
+export const HERO_BACKGROUND_IMAGE = 'https://lhbs.edu.vn/wp-content/uploads/2025/02/IMG_8910.jpg'
+
+export const PUBLIC_INFO_BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { label: 'Trang chủ', path: '/' },
+  { label: 'Công khai thông tin' }
+]
+
+// =============================================================================
+// TRUST STATISTICS
+// =============================================================================
+
+export const TRUST_STATISTICS: TrustStatistic[] = [
+  {
+    id: 'years',
+    value: '11',
+    label: 'Năm hoạt động',
+    icon: 'calendar'
+  },
+  {
+    id: 'students',
+    value: '2,600',
+    label: 'Học sinh',
+    icon: 'users'
+  },
+  {
+    id: 'teachers',
+    value: '250',
+    label: 'Giáo viên',
+    icon: 'graduation'
+  },
+  {
+    id: 'graduation-rate',
+    value: '100',
+    label: 'Tỷ lệ tốt nghiệp',
+    icon: 'award'
+  }
+]
+
+// =============================================================================
+// ACCREDITATIONS
+// =============================================================================
+
+export const ACCREDITATIONS: Accreditation[] = [
+  {
+    id: 'cambridge',
+    name: 'Cambridge International',
+    logoUrl: '/images/accreditation/cambridge.png',
+    description: 'Chương trình Cambridge IGCSE & A-Level'
+  },
+  {
+    id: 'moet',
+    name: 'Bộ Giáo dục & Đào tạo',
+    logoUrl: '/images/accreditation/moet.png',
+    description: 'Được cấp phép hoạt động bởi Bộ GD&ĐT'
+  },
+  {
+    id: 'doet',
+    name: 'Sở Giáo dục & Đào tạo',
+    logoUrl: '/images/accreditation/doet.png',
+    description: 'Được cấp phép bởi Sở GD&ĐT Đồng Nai'
+  }
+]
+
+// =============================================================================
+// ANNUAL REPORTS
+// =============================================================================
+
+export const ANNUAL_REPORTS: AnnualReport[] = [
   {
     id: 'report-2024-2025',
     title: 'Báo cáo thường niên năm học 2024 - 2025',
@@ -11,7 +82,8 @@ export const annualReports: AnnualReport[] = [
     pdfUrl: '/documents/Anual-Report-LHBS.pdf',
     publishDate: '01/02/2025',
     fileSize: '15.2 MB',
-    featured: true
+    featured: true,
+    thumbnailUrl: '/images/reports/annual-report-2024-2025-cover.jpg'
   },
   {
     id: 'report-2023-2024',
@@ -42,23 +114,25 @@ export const annualReports: AnnualReport[] = [
   }
 ]
 
-export const formDocuments: FormDocument[] = [
-  // Leave forms
+// =============================================================================
+// DOCUMENTS (Unified: Forms + Policies)
+// =============================================================================
+
+export const DOCUMENTS: FormDocument[] = [
+  // Forms - Parent
   {
     id: 'form-leave-02',
     name: 'Đơn rút hồ sơ',
-    category: 'leave',
+    category: 'form',
     description: 'Mẫu đơn rút hồ sơ học sinh',
     pdfUrl: 'https://drive.google.com/file/d/1I1QBFJaFAYp1g8CYWYJojzIRsj-g5bTg/preview',
     fileSize: '200 KB',
     lastUpdate: '30/12/2024'
   },
-
-  // Other forms
   {
     id: 'form-other-01',
     name: 'Đơn đề nghị cấp giấy xác nhận học sinh',
-    category: 'other',
+    category: 'form',
     description: 'Mẫu đơn đề nghị cấp giấy xác nhận học sinh',
     pdfUrl: 'https://drive.google.com/file/d/1knZSDJ5fnT0rIbBEUPecPte0tVX2Fq8I/preview',
     fileSize: '250 KB',
@@ -67,7 +141,7 @@ export const formDocuments: FormDocument[] = [
   {
     id: 'form-other-02',
     name: 'Đơn xin photo hồ sơ',
-    category: 'other',
+    category: 'form',
     description: 'Mẫu đơn xin photo hồ sơ học sinh',
     pdfUrl: 'https://drive.google.com/file/d/197qKBa2x7OYLtI-FJXnQ9ojwzr6lOxp8/preview',
     fileSize: '180 KB',
@@ -76,7 +150,7 @@ export const formDocuments: FormDocument[] = [
   {
     id: 'form-other-03',
     name: 'Đơn thay đổi SĐT',
-    category: 'other',
+    category: 'form',
     description: 'Mẫu đơn đề nghị thay đổi số điện thoại liên hệ',
     pdfUrl: 'https://drive.google.com/file/d/1QglJuLUtdhk53ZqwbWU8wmDUbz7jCnFq/preview',
     fileSize: '200 KB',
@@ -85,7 +159,7 @@ export const formDocuments: FormDocument[] = [
   {
     id: 'form-other-04',
     name: 'Đơn đăng ký/ Hủy đăng ký dịch vụ',
-    category: 'other',
+    category: 'form',
     description: 'Mẫu đơn đăng ký hoặc hủy đăng ký các dịch vụ của nhà trường',
     pdfUrl: 'https://drive.google.com/file/d/1QdkVPTZtNIFjcLJRdL7srYDP52QZDgKI/preview',
     fileSize: '220 KB',
@@ -93,12 +167,8 @@ export const formDocuments: FormDocument[] = [
   }
 ]
 
-export const formCategories = [
-  { id: 'leave', label: 'Nghỉ học' },
-  { id: 'other', label: 'Khác' }
+export const DOCUMENT_CATEGORIES = [
+  { id: 'report', label: 'Báo cáo thường niên' },
+  { id: 'policy', label: 'Chính sách' },
+  { id: 'form', label: 'Biểu mẫu' }
 ] as const
-
-export const PUBLIC_INFO_BREADCRUMB_ITEMS: BreadcrumbItem[] = [
-  { label: 'Trang chủ', path: '/' },
-  { label: 'Công khai thông tin' }
-]
