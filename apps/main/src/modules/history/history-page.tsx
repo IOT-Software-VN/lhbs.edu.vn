@@ -12,7 +12,7 @@ export function HistoryPage() {
         backgroundImage={HERO_BACKGROUND_IMAGE}
       />
 
-      <BreadcrumbSection items={HISTORY_BREADCRUMB_ITEMS} />
+      <BreadcrumbSection items={HISTORY_BREADCRUMB_ITEMS} variant='dark' />
 
       {/* Main Timeline */}
       <HistoryTimeline />
