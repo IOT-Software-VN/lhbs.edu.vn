@@ -124,7 +124,10 @@ export function CurvedTimeline({ levels }: CurvedTimelineProps) {
   }, [svgHeight]) // Recalc if SVG height changes
 
   return (
-    <div ref={containerRef} className='absolute inset-0 pointer-events-none z-0 hidden md:block'>
+    <div 
+      ref={containerRef} 
+      className='absolute inset-0 pointer-events-none z-0 hidden md:block'
+    >
       <svg width='100%' height={svgHeight} className='overflow-visible'>
         <defs>
           {/* Main Gradient for the Line */}
@@ -158,7 +161,9 @@ export function CurvedTimeline({ levels }: CurvedTimelineProps) {
           style={{
             fontSize: '20px',
             letterSpacing: '24px',
-            filter: 'grayscale(1) sepia(1) saturate(5) hue-rotate(90deg)'
+            filter: 'grayscale(1) sepia(1) saturate(5) hue-rotate(90deg) drop-shadow(0 2px 4px rgba(0,107,61,0.3))',
+            mixBlendMode: 'normal',
+            opacity: 1
           }}
           mask='url(#path-mask)'
         >

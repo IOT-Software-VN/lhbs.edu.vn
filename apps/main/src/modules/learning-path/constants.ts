@@ -4,16 +4,20 @@ import {
   Star,
   BookOpen,
   GraduationCap,
-  Zap,
   Globe,
   Award,
-  Palette,
-  Brain,
   Heart,
-  Coins,
   Mic,
   Rocket,
-  PenTool
+  School,
+  Blocks,
+  LifeBuoy,
+  Bot,
+  Briefcase,
+  Code,
+  Languages,
+  Search,
+  FileText
 } from 'lucide-react'
 import { type SchoolLevel, type SchoolLevelData } from './types'
 
@@ -31,10 +35,18 @@ export const schoolData: Record<SchoolLevel, SchoolLevelData> = {
       'Cảm thụ Nghệ thuật & Sáng tạo'
     ],
     certificates: [
-      { name: 'Bộ GD&ĐT', icon: BookOpen },
-      { name: 'Tiếng Anh GVNN', icon: Globe },
-      { name: 'Montessori Inspired', icon: Palette },
-      { name: 'Kỹ năng sống', icon: Heart }
+      { name: 'Bộ GD&ĐT', icon: School, logo: null },
+      {
+        name: 'Tiếng Anh GVNN',
+        icon: Globe,
+        logo: 'https://blog.englishcentral.com/wp-content/uploads/2022/05/cropped-ec.png'
+      },
+      {
+        name: 'Montessori Inspired',
+        icon: Blocks,
+        logo: 'https://images.ctfassets.net/pc40tpn1u6ef/53uHpRwHaK9sso1qyHHEac/ff0836356ad19c1610be81b5ae6f06d4/STEM-Logo-220801.svg'
+      },
+      { name: 'Kỹ năng sống', icon: LifeBuoy, logo: 'https://advantagesschool.com/wp-content/uploads/2022/10/asi-logo.png' }
     ],
     icon: Baby
   },
@@ -51,10 +63,22 @@ export const schoolData: Record<SchoolLevel, SchoolLevelData> = {
       'Văn hóa đọc (Reading A-Z)'
     ],
     certificates: [
-      { name: 'Cambridge YLE', icon: Award },
-      { name: 'STEM Robotics', icon: Zap },
-      { name: 'Junior Achievement', icon: Coins },
-      { name: 'Reading A-Z', icon: BookOpen }
+      {
+        name: 'Cambridge YLE',
+        icon: Award,
+        logo: 'https://vectorseek.com/wp-content/uploads/2023/08/Cambridge-English-Language-Assessment-Logo-Vector.svg-.png'
+      },
+      {
+        name: 'STEM Robotics',
+        icon: Bot,
+        logo: 'https://images.ctfassets.net/pc40tpn1u6ef/53uHpRwHaK9sso1qyHHEac/ff0836356ad19c1610be81b5ae6f06d4/STEM-Logo-220801.svg'
+      },
+      {
+        name: 'Junior Achievement',
+        icon: Briefcase,
+        logo: 'https://blog.englishcentral.com/wp-content/uploads/2022/05/cropped-ec.png'
+      },
+      { name: 'Reading A-Z', icon: BookOpen, logo: null }
     ],
     icon: Star
   },
@@ -71,12 +95,24 @@ export const schoolData: Record<SchoolLevel, SchoolLevelData> = {
       'Công nghệ AI & Lập trình Alpha Mini'
     ],
     certificates: [
-      { name: 'Cambridge KET/PET', icon: Award },
-      { name: 'AI & Coding', icon: Brain },
-      { name: 'Debate & Public Speaking', icon: Mic },
-      { name: 'Global Projects', icon: Globe }
+      {
+        name: 'Cambridge KET/PET',
+        icon: Award,
+        logo: 'https://vectorseek.com/wp-content/uploads/2023/08/Cambridge-English-Language-Assessment-Logo-Vector.svg-.png'
+      },
+      {
+        name: 'AI & Coding',
+        icon: Code,
+        logo: 'https://images.ctfassets.net/pc40tpn1u6ef/53uHpRwHaK9sso1qyHHEac/ff0836356ad19c1610be81b5ae6f06d4/STEM-Logo-220801.svg'
+      },
+      {
+        name: 'Debate & Public Speaking',
+        icon: Mic,
+        logo: 'https://blog.englishcentral.com/wp-content/uploads/2022/05/cropped-ec.png'
+      },
+      { name: 'Global Projects', icon: Globe, logo: null }
     ],
-    icon: BookOpen
+    icon: GraduationCap
   },
   high: {
     title: 'Trung học Phổ thông',
@@ -91,10 +127,22 @@ export const schoolData: Record<SchoolLevel, SchoolLevelData> = {
       'Định hướng Nghề nghiệp & Du học'
     ],
     certificates: [
-      { name: 'IELTS Preparation', icon: Globe },
-      { name: 'ASI Dual Diploma', icon: Award },
-      { name: 'Career Orient', icon: Rocket },
-      { name: 'Research Skills', icon: PenTool }
+      {
+        name: 'IELTS Preparation',
+        icon: Languages,
+        logo: 'https://vectorseek.com/wp-content/uploads/2023/08/Cambridge-English-Language-Assessment-Logo-Vector.svg-.png'
+      },
+      {
+        name: 'ASI Dual Diploma',
+        icon: Award,
+        logo: 'https://advantagesschool.com/wp-content/uploads/2022/10/asi-logo.png'
+      },
+      {
+        name: 'Career Orient',
+        icon: Rocket,
+        logo: 'https://images.ctfassets.net/pc40tpn1u6ef/53uHpRwHaK9sso1qyHHEac/ff0836356ad19c1610be81b5ae6f06d4/STEM-Logo-220801.svg'
+      },
+      { name: 'Research Skills', icon: Search, logo: null }
     ],
     icon: GraduationCap
   }

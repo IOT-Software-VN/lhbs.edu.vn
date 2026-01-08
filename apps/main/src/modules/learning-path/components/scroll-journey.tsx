@@ -46,28 +46,50 @@ export function ScrollJourney({ onNavigate }: ScrollJourneyProps) {
     return () => observer.disconnect()
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Visibility Observer for StickyNav
+  // Visibility Observer for StickyNav - Ẩn khi scroll qua hết section cuối cùng
   useEffect(() => {
-    const containerEl = containerRef.current
-    if (!containerEl) return
+    const checkVisibility = () => {
+      const lastSectionEl = document.getElementById(`section-${levels[levels.length - 1]}`)
 
-    const visibilityObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setIsInPathSection(entry.isIntersecting)
-        })
-      },
-      {
-        root: null,
-        rootMargin: '-10% 0px -10% 0px',
-        threshold: 0
+      if (!lastSectionEl) {
+        setIsInPathSection(false)
+        return
       }
-    )
 
-    visibilityObserver.observe(containerEl)
+      const lastRect = lastSectionEl.getBoundingClientRect()
 
-    return () => visibilityObserver.disconnect()
-  }, [])
+      // Ẩn sticky nav khi section cuối cùng đã hoàn toàn ở trên viewport
+      // Tức là khi top < 0 VÀ bottom < 0 (đã scroll qua hết section)
+      // Hiển thị khi section vẫn còn một phần trong viewport (bottom > 0)
+      const isFullyAboveViewport = lastRect.top < 0 && lastRect.bottom < 0
+      const shouldShow = !isFullyAboveViewport && lastRect.bottom > -50 // Buffer 50px để tránh flicker
+
+      setIsInPathSection(shouldShow)
+    }
+
+    // Kiểm tra ngay lập tức
+    checkVisibility()
+
+    // Thêm scroll listener với requestAnimationFrame để tối ưu performance
+    let ticking = false
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          checkVisibility()
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('resize', checkVisibility, { passive: true })
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', checkVisibility)
+    }
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const scrollToSection = (level: SchoolLevel) => {
     const el = document.getElementById(`section-${level}`)
