@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export function HistoryFutureSection() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.3 })
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   const futureGoals = [
     {
@@ -28,76 +28,77 @@ export function HistoryFutureSection() {
   ]
 
   return (
-    <section ref={ref} className='relative w-full py-20 md:py-32 bg-white overflow-hidden'>
-      {/* Abstract Background */}
-      <div className='absolute inset-0 bg-linear-to-b from-transparent via-brand-green/5 to-transparent' />
-      <div className='absolute -left-20 top-20 w-80 h-80 bg-brand-gold/10 rounded-full blur-3xl' />
-      <div className='absolute -right-20 bottom-20 w-96 h-96 bg-brand-green/10 rounded-full blur-3xl' />
+    <section ref={ref} className='relative w-full py-24 md:py-32 bg-gray-50/50 overflow-hidden'>
+      {/* Subtle Background - Giống HistoryMilestonesGrid */}
+      <div className='absolute inset-0 bg-[radial-gradient(#1e5338_0.8px,transparent_0.8px)] [background-size:20px_20px] opacity-[0.03]' />
 
       <div className='relative z-10 container mx-auto px-4 md:px-8'>
+        {/* Header - Đồng bộ với HistoryMilestonesGrid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className='text-center max-w-4xl mx-auto mb-16'
+          className='text-center max-w-3xl mx-auto mb-16 md:mb-24'
         >
           <div className='bg-brand-gold w-20 h-2 mx-auto mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
-          <h2 className='text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-brand-green uppercase tracking-tight mb-6 drop-shadow-sm'>
+          <h2 className='text-3xl md:text-4xl lg:text-5xl font-black text-brand-green uppercase tracking-tight mb-4'>
             Hướng về <span className='text-brand-gold'>tương lai</span>
           </h2>
-          <p className='text-brand-green/70 text-sm md:text-lg font-medium leading-relaxed max-w-2xl mx-auto'>
+          <p className='text-lg md:text-xl text-brand-green/70 font-light'>
             Tiếp nối hành trình kiến tạo tri thức, LHBS cam kết vững bước trên con đường đổi mới và hội nhập.
           </p>
         </motion.div>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>
+        {/* Cards Grid - Đồng bộ với HistoryMilestonesGrid card style */}
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-16'>
           {futureGoals.map((goal, index) => {
             const Icon = goal.icon
             return (
               <motion.div
                 key={goal.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className='group relative bg-white rounded-2xl p-8 border border-brand-green/10 hover:border-brand-green/30 shadow-lg hover:shadow-2xl transition-all duration-300'
+                initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+                whileHover={{ y: -5 }}
+                className='group relative bg-white rounded-2xl p-6 shadow-[0_2px_15px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_-5px_rgba(30,83,56,0.1)] transition-all duration-300 border border-transparent hover:border-brand-green/20'
               >
-                <div className='w-16 h-16 rounded-2xl bg-brand-green/5 flex items-center justify-center mb-6 group-hover:bg-brand-green transition-all duration-300 group-hover:scale-110 group-hover:-rotate-3'>
-                  <Icon
-                    className='w-8 h-8 text-brand-green group-hover:text-brand-gold transition-colors duration-300'
-                    strokeWidth={1.5}
-                  />
-                </div>
+                {/* Icon - Đồng bộ với HistoryMilestonesGrid */}
+                <div className='flex flex-col h-full justify-between gap-4'>
+                  <div className='w-12 h-12 md:w-14 md:h-14 rounded-xl bg-brand-green/5 flex items-center justify-center group-hover:bg-brand-green group-hover:rotate-3 transition-all duration-300'>
+                    <Icon className='w-6 h-6 md:w-7 md:h-7 text-brand-green/70 group-hover:text-white transition-colors duration-300' />
+                  </div>
 
-                <h3 className='text-xl font-bold text-brand-green mb-3'>{goal.title}</h3>
-                <p className='text-brand-green/60 font-medium leading-relaxed'>{goal.description}</p>
-
-                <div className='absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                  <ArrowRight className='w-5 h-5 text-brand-gold -rotate-45 group-hover:rotate-0 transition-transform duration-300' />
+                  <div className='flex flex-col gap-1'>
+                    <h3 className='text-base md:text-lg font-bold text-brand-green uppercase tracking-wide'>
+                      {goal.title}
+                    </h3>
+                    {goal.description && (
+                      <p className='text-sm text-brand-green/50 font-medium leading-tight'>
+                        {goal.description}
+                      </p>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             )
           })}
         </div>
 
+        {/* CTA Button - Đồng bộ với branding */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className='flex justify-center gap-6'
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='flex justify-center'
         >
           <Link
             href='/gioi-thieu/tam-nhin-su-menh'
-            className='inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-brand-green font-bold rounded-sm uppercase tracking-widest text-sm hover:bg-white transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]'
+            className='group inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-brand-green font-bold rounded-full uppercase tracking-widest text-sm hover:bg-white transition-all duration-300 shadow-xl shadow-brand-gold/30 hover:-translate-y-1 hover:shadow-2xl'
           >
-            Tầm nhìn & Sứ mệnh
-            <ArrowRight className='w-4 h-4' />
+            <span>Tầm nhìn & Sứ mệnh</span>
+            <ArrowRight className='w-4 h-4 transform group-hover:translate-x-1 transition-transform' />
           </Link>
         </motion.div>
-
-        <div className='mt-24 text-center opacity-10 select-none pointer-events-none'>
-          <span className='text-[12vw] font-black text-brand-green tracking-tighter'>2030</span>
-        </div>
       </div>
     </section>
   )

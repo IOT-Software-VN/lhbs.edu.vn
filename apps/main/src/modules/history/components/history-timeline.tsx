@@ -123,7 +123,31 @@ export function HistoryTimeline() {
     <section ref={containerRef} className='relative w-full bg-brand-green overflow-hidden py-24 lg:py-32'>
       <div className='absolute inset-0 bg-linear-to-b from-black/10 via-transparent to-black/10 pointer-events-none' />
 
-      <div className='container mx-auto px-4 relative z-10'>
+      {/* Decorative Orbs for Branding */}
+      <div className='absolute top-1/4 right-0 w-[500px] h-[500px] bg-brand-gold rounded-full blur-[120px] opacity-[0.08] -mr-[250px] pointer-events-none mix-blend-screen' />
+      <div className='absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-white rounded-full blur-[100px] opacity-[0.05] -mr-[200px] pointer-events-none mix-blend-overlay' />
+
+      {/* Subtle Background Pattern */}
+      <div className='absolute inset-0 bg-[radial-gradient(#faba1e_0.5px,transparent_0.5px)] bg-size-[40px_40px] opacity-[0.03] pointer-events-none' />
+
+      {/* Large Logo Watermark - Sticky Center Right */}
+      <div className='hidden lg:block pointer-events-none absolute inset-0 z-0 overflow-hidden'>
+        <div className='relative w-full min-h-[2000px]'>
+          <div className='sticky top-1/2 -translate-y-1/2 w-full flex justify-end pr-[5%]'>
+            <div className='relative w-[600px] h-[600px] opacity-[0.04]'>
+              <Image
+                src='/images/base/lhbs-hac.png'
+                alt='LHBS Logo Watermark'
+                fill
+                className='object-contain object-top'
+                sizes='600px'
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='container mx-auto px-4 md:px-8 lg:px-16 relative z-10'>
         {/* Header - International Style */}
         <div className='mb-24 flex flex-col items-center text-center'>
           <motion.div
@@ -182,14 +206,14 @@ export function HistoryTimeline() {
 
               <g mask='url(#timeline-mask)'>
                 {/* Structure (Ghost) Paths */}
-                <path d={trunkPath} stroke='rgba(255, 255, 255, 0.1)' strokeWidth='2' fill='none' />
-                {branchPath && <path d={branchPath} stroke='rgba(255, 255, 255, 0.1)' strokeWidth='2' fill='none' />}
+                <path d={trunkPath} stroke='rgba(255, 255, 255, 0.1)' strokeWidth='3' fill='none' />
+                {branchPath && <path d={branchPath} stroke='rgba(255, 255, 255, 0.1)' strokeWidth='3' fill='none' />}
 
                 {/* Active Beam Path (Synchronized continuous journey) */}
                 <motion.path
                   d={activeStoryPath}
                   stroke='url(#beam-gradient-gold)'
-                  strokeWidth='2'
+                  strokeWidth='3'
                   fill='none'
                   strokeLinecap='round'
                   initial={{ pathLength: 0 }}
@@ -250,14 +274,14 @@ export function HistoryTimeline() {
                   >
                     {/* Chapter Badge */}
                     <div className='mb-6'>
-                      <span className='inline-flex px-4 py-2 bg-brand-gold text-brand-green text-[12px] font-black rounded-sm uppercase tracking-[0.2em] shadow-xl'>
+                      <span className='inline-flex px-4 py-2 bg-brand-gold text-brand-green text-xs md:text-sm font-black rounded-md uppercase tracking-[0.2em] shadow-xl'>
                         {item.label}
                       </span>
                     </div>
 
                     {/* Big White Title */}
                     <div className='mb-6'>
-                      <h3 className='text-3xl md:text-3xl lg:text-3xl font-black text-white uppercase tracking-tight leading-[0.95] max-w-4xl'>
+                      <h3 className='text-2xl md:text-3xl lg:text-4xl font-black text-white uppercase tracking-tight leading-[1.1]'>
                         {item.title}
                       </h3>
                     </div>
