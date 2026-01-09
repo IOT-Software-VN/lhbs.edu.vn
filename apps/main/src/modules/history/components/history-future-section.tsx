@@ -49,7 +49,7 @@ export function HistoryFutureSection() {
           </p>
         </motion.div>
 
-        {/* Cards Grid - Đồng bộ với HistoryMilestonesGrid card style */}
+        {/* Cards Grid - Gold accent với green title */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-16'>
           {futureGoals.map((goal, index) => {
             const Icon = goal.icon
@@ -60,12 +60,12 @@ export function HistoryFutureSection() {
                 animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 whileHover={{ y: -5 }}
-                className='group relative bg-white rounded-2xl p-6 shadow-[0_2px_15px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_-5px_rgba(30,83,56,0.1)] transition-all duration-300 border border-transparent hover:border-brand-green/20'
+                className='group relative bg-white rounded-2xl p-6 shadow-[0_2px_15px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_-5px_rgba(230,161,0,0.15)] transition-all duration-300 border border-transparent hover:border-brand-gold/30'
               >
-                {/* Icon - Đồng bộ với HistoryMilestonesGrid */}
+                {/* Icon - Gold accent */}
                 <div className='flex flex-col h-full justify-between gap-4'>
-                  <div className='w-12 h-12 md:w-14 md:h-14 rounded-xl bg-brand-green/5 flex items-center justify-center group-hover:bg-brand-green group-hover:rotate-3 transition-all duration-300'>
-                    <Icon className='w-6 h-6 md:w-7 md:h-7 text-brand-green/70 group-hover:text-white transition-colors duration-300' />
+                  <div className='w-12 h-12 md:w-14 md:h-14 rounded-xl bg-brand-gold/10 flex items-center justify-center group-hover:bg-brand-gold group-hover:rotate-3 transition-all duration-300'>
+                    <Icon className='w-6 h-6 md:w-7 md:h-7 text-brand-gold group-hover:text-brand-green transition-colors duration-300' />
                   </div>
 
                   <div className='flex flex-col gap-1'>
@@ -73,7 +73,7 @@ export function HistoryFutureSection() {
                       {goal.title}
                     </h3>
                     {goal.description && (
-                      <p className='text-sm text-brand-green/50 font-medium leading-tight'>{goal.description}</p>
+                      <p className='text-sm text-gray-600 font-medium leading-tight'>{goal.description}</p>
                     )}
                   </div>
                 </div>

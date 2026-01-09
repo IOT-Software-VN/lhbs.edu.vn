@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LHBS Color Palette</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        padding: 40px 20px;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        text-align: center;
+        color: #217d46;
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 20px;
+      }
+
+      .color-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .color-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .color-preview {
+        height: 120px;
+        width: 100%;
+        position: relative;
+      }
+
+      .color-info {
+        padding: 15px;
+        text-align: center;
+      }
+
+      .color-code {
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .copy-btn {
+        width: 100%;
+        padding: 8px;
+        background: #217d46;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .copy-btn:hover {
+        background: #1a6337;
+      }
+
+      .copy-btn:active {
+        transform: scale(0.95);
+      }
+
+      .copy-btn.copied {
+        background: #e6ab1a;
+      }
+
+      .toast {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #217d46;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        font-weight: 600;
+      }
+
+      .toast.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        .color-grid {
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          gap: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎨 LHBS Color Palette</h1>
+      <div class="color-grid" id="colorGrid"></div>
+    </div>
+
+    <div class="toast" id="toast">Copied to clipboard! ✓</div>
+
+    <script>
+      const colors = {
+        '202020': '#202020',
+        '252525': '#252525',
+        '666666': '#666666',
+        '808080': '#808080',
+        '000000': '#000000',
+        'CD201F': '#CD201F',
+        'E6A915': '#E6A915',
+        'E6AB1A': '#E6AB1A',
+        'E8B432': '#E8B432',
+        'F0AA00': '#F0AA00',
+        'F1AA01': '#F1AA01',
+        'F2F2F2': '#F2F2F2',
+        'FF8500': '#FF8500',
+        'FFFFFF': '#FFFFFF',
+        '217D46': '#217D46',
+        '217D47': '#217D47',
+        '227D44': '#227D44',
+        '227D46': '#227D46',
+        '3B5998': '#3B5998',
+        '4DB0EB': '#4DB0EB',
+        '1E1E1E': '#1E1E1E'
+      }
+
+      const colorGrid = document.getElementById('colorGrid')
+      const toast = document.getElementById('toast')
+
+      // Generate color cards
+      Object.entries(colors).forEach(([name, hex]) => {
+        const card = document.createElement('div')
+        card.className = 'color-card'
+        card.innerHTML = `
+          <div class="color-preview" style="background-color: ${hex}"></div>
+          <div class="color-info">
+            <div class="color-code">${hex}</div>
+            <button class="copy-btn" onclick="copyColor('${hex}', this)">Copy</button>
+          </div>
+        `
+        colorGrid.appendChild(card)
+      })
+
+      // Copy color function
+      function copyColor(hex, button) {
+        navigator.clipboard.writeText(hex).then(() => {
+          // Show toast
+          toast.classList.add('show')
+          setTimeout(() => {
+            toast.classList.remove('show')
+          }, 2000)
+
+          // Button feedback
+          const originalText = button.textContent
+          button.textContent = 'Copied!'
+          button.classList.add('copied')
+
+          setTimeout(() => {
+            button.textContent = originalText
+            button.classList.remove('copied')
+          }, 1500)
+        })
+      }
+    </script>
+  </body>
+</html>
