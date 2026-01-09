@@ -90,7 +90,7 @@ export function HeroCarousel() {
         transition={{ duration: 0.5 }}
       >
         {/* Scrollable Text Area - Allows content to fit or scroll in smaller viewports */}
-        <div className='w-full max-w-[1920px] mx-auto max-h-[85vh] overflow-y-auto no-scrollbar pointer-events-auto'>
+        <div className='w-full max-w-[1920px] mx-auto max-h-[85vh] no-scrollbar pointer-events-auto'>
           <div className='grid grid-cols-1 lg:grid-cols-12 gap-8'>
             <motion.div
               className='lg:col-span-9 xl:col-span-8 flex flex-col items-start'
