@@ -24,11 +24,12 @@
   --color-accent-gray: #999999; /* C0 M0 Y0 K40 - Gray */
 
   /* Legacy colors for backward compatibility */
-  --color-brand-green: #1e5338;
-  --color-brand-gold: #faba1e;
+  --color-brand-green: #006b00;
+  --color-brand-gold: #e6a100;
   --color-lhbs-green: #1a9900;
-  --color-lhbs-green-dark: #1e5338;
+  --color-lhbs-green-dark: #006b00;
   --color-lhbs-yellow: #e6a100;
+  /* 1e5338, faba1e */
 }
 
 html {

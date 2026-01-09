@@ -69,7 +69,7 @@
   /* 3. Title - color based on background */
 }
 ;<h2
-  className='text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-black uppercase tracking-tight drop-shadow-2xl
+  className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-black uppercase tracking-tight drop-shadow-2xl
   text-white {/* on green bg */} 
   text-brand-green {/* on white bg */}'
 >
