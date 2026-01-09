@@ -25,19 +25,13 @@ export function OverviewSection({ onNavigate }: OverviewSectionProps) {
             <h2 className='text-sm md:text-base font-bold text-brand-gold uppercase tracking-[0.25em] mb-4'>
               Hành trình học tập
             </h2>
-            <h1
-              className='text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight 
-            bg-linear-to-r from-[#006b3d] to-[#004d2c] 
-            bg-clip-text text-transparent 
-            inline-block uppercase 
-            drop-shadow-sm'
-            >
+            <h1 className='text-3xl md:text-5xl lg:text-6xl font-black text-brand-green uppercase tracking-tight leading-tight drop-shadow-2xl'>
               HỆ THỐNG GIÁO DỤC LHBS
             </h1>
             <p className='mt-6 text-gray-600 max-w-3xl mx-auto text-base md:text-xl leading-relaxed font-light'>
-              Lộ trình đào tạo xuyên suốt từ <strong className='text-[#006b3d]'>Mầm non</strong> đến{' '}
-              <strong className='text-[#006b3d]'>Trung học Phổ thông</strong>, kết nối tri thức và nuôi dưỡng nhân cách
-              toàn cầu.
+              Lộ trình đào tạo xuyên suốt từ <strong className='text-brand-green'>Mầm non</strong> đến{' '}
+              <strong className='text-brand-green'>Trung học Phổ thông</strong>, kết nối tri thức và nuôi dưỡng nhân
+              cách toàn cầu.
             </p>
           </motion.div>
         </div>
