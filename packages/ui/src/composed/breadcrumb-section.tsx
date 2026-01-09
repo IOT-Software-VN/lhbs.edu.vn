@@ -9,8 +9,8 @@ export function BreadcrumbSection({ items, variant = 'light' }: BreadcrumbSectio
   const isDark = variant === 'dark'
 
   return (
-    <div className={`w-full pt-12 pb-4 md:pt-20 md:pb-6 relative z-10 ${isDark ? 'bg-[#013b1d]' : 'bg-white'}`}>
-      <div className='container mx-auto px-4 md:px-8 lg:px-12'>
+    <div className={`w-full py-12 md:py-20 relative z-10 flex items-center ${isDark ? 'bg-brand-green' : 'bg-white'}`}>
+      <div className='container mx-auto px-4 md:px-8 lg:px-16'>
         <Breadcrumb
           items={items}
           {...(isDark && {

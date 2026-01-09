@@ -173,17 +173,21 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
               ))}
             </div>
 
-            <div className='flex flex-wrap items-center justify-end gap-6 mb-8'>
-              {' '}
+            <div className='flex flex-wrap items-center justify-end gap-4 md:gap-6 mb-8'>
               {partnerLogos.map((logo) => (
-                <div key={logo.id} className='relative rounded-lg p-2 h-16 w-40 flex items-center justify-center'>
-                  <Image
-                    src={logo.image}
-                    alt={logo.name}
-                    fill
-                    className='object-contain hover:scale-110 transition-transform duration-300 w-full h-full'
-                    sizes='(max-width: 768px) 50vw, 200px'
-                  />
+                <div
+                  key={logo.id}
+                  className='shrink-0 rounded-lg p-3 md:p-4 h-16 md:h-20 w-32 md:w-40 flex items-center justify-center bg-white/10 hover:bg-white/20 transition-all duration-300'
+                >
+                  <div className='relative w-full h-full'>
+                    <Image
+                      src={logo.image}
+                      alt={logo.name}
+                      fill
+                      className='object-contain hover:scale-105 transition-transform duration-300'
+                      sizes='(max-width: 768px) 128px, 160px'
+                    />
+                  </div>
                 </div>
               ))}
             </div>
