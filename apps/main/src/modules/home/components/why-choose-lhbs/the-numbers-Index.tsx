@@ -30,7 +30,7 @@ export function TheNumbersSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#005C42] uppercase tracking-tight drop-shadow-2xl'
+            className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-brand-green uppercase tracking-tight drop-shadow-2xl'
           >
             Tại sao chọn LHBS
           </motion.h2>
